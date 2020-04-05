@@ -1,85 +1,95 @@
-const { src, dest, parallel, watch, series } = require('gulp');
-const pug = require('gulp-pug');
-const postcss = require('gulp-postcss')
-const postcssPresetEnv = require('postcss-preset-env');
-const postCssImport = require('postcss-easy-import');
-const minifyCSS = require('gulp-csso');
-const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
-const svgo = require('gulp-svgo');
-const autoprefixer = require('autoprefixer')
-const gulpStylelint = require('gulp-stylelint');
-const plumber = require('gulp-plumber');
+const { src, dest, watch } = require('gulp');
+const babel                = require('gulp-babel');
+const pug                  = require('gulp-pug');
+const postcss              = require('gulp-postcss')
+const minifyCSS            = require('gulp-csso');
+const concat               = require('gulp-concat');
+const imagemin             = require('gulp-imagemin');
+const plumber              = require('gulp-plumber');
+const livereload           = require('gulp-livereload');
+const autoprefixer         = require('autoprefixer')
+const postCssImport        = require('postcss-easy-import');
+const postcssPresetEnv     = require('postcss-preset-env');
 
 const paths = {
-  css: 'src/css/*.css',
-  html: 'src/html/**/*.pug',
-  fonts: 'src/fonts/**/*.*',
-  js: 'src/js/*.js',
-  images: 'src/images/*'
-}
+	css    : 'src/css/**/*.css',
+	html   : 'src/html/**/*.pug',
+	fonts  : 'src/fonts/**/*.*',
+	js     : 'src/js/*.js',
+	images : 'src/images/*'
+};
+
+livereload({ start: true });
 
 function html(cb) {
-  src(paths.html)
-    .pipe(plumber())
-    .pipe(pug())
-    .pipe(dest('build/'))
+	src(paths.html)
+		.pipe(plumber())
+		.pipe(pug())
+		.pipe(dest('./build'))
+		.pipe(livereload());
 
-  cb()
+	cb();
 }
 
 function fonts(cb) {
-  src(paths.fonts)
-    .pipe(dest('build/fonts'))
-  cb()
+	src(paths.fonts)
+		.pipe(dest('build/fonts'))
+
+	cb();
 }
 
 function css(cb) {
-  src(paths.css)
-    .pipe(plumber())
-    .pipe(postcss([
-      postCssImport(),
-      postcssPresetEnv(/* pluginOptions */),
-      autoprefixer()
-    ]))
-    .pipe(minifyCSS())
-    .pipe(dest('build/css'))
+  	src(paths.css)
+		.pipe(plumber())
+		.pipe(postcss([
+			postCssImport(),
+			postcssPresetEnv(/* pluginOptions */),
+			autoprefixer()
+		]))
+		.pipe(minifyCSS())
+		.pipe(dest('build/css'))
+		.pipe(livereload());
 
-  cb()
+  	cb();
 }
 
 function js(cb) {
-  src(paths.js, { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(concat('app.min.js'))
-    .pipe(dest('build/js', { sourcemaps: true }))
+	src(paths.js, { sourcemaps: true })
+		.pipe(babel())
+		.pipe(plumber())
+		.pipe(concat('app.min.js'))
+		.pipe(dest('build/js', { sourcemaps: true }))
+		.pipe(livereload());
 
-  cb()
+  	cb();
 }
 
 function images(cb) {
-  src(paths.images)
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 75, progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-          plugins: [
-              {removeViewBox: true},
-              {cleanupIDs: false}
-          ]
-      })
-    ]))
-    .pipe(plumber())
-    .pipe(dest('build/images'))
+	src(paths.images)
+		.pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeViewBox: true },
+					{ cleanupIDs: false }
+				]
+			})
+		]))
+		.pipe(plumber())
+		.pipe(dest('build/images'))
+		.pipe(livereload());
 
-    cb()
+    cb();
 }
 
 exports.default = function(cb) {
-    watch('src/css/**/*.css', { ignoreInitial: false }, css);
-    watch(paths.fonts, { ignoreInitial: false }, fonts);
-    watch(paths.html, { ignoreInitial: false }, html);
-    watch(paths.js, { ignoreInitial: false }, js);
-    watch(paths.images, { ignoreInitial: false }, images);
+	livereload.listen();
+
+	watch(paths.css, { ignoreInitial: false }, css);
+	watch(paths.fonts, { ignoreInitial: false }, fonts);
+	watch(paths.html, { ignoreInitial: false }, html);
+	watch(paths.js, { ignoreInitial: false }, js);
+	watch(paths.images, { ignoreInitial: false }, images);
 };
