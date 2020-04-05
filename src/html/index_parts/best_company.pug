@@ -1,0 +1,30 @@
+mixin company(logo, title, number)
+  .bestCompaniesWidgetCompany
+    img.bestCompaniesWidgetCompany__logo(srcset=logo)
+    .bestCompaniesWidgetCompany__title= title
+    .bestCompaniesWidgetCompany__number= number
+
+.widget.bestCompaniesWidget
+  .widget__title Best company
+
+  .widget__content
+    +company('./images/logo_nova.png 1x, ./images/logo_nova@2x.png 2x',
+            'New Post',
+            '1450,99')
+    +company('./images/logo_cossa.png 1x, ./images/logo_cossa@2x.png 2x',
+            'Cossa',
+            '2450,99')
+    +company('./images/logo_nemiroff.png 1x, ./images/logo_nemiroff@2x.png 2x',
+            'Nemiroff',
+            '2350,99')
+    +company('./images/logo_unilever.png 1x, ./images/logo_unilever@2x.png 2x',
+            'Uniliver',
+            '3450,99')
+    +company('./images/logo_rusbase.png 1x, ./images/logo_rusbase@2x.png 2x',
+            'Rusbase',
+            '850,99')
+    +company('./images/logo_lifecell.png 1x, ./images/logo_lifecell@2x.png 2x',
+            'Lifecell',
+            '1650,99')
+
+  .widget__button Show all

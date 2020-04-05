@@ -1,0 +1,11 @@
+.title {
+
+}
+
+.title--pageTitle {
+  color: var(--text-black-2);
+  font-family: var(--font-montserrat);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+}

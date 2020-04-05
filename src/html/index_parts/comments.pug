@@ -1,0 +1,15 @@
+mixin comment(text)
+  .commentsWidgetComment
+    .commentsWidgetComment__text= text
+    .commentsWidgetComment__meta
+      img.commentsWidgetComment__icon(src='./images/comments_icon.svg')
+      .commentsWidgetComment__count 12
+
+div.commentsWidget
+  .commentsWidget__title Interessante neue Fragen und Antworten
+
+  +comment('Wie macht man aus einem Eimer ein Hundehalsband?')
+  +comment('Wie ist die Arabische Sprache?')
+  +comment('Wie kann man die hölzernen Deckenstützen in einem Holzhaus dekorieren?')
+  +comment('Wie unterscheidet sich homogenes Linoleum von heterogenem?')
+  +comment('Ist es eine gute Idee, die Wände im Schlafzimmer mit einer Linkrist-Tapete zu verkleiden?')

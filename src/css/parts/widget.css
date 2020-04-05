@@ -1,0 +1,23 @@
+.widget {}
+
+.widget__title {
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  flex: 1;
+  margin-bottom: 13px;
+}
+
+.widget__content {
+  margin-bottom: 20px;
+}
+
+.widget__button {
+  color: var(--text-blue);
+  font-family: var(--font-open-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
