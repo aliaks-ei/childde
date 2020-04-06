@@ -1,8 +1,9 @@
 .topNavigationRightBlock {
-  display: flex;
-  align-items: center;
+	position    : relative; 
+	display     : flex;
+	align-items : center;
 }
 
 .topNavigationRightBlock__item + .topNavigationRightBlock__item {
-  margin-left: 22px;
+	margin-left: 22px;
 }

@@ -1,0 +1,13 @@
+mixin accountWidgetItem(icon_path, title)
+    .account-widget__item
+        .account-widget__item__icon
+            img(src=icon_path)
+        span= title
+
+.account-widget
+    +accountWidgetItem('./images/profile_icon_small.svg', 'Profil')
+    +accountWidgetItem('./images/message_icon.svg', 'Nachrichten')
+    +accountWidgetItem('./images/bookmark_icon.svg', 'Lesezeichen')
+    +accountWidgetItem('./images/question_icon.svg', 'Hilfe')
+    +accountWidgetItem('./images/settings_icon.svg', 'Einstellungen')
+    +accountWidgetItem('./images/exit_icon.svg', 'Abmelden')

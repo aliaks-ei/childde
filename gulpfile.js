@@ -12,7 +12,7 @@ const postCssImport        = require('postcss-easy-import');
 const postcssPresetEnv     = require('postcss-preset-env');
 
 const paths = {
-	css    : 'src/css/**/*.css',
+	css    : 'src/css/*.css',
 	html   : 'src/pug/*.pug',
 	fonts  : 'src/fonts/**/*.*',
 	js     : 'src/js/*.js',
@@ -87,7 +87,7 @@ function images(cb) {
 exports.default = function () {
 	livereload.listen();
 
-	watch(paths.css,          { ignoreInitial: false }, css);
+	watch('src/css/**/*.css',          { ignoreInitial: false }, css);
 	watch(paths.fonts,        { ignoreInitial: false }, fonts);
 	watch('src/pug/**/*.pug', { ignoreInitial: false }, html);
 	watch(paths.js,           { ignoreInitial: false }, js);
