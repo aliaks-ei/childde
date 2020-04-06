@@ -1,2 +1,2 @@
 - Запуск проекта
-`foreman start`
+`nf start`

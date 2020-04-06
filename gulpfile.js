@@ -13,7 +13,7 @@ const postcssPresetEnv     = require('postcss-preset-env');
 
 const paths = {
 	css    : 'src/css/**/*.css',
-	html   : 'src/html/**/*.pug',
+	html   : 'src/pug/*.pug',
 	fonts  : 'src/fonts/**/*.*',
 	js     : 'src/js/*.js',
 	images : 'src/images/*'
@@ -47,6 +47,7 @@ function css(cb) {
 			autoprefixer()
 		]))
 		.pipe(minifyCSS())
+		.pipe(concat('index.css'))
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 
@@ -84,12 +85,12 @@ function images(cb) {
     cb();
 }
 
-exports.default = function(cb) {
+exports.default = function () {
 	livereload.listen();
 
-	watch(paths.css, { ignoreInitial: false }, css);
-	watch(paths.fonts, { ignoreInitial: false }, fonts);
-	watch(paths.html, { ignoreInitial: false }, html);
-	watch(paths.js, { ignoreInitial: false }, js);
-	watch(paths.images, { ignoreInitial: false }, images);
+	watch(paths.css,          { ignoreInitial: false }, css);
+	watch(paths.fonts,        { ignoreInitial: false }, fonts);
+	watch('src/pug/**/*.pug', { ignoreInitial: false }, html);
+	watch(paths.js,           { ignoreInitial: false }, js);
+	watch(paths.images,       { ignoreInitial: false }, images);
 };

@@ -1,4 +1,10 @@
-include ../mixins/personage
+mixin personage(css_helper_class, title, content, image_url, button_text)
+  .personage(class=css_helper_class)
+    .personage__container
+      img.personage__image(src=image_url)
+      .personage__title= title
+      .personage__content= content
+      .personage__button= button_text
 
 .personagesWithAdvices
   +personage(
