@@ -1,22 +1,23 @@
 .threeColumnContainer
-  .threeColumnContainer__left
-    include ./leftMainMenu
-  .threeColumnContainer__center
-    .title--pageTitle
-      | Nur so sind alle Erfahrungen,
-      br
-      | Meinungen und Antworten zuganglich.
-    include ./personages
-    include ./askQuestion
-  .threeColumnContainer__right
-    .widgetsList
-      .widgetsList__block
-        include ./comments
-      .widgetsList__block
-        include ./sponsor
-      .widgetsList__block
-        include ./popular_themes
-      .widgetsList__block
-        include ./best_company
-      .widgetsList__block
-        include ./we_are_read
+	.threeColumnContainer__left
+		include ./leftMainMenu
+	.threeColumnContainer__center
+		.title--pageTitle
+			| Nur so sind alle Erfahrungen,
+			br
+			| Meinungen und Antworten zuganglich.
+		include ./personages
+		include ./askQuestion
+		include ./dateFilter
+	.threeColumnContainer__right
+		.widgetsList
+			.widgetsList__block
+				include ./comments
+			.widgetsList__block
+				include ./sponsor
+			.widgetsList__block
+				include ./popular_themes
+			.widgetsList__block
+				include ./best_company
+			.widgetsList__block
+				include ./we_are_read

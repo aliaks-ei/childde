@@ -1,0 +1,32 @@
+.date-filter {
+    display          : flex;
+    height           : 50px;
+    width            : 348px;
+    margin-bottom    : 32px;
+    border-radius    : 25px;
+    border           : 1px solid var(--border-color-lightblue);
+    background-color : var(--background-color-gray);
+    padding          : 4px;
+}
+
+.date-filter__item {
+    flex             : 1 1 25%;
+    background-color : transparent;
+    height           : 100%;
+    border           : 0;
+    border-radius    : 21px;
+    font-size        : 14px;
+    font-weight      : 700;
+    font-family      : var(--font-montserrat);
+    color            : var(--text-black-2);
+    cursor           : pointer;
+}
+
+.date-filter__item + .date-filter__item {
+    margin-left: 4px;
+}
+
+.date-filter__item--active {
+    background-color : var(--background-color-white );
+    color            : var(--red-color);
+}

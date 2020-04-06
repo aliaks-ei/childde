@@ -1,7 +1,8 @@
 .ask-question-wrapper {
-    display     : flex;
-    align-items : center;
-    height      : 50px;
+    display       : flex;
+    align-items   : center;
+    height        : 50px;
+    margin-bottom : 92px;
 }
 
 .ask-question-wrapper__input {
