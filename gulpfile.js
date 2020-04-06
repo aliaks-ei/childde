@@ -47,7 +47,6 @@ function css(cb) {
 			autoprefixer()
 		]))
 		.pipe(minifyCSS())
-		.pipe(concat('index.css'))
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 
@@ -56,7 +55,7 @@ function css(cb) {
 
 function js(cb) {
 	src(paths.js, { sourcemaps: true })
-		.pipe(babel())
+		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(plumber())
 		.pipe(concat('app.min.js'))
 		.pipe(dest('build/js', { sourcemaps: true }))

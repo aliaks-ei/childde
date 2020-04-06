@@ -1,0 +1,1 @@
+.searchBar,.searchBar__input{background-color:var(--background-color-white);border-radius:25px;height:50px}.searchBar{max-width:436px;flex:1;position:relative}.searchBar__input{border:0;width:100%;font-size:16px;font-weight:500;font-family:var(--font-montserrat);color:var(--text-black);padding:0 48px 0 22px}.searchBar__searchIcon{position:absolute;right:18px;top:calc(50% - 8px)}

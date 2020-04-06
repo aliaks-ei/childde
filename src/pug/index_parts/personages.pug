@@ -1,28 +1,25 @@
-mixin personage(css_helper_class, title, content, image_url, button_text)
-  .personage(class=css_helper_class)
-    .personage__container
-      img.personage__image(src=image_url)
-      .personage__title= title
-      .personage__content= content
-      .personage__button= button_text
+mixin personage(title, content, image_url, button_text)
+	li.personage.personagesWithAdvices__item
+		img.personage__image(src=image_url)
+		.personage__container
+			.personage__title= title
+			.personage__content= content
+			button.personage__button(type="button")= button_text
 
-.personagesWithAdvices
-  +personage(
-    'personagesWithAdvices__item personage--1',
-    'Nur so sind alle Erfahrungen, Meinungen und Antworten',
-    'Technological competition startups. Provides IT industry promising technologies.',
-    './images/green_personage.png',
-    'Deine Meinung zu…?')
-  +personage(
-    'personagesWithAdvices__item personage--2',
-    'Nur so sind alle Erfahrungen, \n' +
-    'Meinungen und Antworten ',
-    'Technological competition startups. Provides IT industry promising  te…',
-    './images/blue_personage.png',
-    'Deine Frage')
-  +personage(
-    'personagesWithAdvices__item personage--3',
-    'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
-    'Technological competition startups.  Provides IT industry promising  technologies.',
-    './images/yellow_personage.png',
-    'Deine Frage')
+ul.personagesWithAdvices
+	+personage(
+		'Nur so sind alle Erfahrungen, Meinungen und Antworten',
+		'Technological competition startups. Provides IT industry promising technologies.',
+		'./images/green_personage.png',
+		'Deine Meinung zu…?')
+	+personage(
+		'Nur so sind alle Erfahrungen, \n' +
+		'Meinungen und Antworten ',
+		'Technological competition startups. Provides IT industry promising  te…',
+		'./images/blue_personage.png',
+		'Deine Frage')
+	+personage(
+		'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+		'Technological competition startups.  Provides IT industry promising  technologies.',
+		'./images/yellow_personage.png',
+		'Deine Frage')
