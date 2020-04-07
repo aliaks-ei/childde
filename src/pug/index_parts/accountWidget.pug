@@ -1,10 +1,10 @@
 mixin accountWidgetItem(icon_path, title)
-    .account-widget__item
+    a.account-widget__item
         .account-widget__item__icon
             img(src=icon_path)
         span= title
 
-.account-widget
+.account-widget#accountDropdown
     +accountWidgetItem('./images/profile_icon_small.svg', 'Profil')
     +accountWidgetItem('./images/message_icon.svg', 'Nachrichten')
     +accountWidgetItem('./images/bookmark_icon.svg', 'Lesezeichen')
