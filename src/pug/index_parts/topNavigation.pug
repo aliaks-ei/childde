@@ -1,14 +1,14 @@
 .topNavigation
 	.topNavigation__container
-		img(srcset="./images/logo.png 1x, ./images/logo@2x.png 2x")
+		img(srcset="./assets/images/logo.png 1x, ./assets/images/logo@2x.png 2x")
 
 		.searchBar.topNavigation__searchBar
 			input.searchBar__input(placeholder='Search')
-			img.searchBar__searchIcon(src="./images/search_icon.svg")
+			img.searchBar__searchIcon(src="./assets/icons/search_icon.svg")
 
 		.topNavigationRightBlock.topNavigation__right
 			a.topNavigationRightBlock__item(href='#')
-				img(src='./images/new_notifications_icon.svg')
+				img(src='./assets/icons/new_notifications_icon.svg')
 			a.topNavigationRightBlock__item#userImage(href='#')
-				img(srcset="./images/avatar.png 1x, ./images/avatar@2x.png 2x")
+				img(srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x")
 			include ./accountWidget

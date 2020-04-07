@@ -1,3 +1,5 @@
+include ../mixins/questionCard.pug
+
 .threeColumnContainer
 	.threeColumnContainer__left
 		include ./leftMainMenu
@@ -10,6 +12,10 @@
 		include ./askQuestion
 		include ./dateFilter
 		include ./opinionCard
+		+questionCard('var(--red-color)', 'question-1-image.png', 'question-1-avatar.png')
+		+questionCard('var(--orange-color)', 'question-2-image.png', 'question-2-avatar.png')
+		+questionCard('var(--green-color)', 'question-3-image.png', 'question-3-avatar.png')
+		+questionCard('var(--purple-color)', 'question-4-image.png', 'question-4-avatar.png')
 	.threeColumnContainer__right
 		.widgetsList
 			.widgetsList__block

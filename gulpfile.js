@@ -12,11 +12,12 @@ const postCssImport        = require('postcss-easy-import');
 const postcssPresetEnv     = require('postcss-preset-env');
 
 const paths = {
-	css    : 'src/css/*.css',
+	css    : 'src/css/**/*.css',
 	html   : 'src/pug/*.pug',
-	fonts  : 'src/fonts/**/*.*',
+	fonts  : 'src/assets/fonts/**/*.*',
 	js     : 'src/js/*.js',
-	images : 'src/images/*'
+	images : 'src/assets/images/*',
+	icons  : 'src/assets/icons/*'
 };
 
 livereload({ start: true });
@@ -33,7 +34,7 @@ function html(cb) {
 
 function fonts(cb) {
 	src(paths.fonts)
-		.pipe(dest('build/fonts'))
+		.pipe(dest('build/assets/fonts'))
 
 	cb();
 }
@@ -46,6 +47,7 @@ function css(cb) {
 			postcssPresetEnv(/* pluginOptions */),
 			autoprefixer()
 		]))
+		.pipe(concat('index.css'))
 		.pipe(minifyCSS())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
@@ -67,9 +69,18 @@ function js(cb) {
 function images(cb) {
 	src(paths.images)
 		.pipe(imagemin([
-			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 75, progressive: true }),
-			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.optipng({ optimizationLevel: 5 })
+		]))
+		.pipe(plumber())
+		.pipe(dest('build/assets/images'))
+		.pipe(livereload());
+
+    cb();
+}
+
+function icons(cb) {
+	src(paths.icons)
+		.pipe(imagemin([
 			imagemin.svgo({
 				plugins: [
 					{ removeViewBox: true },
@@ -78,7 +89,7 @@ function images(cb) {
 			})
 		]))
 		.pipe(plumber())
-		.pipe(dest('build/images'))
+		.pipe(dest('build/assets/icons'))
 		.pipe(livereload());
 
     cb();
@@ -87,9 +98,10 @@ function images(cb) {
 exports.default = function () {
 	livereload.listen();
 
-	watch('src/css/**/*.css',          { ignoreInitial: false }, css);
+	watch('src/css/**/*.css', { ignoreInitial: false }, css);
 	watch(paths.fonts,        { ignoreInitial: false }, fonts);
 	watch('src/pug/**/*.pug', { ignoreInitial: false }, html);
 	watch(paths.js,           { ignoreInitial: false }, js);
 	watch(paths.images,       { ignoreInitial: false }, images);
+	watch(paths.icons,        { ignoreInitial: false }, icons);
 };
