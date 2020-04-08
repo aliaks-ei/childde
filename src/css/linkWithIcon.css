@@ -1,17 +1,42 @@
 .linkWithIcon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	position: relative;
+}
+
+.linkWithIcon:before {
+	position         : absolute;
+	content          : "";
+	top              : 0;
+	bottom           : 0;
+	left             : -6px;
+	right            : -6px;
+	border-radius    : 25px;
+	opacity          : 0;
+	background-color : var(--background-color-gray);
+	transition       : opacity .1s ease-out;
+}
+
+.linkWithIcon:hover:before {
+	opacity: 1;
 }
 
 .linkWithIcon__icon {
-  margin-right: 15px;
+	position        : relative;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	width           : 32px;
+	margin-right    : 8px;
 }
 
 .linkWithIcon__link {
-  color: var(--text-black);
-  font-family: var(--font-open-sans);
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
+	position        : relative;
+	display         : flex;
+	align-items     : center;
+	height          : 100%;
+	color           : var(--text-black);
+	font-family     : var(--font-open-sans);
+	font-size       : 16px;
+	font-weight     : 600;
+	padding         : 0 8px;
+	text-decoration : none;
 }

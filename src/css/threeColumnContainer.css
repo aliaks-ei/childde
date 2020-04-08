@@ -1,4 +1,6 @@
 .threeColumnContainer {
+	--top-offset: 124px;
+
 	display: flex;
 }
 
@@ -6,7 +8,7 @@
 	max-width   : 170px;
 	margin-left : 34px;
 	flex        : 1;
-	margin-top  : 120px;
+	margin-top  : var(--top-offset);
 }
 
 .threeColumnContainer__center {
@@ -16,5 +18,5 @@
 
 .threeColumnContainer__right {
 	max-width  : 280px;
-	margin-top : 120px;
+	margin-top : var(--top-offset);
 }

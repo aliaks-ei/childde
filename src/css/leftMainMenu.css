@@ -1,22 +1,23 @@
-.leftMainMenu {}
+.leftMainMenu__item {
+	height: 46px;
+}
 
 .leftMainMenu__item + .leftMainMenu__item {
-  margin-top: 28px;
+  margin-top: 2px;
 }
 
 .leftMainMenu__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  border-radius: 25px;
-  background-color: var(--background-color-black);
-
-  color: var(--background-color-white);
-  font-family: var(--font-montserrat);
-  font-size: 14px;
-  font-weight: 700;
-  margin-top: 30px;
-  text-decoration: none;
+	display          : flex;
+	justify-content  : center;
+	align-items      : center;
+	width            : 100%;
+	height           : 50px;
+	border-radius    : 25px;
+	background-color : var(--background-color-black);
+	color            : var(--background-color-white);
+	font-family      : var(--font-montserrat);
+	font-size        : 14px;
+	font-weight      : 700;
+	margin-top       : 30px;
+	text-decoration  : none;
 }
