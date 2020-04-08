@@ -1,8 +1,9 @@
 :root {
-	--red-color    : #e45b60;
-	--orange-color : #f7ae3b;
-	--green-color  : #8cc761;
-	--purple-color : #a461c7;
+	--red-color      : #e45b60;
+	--orange-color   : #f7ae3b;
+	--orange-color-2 : #ffc488;
+	--green-color    : #8cc761;
+	--purple-color   : #a461c7;
 
 	--background-color-pink       : #ffb3bf;
 	--background-color-white      : #ffffff;

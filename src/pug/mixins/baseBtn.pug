@@ -1,0 +1,8 @@
+mixin baseBtn({ text, withArrow, width = 197, bgColor, color, iconType })
+    button.ask-question-button(
+        type="button", 
+        style=`width: ${ width }px; background-color: ${ bgColor }; color: ${ color }`
+    )&attributes(attributes)
+        span= text
+        if withArrow
+            img.ask-question-button__icon(src=`./assets/icons/right_arrow_${ iconType }.svg`)

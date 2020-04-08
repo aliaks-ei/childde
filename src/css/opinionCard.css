@@ -30,16 +30,3 @@
     color         : var(--text-black);
     margin-bottom : 25px;
 }
-
-.card-content__action-btn {
-    height           : 50px;
-    width            : 183px;
-    border-radius    : 25px;
-    background-color : var(--text-blue);
-    font-size        : 14px;
-    font-weight      : 700;
-    font-family      : var(--font-montserrat);
-    border           : 0;
-    color            : var(--text-white);
-    cursor           : pointer;
-}

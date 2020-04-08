@@ -1,10 +1,11 @@
-extends ./layouts/layout.pug
+extends ./layouts/layout
 
 block title 
 	title Index 
 
 block content
-	include ./index_parts/topNavigation.pug
+	include ./index_parts/topNavigation
 	.container--1400
 		.spaceVertical--100
 		include ./index_parts/threeColumnContainer
+	include ./index_parts/youHaveAQuestion
