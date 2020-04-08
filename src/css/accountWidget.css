@@ -3,7 +3,7 @@
     position         : absolute;
     width            : 235px;
     background-color : var(--background-color-white);
-    box-shadow       : 0 3px 30px rgba(54, 54, 54, .1);
+    box-shadow       : 0 3px 30px var(--box-shadow-gray);
     border-radius    : 10px;
     right            : 0;
     top              : 64px;
@@ -11,19 +11,17 @@
     padding          : 14px 0;
 }
 
-.account-widget--visible {
-    display: block;
-}
-
 .account-widget__item {
-    display     : flex;
-    align-items : center;
-    padding     : 0 22px;
-    font-family : var(--font-open-sans);
-    font-size   : 16px;
-    font-weight : 600;
-    line-height : 45px;
-    cursor      : pointer;
+    display         : flex;
+    align-items     : center;
+    padding         : 0 22px;
+    font-family     : var(--font-open-sans);
+    font-size       : 16px;
+    font-weight     : 600;
+    line-height     : 45px;
+    cursor          : pointer;
+    text-decoration : none;
+    color           : var(--text-black-2);
 }
 
 .account-widget__item:hover {

@@ -1,13 +1,13 @@
-mixin accountWidgetItem(icon_path, title)
+mixin accountWidgetItem(iconName, title)
     a.account-widget__item
         .account-widget__item__icon
-            img(src=icon_path)
+            img(src=`./assets/icons/${ iconName }.svg`)
         span= title
 
 .account-widget#accountDropdown
-    +accountWidgetItem('./assets/icons/profile_icon_small.svg', 'Profil')
-    +accountWidgetItem('./assets/icons/message_icon.svg', 'Nachrichten')
-    +accountWidgetItem('./assets/icons/bookmark_icon.svg', 'Lesezeichen')
-    +accountWidgetItem('./assets/icons/question_icon.svg', 'Hilfe')
-    +accountWidgetItem('./assets/icons/settings_icon.svg', 'Einstellungen')
-    +accountWidgetItem('./assets/icons/exit_icon.svg', 'Abmelden')
+    +accountWidgetItem('profile_icon_small', 'Profil')
+    +accountWidgetItem('message_icon', 'Nachrichten')
+    +accountWidgetItem('bookmark_icon', 'Lesezeichen')
+    +accountWidgetItem('question_icon', 'Hilfe')
+    +accountWidgetItem('settings_icon', 'Einstellungen')
+    +accountWidgetItem('exit_icon', 'Abmelden')
