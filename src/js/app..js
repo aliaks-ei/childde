@@ -89,7 +89,7 @@ window.addEventListener('click', event => {
         qTopDropdownEl.querySelector('#notifyTogglerOption').addEventListener('click', toggleQuestionNotifications);
     }
 
-    if (event.target.classList.contains('question-votes__horizontal-dropdown')) {
+    if (event.target.classList.contains('question-reviews__horizontal-dropdown')) {
         const { x, y } = event.target.getBoundingClientRect();
 
         document.body.insertAdjacentHTML('beforeend', generateQBottomDropdownEl(x, y));
