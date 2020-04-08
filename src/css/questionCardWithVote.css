@@ -1,0 +1,40 @@
+.question-card__vote-bar {
+    position         : relative;
+    display          : flex;
+    align-items      : center;
+    height           : 44px;
+    background-color : var(--background-color-gray);
+    border-radius    : 20px;
+}
+
+.question-card__vote-bar + .question-card__vote-bar {
+    margin-top: 16px;
+}
+
+.question-card__vote-bar__progress {
+    display          : flex;
+    align-items      : center;
+    padding          : 8px 22px;
+    height           : 40px;
+    width            : 75%;
+    font-family      : var(--font-open-sans);
+    font-size        : 16px;
+    line-height      : 26px;
+    background-color : var(--red-color);
+    border-radius    : inherit;
+    color            : var(--text-white);
+}
+
+.question-card__vote-bar__progress > span {
+    text-overflow : ellipsis;
+    overflow      : hidden;
+    white-space   : nowrap;
+}
+
+.question-card__vote-bar__percentage {
+    position    : absolute;
+    right       : 10px;
+    font-family : var(--font-montserrat);
+    font-size   : 14px;
+    font-weight : 700;
+}

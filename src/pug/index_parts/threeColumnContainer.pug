@@ -1,4 +1,5 @@
 include ../mixins/questionCard
+include ../mixins/questionCardWithVote
 
 - 
 	let fullDesc = `
@@ -86,6 +87,20 @@ include ../mixins/questionCard
 			chips,
 			shortDesc,
 			fullDesc
+		})
+		+questionCardWithVote({
+			avatar        : 'question-vote-avatar.png',
+			title         : 'Which movie do you like more?',
+			subtitle      : 'Please vote below',
+			votingOptions : [
+				{ name: 'Das Boot', power: 75, bgColor: '#fabb4f' },
+				{ name: 'Aquaman', power: 45, bgColor: '#75d0c4' },
+				{ name: 'The house that Jack has built', power: 55, bgColor: '#e57497' },
+				{ name: 'Brothers sisters', power: 45, bgColor: '#ffcf62' }
+			],
+			username,
+			time,
+			chips
 		})
 	.threeColumnContainer__right
 		.widgetsList

@@ -1,6 +1,4 @@
-include ./questionCardBtn
-
-mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title, interested, chips = [], shortDesc, fullDesc })
+mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel, title, subtitle, chips = [], votingOptions = [] })
     - let isDefaultQuestion = !(overlay && bgImage);
 
     .question-card(class={ 'question-card--default': isDefaultQuestion })
@@ -23,6 +21,7 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                             img.question-user__label__icon(src="./assets/icons/toy.svg")
                             span Kinderfrage
                 .question-info__title !{ title }
+                .question-info__subtitle !{ subtitle }
                 .question-info__chips
                     each chip in chips
                         .question-info__chip 
@@ -30,25 +29,11 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                             span= chip.text 
             button.question-header__dropdown-icon
                 img(src=`./assets/icons/${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
-        .question-card__reactions-wrapper
-            .question-card__reactions 
-                +questionCardBtn(`./assets/icons/${ interested ? 'heart-active' : 'heart' }.svg`, 'Interessant 53')
-                +questionCardBtn('./assets/icons/messages.svg', '345', 'question-card__reactions__messages')  
-            button.question-card__visibility-btn
-                img(src="./assets/icons/eye.svg")
-        .question-card__content
-            div
-                .question-card__content__short-desc
-                    span= shortDesc
-                    span.question-card__content__read-more-btn Mehr lesen
-                .question-card__content__full-desc
-                    div !{ fullDesc }
-                    .question-card__content__reviews.question-reviews
-                        .question-reviews__likes
-                            +questionCardBtn('./assets/icons/like.svg', 'Gute Antwort +75')
-                            +questionCardBtn('./assets/icons/dislike.svg', '0', 'question-reviews__dislikes-item')
-                        button.question-reviews__horizontal-dropdown
-                            img(src="./assets/icons/dropdown-gray.svg")
-                    button.question-card__read-all-answers-btn Weitere Antworten lesen
+        .question-card__content.question-card__content--vote 
+            each option in votingOptions
+                .question-card__vote-bar
+                    .question-card__vote-bar__progress(style=`width: ${ option.power }%; background-color: ${ option.bgColor }`)
+                        span= option.name
+                    .question-card__vote-bar__percentage= `${ option.power }%`
 
         
