@@ -1,22 +1,20 @@
-.personages-wrapper {
-	margin-bottom: 48px;
-}
-
-.personages-wrapper .swiper-wrapper {
-	padding-top: 46px;
-}
-
-.personage {
+.swiper-card {
 	display         : flex;
-	align-items     : flex-end;
-	height          : 378px;
+	flex-direction  : column;
+	align-items     : center;
+	min-width       : 260px;
+	height          : 270px;
 	border-radius   : 10px;
 	position        : relative;
 	padding         : 28px 24px;
 	text-decoration : none;
 }
 
-.personage__title {
+.swiper-card--with-image {
+	height: 378px;
+}
+
+.swiper-card__title {
 	color       : var(--text-black-2);
 	font-family : var(--font-montserrat);
 	font-size   : 14px;
@@ -24,26 +22,23 @@
 	line-height : 18px;
 }
 
-.personage__image {
-	position: absolute;
+.swiper-card__image {
+	position: relative;
 }
 
-.personage:first-of-type .personage__image {
-	top  : -11px;
-	left : 68px;
+.swiper-card:first-of-type .swiper-card__image {
+	top: -39px;
 }
 
-.personage:nth-of-type(2) .personage__image {
-	top  : -25px;
-	left : 74px;
+.swiper-card:nth-of-type(2) .swiper-card__image {
+	top: -53px;
 }
 
-.personage:last-of-type .personage__image {
-	top  : -18px;
-	left : 74px;
+.swiper-card:last-of-type .swiper-card__image {
+	top: -46px;
 }
 
-.personage__content {
+.swiper-card__content {
 	color       : var(--text-black);
 	font-family : var(--font-open-sans);
 	font-size   : 14px;
@@ -52,7 +47,7 @@
 	margin      : 13px 0 24px;
 }
 
-.personage__button {
+.swiper-card__button {
 	background-color : var(--background-color-white);
 	border           : 0;
 	border-radius    : 25px;
@@ -68,14 +63,14 @@
 	line-height      : 39px;
 }
 
-.personage:first-of-type {
+.swiper-card:first-of-type {
 	background-color: var(--background-color-personage1);
 }
 
-.personage:nth-of-type(2) {
+.swiper-card:nth-of-type(2) {
 	background-color: var(--background-color-personage2);
 }
 
-.personage:last-of-type {
+.swiper-card:last-of-type {
 	background-color: var(--background-color-personage3);
 }

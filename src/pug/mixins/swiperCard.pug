@@ -1,0 +1,8 @@
+mixin swiperCard({ title, content, imageUrl, buttonText })
+	a.swiper-card.swiper-slide(href="#")(class=imageUrl ? 'swiper-card--with-image' : '')
+		if imageUrl
+			img.swiper-card__image(src=imageUrl)
+		.swiper-card__container
+			.swiper-card__title= title
+			.swiper-card__content= content
+			button.swiper-card__button(type="button")= buttonText

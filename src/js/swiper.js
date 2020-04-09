@@ -1,4 +1,4 @@
-const personages = new Swiper('#personagesSwiper .swiper-container', {
+const swiperParams = {
     slidesPerView : 2.8,
     spaceBetween  : 20,
     freeMode      : true,
@@ -7,4 +7,7 @@ const personages = new Swiper('#personagesSwiper .swiper-container', {
         nextEl : '.swiper-button-next',
         prevEl : '.swiper-button-prev',
     }
-});
+};
+
+const personages      = new Swiper('#personagesSwiper .swiper-container', swiperParams);
+const questionsSlider = new Swiper('#questionsSlider .swiper-container', swiperParams);
