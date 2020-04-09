@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.base-swiper .swiper-wrapper {
+    padding: 46px 0;
+}
+
 .base-swiper-button {
 	width            : 36px;
 	height           : 36px;
@@ -47,10 +51,10 @@
     position       : absolute;
     width          : 18px;
     top            : 0;
-    bottom         : -46px;
-    pointer-events : none;
+    bottom         : 0;
     z-index        : 1;
     opacity        : 0;
+    pointer-events : none;
     transition     : opacity .3s ease-in-out;
 }
 
