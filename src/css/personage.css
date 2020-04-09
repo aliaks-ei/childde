@@ -1,13 +1,19 @@
+.personages-wrapper {
+	margin-bottom: 48px;
+}
+
+.personages-wrapper .swiper-wrapper {
+	padding-top: 46px;
+}
+
 .personage {
-	display       : flex;
-	align-items   : flex-end;
-	list-style    : none;
-	height        : 378px;
-	width         : 265px;
-	min-width     : 265px;
-	border-radius : 10px;
-	position      : relative;
-	padding       : 28px 24px;
+	display         : flex;
+	align-items     : flex-end;
+	height          : 378px;
+	border-radius   : 10px;
+	position        : relative;
+	padding         : 28px 24px;
+	text-decoration : none;
 }
 
 .personage__title {
@@ -37,10 +43,6 @@
 	left : 74px;
 }
 
-.personage:not(:first-of-type):not(:last-of-type) {
-	margin: 0 10px;
-}
-
 .personage__content {
 	color       : var(--text-black);
 	font-family : var(--font-open-sans);
@@ -67,8 +69,7 @@
 }
 
 .personage:first-of-type {
-	background-color : var(--background-color-personage1);
-	margin-right     : 10px;
+	background-color: var(--background-color-personage1);
 }
 
 .personage:nth-of-type(2) {
@@ -76,6 +77,5 @@
 }
 
 .personage:last-of-type {
-	background-color : var(--background-color-personage3);
-	margin-left      : 10px;
+	background-color: var(--background-color-personage3);
 }

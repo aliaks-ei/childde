@@ -1,25 +1,37 @@
 mixin personage(title, content, image_url, button_text)
-	li.personage.personagesWithAdvices__item
+	a.personage.personagesWithAdvices__item.swiper-slide(href="#")
 		img.personage__image(src=image_url)
 		.personage__container
 			.personage__title= title
 			.personage__content= content
 			button.personage__button(type="button")= button_text
 
-ul.personagesWithAdvices
-	+personage(
-		'Nur so sind alle Erfahrungen, Meinungen und Antworten',
-		'Technological competition startups. Provides IT industry promising technologies.',
-		'./assets/images/green_personage.png',
-		'Deine Meinung zu…?')
-	+personage(
-		'Nur so sind alle Erfahrungen, \n' +
-		'Meinungen und Antworten ',
-		'Technological competition startups. Provides IT industry promising  te…',
-		'./assets/images/blue_personage.png',
-		'Deine Frage')
-	+personage(
-		'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
-		'Technological competition startups.  Provides IT industry promising  technologies.',
-		'./assets/images/yellow_personage.png',
-		'Deine Frage')
+.personages-wrapper#personagesSwiper
+	.base-swiper
+		.swiper-container
+			.swiper-wrapper
+				+personage(
+					'Nur so sind alle Erfahrungen, Meinungen und Antworten',
+					'Technological competition startups. Provides IT industry promising technologies.',
+					'./assets/images/green_personage.png',
+					'Deine Meinung zu…?')
+				+personage(
+					'Nur so sind alle Erfahrungen, \n' +
+					'Meinungen und Antworten ',
+					'Technological competition startups. Provides IT industry promising  te…',
+					'./assets/images/blue_personage.png',
+					'Deine Frage')
+				+personage(
+					'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+					'Technological competition startups.  Provides IT industry promising  technologies.',
+					'./assets/images/yellow_personage.png',
+					'Deine Frage')
+
+		.base-swiper-button.swiper-button-next
+			img(src="./assets/icons/right_arrow_black.svg")
+		.base-swiper__right-shadow
+
+		.base-swiper-button.swiper-button-prev
+			img(src="./assets/icons/right_arrow_black.svg")
+		.base-swiper__left-shadow
+		
