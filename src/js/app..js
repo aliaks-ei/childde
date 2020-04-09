@@ -1,5 +1,6 @@
 const userImageEl    = document.getElementById('userImage');
 const dropdownMenuEl = document.getElementById('accountDropdown');
+const scrollToTopBtn = document.getElementById('scrollToTop');
 const shortDescEls   = document.getElementsByClassName('question-card__content__short-desc');
 
 let qTopDropdownEl;
@@ -95,4 +96,9 @@ window.addEventListener('click', event => {
         document.body.insertAdjacentHTML('beforeend', generateQBottomDropdownEl(x, y));
         qBottomDropdownEl = document.getElementById('qBottomDropdown');
     }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });
