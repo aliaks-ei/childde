@@ -38,12 +38,13 @@ mixin optionBtn({ icon, text })
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
         .question-modal__bottom-container.q-bottom-container
-            .q-bottom-container__user-select.q-user-select#qUserSelect
-                .q-user-select__avatar
-                    img(src="./assets/images/question-vote-avatar.png")
-                span.q-user-select__name Philip Djones
-                .q-user-select__icon 
-                    img(src="./assets/icons/select_arrow_down.svg")
+            .q-bottom-container__user-select.q-user-select
+                .q-user-select__selected#qUserSelectActivator
+                    .q-user-select__avatar
+                        img(src="./assets/images/question-vote-avatar.png")
+                    span.q-user-select__name Philip Djones
+                    .q-user-select__icon 
+                        img(src="./assets/icons/select_arrow_down.svg")
             +baseBtn({ 
                 text      : 'Speichern',
                 withArrow : true,
