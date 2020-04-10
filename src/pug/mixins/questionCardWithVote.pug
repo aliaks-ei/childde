@@ -27,7 +27,7 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                         .question-info__chip 
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
-            button.question-header__dropdown-icon
+            button.base-icon-btn.question-header__dropdown-icon
                 img(src=`./assets/icons/${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
         .question-card__content.question-card__content--vote 
             each option in votingOptions

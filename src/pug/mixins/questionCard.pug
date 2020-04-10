@@ -28,7 +28,7 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                         .question-info__chip 
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
-            button.question-header__dropdown-icon
+            button.base-icon-btn.question-header__dropdown-icon
                 img(src=`./assets/icons/${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
         .question-card__reactions-wrapper
             .question-card__reactions 
@@ -47,7 +47,7 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                         .question-reviews__likes
                             +questionCardBtn('./assets/icons/like.svg', 'Gute Antwort +75')
                             +questionCardBtn('./assets/icons/dislike.svg', '0', 'question-reviews__dislikes-item')
-                        button.question-reviews__horizontal-dropdown
+                        button.base-icon-btn.question-reviews__horizontal-dropdown
                             img(src="./assets/icons/dropdown-gray.svg")
                     button.question-card__read-all-answers-btn Weitere Antworten lesen
 

@@ -14,7 +14,7 @@
 	background-color : var(--background-color-white);
     box-shadow       : 0 3px 6px rgba(0, 0, 0, .16);
     z-index          : 3;
-    transition       : transform .2s ease-in-out;
+    transition       : .2s ease-in-out;
 }
 
 .base-swiper-button:after {
@@ -26,7 +26,9 @@
 }
 
 .base-swiper-button.swiper-button-disabled {
-	display: none;
+    opacity        : 0;
+    user-select    : none;
+    pointer-events : none;
 }
 
 .base-swiper-button.swiper-button-next {

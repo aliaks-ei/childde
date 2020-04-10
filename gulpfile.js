@@ -2,11 +2,11 @@ const { src, dest, watch } = require('gulp');
 const babel                = require('gulp-babel');
 const pug                  = require('gulp-pug');
 const postcss              = require('gulp-postcss')
-const minifyCSS            = require('gulp-csso');
 const concat               = require('gulp-concat');
 const imagemin             = require('gulp-imagemin');
 const plumber              = require('gulp-plumber');
 const livereload           = require('gulp-livereload');
+const cleanCSS             = require('gulp-clean-css');
 const autoprefixer         = require('autoprefixer')
 const postCssImport        = require('postcss-easy-import');
 const postcssPresetEnv     = require('postcss-preset-env');
@@ -48,7 +48,7 @@ function css(cb) {
 			autoprefixer()
 		]))
 		.pipe(concat('index.css'))
-		.pipe(minifyCSS())
+		.pipe(cleanCSS())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 
