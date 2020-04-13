@@ -1,45 +1,46 @@
 include ../mixins/baseBtn
+include ../mixins/svgIcon
 
 nav.leftMainMenu
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='feed_icon.svg')
+				+svgIcon('newspaper')
 			span Feed
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='profile_icon.svg')
+				+svgIcon('user')
 			span Profil
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='neu_icon.svg')
+				+svgIcon('compass')
 			span Neu
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='anworten_icon.svg')
+				+svgIcon('edit')
 			span Anworten
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='top_icon.svg')
+				+svgIcon('trophy')
 			span Top
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='themen_icon.svg')
+				+svgIcon('themen')
 			span Themen
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='bewertung_icon.svg')
+				+svgIcon('surface')
 			span Bewertung
 	.linkWithIcon.leftMainMenu__item
 		a.linkWithIcon__link(href="#")
 			.linkWithIcon__icon
-				img(src='community_icon.svg')
+				+svgIcon('teamwork')
 			span Community
 	+baseBtn({ 
 		text      : 'Frage stellen',

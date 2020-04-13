@@ -4,9 +4,10 @@
 
 .question-modal {
     width            : 778px;
-    background-color : var(--background-color-white);
     border-radius    : 8px;
+    margin           : 32px;
     box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
+    background-color : var(--background-color-white);
     overflow         : hidden;
 }
 
@@ -98,7 +99,8 @@
 }
 
 .question-modal__color-btn--bordered {
-    border: 1px solid var(--text-gray);
+    background-color : var(--background-color-white);
+    border           : 1px solid var(--text-gray);
 }
 
 .question-modal__color-btn + .question-modal__color-btn {

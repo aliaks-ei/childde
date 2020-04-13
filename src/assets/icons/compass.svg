@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22.001" viewBox="0 0 22 22.001">
+  <g id="compass" transform="translate(-0.008)">
+    <g id="Group_20673" data-name="Group 20673" transform="translate(0.008)">
+      <g id="Group_20672" data-name="Group 20672" transform="translate(0)">
+        <path id="Path_16692" data-name="Path 16692" d="M11.008,0a11,11,0,1,0,11,11A11.013,11.013,0,0,0,11.008,0Zm5.437,6.266L12.962,12.74a.515.515,0,0,1-.21.21L6.279,16.433a.516.516,0,0,1-.7-.7L9.064,9.261a.516.516,0,0,1,.21-.21l6.474-3.483a.516.516,0,0,1,.7.7Z" transform="translate(-0.008)" fill="#282a2d"/>
+      </g>
+    </g>
+    <g id="Group_20675" data-name="Group 20675" transform="translate(9.817 9.802)">
+      <g id="Group_20674" data-name="Group 20674">
+        <path id="Path_16693" data-name="Path 16693" d="M222.365,220.984a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,222.365,220.984Z" transform="translate(-221.164 -220.984)" fill="#282a2d"/>
+      </g>
+    </g>
+  </g>
+</svg>

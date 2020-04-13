@@ -1,4 +1,7 @@
-mixin questionCardBtn(image_src, button_text, additional_class)
+include ./svgIcon
+
+mixin questionCardBtn(icon, button_text, additional_class)
     button.question-card-button(type="button", class=additional_class)
-        img.question-card-button__icon(src=image_src)
+        span.question-card-button__icon
+            +svgIcon(icon)
         span= button_text

@@ -104,6 +104,10 @@
     margin-bottom   : 32px;
 }
 
+.footer__socials__icons svg {
+    fill: var(--text-black-2);
+}
+
 .footer__copyright {
     font-weight   : 600;
     font-size     : 14px;
@@ -134,5 +138,7 @@
 }
 
 .footer__scroll-top-btn .footer__scroll-top-btn__icon {
-    transform: rotate(-90deg);
+    display       : flex;
+    align-items   : center;
+    margin-bottom : 4px;
 }

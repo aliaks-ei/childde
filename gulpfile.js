@@ -7,7 +7,7 @@ const concat           = require('gulp-concat');
 const imagemin         = require('gulp-imagemin');
 const plumber          = require('gulp-plumber');
 const livereload       = require('gulp-livereload');
-const injectSvg        = require('gulp-inject-svg');
+const svgSymbols       = require('gulp-svg-symbols')
 const clean            = require('gulp-clean');
 const csso             = require('gulp-csso');
 const autoprefixer     = require('autoprefixer')
@@ -29,11 +29,16 @@ function cleanBuild() {
 		.pipe(clean());
 }
 
+function svgSprites() {
+	src(paths.icons)
+		.pipe(svgSymbols())
+		.pipe(dest('build/assets/icons'))
+}
+
 function html(cb) {
 	src(paths.html)
 		.pipe(plumber())
 		.pipe(pug({ pretty: true }))
-		.pipe(injectSvg({ base: '/src/assets/icons/' })) 
 		.pipe(dest('build'))
 		.pipe(livereload());
 
@@ -88,4 +93,5 @@ exports.default = function () {
 	watch('src/css/**/*.css', { ignoreInitial: false }, css);
 	watch(paths.js,           { ignoreInitial: false }, js);
 	watch(paths.images,       { ignoreInitial: false }, images);
+	watch(paths.icons,        { ignoreInitial: false }, svgSprites);
 };

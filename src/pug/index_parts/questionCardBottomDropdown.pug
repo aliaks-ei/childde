@@ -1,10 +1,12 @@
+include ../mixins/svgIcon
+
 #qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom(style='display: none')
 	.question-dropdown-wrapper
 		a.question-dropdown__item
 			.question-dropdown__item__icon
-				img(src='share.svg')
+				+svgIcon('share')
 			span Teilen
 		a.question-dropdown__item
 			.question-dropdown__item__icon
-				img(src='warning.svg')
+				+svgIcon('warning')
 			span Melden

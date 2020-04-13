@@ -1,3 +1,5 @@
+include ./svgIcon
+
 mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel, title, subtitle, chips = [], votingOptions = [] })
     - let isDefaultQuestion = !(overlay && bgImage);
 
@@ -28,7 +30,7 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
             button.base-icon-btn.question-header__dropdown-icon
-                img(src=`${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
+                +svgIcon("dropdown")
         .question-card__content.question-card__content--vote 
             each option in votingOptions
                 .question-card__vote-bar

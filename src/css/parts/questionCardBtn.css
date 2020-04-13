@@ -28,6 +28,11 @@
     opacity: 1;
 }
 
+.question-card-button__icon {
+    display     : flex;
+    align-items : center;
+}
+
 .question-card-button__icon:not(:only-child) {
     margin-right: 10px;
 }

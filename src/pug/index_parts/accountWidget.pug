@@ -1,13 +1,15 @@
+include ../mixins/svgIcon
+
 mixin accountWidgetItem(iconName, title)
     a.account-widget__item
         .account-widget__item__icon
-            img(src=`${ iconName }.svg`)
+            +svgIcon(iconName)
         span= title
 
 .account-widget#accountDropdown
-    +accountWidgetItem('profile_icon_small', 'Profil')
-    +accountWidgetItem('message_icon', 'Nachrichten')
-    +accountWidgetItem('bookmark_icon', 'Lesezeichen')
-    +accountWidgetItem('question_icon', 'Hilfe')
-    +accountWidgetItem('settings_icon', 'Einstellungen')
-    +accountWidgetItem('exit_icon', 'Abmelden')
+    +accountWidgetItem('user', 'Profil')
+    +accountWidgetItem('message', 'Nachrichten')
+    +accountWidgetItem('bookmark', 'Lesezeichen')
+    +accountWidgetItem('question', 'Hilfe')
+    +accountWidgetItem('settings', 'Einstellungen')
+    +accountWidgetItem('exit', 'Abmelden')

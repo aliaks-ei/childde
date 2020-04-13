@@ -1,9 +1,10 @@
+include ../mixins/svgIcon
 mixin weAreReadWidget(text)
   .weAreReadWidget
     .weAreReadWidget__text= text
     .commentsCount
       .commentsCount__icon
-        img(src="comments_icon.svg")
+        +svgIcon('messages')
       .commentsCount__text.weAreReadWidget__commentsCount 345
 
 .widget.bestCompaniesWidget

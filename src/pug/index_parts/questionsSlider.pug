@@ -1,4 +1,5 @@
 include ../mixins/swiperCard.pug
+include ../mixins/svgIcon
 
 .questions-slider-wrapper
 	.base-swiper
@@ -22,11 +23,11 @@ include ../mixins/swiperCard.pug
 
 		.base-swiper-button.swiper-button-next
 			span
-				img(src="right_arrow_black.svg")
+				+svgIcon("arrow-right")
 		.base-swiper__right-shadow
 
 		.base-swiper-button.swiper-button-prev
 			span
-				img(src="right_arrow_black.svg")
+				+svgIcon("arrow-left")
 		.base-swiper__left-shadow
 		

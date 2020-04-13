@@ -1,4 +1,5 @@
 include ./questionCardBtn
+include ./svgIcon
 
 mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title, interested, chips = [], shortDesc, fullDesc })
     - let isDefaultQuestion = !(overlay && bgImage);
@@ -20,7 +21,8 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                     if withLabel
                         .question-user__label 
                             a.question-card__overlapping-link(href="#")
-                            img.question-user__label__icon(src="toy.svg")
+                            .question-user__label__icon
+                                +svgIcon("toy")
                             span Kinderfrage
                 .question-info__title !{ title }
                 .question-info__chips
@@ -29,13 +31,16 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
             button.base-icon-btn.question-header__dropdown-icon
-                img(src=`${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
+                +svgIcon("dropdown")
         .question-card__reactions-wrapper
             .question-card__reactions 
-                +questionCardBtn(`${ interested ? 'heart-active' : 'heart' }.svg`, 'Interessant 53')
-                +questionCardBtn('messages.svg', '345', 'question-card__reactions__messages')  
+                if interested
+                    +questionCardBtn('heart-active', 'Interessant 53')
+                else
+                    +questionCardBtn('heart', 'Interessant 53')
+                +questionCardBtn('messages', '345', 'question-card__reactions__messages')  
             button.question-card__visibility-btn
-                img(src="eye.svg")
+                +svgIcon("eye")
         .question-card__content
             div
                 .question-card__content__short-desc
@@ -45,10 +50,10 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                     div !{ fullDesc }
                     .question-card__content__reviews.question-reviews
                         .question-reviews__likes
-                            +questionCardBtn('like.svg', 'Gute Antwort +75')
-                            +questionCardBtn('dislike.svg', '0', 'question-reviews__dislikes-item')
+                            +questionCardBtn('like', 'Gute Antwort +75')
+                            +questionCardBtn('dislike', '0', 'question-reviews__dislikes-item')
                         button.base-icon-btn.question-reviews__horizontal-dropdown
-                            img(src="dropdown-gray.svg")
+                            +svgIcon("dropdown")
                     button.question-card__read-all-answers-btn Weitere Antworten lesen
 
         

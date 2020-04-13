@@ -11,7 +11,8 @@
 	margin-bottom: 4px;
 }
 
-.commentsWidgetComment__meta {
+.commentsWidgetComment__meta,
+.commentsWidgetComment__icon {
 	display     : flex;
 	align-items : center;
 }
