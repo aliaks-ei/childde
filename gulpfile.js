@@ -1,24 +1,25 @@
 const { src, dest, watch } = require('gulp');
-const babel                = require('gulp-babel');
-const pug                  = require('gulp-pug');
-const postcss              = require('gulp-postcss')
-const concat               = require('gulp-concat');
-const imagemin             = require('gulp-imagemin');
-const plumber              = require('gulp-plumber');
-const livereload           = require('gulp-livereload');
-const cleanCSS             = require('gulp-clean-css');
-const injectSvg            = require('gulp-inject-svg');
-const clean                = require('gulp-clean');
-const autoprefixer         = require('autoprefixer')
-const postCssImport        = require('postcss-easy-import');
-const postcssPresetEnv     = require('postcss-preset-env');
+
+const babel            = require('gulp-babel');
+const pug              = require('gulp-pug');
+const postcss          = require('gulp-postcss');
+const concat           = require('gulp-concat');
+const imagemin         = require('gulp-imagemin');
+const plumber          = require('gulp-plumber');
+const livereload       = require('gulp-livereload');
+const injectSvg        = require('gulp-inject-svg');
+const clean            = require('gulp-clean');
+const csso             = require('gulp-csso');
+const autoprefixer     = require('autoprefixer')
+const postCssImport    = require('postcss-easy-import');
+const postcssPresetEnv = require('postcss-preset-env');
 
 const paths = {
 	css    : 'src/css/parts/*.css',
 	html   : 'src/pug/*.pug',
 	js     : 'src/js/*.js',
-	images : 'src/assets/images/*',
-	icons  : 'src/assets/icons/*'
+	images : 'src/assets/images/*.png',
+	icons  : 'src/assets/icons/*.svg'
 };
 
 livereload({ start: true });
@@ -48,7 +49,7 @@ function css(cb) {
 			autoprefixer()
 		]))
 		.pipe(concat('index.css'))
-		.pipe(cleanCSS())
+		.pipe(csso())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 
@@ -68,28 +69,11 @@ function js(cb) {
 
 function images(cb) {
 	src(paths.images)
+		.pipe(plumber())
 		.pipe(imagemin([
 			imagemin.optipng({ optimizationLevel: 5 })
 		]))
-		.pipe(plumber())
 		.pipe(dest('build/assets/images'))
-		.pipe(livereload());
-
-    cb();
-}
-
-function icons(cb) {
-	src(paths.icons)
-		.pipe(imagemin([
-			imagemin.svgo({
-				plugins: [
-					{ removeViewBox: true },
-					{ cleanupIDs: false }
-				]
-			})
-		]))
-		.pipe(plumber())
-		.pipe(dest('build/assets/icons'))
 		.pipe(livereload());
 
     cb();
@@ -104,5 +88,4 @@ exports.default = function () {
 	watch('src/css/**/*.css', { ignoreInitial: false }, css);
 	watch(paths.js,           { ignoreInitial: false }, js);
 	watch(paths.images,       { ignoreInitial: false }, images);
-	watch(paths.icons,        { ignoreInitial: false }, icons);
 };

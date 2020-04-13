@@ -4,10 +4,9 @@
 }
 
 .commentsCount__icon {
-	width            : 13px;
-	height           : 13px;
-	background-image : url('/assets/icons/comments_icon.svg');
-	margin-right     : 4px;
+	display      : flex;
+	align-items  : center;
+	margin-right : 8px;
 }
 
 .commentsCount__text {
