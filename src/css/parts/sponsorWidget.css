@@ -1,0 +1,29 @@
+.sponsorWidget__head {
+	display       : flex;
+	margin-bottom : 13px;
+}
+
+.sponsorWidget__companyTitle {
+	font-family : var(--font-montserrat);
+	font-size   : 18px;
+	font-weight : 700;
+	line-height : 26px;
+	flex        : 1;
+}
+
+.sponsorWidget__text {
+	font-weight   : 600;
+	line-height   : 26px;
+	margin-bottom : 15px;
+}
+
+.sponsorWidget__becomeASponsons {
+	color           : var(--text-blue);
+	font-weight     : 600;
+	line-height     : 26px;
+	text-decoration : none;
+}
+
+.sponsorWidget__becomeASponsons:hover {
+	text-decoration: underline;
+}

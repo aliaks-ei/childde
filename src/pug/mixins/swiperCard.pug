@@ -1,5 +1,5 @@
 mixin swiperCard({ title, content, imageUrl, buttonText })
-	a.swiper-card.swiper-slide(href="#")(class=imageUrl ? 'swiper-card--with-image' : '')
+	a.swiper-card.swiper-slide(href="#", class=imageUrl ? 'swiper-card--with-image' : '')
 		if imageUrl
 			img.swiper-card__image(src=imageUrl)
 		.swiper-card__container

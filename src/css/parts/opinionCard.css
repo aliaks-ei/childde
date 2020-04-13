@@ -1,0 +1,29 @@
+.opinion-card {
+    display          : flex;
+    justify-content  : space-between;
+    height           : 250px;
+    background-color : var(--background-color-gray-2);
+    border-radius    : 10px;
+    padding          : 32px 40px 25px;
+    margin-bottom    : 30px;
+}
+
+.opinion-card__img {
+    margin: 0 15px;
+}
+
+.card-content {
+    line-height: 26px;
+}
+
+.card-content__title {
+    font-size     : 18px;
+    font-weight   : 700;
+    font-family   : var(--font-montserrat);
+    color         : var(--text-black-2);
+    margin-bottom : 22px;
+}
+
+.card-content__text {
+    margin-bottom: 25px;
+}

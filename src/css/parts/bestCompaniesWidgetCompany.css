@@ -1,0 +1,29 @@
+.bestCompaniesWidgetCompany {
+	display         : flex;
+	justify-content : space-between;
+	align-items     : center;
+}
+
+.bestCompaniesWidgetCompany + .bestCompaniesWidgetCompany {
+	margin-top: 43px;
+}
+
+.bestCompaniesWidgetCompany__logo {
+	width        : 80px;
+	margin-right : 20px;
+}
+
+.bestCompaniesWidgetCompany__title {
+	flex        : 1;
+	color       : var(--text-blue-2);
+	font-family : var(--font-montserrat);
+	font-size   : 14px;
+	font-weight : 700;
+	line-height : 30px;
+}
+
+.bestCompaniesWidgetCompany__number {
+	color       : var(--text-black-2);
+	font-size   : 14px;
+	line-height : 30px;
+}

@@ -1,0 +1,25 @@
+.cookiesWarning {
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	height          : 60px;
+}
+
+.cookiesWarning__button {
+	background-color : var(--red-color);
+	border           : none;
+	border-radius    : 15px;
+	padding          : 6px 12px;
+	color            : var(--text-white);
+	margin-left      : 14px;
+	font-size        : 14px;
+	font-weight      : 700;
+	font-family      : var(--font-montserrat);
+	cursor           : pointer;
+}
+
+.cookiesWarning__detailsLink {
+	text-decoration : underline;
+	margin-left     : 4px;
+	cursor          : pointer;
+}

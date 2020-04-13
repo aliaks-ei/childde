@@ -6,11 +6,11 @@ mixin colorChoiceBtn({ color, icon, isWhite })
         class = isWhite ? 'question-modal__color-btn--bordered' : '',
         id = isWhite ? 'qColorBtnWhite' : null
     )
-        img(src=`./assets/icons/${ icon }.svg`)
+        img(src=`${ icon }.svg`)
 
 mixin optionBtn({ icon, text })
     button.question-modal__option-btn&attributes(attributes)
-        img(src=`./assets/icons/${ icon }.svg`)
+        img(src=`${ icon }.svg`)
         span &nbsp; #{ text }
 
 .question-modal-wrapper
@@ -19,7 +19,7 @@ mixin optionBtn({ icon, text })
             .question-modal__header 
                 .question-modal__header__title Frage stellen
                 button.base-icon-btn.question-modal__close-btn
-                    img(src="./assets/icons/close.svg")
+                    img(src="close.svg")
             .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="3")
@@ -44,7 +44,7 @@ mixin optionBtn({ icon, text })
                         img(src="./assets/images/question-vote-avatar.png")
                     span.q-user-select__name Philip Djones
                     .q-user-select__icon 
-                        img(src="./assets/icons/select_arrow_down.svg")
+                        img(src="select_arrow_down.svg")
             +baseBtn({ 
                 text      : 'Speichern',
                 withArrow : true,

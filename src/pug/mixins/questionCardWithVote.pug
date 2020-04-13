@@ -18,7 +18,7 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                     if withLabel
                         .question-user__label 
                             a.question-card__overlapping-link(href="#")
-                            img.question-user__label__icon(src="./assets/icons/toy.svg")
+                            img.question-user__label__icon(src="toy.svg")
                             span Kinderfrage
                 .question-info__title !{ title }
                 .question-info__subtitle !{ subtitle }
@@ -28,7 +28,7 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
             button.base-icon-btn.question-header__dropdown-icon
-                img(src=`./assets/icons/${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
+                img(src=`${ isDefaultQuestion ? 'dropdown-gray' : 'dropdown' }.svg`)
         .question-card__content.question-card__content--vote 
             each option in votingOptions
                 .question-card__vote-bar
