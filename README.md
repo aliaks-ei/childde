@@ -1,5 +1,9 @@
-- Run development server
-`npm run serve`
+## Run development server
+```
+npm run serve
+```
 
-- Build application
-`npm run build`
+## Build application
+```
+npm run build
+```
