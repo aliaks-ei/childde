@@ -9,7 +9,6 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                 if bgImage
                     .question-image__background(style=`background-image: url('./assets/images/${ bgImage }')`)
                 .question-image__overlay(style=`background-color: ${ overlay || 'var(--background-color-white )' }`)
-            a.question-header__link(href="#")
             .question-header__info.question-info 
                 .question-info__user.question-user
                     div.question-user__link-wrapper
@@ -29,7 +28,7 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                         .question-info__chip 
                             a.question-card__overlapping-link(href=chip.link)
                             span= chip.text 
-            button.base-icon-btn.question-header__dropdown-icon
+            button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark
                 +svgIcon("dropdown")
         .question-card__content.question-card__content--vote 
             each option in votingOptions

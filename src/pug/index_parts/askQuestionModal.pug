@@ -5,7 +5,7 @@ mixin colorChoiceBtn({ color, icon, isWhite })
     button.question-modal__color-btn(
         style = `background-color: ${ color }`, 
         class = isWhite ? 'question-modal__color-btn--bordered' : '',
-        id = isWhite ? 'qColorBtnWhite' : null
+        id    = isWhite ? 'qColorBtnWhite' : null
     )
         +svgIcon(icon)
 
@@ -46,7 +46,7 @@ mixin optionBtn({ icon, text })
                         img(src="./assets/images/question-vote-avatar.png")
                     span.q-user-select__name Philip Djones
                     .q-user-select__icon 
-                        +svgIcon("right-arrow-small")
+                        +svgIcon("arrow-right-small")
             +baseBtn({ 
                 text      : 'Speichern',
                 withArrow : true,

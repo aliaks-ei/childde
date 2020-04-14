@@ -1,5 +1,5 @@
-// const userImageEl    = document.getElementById('userImage');
-// const dropdownMenuEl = document.getElementById('accountDropdown');
+const userImageEl    = document.getElementById('userImage');
+const dropdownMenuEl = document.getElementById('accountDropdown');
 const scrollToTopBtn = document.getElementById('scrollToTop');
 const shortDescEls   = document.getElementsByClassName('question-card__content__short-desc');
 
@@ -45,11 +45,11 @@ window.addEventListener('click', event => {
         qBottomDropdownEl.style.display = 'none';
     }
 
-    // dropdownMenuEl.style.display = 'none';
+    dropdownMenuEl.style.display = 'none';
 
-    // if (userImageEl.contains(event.target) || dropdownMenuEl.contains(event.target)) {
-    //     dropdownMenuEl.style.display = 'block';
-    // }
+    if (userImageEl.contains(event.target) || dropdownMenuEl.contains(event.target)) {
+        dropdownMenuEl.style.display = 'block';
+    }
 
     if (event.target.classList.contains('question-header__dropdown-icon')) {
         const { x, y } = event.target.getBoundingClientRect();

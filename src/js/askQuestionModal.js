@@ -6,28 +6,43 @@ const qUserSelectActivator = document.getElementById('qUserSelectActivator');
 const qColorBtns           = document.getElementsByClassName('question-modal__color-btn');
 const qModalCover          = qModal.querySelector('.question-modal__cover');
 
+const listSVGIcon = `
+    <svg class="list">
+        <use xlink:href="./assets/icons/svg-symbols.svg#list"></use>
+    </svg>
+`;
+
+const checkSVGIcon = `
+    <svg class="check">
+        <use xlink:href="./assets/icons/svg-symbols.svg#check"></use>
+    </svg>
+`;
+
 let qUserSelectDropdown;
+let selectedQColorBtnIdx = 0;
 
 autosize(document.getElementsByTagName('textarea'));
 
 function changeQCoverColor(targetEl) {
     const pressedColorBtn = targetEl.closest('.question-modal__color-btn');
 
-    if (pressedColorBtn) {
+    if (pressedColorBtn && qColorBtns[selectedQColorBtnIdx] !== pressedColorBtn) {
         qCoverBgColor.style.backgroundColor = pressedColorBtn.style.backgroundColor;
 
-        for (const qColorBtn of qColorBtns) {
-            qColorBtn.firstElementChild.src = `list_${ 
-                qColorBtn.id == 'qColorBtnWhite' ? 'black' : 'white' 
-            }.svg`; 
-        }
+        qColorBtns[selectedQColorBtnIdx].firstElementChild.remove();
+        pressedColorBtn.firstElementChild.remove();
+
+        qColorBtns[selectedQColorBtnIdx].insertAdjacentHTML('afterbegin', listSVGIcon);
+        pressedColorBtn.insertAdjacentHTML('afterbegin', checkSVGIcon);
+
+        selectedQColorBtnIdx = [...qColorBtns].findIndex(
+            qColorBtn => qColorBtn === pressedColorBtn
+        );
 
         if (pressedColorBtn.id == 'qColorBtnWhite') {
-            pressedColorBtn.firstElementChild.src = 'check_black.svg';
             qModalCover.classList.remove('question-modal__cover-white-text');
         }
         else {
-            pressedColorBtn.firstElementChild.src = 'check_white.svg';
             qModalCover.classList.add('question-modal__cover-white-text');
         }
     }
@@ -57,9 +72,7 @@ function showQAuthorDropdown() {
                         <img src="./assets/images/question-vote-avatar.png"/>
                     </div>
                     <span class="q-user-select__name">Philip Djones</span>
-                    <div class="q-select-dropdown__btn__check-icon">
-                        <img src="check_blue.svg"/>
-                    </div>
+                    <div class="q-select-dropdown__btn__check-icon"> ${ checkSVGIcon } </div>
                 </button>
                 <button class="q-select-dropdown__btn">
                     <div class="q-user-select__avatar">

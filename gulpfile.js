@@ -10,6 +10,8 @@ const livereload       = require('gulp-livereload');
 const svgSymbols       = require('gulp-svg-symbols')
 const clean            = require('gulp-clean');
 const csso             = require('gulp-csso');
+const minify           = require('gulp-minify');
+const rename           = require('gulp-rename');
 const autoprefixer     = require('autoprefixer')
 const postCssImport    = require('postcss-easy-import');
 const postcssPresetEnv = require('postcss-preset-env');
@@ -54,6 +56,8 @@ function css(cb) {
 			autoprefixer()
 		]))
 		.pipe(concat('index.css'))
+		.pipe(dest('build/css'))
+		.pipe(rename('index.min.css'))
 		.pipe(csso())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
@@ -65,7 +69,13 @@ function js(cb) {
 	src(paths.js)
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(plumber())
-		.pipe(concat('app.js'))
+		.pipe(concat('index.js'))
+		.pipe(minify({
+			ext: {
+				src:'.js',
+				min:'.min.js'
+			}
+		}))
 		.pipe(dest('build/js'))
 		.pipe(livereload());
 
