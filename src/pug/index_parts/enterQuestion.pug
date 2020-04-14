@@ -1,8 +1,9 @@
 include ../mixins/baseBtn
 
-.ask-question-wrapper 
-    input.ask-question-wrapper__input(type="text", placeholder="Enter your question")
-    +baseBtn({ 
-        text      : 'Shreiben',
-        withArrow : true
-    })
+.ask-question-wrapper(data-target="qModal") 
+    .ask-question-wrapper__container
+        input.ask-question-wrapper__input(type="text", placeholder="Enter your question")
+        +baseBtn({ 
+            text      : 'Shreiben',
+            withArrow : true
+        })

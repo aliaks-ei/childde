@@ -6,7 +6,7 @@
     background-color : var(--background-color-white );
     border-radius    : 10px;
     box-shadow       : 0 3px 30px var(--box-shadow-gray);
-    z-index          : 1100;
+    z-index          : 1001;
     will-change      : transform;
 }
 

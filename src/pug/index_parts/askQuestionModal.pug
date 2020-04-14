@@ -14,12 +14,12 @@ mixin optionBtn({ icon, text })
         +svgIcon(icon)
         span &nbsp; #{ text }
 
-.question-modal-wrapper
-    .question-modal#qModal
+.question-modal-wrapper#qModal(style="display: none")
+    .question-modal(tabindex="0")
         .question-modal__cover
             .question-modal__header 
                 .question-modal__header__title Frage stellen
-                button.base-icon-btn.question-modal__close-btn
+                button.base-icon-btn.question-modal__close-btn#qModalCloseBtn
                     +svgIcon("close")
             .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
@@ -36,9 +36,10 @@ mixin optionBtn({ icon, text })
             +colorChoiceBtn({ color: '#e57497', icon: 'list' })
         .question-modal__options-wrapper 
             .question-modal__options 
-                +optionBtn({ icon: 'book', text: 'Themes' })(id="qThemesBtn")
+                +optionBtn({ icon: 'book', text: 'Themes' })(id="qThemesSelectActivator")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
+                include ./themesSelect
         .question-modal__bottom-container.q-bottom-container
             .q-bottom-container__user-select.q-user-select
                 .q-user-select__selected#qUserSelectActivator
@@ -47,6 +48,18 @@ mixin optionBtn({ icon, text })
                     span.q-user-select__name Philip Djones
                     .q-user-select__icon 
                         +svgIcon("arrow-right-small")
+                .q-user-select__dropdown-wrapper#qUserSelectDropdown(style="display: none")
+                    .q-user-select__dropdown.q-select-dropdown
+                        button.q-select-dropdown__btn
+                            .q-user-select__avatar
+                                img(src='./assets/images/question-vote-avatar.png')
+                            span.q-user-select__name Philip Djones
+                            .q-select-dropdown__btn__check-icon
+                                +svgIcon("check")
+                        button.q-select-dropdown__btn
+                            .q-user-select__avatar
+                                img(src='./assets/images/question-1-avatar.png')
+                            span.q-user-select__name Don't use my name
             +baseBtn({ 
                 text      : 'Speichern',
                 withArrow : true,

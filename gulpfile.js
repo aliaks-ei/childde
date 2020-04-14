@@ -67,8 +67,8 @@ function css(cb) {
 
 function js(cb) {
 	src(paths.js)
-		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(plumber())
+		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(concat('index.js'))
 		.pipe(minify({
 			ext: {

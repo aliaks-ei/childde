@@ -1,8 +1,14 @@
 .ask-question-wrapper {
-    display       : flex;
-    align-items   : center;
     height        : 50px;
-    margin-bottom : 92px;
+	margin-bottom : 92px;
+	cursor        : pointer;
+}
+
+.ask-question-wrapper__container {
+	display        : flex;
+	align-items    : center;
+	height         : 100%;
+	pointer-events : none;
 }
 
 .ask-question-wrapper__input {

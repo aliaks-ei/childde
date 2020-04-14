@@ -1,0 +1,96 @@
+.themes-select-wrapper {
+    position      : absolute;
+    top           : -20px;
+    width         : 340px;
+    margin-bottom : 24px;
+    z-index       : 1100;
+}
+
+.themes-select {
+    border-radius    : 10px;
+    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
+    background-color : var(--background-color-white);
+}
+
+.themes-select__header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    padding         : 30px 36px 0;
+}
+
+.themes-header__title {
+    font-family : var(--font-montserrat);
+    font-weight : 700;
+    font-size   : 22px;
+}
+
+.themes-header__close-btn {
+    font-size        : 14px;
+    font-family      : var(--font-montserrat);
+    font-weight      : 700;
+    border           : 0;
+    border-radius    : 50px;
+    width            : 84px;
+    height           : 40px;
+    background-color : var(--background-color-gray);
+    cursor           : pointer;
+}
+
+.themes-select__search-results {
+    padding: 15px 0 23px;
+}
+
+.themes-search__field-wrapper {
+    padding: 0 38px;
+}
+
+.themes-search__field {
+    border           : 0;
+    border-radius    : 5px;
+    background-color : var(--background-color-gray);
+    height           : 43px;
+    width            : 100%;
+    padding          : 0 16px;
+    font-family      : var(--font-montserrat);
+    font-weight      : 500;
+}
+
+.themes-search__results-wrapper {
+    padding-top: 23px;
+}
+
+.themes-options {
+    max-height    : 200px;
+    overflow-y    : overlay;
+    overflow-y    : auto;
+    padding       : 0 38px;
+}
+
+.themes-options__option {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    padding         : 7px 0;
+    font-family     : var(--font-open-sans);
+    font-weight     : 600;
+    font-size       : 16px;
+}
+
+.themes-options__option__add-btn {
+    width            : 30px;
+    min-width        : 30px;
+    height           : 30px;
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    padding          : 0;
+    border           : 0;
+    border-radius    : 50%;
+    background-color : var(--background-color-gray);
+    cursor           : pointer;
+}
+
+.themes-options__option__add-btn svg {
+    fill: var(--text-blue-2);
+}
