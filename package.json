@@ -22,7 +22,6 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-csso": "^4.0.1",
 		"gulp-imagemin": "^7.1.0",
-		"gulp-inject-svg": "^0.1.18",
 		"gulp-livereload": "^4.0.2",
 		"gulp-plumber": "^1.2.1",
 		"gulp-postcss": "^8.0.0",
