@@ -75,6 +75,7 @@
     font-family     : var(--font-open-sans);
     font-weight     : 600;
     font-size       : 16px;
+    user-select     : none;
 }
 
 .themes-options__option__add-btn {

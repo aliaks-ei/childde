@@ -24,6 +24,13 @@ mixin optionBtn({ icon, text })
             .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="3")
+            .question-modal__selected-themes-wrapper
+                .question-modal__selected-themes.q-selected-themes
+                    button.question-info__chip.q-selected-themes__add-btn(data-target="qThemesSelect")
+                        +svgIcon("plus")
+                    .q-selected-themes__theme.question-info__chip Family
+                    .q-selected-themes__theme.question-info__chip Sport
+                    .q-selected-themes__theme.question-info__chip Chillout
         .question-modal__cover-colors#qCoverColors
             button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
                 +svgIcon("check")
@@ -36,7 +43,7 @@ mixin optionBtn({ icon, text })
             +colorChoiceBtn({ color: '#e57497', icon: 'list' })
         .question-modal__options-wrapper 
             .question-modal__options 
-                +optionBtn({ icon: 'book', text: 'Themes' })(id="qThemesSelectActivator")
+                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesSelect")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
                 include ./themesSelect
@@ -60,11 +67,17 @@ mixin optionBtn({ icon, text })
                             .q-user-select__avatar
                                 img(src='./assets/images/question-1-avatar.png')
                             span.q-user-select__name Don't use my name
-            +baseBtn({ 
-                text      : 'Speichern',
-                withArrow : true,
-                width     : 208,
-                height    : 66
-            })(class="q-bottom-container__btn")
+            .q-bottom-container__actions.q-actions
+                .q-actions__counter-wrapper.q-counter
+                    .q-counter__label 20
+                    .q-counter__circle
+                        .q-counter__circle__half.q-counter__circle__half--left
+                        .q-counter__circle__half.q-counter__circle__half--right 
+                +baseBtn({ 
+                    text      : 'Speichern',
+                    withArrow : true,
+                    width     : 208,
+                    height    : 66
+                })(class="q-bottom-container__btn")
 
 

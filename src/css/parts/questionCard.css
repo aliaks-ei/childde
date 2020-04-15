@@ -130,10 +130,8 @@
     border-radius    : 40px;
     background-color : rgba(241, 244, 246, .1);
     margin-bottom    : 9px;
-}
-
-.question-info__chip + .question-info__chip {
-    margin-left: 9px;
+    margin-right     : 9px;
+    cursor           : pointer;
 }
 
 .question-header__dropdown-icon {

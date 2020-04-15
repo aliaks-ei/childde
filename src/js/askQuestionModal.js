@@ -1,15 +1,16 @@
-const qModal                 = document.getElementById('qModal');
-const qModalCloseBtn         = document.getElementById('qModalCloseBtn');
-const qCoverColors           = document.getElementById('qCoverColors');
-const qCoverBgColor          = document.getElementById('qCoverBgColor');
-const qDetailsBtn            = document.getElementById('qDetailsBtn');
-const qUserSelectActivator   = document.getElementById('qUserSelectActivator');
-const qUserSelectDropdown    = document.getElementById('qUserSelectDropdown');
-const qThemesSelectActivator = document.getElementById('qThemesSelectActivator');
-const qThemesSelect          = document.getElementById('qThemesSelect');
-const qColorBtns             = document.getElementsByClassName('question-modal__color-btn');
-const qModalActivators       = document.querySelectorAll('[data-target="qModal"]');
-const qModalCover            = qModal.querySelector('.question-modal__cover');
+const qModal                  = document.getElementById('qModal');
+const qModalCloseBtn          = document.getElementById('qModalCloseBtn');
+const qCoverColors            = document.getElementById('qCoverColors');
+const qCoverBgColor           = document.getElementById('qCoverBgColor');
+const qDetailsBtn             = document.getElementById('qDetailsBtn');
+const qUserSelectActivator    = document.getElementById('qUserSelectActivator');
+const qUserSelectDropdown     = document.getElementById('qUserSelectDropdown');
+const qThemesSelect           = document.getElementById('qThemesSelect');
+const qThemesSelectClose      = document.getElementById('qThemesSelectClose');
+const qColorBtns              = document.getElementsByClassName('question-modal__color-btn');
+const qModalActivators        = document.querySelectorAll('[data-target="qModal"]');
+const qThemesSelectActivators = document.querySelectorAll('[data-target="qThemesSelect"]');
+const qModalCover             = qModal.querySelector('.question-modal__cover');
 
 const listSVGIcon = `
     <svg class="list">
@@ -50,10 +51,10 @@ function changeQCoverColor(targetEl) {
         );
 
         if (pressedColorBtn.id == 'qColorBtnWhite') {
-            qModalCover.classList.remove('question-modal__cover-white-text');
+            qModalCover.classList.remove('question-modal__cover--white-text');
         }
         else {
-            qModalCover.classList.add('question-modal__cover-white-text');
+            qModalCover.classList.add('question-modal__cover--white-text');
         }
     }
 }
@@ -69,10 +70,14 @@ function handleQModalClick(event) {
     qUserSelectDropdown.style.display = 'none';
     qThemesSelect.style.display = 'none';
 
+    const isQThemesActivatorClicked = [...qThemesSelectActivators].some(
+        activator => activator.contains(event.target)
+    );
+
     if (qCoverColors.contains(event.target)) {
         changeQCoverColor(event.target);
     }
-    else if (qThemesSelectActivator.contains(event.target)) {
+    else if (isQThemesActivatorClicked) {
         qThemesSelect.style.display = 'block';
     }
     else if (qDetailsBtn.contains(event.target)) {
@@ -88,6 +93,10 @@ function handleQModalClick(event) {
 
 function handleQThemesSelectClick(event) {
     event.stopPropagation();
+
+    if (qThemesSelectClose.contains(event.target)) {
+        qThemesSelect.style.display = 'none';
+    }
 }
 
 function showQModal() {
