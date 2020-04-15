@@ -8,7 +8,6 @@
 	display        : flex;
 	align-items    : center;
 	height         : 100%;
-	pointer-events : none;
 }
 
 .ask-question-wrapper__input {
@@ -22,4 +21,5 @@
 	line-height      : 60px;
 	margin-right     : 17px;
 	background-color : var(--background-color-gray-3);
+	cursor           : pointer;
 }
