@@ -1,14 +1,6 @@
 include ../buttons/baseBtn
 include ../svg-icon/svgIcon
 
-mixin colorChoiceBtn({ color, icon, isWhite })
-    button.question-modal__color-btn(
-        style = `background-color: ${ color }`, 
-        class = isWhite ? 'question-modal__color-btn--bordered' : '',
-        id    = isWhite ? 'qColorBtnWhite' : null
-    )
-        +svgIcon(icon)
-
 mixin optionBtn({ icon, text })
     button.question-modal__option-btn&attributes(attributes)
         +svgIcon(icon)
@@ -20,27 +12,37 @@ mixin optionBtn({ icon, text })
             .question-modal__header 
                 .question-modal__header__title Frage stellen
                 button.base-icon-btn.question-modal__close-btn#qModalCloseBtn
-                    +svgIcon("close")
+                    span.material-icons-round close
             .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="3")
             .question-modal__selected-themes-wrapper
                 .question-modal__selected-themes.q-selected-themes
-                    button.question-info__chip.q-selected-themes__add-btn(data-target="qThemesSelect")
-                        +svgIcon("plus")
+                    button.q-selected-themes__theme.question-info__chip(data-target="qThemesSelect")
+                         span.material-icons-round add
                     .q-selected-themes__theme.question-info__chip Family
+                        span.material-icons-round close
                     .q-selected-themes__theme.question-info__chip Sport
+                        span.material-icons-round close
                     .q-selected-themes__theme.question-info__chip Chillout
+                        span.material-icons-round close
         .question-modal__cover-colors#qCoverColors
             button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
-                +svgIcon("check")
-            +colorChoiceBtn({ color: '#fabb4f', icon: 'list' })
-            +colorChoiceBtn({ color: '#75d0c4', icon: 'list' })
-            +colorChoiceBtn({ color: '#ffcf62', icon: 'list' })
-            +colorChoiceBtn({ color: '#9494c5', icon: 'list' })
-            +colorChoiceBtn({ color: '#8ba4c6', icon: 'list' })
-            +colorChoiceBtn({ color: '#ff7150', icon: 'list' })
-            +colorChoiceBtn({ color: '#e57497', icon: 'list' })
+                span.material-icons-round done
+            button.question-modal__color-btn(style = "background-color: #fabb4f")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #75d0c4")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #ffcf62")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #9494c5")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #8ba4c6")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #ff7150")
+                span.material-icons-round notes
+            button.question-modal__color-btn(style="background-color: #e57497")
+                span.material-icons-round notes
         .question-modal__options-wrapper 
             .question-modal__options 
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesSelect")
@@ -54,7 +56,7 @@ mixin optionBtn({ icon, text })
                         img(src="./assets/images/question-vote-avatar.png")
                     span.q-user-select__name Philip Djones
                     .q-user-select__icon 
-                        +svgIcon("arrow-right-small")
+                        span.material-icons-round keyboard_arrow_down
                 .q-user-select__dropdown-wrapper#qUserSelectDropdown(style="display: none")
                     .q-user-select__dropdown.q-select-dropdown
                         button.q-select-dropdown__btn
@@ -62,7 +64,7 @@ mixin optionBtn({ icon, text })
                                 img(src='./assets/images/question-vote-avatar.png')
                             span.q-user-select__name Philip Djones
                             .q-select-dropdown__btn__check-icon
-                                +svgIcon("check")
+                                span.material-icons-round done
                         button.q-select-dropdown__btn
                             .q-user-select__avatar
                                 img(src='./assets/images/question-1-avatar.png')

@@ -33,13 +33,22 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
             button.base-icon-btn.question-header__dropdown-icon(
                 class = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null
             )
-                +svgIcon("dropdown")
+                span.material-icons-round more_vert
         .question-card__reactions-wrapper
-            .question-card__reactions 
-                +questionCardBtn(`${ interested ? '' : 'not-' }interest`, 'Interessant 53')
-                +questionCardBtn('messages', '345', 'question-card__reactions__messages')  
-            button.question-card__visibility-btn
-                +svgIcon("eye")
+            .question-card__reactions
+                button.question-card-button
+                    if interested
+                        span.question-card-button__icon
+                            +svgIcon("interest")
+                    else 
+                        span.question-card-button__icon.material-icons favorite
+                    span Interessant 53
+                button.question-card-button
+                    span.question-card-button__icon
+                        +svgIcon("messages")
+                    span 345
+            button.question-card-button.question-card__visibility-btn
+                span.question-card-button__icon.material-icons visibility_off
         .question-card__content
             div
                 .question-card__content__short-desc
@@ -49,10 +58,14 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                     div !{ fullDesc }
                     .question-card__content__reviews.question-reviews
                         .question-reviews__likes
-                            +questionCardBtn('like', 'Gute Antwort +75')
-                            +questionCardBtn('dislike', '0', 'question-reviews__dislikes-item')
+                            button.question-card-button
+                                span.question-card-button__icon(class=`material-icons${ interested ? '' : '-outlined' }`) thumb_up
+                                span Gute Antwort +75
+                            button.question-card-button
+                                span.question-card-button__icon(class=`material-icons${ interested ? '-outlined' : '' }`) thumb_down
+                                span= interested ? 0 : 1
                         button.base-icon-btn.question-reviews__horizontal-dropdown
-                            +svgIcon("dropdown")
+                            span.material-icons-round more_horiz
                     button.question-card__read-all-answers-btn Weitere Antworten lesen
 
         

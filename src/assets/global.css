@@ -43,3 +43,8 @@ html, body, #app {
     display    : none;
     opacity    : 0.5;
 }
+
+.material-icons,
+.material-icons-round {
+    color: #282a2d;
+}

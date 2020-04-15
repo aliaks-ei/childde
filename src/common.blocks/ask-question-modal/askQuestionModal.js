@@ -40,11 +40,11 @@ function changeQCoverColor(targetEl) {
     if (pressedColorBtn && qColorBtns[selectedQColorBtnIdx] !== pressedColorBtn) {
         qCoverBgColor.style.backgroundColor = pressedColorBtn.style.backgroundColor;
 
-        qColorBtns[selectedQColorBtnIdx].firstElementChild.remove();
-        pressedColorBtn.firstElementChild.remove();
+        qColorBtns[selectedQColorBtnIdx].firstElementChild.textContent = 'notes';
+        pressedColorBtn.firstElementChild.textContent = 'done';
 
-        qColorBtns[selectedQColorBtnIdx].insertAdjacentHTML('afterbegin', listSVGIcon);
-        pressedColorBtn.insertAdjacentHTML('afterbegin', checkSVGIcon);
+        // qColorBtns[selectedQColorBtnIdx].insertAdjacentHTML('afterbegin', listSVGIcon);
+        // pressedColorBtn.insertAdjacentHTML('afterbegin', checkSVGIcon);
 
         selectedQColorBtnIdx = [...qColorBtns].findIndex(
             qColorBtn => qColorBtn === pressedColorBtn

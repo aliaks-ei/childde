@@ -92,6 +92,14 @@
     cursor           : pointer;
 }
 
-.themes-options__option__add-btn svg {
-    fill: var(--text-blue-2);
+.themes-options__option__add-btn .material-icons-round {
+    color: var(--text-blue-2);
+}
+
+.themes-options__option--selected .themes-options__option__add-btn {
+    background-color: var(--text-blue-2);
+}
+
+.themes-options__option--selected .themes-options__option__add-btn .material-icons-round {
+    color: var(--text-white);
 }

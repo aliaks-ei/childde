@@ -104,10 +104,6 @@
     margin-bottom   : 32px;
 }
 
-.footer__socials__icons svg {
-    fill: var(--text-black-2);
-}
-
 .footer__copyright {
     font-weight   : 600;
     font-size     : 14px;
@@ -137,8 +133,7 @@
     cursor           : pointer;
 }
 
-.footer__scroll-top-btn .footer__scroll-top-btn__icon {
-    display       : flex;
-    align-items   : center;
-    margin-bottom : 4px;
+.footer__scroll-top-btn .material-icons-round {
+    font-size   : 18px;
+    font-weight : 700;
 }
