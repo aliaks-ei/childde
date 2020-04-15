@@ -1,0 +1,36 @@
+include ../swiper/swiperCard.pug
+include ../svg-icon/svgIcon
+
+.personages-wrapper
+	.base-swiper
+		.swiper-container
+			.swiper-wrapper
+				+swiperCard({
+					title      : 'Nur so sind alle Erfahrungen, Meinungen und Antworten',
+					content    : 'Technological competition startups. Provides IT industry promising technologies.',
+					imageUrl   : './assets/images/green_personage.png',
+					buttonText : 'Deine Meinung zu…?'
+				})
+				+swiperCard({
+					title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+					content    : 'Technological competition startups. Provides IT industry promising  te…',
+					imageUrl   : './assets/images/blue_personage.png',
+					buttonText : 'Deine Frage'
+				})
+				+swiperCard({
+					title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+					content    : 'Technological competition startups.  Provides IT industry promising  technologies.',
+					imageUrl   : './assets/images/yellow_personage.png',
+					buttonText : 'Deine Frage'
+				})
+
+		.base-swiper-button.swiper-button-next
+			span
+				+svgIcon("arrow-right")
+		.base-swiper__right-shadow
+
+		.base-swiper-button.swiper-button-prev
+			span
+				+svgIcon("arrow-left")
+		.base-swiper__left-shadow
+		

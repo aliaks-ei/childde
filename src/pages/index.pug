@@ -1,0 +1,17 @@
+extends ../common.blocks/layouts/layout
+
+block title 
+	title Index 
+
+block content
+	include ../common.blocks/top-navigation/topNavigation
+	.container--1400
+		.spaceVertical--100
+		include ../common.blocks/layouts/threeColumnContainer	
+	include ../common.blocks/pre-footer/preFooter
+	include ../common.blocks/footer/footer
+
+block modals
+	include ../common.blocks/question-card/questionCardTopDropdown
+	include ../common.blocks/question-card/questionCardBottomDropdown
+	include ../common.blocks/ask-question-modal/askQuestionModal

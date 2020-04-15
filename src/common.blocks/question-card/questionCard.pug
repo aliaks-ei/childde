@@ -1,0 +1,58 @@
+include ./questionCardBtn
+include ../svg-icon/svgIcon
+
+mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title, interested, chips = [], shortDesc, fullDesc })
+    - let isDefaultQuestion = !(overlay && bgImage);
+
+    .question-card(class={ 'question-card--default': isDefaultQuestion })
+        .question-card__header.question-header
+            .question-header__image-wrapper.question-image
+                if bgImage
+                    .question-image__background(style=`background-image: url('./assets/images/${ bgImage }')`)
+                .question-image__overlay(style=`background-color: ${ overlay || 'var(--background-color-white )' }`)
+            a.question-header__link(href="#")
+            .question-header__info.question-info 
+                .question-info__user.question-user
+                    div.question-user__link-wrapper
+                        a.question-card__overlapping-link(href="#")
+                        img(src=`/assets/images/${ avatar }`)
+                        span.question-user__name= username
+                    span.question-user__date= time
+                    if withLabel
+                        .question-user__label 
+                            a.question-card__overlapping-link(href="#")
+                            .question-user__label__icon
+                                +svgIcon("toy")
+                            span Kinderfrage
+                .question-info__title !{ title }
+                .question-info__chips
+                    each chip in chips
+                        .question-info__chip 
+                            a.question-card__overlapping-link(href=chip.link)
+                            span= chip.text 
+            button.base-icon-btn.question-header__dropdown-icon(
+                class = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null
+            )
+                +svgIcon("dropdown")
+        .question-card__reactions-wrapper
+            .question-card__reactions 
+                +questionCardBtn(`${ interested ? '' : 'not-' }interest`, 'Interessant 53')
+                +questionCardBtn('messages', '345', 'question-card__reactions__messages')  
+            button.question-card__visibility-btn
+                +svgIcon("eye")
+        .question-card__content
+            div
+                .question-card__content__short-desc
+                    span= shortDesc
+                    span.question-card__content__read-more-btn Mehr lesen
+                .question-card__content__full-desc
+                    div !{ fullDesc }
+                    .question-card__content__reviews.question-reviews
+                        .question-reviews__likes
+                            +questionCardBtn('like', 'Gute Antwort +75')
+                            +questionCardBtn('dislike', '0', 'question-reviews__dislikes-item')
+                        button.base-icon-btn.question-reviews__horizontal-dropdown
+                            +svgIcon("dropdown")
+                    button.question-card__read-all-answers-btn Weitere Antworten lesen
+
+        

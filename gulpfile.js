@@ -17,9 +17,9 @@ const postCssImport    = require('postcss-easy-import');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const paths = {
-	css    : 'src/css/parts/*.css',
-	html   : 'src/pug/*.pug',
-	js     : 'src/js/*.js',
+	css    : 'src/common.blocks/**/*.css',
+	html   : 'src/pages/*.pug',
+	js     : [ 'src/*.js', 'src/common.blocks/**/*.js' ],
 	images : 'src/assets/images/*.png',
 	icons  : 'src/assets/icons/*.svg'
 };
@@ -48,7 +48,7 @@ function html(cb) {
 }
 
 function css(cb) {
-  	src([ 'src/css/global.css', paths.css ])
+  	src([ 'src/assets/variables.css', 'src/assets/global.css', paths.css ])
 		.pipe(plumber())
 		.pipe(postcss([
 			postCssImport(),
@@ -99,8 +99,8 @@ exports.default = function () {
 
 	cleanBuild();
 
-	watch('src/pug/**/*.pug', { ignoreInitial: false }, html);
-	watch('src/css/**/*.css', { ignoreInitial: false }, css);
+	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
+	watch([ 'src/assets/*.css', 'src/common.blocks/**/*.css' ], { ignoreInitial: false }, css);
 	watch(paths.js,           { ignoreInitial: false }, js);
 	watch(paths.images,       { ignoreInitial: false }, images);
 	watch(paths.icons,        { ignoreInitial: false }, svgSprites);

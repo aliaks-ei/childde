@@ -1,0 +1,15 @@
+include ../svg-icon/svgIcon
+
+mixin accountWidgetItem(iconName, title)
+    a.account-widget__item
+        .account-widget__item__icon
+            +svgIcon(iconName)
+        span= title
+
+.account-widget#accountDropdown
+    +accountWidgetItem('user', 'Profil')
+    +accountWidgetItem('message', 'Nachrichten')
+    +accountWidgetItem('bookmark', 'Lesezeichen')
+    +accountWidgetItem('question', 'Hilfe')
+    +accountWidgetItem('settings', 'Einstellungen')
+    +accountWidgetItem('exit', 'Abmelden')
