@@ -1,7 +1,4 @@
 .widget__title {
-	font-family   : var(--font-montserrat);
-	font-size     : 18px;
-	font-weight   : 700;
 	line-height   : 26px;
 	flex          : 1;
 	margin-bottom : 13px;

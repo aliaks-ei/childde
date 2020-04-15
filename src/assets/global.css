@@ -14,6 +14,11 @@ html, body, #app {
     -moz-osx-font-smoothing     : grayscale;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family : 'Montserrat', sans-serif;
+    color       : var(--text-black-2);
+}
+
 .container--1400 {
     max-width : 1400px;
     margin    : auto;

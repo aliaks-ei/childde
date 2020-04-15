@@ -4,11 +4,8 @@
 }
 
 .sponsorWidget__companyTitle {
-	font-family : var(--font-montserrat);
-	font-size   : 18px;
-	font-weight : 700;
-	line-height : 26px;
 	flex        : 1;
+	line-height : 26px;
 }
 
 .sponsorWidget__text {

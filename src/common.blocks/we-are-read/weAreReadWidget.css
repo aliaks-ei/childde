@@ -6,6 +6,12 @@
 	display          : flex;
 	flex-direction   : column;
 	justify-content  : space-between;
+	color            : var(--text-black);
+	text-decoration  : none;
+}
+
+.weAreReadWidget:hover .weAreReadWidget__text {
+	text-decoration: underline;
 }
 
 .weAreReadWidget + .weAreReadWidget {

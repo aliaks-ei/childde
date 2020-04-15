@@ -1,7 +1,4 @@
 .popularThemesWidget__title {
-	font-family   : var(--font-montserrat);
-	font-size     : 18px;
-	font-weight   : 700;
 	line-height   : 26px;
 	margin-bottom : 20px;
 }
@@ -16,10 +13,11 @@
 	margin           : 0 4px 11px 4px;
 	font-size        : 14px;
 	border-radius    : 40px;
-	background-color : #f1f4f6;
+	background-color : var(--background-color-gray);
 	height           : 40px;
 	padding          : 9px 20px;
 	display          : flex;
 	justify-content  : center;
 	align-items      : center;
+	cursor           : pointer;
 }
