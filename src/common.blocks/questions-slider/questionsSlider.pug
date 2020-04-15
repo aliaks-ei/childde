@@ -1,33 +1,23 @@
-include ../swiper/swiperCard.pug
-include ../svg-icon/svgIcon
+include ../swiper/baseSwiper
 
-.questions-slider-wrapper
-	.base-swiper
-		.swiper-container
-			.swiper-wrapper
-				+swiperCard({
-					title      : 'Nur so sind alle Erfahrungen, Meinungen und Antworten',
-					content    : 'Technological competition startups. Provides IT industry promising technologies.',
-					buttonText : 'Deine Meinung zu…?'
-				})
-				+swiperCard({
-					title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
-					content    : 'Technological competition startups. Provides IT industry promising  te…',
-					buttonText : 'Deine Frage'
-				})
-				+swiperCard({
-					title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
-					content    : 'Technological competition startups.  Provides IT industry promising  technologies.',
-					buttonText : 'Deine Frage'
-				})
+- 
+	const questionsCards = [
+		{
+			title      : 'Nur so sind alle Erfahrungen, Meinungen und Antworten',
+			content    : 'Technological competition startups. Provides IT industry promising technologies.',
+			buttonText : 'Deine Meinung zu…?'
+		},
+		{
+			title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+			content    : 'Technological competition startups. Provides IT industry promising  te…',
+			buttonText : 'Deine Frage'
+		},
+		{
+			title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
+			content    : 'Technological competition startups.  Provides IT industry promising  technologies.',
+			buttonText : 'Deine Frage'
+		}
+	]
 
-		.base-swiper-button.swiper-button-next
-			span
-				+svgIcon("arrow-right")
-		.base-swiper__right-shadow
-
-		.base-swiper-button.swiper-button-prev
-			span
-				+svgIcon("arrow-left")
-		.base-swiper__left-shadow
++baseSwiper(questionsCards)(class="questions-slider-wrapper")
 		

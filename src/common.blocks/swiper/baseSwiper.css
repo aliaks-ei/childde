@@ -21,14 +21,10 @@
 	content: none;
 }
 
-.base-swiper-button span {
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-}
-
-.base-swiper-button.swiper-button-prev span {
-    margin-left: -2px;
+.base-swiper-button .material-icons {
+    color       : var(--text-black);
+    font-size   : 20px;
+    font-weight : 700;
 }
 
 .base-swiper-button.swiper-button-disabled {
