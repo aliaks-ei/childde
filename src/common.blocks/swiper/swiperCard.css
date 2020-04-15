@@ -12,6 +12,10 @@
 	color           : var(--text-black);
 }
 
+.swiper-card__container {
+	margin-top: auto;
+}
+
 .swiper-card--with-image {
 	height: 378px;
 }
@@ -25,19 +29,19 @@
 }
 
 .swiper-card__image {
-	position: relative;
+	position: absolute;
 }
 
 .swiper-card:first-of-type .swiper-card__image {
-	top: -39px;
+	top: -12px;
 }
 
 .swiper-card:nth-of-type(2) .swiper-card__image {
-	top: -53px;
+	top: -24px;
 }
 
 .swiper-card:last-of-type .swiper-card__image {
-	top: -46px;
+	top: -18px;
 }
 
 .swiper-card__content {

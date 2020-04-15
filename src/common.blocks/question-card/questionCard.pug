@@ -1,7 +1,7 @@
 include ./questionCardBtn
 include ../svg-icon/svgIcon
 
-mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title, interested, chips = [], shortDesc, fullDesc })
+mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
     - let isDefaultQuestion = !(overlay && bgImage);
 
     .question-card(class={ 'question-card--default': isDefaultQuestion })
@@ -16,8 +16,8 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                     div.question-user__link-wrapper
                         a.question-card__overlapping-link(href="#")
                         img(src=`/assets/images/${ avatar }`)
-                        span.question-user__name= username
-                    span.question-user__date= time
+                        span.question-user__name Philip Djones
+                    span.question-user__date yesterday at 12:20
                     if withLabel
                         .question-user__label 
                             a.question-card__overlapping-link(href="#")
@@ -26,10 +26,12 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
                             span Kinderfrage
                 .question-info__title !{ title }
                 .question-info__chips
-                    each chip in chips
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href=chip.link)
-                            span= chip.text 
+                    .question-info__chip 
+                        a.question-card__overlapping-link(href="#")
+                        span Real estate 
+                    .question-info__chip 
+                        a.question-card__overlapping-link(href="#")
+                        span Career 
             button.base-icon-btn.question-header__dropdown-icon(
                 class = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null
             )
@@ -52,10 +54,19 @@ mixin questionCard({ overlay, bgImage, username, time, avatar, withLabel, title,
         .question-card__content
             div
                 .question-card__content__short-desc
-                    span= shortDesc
+                    span
+                        | Der Eimer sollte aus weichem Kunststoff bestehen. 
+                        | Wählen Sie die Größe des Eimers auf der Grundlage der Größe des Hundes. 
+                        | Einem durchschnittlichen Hund passt etwa ein 5 Liter Eimer. 
+                        | Nehmen Sie die Tiefe so auf, dass der Bug des Hundes um 1/3 herau ...
                     span.question-card__content__read-more-btn Mehr lesen
                 .question-card__content__full-desc
-                    div !{ fullDesc }
+                    div
+                        p Introvertierte Menschen sind eher verschlossen, scheu und zurückhaltend im Umgang mit anderen Menschen. Sie halten sich in Gegenwart anderer eher im Hintergrund. Extrovertierte Menschen blühen auf, wenn sie mit anderen Menschen zusammen sind. Sie sind gesellig, kontaktfreudig, sozial aktiv und sehr kommunikativ.
+                        p Introversion und Extraversion sind eine angeborene Veranlagung, auf die allerdings das soziale Umfeld, die Erziehung sowie prägende Erlebnisse weiter Einfluss nehmen können. Das heißt, Sie kommen bereits introvertiert, zentrovertiert oder extrovertiert auf die Welt.
+                        p Die Entwicklung in die eine oder andere Richtung kann beispielsweise durch die Erziehung weiter ausgeprägt werden.
+                        p Aber aus einem introvertierten wird niemals ein extrovertierter Mensch, und umgekehrt.
+                        p Beide können sich zwar in einer bestimmten Situation gegensätzlich verhalten, aber in ihrer Wesensart werden sie sich nicht ändern.
                     .question-card__content__reviews.question-reviews
                         .question-reviews__likes
                             button.question-card-button

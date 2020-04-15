@@ -1,0 +1,21 @@
+.three-column-layout {
+	display: flex;
+	justify-content: center;
+}
+
+.three-column-layout__left {
+	flex        : 0 0 170px;
+	margin-top  : var(--top-offset);
+	padding: 0 24px;
+}
+
+.three-column-layout__center {
+	max-width : 780px;
+	padding: 0 24px;
+}
+
+.three-column-layout__right {
+	flex  : 0 0 280px;
+	margin-top : var(--top-offset);
+	padding: 0 24px;
+}

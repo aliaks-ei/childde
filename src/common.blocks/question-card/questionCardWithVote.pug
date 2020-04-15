@@ -1,4 +1,4 @@
-mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel, title, subtitle, chips = [], votingOptions = [] })
+mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitle, chips = [], votingOptions = [] })
     - let isDefaultQuestion = !(overlay && bgImage);
 
     .question-card(class={ 'question-card--default': isDefaultQuestion })
@@ -12,8 +12,8 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                     div.question-user__link-wrapper
                         a.question-card__overlapping-link(href="#")
                         img(src=`./assets/images/${ avatar }`)
-                        span.question-user__name= username
-                    span.question-user__date= time
+                        span.question-user__name Philip Djones
+                    span.question-user__date yesterday at 12:20
                     if withLabel
                         .question-user__label 
                             a.question-card__overlapping-link(href="#")
@@ -22,10 +22,12 @@ mixin questionCardWithVote({ overlay, bgImage, username, time, avatar, withLabel
                 .question-info__title !{ title }
                 .question-info__subtitle !{ subtitle }
                 .question-info__chips
-                    each chip in chips
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href=chip.link)
-                            span= chip.text 
+                    .question-info__chip 
+                        a.question-card__overlapping-link(href="#")
+                        span Real estate 
+                    .question-info__chip 
+                        a.question-card__overlapping-link(href="#")
+                        span Career 
             button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark
                 span.material-icons-round more_vert
         .question-card__content.question-card__content--vote 
