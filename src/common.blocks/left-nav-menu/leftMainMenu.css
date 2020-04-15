@@ -1,11 +1,93 @@
 .leftMainMenu__item {
-	height: 46px;
+	height: 44px;
 }
 
 .leftMainMenu__item + .leftMainMenu__item {
   	margin-top: 2px;
 }
 
+.linkWithIcon {
+	position: relative;
+}
+
+.linkWithIcon:before {
+	position         : absolute;
+	content          : "";
+	top              : 0;
+	bottom           : 0;
+	left             : -6px;
+	right            : -6px;
+	border-radius    : 25px;
+	opacity          : 0;
+	background-color : var(--background-color-gray);
+	transition       : opacity .1s ease-out;
+}
+
+.linkWithIcon:hover:before {
+	opacity: 1;
+}
+
+.linkWithIcon__icon {
+	position        : relative;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	width           : 32px;
+}
+
+.linkWithIcon__link {
+	position        : relative;
+	display         : flex;
+	align-items     : center;
+	height          : 100%;
+	font-weight     : 600;
+	padding         : 0 8px;
+	text-decoration : none;
+	color           : var(--text-black);
+}
+
+.linkWithIcon__link span {
+	margin-left: 8px;
+}
+
 .leftMainMenu__button {
 	margin-top: 30px;
 }
+
+.leftMainMenu__button--tablet {
+	display          : none;
+	border           : 0;
+	padding          : 0;
+	border-radius    : 44px;
+	width            : 44px;
+	height           : 44px;
+	min-width        : 44px;
+	line-height      : 44px;
+	cursor           : pointer;
+	background-color : var(--background-color-black);
+}
+
+.leftMainMenu__button--tablet .material-icons {
+	line-height : inherit;
+	color       : var(--text-white);
+}
+
+@media (max-width: 1279px) {
+	.linkWithIcon__link span {
+		display: none;
+	}
+
+	.linkWithIcon:before {
+		left  : 0;
+		right : 0;
+	}
+
+	.leftMainMenu__button {
+		display: none;
+	}
+
+	.leftMainMenu__button--tablet {
+		display: block;
+	}
+}
+

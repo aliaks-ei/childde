@@ -1,8 +1,14 @@
 const swiperParams = {
-    slidesPerView : '2.8',
-    spaceBetween  : 20,
+    slidesPerView : 2.2,
+    spaceBetween  : 15,
     freeMode      : true,
-    grabCursor    : true
+    grabCursor    : true,
+    breakpoints   : {
+        1280: {
+            slidesPerView : 2.8,
+            spaceBetween  : 20
+        }
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
