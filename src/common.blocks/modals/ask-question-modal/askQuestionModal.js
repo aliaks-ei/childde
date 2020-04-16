@@ -2,8 +2,6 @@ const qModalCloseBtn            = document.getElementById('qModalCloseBtn');
 const qCoverColors              = document.getElementById('qCoverColors');
 const qCoverBgColor             = document.getElementById('qCoverBgColor');
 const qDetailsBtn               = document.getElementById('qDetailsBtn');
-const qUserSelectActivator      = document.getElementById('qUserSelectActivator');
-const qUserSelectDropdown       = document.getElementById('qUserSelectDropdown');
 const qThemesDropdown           = document.getElementById('qThemesDropdown');
 const qThemesDropdownClose      = document.getElementById('qThemesDropdownClose');
 const qColorBtns                = document.getElementsByClassName('question-modal__color-btn');
@@ -11,6 +9,7 @@ const qModalActivators          = document.querySelectorAll('[data-target="qModa
 const qThemesDropdownActivators = document.querySelectorAll('[data-target="qThemesDropdown"]');
 
 let qModalCover;
+let userSelectDropdownActivator; 
 let selectedQColorBtnIdx = 0;
 
 function changeQCoverColor(targetEl) {
@@ -49,7 +48,7 @@ function showQDetails() {
 }
 
 function handleQModalClick(event) {
-    qUserSelectDropdown.style.display = 'none';
+    userSelectDropdownActivator.nextElementSibling.style.display = 'none';
     qThemesDropdown.style.display = 'none';
 
     const isQThemesActivatorClicked = [...qThemesDropdownActivators].some(
@@ -65,8 +64,8 @@ function handleQModalClick(event) {
     else if (qDetailsBtn.contains(event.target)) {
         showQDetails();
     }
-    else if (qUserSelectActivator.contains(event.target)) {
-        qUserSelectDropdown.style.display = 'block';
+    else if (userSelectDropdownActivator.contains(event.target)) {
+        userSelectDropdownActivator.nextElementSibling.style.display = 'block';
     }
     else if (qModalCloseBtn.contains(event.target) || !this.firstElementChild.contains(event.target)) {
         hideModal(this);
@@ -89,6 +88,7 @@ for (const activator of qModalActivators) {
         const qModal = document.getElementById('qModal');
 
         qModalCover = qModal.querySelector('.question-modal__cover');
+        userSelectDropdownActivator = qModal.querySelector('[data-target="userSelectDropdown"]');
 
         showModal(qModal);
 

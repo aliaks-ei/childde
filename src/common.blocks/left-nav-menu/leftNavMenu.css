@@ -83,7 +83,7 @@
 		right : 0;
 	}
 
-	.left-nav-menu__button {
+	.left-nav-menu__button.base-btn {
 		display: none;
 	}
 

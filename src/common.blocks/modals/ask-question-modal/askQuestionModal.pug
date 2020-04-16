@@ -1,4 +1,4 @@
-include ../../buttons/baseBtn
+include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
 mixin optionBtn({ icon, text })
@@ -50,36 +50,16 @@ mixin optionBtn({ icon, text })
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
                 include ../../themes-dropdown/themesDropdown
         .question-modal__bottom-container.q-bottom-container
-            .q-bottom-container__user-select.q-user-select
-                .q-user-select__selected#qUserSelectActivator
-                    .q-user-select__avatar
-                        img(src="./assets/images/question-vote-avatar.png")
-                    span.q-user-select__name Philip Djones
-                    .q-user-select__icon 
-                        span.material-icons-round keyboard_arrow_down
-                .q-user-select__dropdown-wrapper#qUserSelectDropdown(style="display: none")
-                    .q-user-select__dropdown.q-select-dropdown
-                        button.q-select-dropdown__btn
-                            .q-user-select__avatar
-                                img(src='./assets/images/question-vote-avatar.png')
-                            span.q-user-select__name Philip Djones
-                            .q-select-dropdown__btn__check-icon
-                                span.material-icons-round done
-                        button.q-select-dropdown__btn
-                            .q-user-select__avatar
-                                img(src='./assets/images/question-1-avatar.png')
-                            span.q-user-select__name Don't use my name
+            include ../../user-select-dropdown/userSelectDropdown
             .q-bottom-container__actions.q-actions
                 .q-actions__counter-wrapper.q-counter
                     .q-counter__label 20
                     .q-counter__circle
                         .q-counter__circle__half.q-counter__circle__half--left
                         .q-counter__circle__half.q-counter__circle__half--right 
-                +baseBtn({ 
+                +baseButton({ 
                     text      : 'Speichern',
                     withArrow : true,
                     width     : 208,
                     height    : 66
                 })(class="q-bottom-container__btn")
-
-
