@@ -1,11 +1,18 @@
-.cookiesWarning {
+.cookies-warning {
 	display         : flex;
 	justify-content : center;
 	align-items     : center;
 	height          : 60px;
 }
 
-.cookiesWarning__button {
+.cookies-warning__details-link {
+	color           : var(--text-black);
+	text-decoration : underline;
+	margin-left     : 4px;
+	cursor          : pointer;
+}
+
+.cookies-warning__button {
 	background-color : var(--red-color);
 	border           : none;
 	border-radius    : 15px;
@@ -16,11 +23,4 @@
 	font-weight      : 700;
 	font-family      : var(--font-montserrat);
 	cursor           : pointer;
-}
-
-.cookiesWarning__detailsLink {
-	color           : var(--text-black);
-	text-decoration : underline;
-	margin-left     : 4px;
-	cursor          : pointer;
 }

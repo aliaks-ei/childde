@@ -1,16 +1,16 @@
-.ask-question-wrapper {
+.enter-question-wrapper {
     height        : 50px;
 	margin-bottom : 92px;
 	cursor        : pointer;
 }
 
-.ask-question-wrapper__container {
+.enter-question-wrapper__container {
 	display        : flex;
 	align-items    : center;
 	height         : 100%;
 }
 
-.ask-question-wrapper__input {
+.enter-question-wrapper__input {
 	flex             : 1 1 auto;
 	height           : 100%;
 	border           : 0;
@@ -22,4 +22,5 @@
 	margin-right     : 17px;
 	background-color : var(--background-color-gray-3);
 	cursor           : pointer;
+	pointer-events   : none;
 }

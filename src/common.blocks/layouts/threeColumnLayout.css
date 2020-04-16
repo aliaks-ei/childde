@@ -1,14 +1,7 @@
-.three-column-layout-wrapper {
+.three-column-layout {
 	display : flex;
 	flex    : 1 1;
 	width   : 100%;
-}
-
-.three-column-layout {
-	display         : flex;
-	justify-content : center;
-	max-width       : 1264px;
-	margin          : 0 auto;
 }
 
 .three-column-layout__left {
@@ -29,10 +22,6 @@
 }
 
 @media (max-width: 1279px) {
-	.three-column-layout {
-		width: 1024px;
-	}
-
 	.three-column-layout__left {
 		width   : 72px;
 		padding : 0 20px 0 8px;

@@ -1,6 +1,7 @@
 .footer {
-    position : relative;
-    padding  : 96px 26px 114px;
+    position       : relative;
+    flex-direction : column;
+    padding        : 96px 20px 114px;
 }
 
 .footer__top-block,
@@ -136,4 +137,10 @@
 .footer__scroll-top-btn .material-icons-round {
     font-size   : 18px;
     font-weight : 700;
+}
+
+@media (max-width: 1279px) {
+    .footer__downloads {
+        margin-right: 130px;
+    }
 }

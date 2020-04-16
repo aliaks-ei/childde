@@ -1,21 +1,16 @@
-.have-question-wrapper {
+.pre-footer-wrapper {
     height           : 250px;
     margin-top       : 64px;
     background-color : var(--orange-color-2);
 }
 
-.have-question-container {
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    flex-direction  : column;
-    height          : 100%;
+.pre-footer-container {
+    align-items    : center;
+    flex-direction : column;
+    height         : 100%;
 }
 
-.have-question__title {
-    font-size     : 30px;
-    font-weight   : 700;
-    font-family   : var(--font-montserrat);
+.pre-footer__title {
     line-height   : 40px;
     margin-bottom : 32px;
 }

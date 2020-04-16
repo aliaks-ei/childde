@@ -1,9 +1,9 @@
 include ../buttons/baseBtn
 
-.ask-question-wrapper 
-    .ask-question-wrapper__container
-        input.ask-question-wrapper__input(type="text", placeholder="Enter your question", data-target="qModal")
+.enter-question-wrapper 
+    .enter-question-wrapper__container(data-target="qModal")
+        input.enter-question-wrapper__input(type="text", placeholder="Enter your question")
         +baseBtn({ 
             text      : 'Shreiben',
             withArrow : true
-        })(data-target="qModal")
+        })

@@ -1,5 +1,5 @@
 const swiperParams = {
-    slidesPerView : 2.2,
+    slidesPerView : 2.4,
     spaceBetween  : 15,
     freeMode      : true,
     grabCursor    : true,
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         swiperEls[i].querySelector('.swiper-button-prev').classList.add(`btn-prev-${ i + 1 }`);
         swiperEls[i].querySelector('.swiper-button-next').classList.add(`btn-next-${ i + 1 }`);
 
-        const swiper = new Swiper(`.swiper-${ i + 1 }`, {
+        new Swiper(`.swiper-${ i + 1 }`, {
             ...swiperParams,
             navigation: {
                 nextEl : `.btn-next-${ i + 1 }`,
