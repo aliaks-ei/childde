@@ -20,14 +20,6 @@
 	height: 378px;
 }
 
-.swiper-card__title {
-	color       : var(--text-black-2);
-	font-family : var(--font-montserrat);
-	font-size   : 14px;
-	font-weight : 700;
-	line-height : 18px;
-}
-
 .swiper-card__image {
 	position: absolute;
 }

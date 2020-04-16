@@ -17,6 +17,7 @@ html, body, #app {
 h1, h2, h3, h4, h5, h6 {
     font-family : 'Montserrat', sans-serif;
     color       : var(--text-black-2);
+    margin-top  : 0;
 }
 
 h1 {
@@ -27,6 +28,11 @@ h1 {
 h3 {
     font-size   : 1.125em;
     line-height : 26px;
+}
+
+h5 {
+    font-size   : .875em;
+    line-height : 18px;
 }
 
 .container-1024 {

@@ -3,6 +3,6 @@ mixin swiperCard({ title, content, imageUrl, buttonText })
 		if imageUrl
 			img.swiper-card__image(src=imageUrl)
 		.swiper-card__container
-			.swiper-card__title= title
+			h5= title
 			.swiper-card__content= content
 			button.swiper-card__button(type="button")= buttonText

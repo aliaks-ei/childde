@@ -18,7 +18,7 @@ mixin optionBtn({ icon, text })
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="3")
             .question-modal__selected-themes-wrapper
                 .question-modal__selected-themes.q-selected-themes
-                    button.q-selected-themes__theme.question-info__chip(data-target="qThemesSelect")
+                    button.q-selected-themes__theme.question-info__chip(data-target="qThemesDropdown")
                          span.material-icons-round add
                     .q-selected-themes__theme.question-info__chip Family
                         span.material-icons-round close
@@ -45,10 +45,10 @@ mixin optionBtn({ icon, text })
                 span.material-icons-round notes
         .question-modal__options-wrapper 
             .question-modal__options 
-                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesSelect")
+                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
-                include ./themesSelect
+                include ../themes-dropdown/themesDropdown
         .question-modal__bottom-container.q-bottom-container
             .q-bottom-container__user-select.q-user-select
                 .q-user-select__selected#qUserSelectActivator

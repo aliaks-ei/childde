@@ -1,16 +1,16 @@
-const qModal                  = document.getElementById('qModal');
-const qModalCloseBtn          = document.getElementById('qModalCloseBtn');
-const qCoverColors            = document.getElementById('qCoverColors');
-const qCoverBgColor           = document.getElementById('qCoverBgColor');
-const qDetailsBtn             = document.getElementById('qDetailsBtn');
-const qUserSelectActivator    = document.getElementById('qUserSelectActivator');
-const qUserSelectDropdown     = document.getElementById('qUserSelectDropdown');
-const qThemesSelect           = document.getElementById('qThemesSelect');
-const qThemesSelectClose      = document.getElementById('qThemesSelectClose');
-const qColorBtns              = document.getElementsByClassName('question-modal__color-btn');
-const qModalActivators        = document.querySelectorAll('[data-target="qModal"]');
-const qThemesSelectActivators = document.querySelectorAll('[data-target="qThemesSelect"]');
-const qModalCover             = qModal.querySelector('.question-modal__cover');
+const qModal                    = document.getElementById('qModal');
+const qModalCloseBtn            = document.getElementById('qModalCloseBtn');
+const qCoverColors              = document.getElementById('qCoverColors');
+const qCoverBgColor             = document.getElementById('qCoverBgColor');
+const qDetailsBtn               = document.getElementById('qDetailsBtn');
+const qUserSelectActivator      = document.getElementById('qUserSelectActivator');
+const qUserSelectDropdown       = document.getElementById('qUserSelectDropdown');
+const qThemesDropdown           = document.getElementById('qThemesDropdown');
+const qThemesDropdownClose      = document.getElementById('qThemesDropdownClose');
+const qColorBtns                = document.getElementsByClassName('question-modal__color-btn');
+const qModalActivators          = document.querySelectorAll('[data-target="qModal"]');
+const qThemesDropdownActivators = document.querySelectorAll('[data-target="qThemesDropdown"]');
+const qModalCover               = qModal.querySelector('.question-modal__cover');
 
 const listSVGIcon = `
     <svg class="list">
@@ -68,9 +68,9 @@ function showQDetails() {
 
 function handleQModalClick(event) {
     qUserSelectDropdown.style.display = 'none';
-    qThemesSelect.style.display = 'none';
+    qThemesDropdown.style.display = 'none';
 
-    const isQThemesActivatorClicked = [...qThemesSelectActivators].some(
+    const isQThemesActivatorClicked = [...qThemesDropdownActivators].some(
         activator => activator.contains(event.target)
     );
 
@@ -78,7 +78,7 @@ function handleQModalClick(event) {
         changeQCoverColor(event.target);
     }
     else if (isQThemesActivatorClicked) {
-        qThemesSelect.style.display = 'block';
+        qThemesDropdown.style.display = 'block';
     }
     else if (qDetailsBtn.contains(event.target)) {
         showQDetails();
@@ -91,11 +91,11 @@ function handleQModalClick(event) {
     }
 }
 
-function handleQThemesSelectClick(event) {
+function handleQThemesDropdownClick(event) {
     event.stopPropagation();
 
-    if (qThemesSelectClose.contains(event.target)) {
-        qThemesSelect.style.display = 'none';
+    if (qThemesDropdownClose.contains(event.target)) {
+        qThemesDropdown.style.display = 'none';
     }
 }
 
@@ -108,7 +108,7 @@ function showQModal() {
     qModal.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block"></div>');
     qModal.addEventListener('click', handleQModalClick);
 
-    qThemesSelect.addEventListener('click', handleQThemesSelectClick);
+    qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
 
     autosize(document.querySelectorAll('textarea'));
 }
@@ -122,7 +122,7 @@ function hideQModal() {
     document.body.style.overflow     = null;
 
     qModal.removeEventListener('click', handleQModalClick);
-    qThemesSelect.removeEventListener('click', handleQThemesSelectClick);
+    qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
 }
 
 for (const activator of qModalActivators) {

@@ -98,12 +98,11 @@
 }
 
 .question-info__title {
-    font-size     : 18px;
-    font-weight   : 700;
-    font-family   : var(--font-montserrat);
-    line-height   : 26px;
-    margin-bottom : 18px;
-    margin-right  : 22px;
+    margin-right: 22px;
+}
+
+.question-card:not(.question-card--default) .question-info__title {
+    color: var(--text-white);
 }
 
 .question-info__subtitle {
