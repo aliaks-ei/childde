@@ -6,12 +6,6 @@
     z-index       : 1100;
 }
 
-.themes-select {
-    border-radius    : 10px;
-    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
-    background-color : var(--background-color-white);
-}
-
 .themes-select__header {
     display         : flex;
     align-items     : center;

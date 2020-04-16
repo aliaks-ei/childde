@@ -20,13 +20,15 @@ include ../../symbols-counter/symbolsCounter
                         span.answer-options__btn__content.material-icons list
                     button.answer-options__btn
                         span.answer-options__btn__content.material-icons-round format_quote
-                    button.answer-options__btn
+                    button.answer-options__btn(data-target="uploadImageDropdown")
                         span.answer-options__btn__content.material-icons-round insert_photo
-                    button.answer-options__btn.answer-options__btn--link
+                    include ../../dropdowns/upload-image/uploadImage
+                    button.answer-options__btn.answer-options__btn--link(data-target="addLinkDropdown")
                         span.answer-options__btn__content.material-icons-round insert_link
+                    include ../../dropdowns/add-link/addLink
             .answer-modal__bottom-wrapper
                 .answer-modal__bottom-container
-                    include ../../user-select-dropdown/userSelectDropdown
+                    include ../../dropdowns/user-select-dropdown/userSelectDropdown
                     .asnwer-modal__answer-button-wrapper
                         +symbolsCounter({ label: 20, success: true })
                         button.asnwer-modal__answer-button.answer-modal__answer-button--disabled Antworten

@@ -70,7 +70,7 @@ function handleQModalClick(event) {
     else if (qModalCloseBtn.contains(event.target) || !this.firstElementChild.contains(event.target)) {
         hideModal(this);
 
-        qModal.removeEventListener('click', handleQModalClick);
+        this.removeEventListener('click', handleQModalClick);
         qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
     }
 }

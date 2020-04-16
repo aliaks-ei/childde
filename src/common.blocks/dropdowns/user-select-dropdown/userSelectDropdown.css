@@ -19,14 +19,12 @@
 }
 
 .user-select__dropdown-wrapper {
-    position         : absolute;
-    top              : -17px;
-    left             : -26px;
-    width            : 325px;
-    background-color : var(--background-color-white);
-    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
-    border-radius    : 10px;
-    margin-bottom    : 24px;
+    position      : absolute;
+    top           : -17px;
+    left          : -26px;
+    width         : 325px;
+    margin-bottom : 24px;
+    z-index       : 1100;
 }
 
 .select-dropdown {

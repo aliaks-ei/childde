@@ -40,6 +40,7 @@
 }
 
 .answer-options {
+    position    : relative;
     display     : flex;
     align-items : center;
     margin      : 0 -6px;

@@ -38,9 +38,9 @@ mixin optionBtn({ icon, text })
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
-                include ../../themes-dropdown/themesDropdown
+                include ../../dropdowns/themes-dropdown/themesDropdown
         .question-modal__bottom-container.q-bottom-container
-            include ../../user-select-dropdown/userSelectDropdown
+            include ../../dropdowns/user-select-dropdown/userSelectDropdown
             .q-bottom-container__actions.q-actions
                 +symbolsCounter({ label: 20 })
                 +baseButton({ 
