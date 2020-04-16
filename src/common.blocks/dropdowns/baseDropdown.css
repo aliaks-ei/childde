@@ -35,8 +35,8 @@
 }
 
 .base-dropdown__delimiter {
-    text-align: center;
-    color: var(--text-gray-2);
+    text-align : center;
+    color      : var(--text-gray-2);
 }
 
 .base-dropdown__fileupload {

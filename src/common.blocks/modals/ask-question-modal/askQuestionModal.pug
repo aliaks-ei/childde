@@ -36,9 +36,10 @@ mixin optionBtn({ icon, text })
         .question-modal__options-wrapper 
             .question-modal__options 
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
-                +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
-                +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
                 include ../../dropdowns/themes-dropdown/themesDropdown
+                +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="qUploadCoverBtn")
+                include ../../dropdowns/upload-question-cover/uploadQuestionCover
+                +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
         .question-modal__bottom-container.q-bottom-container
             include ../../dropdowns/user-select-dropdown/userSelectDropdown
             .q-bottom-container__actions.q-actions

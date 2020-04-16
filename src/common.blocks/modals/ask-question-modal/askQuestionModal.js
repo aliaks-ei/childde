@@ -4,9 +4,12 @@ const qCoverBgColor             = document.getElementById('qCoverBgColor');
 const qDetailsBtn               = document.getElementById('qDetailsBtn');
 const qThemesDropdown           = document.getElementById('qThemesDropdown');
 const qThemesDropdownClose      = document.getElementById('qThemesDropdownClose');
+const qCoverUploadDropdown      = document.getElementById('qCoverUploadDropdown');
+const qCoverUploadCloseBtn      = document.getElementById('qCoverUploadCloseBtn');
 const qColorBtns                = document.getElementsByClassName('question-modal__color-btn');
 const qModalActivators          = document.querySelectorAll('[data-target="qModal"]');
 const qThemesDropdownActivators = document.querySelectorAll('[data-target="qThemesDropdown"]');
+const qUploadCoverActivator     = document.querySelector('[data-target="qUploadCoverBtn"]');
 
 let qModalCover;
 let userSelectDropdownActivator; 
@@ -50,6 +53,7 @@ function showQDetails() {
 function handleQModalClick(event) {
     userSelectDropdownActivator.nextElementSibling.style.display = 'none';
     qThemesDropdown.style.display = 'none';
+    qCoverUploadDropdown.style.display = 'none';
 
     const isQThemesActivatorClicked = [...qThemesDropdownActivators].some(
         activator => activator.contains(event.target)
@@ -60,6 +64,9 @@ function handleQModalClick(event) {
     }
     else if (isQThemesActivatorClicked) {
         qThemesDropdown.style.display = 'block';
+    }
+    else if (qUploadCoverActivator.contains(event.target)) {
+        qCoverUploadDropdown.style.display = 'block';
     }
     else if (qDetailsBtn.contains(event.target)) {
         showQDetails();
@@ -72,6 +79,7 @@ function handleQModalClick(event) {
 
         this.removeEventListener('click', handleQModalClick);
         qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
+        qCoverUploadDropdown.removeEventListener('click', handleQUploadCoverClick);
     }
 }
 
@@ -80,6 +88,14 @@ function handleQThemesDropdownClick(event) {
 
     if (qThemesDropdownClose.contains(event.target)) {
         qThemesDropdown.style.display = 'none';
+    }
+}
+
+function handleQUploadCoverClick(event) {
+    event.stopPropagation();
+
+    if (qCoverUploadCloseBtn.contains(event.target)) {
+        qCoverUploadDropdown.style.display = 'none';
     }
 }
 
@@ -94,6 +110,7 @@ for (const activator of qModalActivators) {
 
         qModal.addEventListener('click', handleQModalClick);
         qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
+        qCoverUploadDropdown.addEventListener('click', handleQUploadCoverClick);
 
         autosize(document.querySelectorAll('textarea'));
     });
