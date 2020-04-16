@@ -1,5 +1,6 @@
 include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
+include ../../symbols-counter/symbolsCounter
 
 mixin optionBtn({ icon, text })
     button.question-modal__option-btn&attributes(attributes)
@@ -29,20 +30,9 @@ mixin optionBtn({ icon, text })
         .question-modal__cover-colors#qCoverColors
             button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
                 span.material-icons-round done
-            button.question-modal__color-btn(style = "background-color: #fabb4f")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #75d0c4")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #ffcf62")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #9494c5")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #8ba4c6")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #ff7150")
-                span.material-icons-round notes
-            button.question-modal__color-btn(style="background-color: #e57497")
-                span.material-icons-round notes
+            each color in ['#fabb4f', '#75d0c4', '#ffcf62', '#9494c5', '#8ba4c6', '#ff7150', '#e57497']
+                button.question-modal__color-btn(style=`background-color: ${ color }`)
+                    span.material-icons-round notes
         .question-modal__options-wrapper 
             .question-modal__options 
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
@@ -52,11 +42,7 @@ mixin optionBtn({ icon, text })
         .question-modal__bottom-container.q-bottom-container
             include ../../user-select-dropdown/userSelectDropdown
             .q-bottom-container__actions.q-actions
-                .q-actions__counter-wrapper.q-counter
-                    .q-counter__label 20
-                    .q-counter__circle
-                        .q-counter__circle__half.q-counter__circle__half--left
-                        .q-counter__circle__half.q-counter__circle__half--right 
+                +symbolsCounter({ label: 20 })
                 +baseButton({ 
                     text      : 'Speichern',
                     withArrow : true,

@@ -1,0 +1,12 @@
+mixin symbolsCounter({ label, error, success, withCheck })
+    .symbols-counter(
+        class = error ? 'symbols-counter--error' : success ? 'symbols-counter--success' : ''
+    )&attributes(attributes)
+        .symbols-counter__label
+            if withCheck
+                span.material-icons-round check
+            else
+                | !{ label }
+        .symbols-counter__circle
+            .symbols-counter__circle__half.symbols-counter__circle__half--left
+            .symbols-counter__circle__half.symbols-counter__circle__half--right 

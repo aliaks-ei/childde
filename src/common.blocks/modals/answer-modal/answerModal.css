@@ -120,6 +120,11 @@
     padding         : 25px 32px;
 }
 
+.asnwer-modal__answer-button-wrapper {
+    display     : flex;
+    align-items : center;
+}
+
 .asnwer-modal__answer-button {
     height           : 40px;
     width            : 134px;

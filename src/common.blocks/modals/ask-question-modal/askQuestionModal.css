@@ -157,59 +157,6 @@
     align-items : center;
 }
 
-.q-counter {
-    position  : relative;
-    width     : 48px;
-    height    : 48px;
-    margin    : auto 12px;
-    font-size : 3em;
-    color     : var(--text-gray-2);
-}
-
-.q-counter__label {
-    line-height : 48px;
-    text-align  : center;
-    font-family : var(--font-open-sans);
-    font-size   : 16px;
-    font-weight : 600;
-}
-
-.q-counter__circle {
-    height   : 100%;
-    width    : 100%;
-    clip     : rect(0, 1em, 1em, .5em);
-    left     : 0;
-    position : absolute;
-    top      : 0;
-}
-
-.q-counter__circle__half {
-    height        : 100%;
-    width         : 100%;
-    border        : .075em solid var(--text-gray-2);
-    border-radius : 50%;
-    clip          : rect(0, .5em, 1em, 0);
-    left          : 0;
-    position      : absolute;
-    top           : 0;
-}
-
-.q-counter__circle__half--left {
-    transform: rotate(60deg);
-}
-
-.q-counter__circle__half--right {
-    display: none;
-}
-
-.q-counter--error {
-    color: var(--red-color);
-}
-
-.q-counter--error .q-counter__circle__half {
-    border-color: var(--red-color);
-}
-
 .question-modal__selected-themes-wrapper {
     position       : relative;
     z-index        : 2;
