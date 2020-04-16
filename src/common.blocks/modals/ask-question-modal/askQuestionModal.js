@@ -1,4 +1,3 @@
-const qModal                    = document.getElementById('qModal');
 const qModalCloseBtn            = document.getElementById('qModalCloseBtn');
 const qCoverColors              = document.getElementById('qCoverColors');
 const qCoverBgColor             = document.getElementById('qCoverBgColor');
@@ -10,28 +9,8 @@ const qThemesDropdownClose      = document.getElementById('qThemesDropdownClose'
 const qColorBtns                = document.getElementsByClassName('question-modal__color-btn');
 const qModalActivators          = document.querySelectorAll('[data-target="qModal"]');
 const qThemesDropdownActivators = document.querySelectorAll('[data-target="qThemesDropdown"]');
-const qModalCover               = qModal.querySelector('.question-modal__cover');
 
-const listSVGIcon = `
-    <svg class="list">
-        <use xlink:href="./assets/icons/svg-symbols.svg#list"></use>
-    </svg>
-`;
-
-const checkSVGIcon = `
-    <svg class="check">
-        <use xlink:href="./assets/icons/svg-symbols.svg#check"></use>
-    </svg>
-`;
-
-const qDetailsEl = `
-    <textarea 
-        class="question-modal__textarea question-modal__textarea--small" 
-        placeholder="Fügen Sie gegebenenfalls eine detaillierte Beschreibung Ihrer Frage hinzu"
-        rows="2"
-    ></textarea>
-`;
-
+let qModalCover;
 let selectedQColorBtnIdx = 0;
 
 function changeQCoverColor(targetEl) {
@@ -42,9 +21,6 @@ function changeQCoverColor(targetEl) {
 
         qColorBtns[selectedQColorBtnIdx].firstElementChild.textContent = 'notes';
         pressedColorBtn.firstElementChild.textContent = 'done';
-
-        // qColorBtns[selectedQColorBtnIdx].insertAdjacentHTML('afterbegin', listSVGIcon);
-        // pressedColorBtn.insertAdjacentHTML('afterbegin', checkSVGIcon);
 
         selectedQColorBtnIdx = [...qColorBtns].findIndex(
             qColorBtn => qColorBtn === pressedColorBtn
@@ -60,9 +36,15 @@ function changeQCoverColor(targetEl) {
 }
 
 function showQDetails() {
-    qModalCover.insertAdjacentHTML('afterend', qDetailsEl);
-    qDetailsBtn.remove();
+    qModalCover.insertAdjacentHTML('afterend', `
+        <textarea 
+            class="question-modal__textarea question-modal__textarea--small" 
+            placeholder="Fügen Sie gegebenenfalls eine detaillierte Beschreibung Ihrer Frage hinzu"
+            rows="2"
+        ></textarea>
+    `);
 
+    qDetailsBtn.remove();
     autosize(document.querySelectorAll('textarea'));
 }
 
@@ -86,8 +68,11 @@ function handleQModalClick(event) {
     else if (qUserSelectActivator.contains(event.target)) {
         qUserSelectDropdown.style.display = 'block';
     }
-    else if (qModalCloseBtn.contains(event.target) || !qModal.firstElementChild.contains(event.target)) {
-        hideQModal();
+    else if (qModalCloseBtn.contains(event.target) || !this.firstElementChild.contains(event.target)) {
+        hideModal(this);
+
+        qModal.removeEventListener('click', handleQModalClick);
+        qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
     }
 }
 
@@ -99,32 +84,17 @@ function handleQThemesDropdownClick(event) {
     }
 }
 
-function showQModal() {
-    qModal.style.display = 'block';
-
-    document.body.style.paddingRight = `${ window.innerWidth - document.documentElement.clientWidth }px`;
-    document.body.style.overflow     = 'hidden';
-
-    qModal.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block"></div>');
-    qModal.addEventListener('click', handleQModalClick);
-
-    qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
-
-    autosize(document.querySelectorAll('textarea'));
-}
-
-function hideQModal() {
-    qModal.style.display = 'none';
-
-    document.querySelector('.modal-overlay').remove();
-    
-    document.body.style.paddingRight = null;
-    document.body.style.overflow     = null;
-
-    qModal.removeEventListener('click', handleQModalClick);
-    qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
-}
-
 for (const activator of qModalActivators) {
-    activator.addEventListener('click', showQModal);
+    activator.addEventListener('click', () => {
+        const qModal = document.getElementById('qModal');
+
+        qModalCover = qModal.querySelector('.question-modal__cover');
+
+        showModal(qModal);
+
+        qModal.addEventListener('click', handleQModalClick);
+        qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
+
+        autosize(document.querySelectorAll('textarea'));
+    });
 }

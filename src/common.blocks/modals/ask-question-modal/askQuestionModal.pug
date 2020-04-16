@@ -1,13 +1,13 @@
-include ../buttons/baseBtn
-include ../svg-icon/svgIcon
+include ../../buttons/baseBtn
+include ../../svg-icon/svgIcon
 
 mixin optionBtn({ icon, text })
     button.question-modal__option-btn&attributes(attributes)
         +svgIcon(icon)
         span &nbsp; #{ text }
 
-.question-modal-wrapper#qModal(style="display: none")
-    .question-modal(tabindex="0")
+.base-modal-wrapper#qModal(style="display: none")
+    .base-modal(tabindex="0").question-modal
         .question-modal__cover
             .question-modal__header 
                 .question-modal__header__title Frage stellen
@@ -48,7 +48,7 @@ mixin optionBtn({ icon, text })
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(id="qCoverImageBtn")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
-                include ../themes-dropdown/themesDropdown
+                include ../../themes-dropdown/themesDropdown
         .question-modal__bottom-container.q-bottom-container
             .q-bottom-container__user-select.q-user-select
                 .q-user-select__selected#qUserSelectActivator

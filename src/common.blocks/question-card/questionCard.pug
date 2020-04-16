@@ -1,4 +1,3 @@
-include ./questionCardBtn
 include ../svg-icon/svgIcon
 
 mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
@@ -45,10 +44,16 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                     else 
                         span.question-card-button__icon.material-icons favorite
                     span Interessant 53
-                button.question-card-button
-                    span.question-card-button__icon
-                        +svgIcon("messages")
-                    span 345
+                if interested
+                    button.question-card-button(data-target="answerModal")
+                        span.question-card-button__icon
+                            +svgIcon("answer")
+                        span Antworten
+                else
+                    button.question-card-button
+                        span.question-card-button__icon
+                            +svgIcon("messages")
+                        span 345
             button.question-card-button.question-card__visibility-btn
                 span.question-card-button__icon.material-icons visibility_off
         .question-card__content

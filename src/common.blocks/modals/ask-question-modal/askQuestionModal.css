@@ -1,23 +1,5 @@
-.question-modal-wrapper {
-    position   : fixed;
-    top        : 0;
-    left       : 0;
-    width      : 100%;
-    height     : 100%;
-    text-align : center;
-    overflow-y : auto;
-    z-index    : 1003;
-}
-
 .question-modal {
-    display          : inline-block;
-    text-align       : left;
-    width            : 778px;
-    border-radius    : 8px;
-    margin-top       : 60px;
-    margin-bottom    : 24px;
-    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
-    background-color : var(--background-color-white);
+    width: 778px;
 }
 
 .question-modal__cover {
