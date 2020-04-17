@@ -7,8 +7,6 @@
 .cookies-warning__details-link {
 	color           : var(--text-black);
 	text-decoration : underline;
-	margin-left     : 4px;
-	cursor          : pointer;
 }
 
 .cookies-warning__button {

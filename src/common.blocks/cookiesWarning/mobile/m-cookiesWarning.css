@@ -1,13 +1,20 @@
 .cookies-warning {
-    flex-direction : column;
-    height         : 96px;
+    padding   : 8px;
+    height    : 56px;
+    font-size : 12px;
 }
 
 .cookies-warning__content {
     text-align: center;
 }
 
+.cookies-warning__details-link {
+    white-space: nowrap;
+}
+
 .cookies-warning__button {
-    margin-top : 8px;
-    padding    : 6px 20px;
+    min-width   : 64px;
+    padding     : 6px 0;
+    font-size   : 12px;
+    margin-left : 8px;
 }
