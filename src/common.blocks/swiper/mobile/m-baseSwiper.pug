@@ -1,0 +1,14 @@
+include ../../swiper-card/baseSwiperCard
+
+mixin baseSwiper(cards = [])
+    .base-swiper&attributes(attributes)
+        .swiper-container
+            .swiper-wrapper
+                each card in cards
+                    +swiperCard({
+                        title      : card.title,
+                        content    : card.content,
+                        imageUrl   : card.imageUrl,
+                        buttonText : card.buttonText
+                    })
+                    

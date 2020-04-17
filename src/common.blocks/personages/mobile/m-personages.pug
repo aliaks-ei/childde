@@ -1,23 +1,26 @@
-include ../swiper/desktop/dt-baseSwiper
+include ../../swiper/mobile/m-baseSwiper
 
 - 
-	const questionsCards = [
+	const personagesCards = [
 		{
 			title      : 'Nur so sind alle Erfahrungen, Meinungen und Antworten',
 			content    : 'Technological competition startups. Provides IT industry promising technologies.',
+			imageUrl   : './assets/images/green_personage.png',
 			buttonText : 'Deine Meinung zu…?'
 		},
 		{
 			title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
-			content    : 'Technological competition startups. Provides IT industry promising  te…',
+			content    : 'Technological competition startups. Provides IT industry promising technologies.',
+			imageUrl   : './assets/images/blue_personage.png',
 			buttonText : 'Deine Frage'
 		},
 		{
 			title      : 'Nur so sind alle Erfahrungen,  Meinungen und Antworten ',
 			content    : 'Technological competition startups.  Provides IT industry promising  technologies.',
+			imageUrl   : './assets/images/yellow_personage.png',
 			buttonText : 'Deine Frage'
 		}
 	]
 
-+baseSwiper(questionsCards)(class="questions-slider-wrapper")
++baseSwiper(personagesCards)(class="personages-wrapper")
 		

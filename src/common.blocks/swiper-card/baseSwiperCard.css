@@ -3,21 +3,14 @@
 	flex-direction  : column;
 	align-items     : center;
 	justify-content : space-between;
-	min-width       : 248px;
-	height          : 270px;
 	border-radius   : 10px;
 	position        : relative;
-	padding         : 28px 24px;
 	text-decoration : none;
 	color           : var(--text-black);
 }
 
 .swiper-card__container {
 	margin-top: auto;
-}
-
-.swiper-card--with-image {
-	height: 378px;
 }
 
 .swiper-card__image {
@@ -37,9 +30,7 @@
 }
 
 .swiper-card__content {
-	font-size   : 14px;
-	line-height : 26px;
-	margin      : 13px 0 24px;
+	font-size: 14px;
 }
 
 .swiper-card__button {
