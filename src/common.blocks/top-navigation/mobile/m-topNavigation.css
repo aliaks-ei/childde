@@ -1,0 +1,29 @@
+.top-navigation {
+	height: 64px;
+}
+
+.top-navigation__container {
+    display : flex;
+    padding : 0 14px;
+}
+
+.top-navigation__logo svg {
+    width: 96px;
+}
+
+.top-navigation-right-block__item + .top-navigation-right-block__item {
+	margin-left: 18px;
+}
+
+.top-navigation-right-block__search-icon {
+    color: var(--text-white);
+}
+
+.top-navigation-right-block__notification-icon {
+    width  : 20px;
+    height : 20px;
+}
+
+.top-navigation-right-block__user-image {
+    width: 34px;
+}

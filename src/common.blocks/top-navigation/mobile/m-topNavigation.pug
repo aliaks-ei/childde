@@ -1,18 +1,17 @@
 include ../../svg-icon/svgIcon
 
 .top-navigation
-	.top-navigation__container.container-1024
-		a(href="#")
+	.top-navigation__container
+		a.top-navigation__logo(href="#")
 			+svgIcon("logo")
-
-		.top-navigation__search-bar.search-bar
-			input.search-bar__input(placeholder='Search')
-			.search-bar__icon
-				+svgIcon('search')
 
 		.top-navigation-right-block
 			.top-navigation-right-block__item
-				+svgIcon('notification')
+				span.material-icons-round.top-navigation-right-block__search-icon search
+			.top-navigation-right-block__item
+				+svgIcon('notification')(class="top-navigation-right-block__notification-icon")
 			.top-navigation-right-block__item#userImage
-				img(srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x")
+				img.top-navigation-right-block__user-image(
+					srcset="./assets/images/avatar.png 1x, ./assets/images/avatar@2x.png 2x"
+				)
 			include ../../account-widget/accountWidget
