@@ -2,7 +2,6 @@
 	display         : flex;
 	justify-content : center;
 	align-items     : center;
-	height          : 60px;
 }
 
 .cookies-warning__details-link {
@@ -16,11 +15,10 @@
 	background-color : var(--red-color);
 	border           : none;
 	border-radius    : 15px;
-	padding          : 6px 12px;
 	color            : var(--text-white);
-	margin-left      : 14px;
 	font-size        : 14px;
 	font-weight      : 700;
 	font-family      : var(--font-montserrat);
 	cursor           : pointer;
+	user-select      : none;
 }

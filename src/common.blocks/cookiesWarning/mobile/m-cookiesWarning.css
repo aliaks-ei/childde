@@ -1,0 +1,13 @@
+.cookies-warning {
+    flex-direction : column;
+    height         : 96px;
+}
+
+.cookies-warning__content {
+    text-align: center;
+}
+
+.cookies-warning__button {
+    margin-top : 8px;
+    padding    : 6px 20px;
+}

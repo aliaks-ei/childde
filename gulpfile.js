@@ -17,7 +17,20 @@ const postCssImport    = require('postcss-easy-import');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const paths = {
-	css    : 'src/common.blocks/**/*.css',
+	dtCss: [
+		'src/assets/styles/variables.css',
+		'src/assets/styles/dt-global.css', 
+		'src/assets/styles/global.css', 
+		'src/common.blocks/**/*.css', 
+		'!src/common.blocks/**/m-*.css'
+	],
+	mCss: [
+		'src/assets/styles/variables.css',
+		'src/assets/styles/m-global.css',
+		'src/assets/styles/global.css',
+		'src/common.blocks/**/*.css',
+		'!src/common.blocks/**/dt-*.css'
+	],
 	html   : 'src/pages/*.pug',
 	js     : [ 'src/*.js', 'src/common.blocks/**/*.js' ],
 	images : 'src/assets/images/*.png',
@@ -48,7 +61,7 @@ function html(cb) {
 }
 
 function css(cb) {
-  	src([ 'src/assets/variables.css', 'src/assets/global.css', paths.css ])
+  	src(paths.dtCss)
 		.pipe(plumber())
 		.pipe(postcss([
 			postCssImport(),
@@ -58,6 +71,20 @@ function css(cb) {
 		.pipe(concat('index.css'))
 		.pipe(dest('build/css'))
 		.pipe(rename('index.min.css'))
+		.pipe(csso())
+		.pipe(dest('build/css'))
+		.pipe(livereload());
+
+	src(paths.mCss)
+		.pipe(plumber())
+		.pipe(postcss([
+			postCssImport(),
+			postcssPresetEnv(),
+			autoprefixer()
+		]))
+		.pipe(concat('m.index.css'))
+		.pipe(dest('build/css'))
+		.pipe(rename('m.index.min.css'))
 		.pipe(csso())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
@@ -100,7 +127,7 @@ exports.default = function () {
 	cleanBuild();
 
 	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
-	watch([ 'src/assets/*.css', 'src/common.blocks/**/*.css' ], { ignoreInitial: false }, css);
+	watch([ 'src/assets/styles/*.css', 'src/common.blocks/**/*.css' ], { ignoreInitial: false }, css);
 	watch(paths.js,           { ignoreInitial: false }, js);
 	watch(paths.images,       { ignoreInitial: false }, images);
 	watch(paths.icons,        { ignoreInitial: false }, svgSprites);
