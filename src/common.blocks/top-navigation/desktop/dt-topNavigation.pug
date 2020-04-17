@@ -5,10 +5,7 @@ include ../../svg-icon/svgIcon
 		a(href="#")
 			+svgIcon("logo")
 
-		.top-navigation__search-bar.search-bar
-			input.search-bar__input(placeholder='Search')
-			.search-bar__icon
-				+svgIcon('search')
+		include ../../search-bar/desktop/dt-searchBar
 
 		.top-navigation-right-block
 			.top-navigation-right-block__item

@@ -6,3 +6,7 @@
 .account-widget__item {
     line-height: 45px;
 }
+
+.account-widget__item:hover {
+    background-color: var(--background-color-gray);
+}

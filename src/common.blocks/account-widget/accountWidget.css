@@ -19,10 +19,6 @@
     color           : var(--text-black-2);
 }
 
-.account-widget__item:hover {
-    background-color: var(--background-color-gray);
-}
-
 .account-widget__item + .account-widget__item {
     margin-top: 4px;
 }

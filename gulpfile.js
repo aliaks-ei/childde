@@ -31,8 +31,17 @@ const paths = {
 		'src/common.blocks/**/*.css',
 		'!src/common.blocks/**/dt-*.css'
 	],
+	dtJs: [ 
+		'src/*.js', 
+		'src/common.blocks/**/*.js',
+		'!src/common.blocks/**/m-*.js'
+	],
+	mJs: [ 
+		'src/*.js', 
+		'src/common.blocks/**/*.js',
+		'!src/common.blocks/**/dt-*.js'
+	],
 	html   : 'src/pages/*.pug',
-	js     : [ 'src/*.js', 'src/common.blocks/**/*.js' ],
 	images : 'src/assets/images/*.png',
 	icons  : 'src/assets/icons/*.svg'
 };
@@ -93,10 +102,23 @@ function css(cb) {
 }
 
 function js(cb) {
-	src(paths.js)
+	src(paths.dtJs)
 		.pipe(plumber())
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(concat('index.js'))
+		.pipe(minify({
+			ext: {
+				src:'.js',
+				min:'.min.js'
+			}
+		}))
+		.pipe(dest('build/js'))
+		.pipe(livereload());
+	
+	src(paths.mJs)
+		.pipe(plumber())
+		.pipe(babel({ presets: ['@babel/env'] }))
+		.pipe(concat('m.index.js'))
 		.pipe(minify({
 			ext: {
 				src:'.js',
@@ -128,7 +150,7 @@ exports.default = function () {
 
 	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
 	watch([ 'src/assets/styles/*.css', 'src/common.blocks/**/*.css' ], { ignoreInitial: false }, css);
-	watch(paths.js,           { ignoreInitial: false }, js);
-	watch(paths.images,       { ignoreInitial: false }, images);
-	watch(paths.icons,        { ignoreInitial: false }, svgSprites);
+	watch([ 'src/*.js', 'src/common.blocks/**/*.js' ], { ignoreInitial: false }, js);
+	watch(paths.images, { ignoreInitial: false }, images);
+	watch(paths.icons, { ignoreInitial: false }, svgSprites);
 };

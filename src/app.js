@@ -68,7 +68,7 @@ window.addEventListener('click', event => {
     }
 });
 
-scrollToTopBtn.addEventListener('click', () => {
+scrollToTopBtn && scrollToTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });

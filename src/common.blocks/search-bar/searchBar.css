@@ -1,0 +1,22 @@
+.search-bar {
+	flex     : 1;
+	position : relative;
+}
+
+.search-bar__input {
+	border-radius : inherit;
+	border        : 0;
+	height        : 100%;
+	width         : 100%;
+	font-weight   : 500;
+	font-family   : var(--font-montserrat);
+	color         : var(--text-black);
+}
+
+.search-bar__icon {
+	position    : absolute;
+	top         : 50%;
+	transform   : translateY(-50%);
+	display     : flex;
+	align-items : center;
+}
