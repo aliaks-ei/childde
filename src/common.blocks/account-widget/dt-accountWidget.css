@@ -1,0 +1,8 @@
+.account-widget {
+    top     : 64px;
+    padding : 14px 0;
+}
+
+.account-widget__item {
+    line-height: 45px;
+}
