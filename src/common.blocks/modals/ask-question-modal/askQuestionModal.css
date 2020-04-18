@@ -108,11 +108,6 @@
     transition: transform .1s ease-out;
 }
 
-.question-modal__color-btn:active,
-.question-modal__option-btn:active {
-    transform: scale(.96);
-}
-
 .question-modal__options {
     position : relative;
     display  : inline-flex;

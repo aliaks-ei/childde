@@ -20,13 +20,19 @@
     font-family      : var(--font-montserrat);
     color            : var(--text-black-2);
     cursor           : pointer;
+    transition       : transform .1s ease-out;
 }
 
 .date-filter__item + .date-filter__item {
     margin-left: 4px;
 }
 
+.date-filter__item:hover,
 .date-filter__item--active {
     background-color : var(--background-color-white );
     color            : var(--red-color);
+}
+
+.date-filter__item:active {
+    opacity: .65;
 }

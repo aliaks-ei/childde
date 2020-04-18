@@ -29,3 +29,7 @@
     width           : 16px;
     margin-right    : 12px;
 }
+
+.account-widget__item {
+    outline: none;
+}

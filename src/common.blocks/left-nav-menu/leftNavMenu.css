@@ -45,6 +45,15 @@
 	padding         : 0 8px;
 	text-decoration : none;
 	color           : var(--text-black);
+	transition      : transform .1s ease-out;
+}
+
+.nav-item__link:focus {
+	outline: none;
+}
+
+.nav-item__link:active {
+	transform : scale(.96);
 }
 
 .nav-item__link span {

@@ -14,6 +14,10 @@
 	text-decoration: underline;
 }
 
+.comment:focus {
+	outline: none;
+}
+
 .comment + .comment {
 	margin-top: 22px;
 }
