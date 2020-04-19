@@ -1,9 +1,6 @@
-include ../buttons/base-button/baseButton
+include ../../buttons/base-button/baseButton
 
 .enter-question-wrapper 
     .enter-question-wrapper__container(data-target="qModal")
         input.enter-question-wrapper__input(type="text", placeholder="Enter your question")
-        +baseButton({ 
-            text      : 'Shreiben',
-            withArrow : true
-        })
+        +baseButton({ text: 'Shreiben', withArrow : true })

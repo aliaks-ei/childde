@@ -1,0 +1,10 @@
+.enter-question-wrapper {
+    height  : 36px;
+    padding : 0 14px;
+}
+
+.enter-question-wrapper__input {
+    padding      : 0 20px;
+    font-size    : 12px;
+    margin-right : 8px;
+}

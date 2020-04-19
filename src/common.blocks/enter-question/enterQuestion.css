@@ -1,9 +1,3 @@
-.enter-question-wrapper {
-    height        : 50px;
-	margin-bottom : 92px;
-	cursor        : pointer;
-}
-
 .enter-question-wrapper__container {
 	display        : flex;
 	align-items    : center;
@@ -15,12 +9,8 @@
 	height           : 100%;
 	border           : 0;
 	border-radius    : 25px;
-	padding          : 0 24px;
 	font-family      : var(--font-montserrat);
 	font-weight      : 500;
-	line-height      : 60px;
-	margin-right     : 17px;
 	background-color : var(--background-color-gray-3);
-	cursor           : pointer;
 	pointer-events   : none;
 }
