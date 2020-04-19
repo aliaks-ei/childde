@@ -1,7 +1,15 @@
 const swiperParams = {
-    spaceBetween  : 12,
-    freeMode      : true,
-    grabCursor    : true
+    slidesPerView      : 1.25,
+    slidesOffsetBefore : 14,
+    slidesOffsetAfter  : 14,
+    spaceBetween       : 14,
+    freeMode           : true,
+    grabCursor         : true,
+    breakpoints        : {
+        375: {
+            slidesPerView: 1.5
+        }
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {

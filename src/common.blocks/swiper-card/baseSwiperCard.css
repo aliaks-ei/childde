@@ -60,3 +60,7 @@
 .swiper-card:last-of-type {
 	background-color: var(--background-color-personage3);
 }
+
+.swiper-card:active {
+	opacity: 1;
+}
