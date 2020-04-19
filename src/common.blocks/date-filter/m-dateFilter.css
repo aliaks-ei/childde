@@ -1,0 +1,9 @@
+.date-filter {
+    height  : 36px;
+    margin  : 0 14px 24px;
+    padding : 2px;
+}
+
+.date-filter__item {
+    font-size : 12px;
+}

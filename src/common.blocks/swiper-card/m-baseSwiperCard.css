@@ -1,13 +1,18 @@
 .swiper-card {
-    height  : 270px;
-    padding : 24px;
+    padding: 24px;
 }
 
 .swiper-card--with-image {
-	height: 336px;
+	height: 330px;
 }
 
 .swiper-card__content {
+	font-size     : 12px;
 	line-height   : 22px;
 	margin-bottom : 16px;
+}
+
+.swiper-card__button {
+	height      : 36px;
+	line-height : 36px;
 }

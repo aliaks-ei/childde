@@ -1,6 +1,7 @@
 .enter-question-wrapper {
-    height  : 36px;
-    padding : 0 14px;
+    height        : 36px;
+    padding       : 0 14px;
+    margin-bottom : 24px;
 }
 
 .enter-question-wrapper__input {

@@ -1,12 +1,9 @@
 .date-filter {
     display          : flex;
-    height           : 50px;
-    width            : 348px;
-    margin-bottom    : 32px;
+    max-width        : 348px;
     border-radius    : 25px;
     border           : 1px solid var(--border-color-lightblue);
     background-color : var(--background-color-gray);
-    padding          : 4px;
 }
 
 .date-filter__item {
@@ -15,11 +12,9 @@
     height           : 100%;
     border           : 0;
     border-radius    : 21px;
-    font-size        : 14px;
     font-weight      : 700;
     font-family      : var(--font-montserrat);
     color            : var(--text-black-2);
-    cursor           : pointer;
     transition       : transform .1s ease-out;
 }
 
@@ -27,7 +22,6 @@
     margin-left: 4px;
 }
 
-.date-filter__item:hover,
 .date-filter__item--active {
     background-color : var(--background-color-white );
     color            : var(--red-color);

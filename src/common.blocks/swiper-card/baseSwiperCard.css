@@ -40,13 +40,11 @@
 	display          : flex;
 	justify-content  : center;
 	align-items      : center;
-	height           : 39px;
 	padding          : 0 30px;
 	color            : var(--text-black-2);
 	font-family      : var(--font-montserrat);
 	font-size        : 12px;
 	font-weight      : 700;
-	line-height      : 39px;
 }
 
 .swiper-card:first-of-type {
