@@ -1,6 +1,4 @@
-.question-card {
-    --card-horizontal-padding: 36px;
-    
+.question-card {    
     border        : 1px solid var(--border-color-lightgray);
     border-radius : 10px;
 }
@@ -12,10 +10,6 @@
     bottom   : 0;
     left     : 0;
     right    : 0;
-}
-
-.question-card + .question-card {
-    margin-top: 28px;
 }
 
 .question-card__header {
@@ -54,25 +48,15 @@
 }
 
 .question-header__info {
-    height  : 100%;
-    padding : 32px var(--card-horizontal-padding) 22px;
+    height: 100%;
 }
 
 .question-info__user {
     display         : flex;
     align-items     : center;
     justify-content : flex-start;
-    font-size       : 14px;
     font-weight     : 500;
     font-family     : var(--font-montserrat);
-    line-height     : 47px;
-    margin-bottom   : 16px;
-    margin-right    : 22px;
-}
-
-.question-user__name,
-.question-user__date {
-    margin-left: 11px;
 }
 
 .question-user__name {
@@ -80,25 +64,25 @@
     text-decoration : none;
 }
 
+.question-user__name,
+.question-user__date {
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+}
+
 .question-user__label {
     position    : relative;
     display     : flex;
     align-items : center;
-    margin-left : 16px;
-}
-
-.question-user__label__icon {
-    margin-right: 7px;
 }
 
 .question-user__link-wrapper {
     position    : relative;
     display     : flex;
     align-items : center;
-}
-
-.question-info__title {
-    margin-right: 22px;
+    overflow    : hidden;
+    white-space : nowrap;
 }
 
 .question-card:not(.question-card--default) .question-info__title {
@@ -106,11 +90,7 @@
 }
 
 .question-info__subtitle {
-    font-size     : 18px;
-    line-height   : 26px;
-    font-family   : var(--font-montserrat);
-    margin-top    : -10px;
-    margin-bottom : 14px;
+    font-family: var(--font-montserrat);
 }
 
 .question-info__chips {
@@ -134,13 +114,11 @@
 }
 
 .question-header__dropdown-icon {
-    top   : 16px;
-    right : 12px;
+    top: 16px;
 }
 
 .question-header__dropdown-icon .material-icons-round {
-    font-size : 36px;
-    color     : var(--text-white);
+    color: var(--text-white);
 }
 
 .question-header__dropdown-icon.question-header__dropdown-icon--dark .material-icons-round {
@@ -151,13 +129,12 @@
     background-color: hsla(0, 0%, 100%, .2);
 }
 
-.question-reviews__horizontal-dropdown {
+.question-reviews__horizontal-dropdown.base-icon-btn {
     position: relative;
 }
 
 .question-reviews__horizontal-dropdown .material-icons-round {
-    font-size : 36px;
-    color     : var(--text-gray);
+    color: var(--text-gray);
 }
 
 .question-card__reactions-wrapper {
@@ -165,7 +142,6 @@
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    padding         : 16px var(--card-horizontal-padding);
 }
 
 .question-card__reactions  {
@@ -173,27 +149,9 @@
     align-items : center;
 }
 
-.question-card__visibility-btn.question-card-button {
-    padding: 4px 0;
-}
-
-.question-card__visibility-btn.question-card-button .material-icons {
-    font-size: 16px;
-}
-
-.question-card__visibility-btn.question-card-button:before {
-    left  : -4px;
-    right : -4px;
-}
-
 .question-card__content {
     position : relative;
     color    : var(--text-black);
-    padding  : 16px var(--card-horizontal-padding) 36px;
-}
-
-.question-card__content--vote {
-    padding-top: 0;
 }
 
 .question-card__content:not(.question-card__content--vote):before {
@@ -207,17 +165,10 @@
     background : var(--border-color-lightgray);
 }
 
-.question-card__content:not(.question-card__content--vote) div {
-    font-size   : 16px;
-    font-family : var(--font-open-sans);
-    line-height : 26px;
-}
-
 .question-card__content__reviews.question-reviews {
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    margin          : 32px 0;
 }
 
 .question-reviews__likes {
@@ -227,22 +178,16 @@
 }
 
 .question-card__read-all-answers-btn {
-    height           : 55px;
     width            : 100%;
     background-color : var(--background-color-gray-2);
     border           : 0;
-    border-radius    : 28px;
-    line-height      : 55px;
-    font-size        : 14px;
     font-weight      : 700;
     font-family      : var(--font-montserrat);
-    cursor           : pointer;
 }
 
 .question-card__content__read-more-btn {
     font-weight : 600;
     margin-left : 4px;
-    cursor      : pointer;
 }
 
 .question-card__content__full-desc {

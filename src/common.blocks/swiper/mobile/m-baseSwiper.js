@@ -1,8 +1,8 @@
 const swiperParams = {
     slidesPerView      : 1.25,
-    slidesOffsetBefore : 14,
-    slidesOffsetAfter  : 14,
-    spaceBetween       : 14,
+    slidesOffsetBefore : 12,
+    slidesOffsetAfter  : 12,
+    spaceBetween       : 12,
     freeMode           : true,
     grabCursor         : true,
     breakpoints        : {

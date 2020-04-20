@@ -1,0 +1,64 @@
+.question-card-wrapper {
+    padding       : 0 12px;
+    margin-bottom : 24px;
+}
+
+.question-card {
+    --card-horizontal-padding: 16px;
+}
+
+.question-header__info {
+    padding : 18px var(--card-horizontal-padding);
+}
+
+.question-info__user {
+    font-size       : 10px;
+    line-height     : 22px;
+    margin-bottom   : 16px;
+    margin-right    : 22px;
+}
+
+.question-card__user-avatar {
+    width: 28px;
+}
+
+.question-user__name,
+.question-user__date {
+    margin-left: 8px;
+}
+
+.question-header__dropdown-icon {
+    top   : 12px;
+    right : 6px;
+}
+
+.question-card__reactions-wrapper {
+    padding: 14px var(--card-horizontal-padding);
+}
+
+.question-card-button {
+    font-size: 12px;
+}
+
+.question-card__content {
+    padding  : 14px var(--card-horizontal-padding) 18px;
+}
+
+.question-card__content:not(.question-card__content--vote) div {
+    line-height: 22px;
+}
+
+.question-card__content__reviews.question-reviews {
+    margin: 16px 0;
+}
+
+.question-reviews__horizontal-dropdown.base-icon-btn {
+    right: -6px;
+}
+
+.question-card__read-all-answers-btn {
+    height           : 36px;
+    line-height      : 36px;
+    border-radius    : 25px;
+    font-size        : 12px;
+}

@@ -1,0 +1,20 @@
+.base-icon-btn {
+    --btn-size: 42px;
+}
+
+.base-icon-btn:before {
+    content          : "";
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    right            : 0;
+    bottom           : 0;
+    border-radius    : var(--btn-size);
+    background-color : rgba(32, 35, 51, .07);
+    transition       : opacity .1s ease-out;
+    opacity          : 0;
+}
+
+.base-icon-btn:hover:before {
+    opacity: 1;
+}

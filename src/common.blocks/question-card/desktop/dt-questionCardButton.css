@@ -1,14 +1,7 @@
 .question-card-button {
-    position         : relative;
-    display          : flex;
-    align-items      : center;
-    font-family      : var(--font-open-sans);
-    font-size        : 14px;
-    font-weight      : 600;
-    line-height      : 26px;
-    border           : 0;
-    background-color : transparent;
-    cursor           : pointer;
+    font-size   : 14px;
+    line-height : 26px;
+    cursor      : pointer;
 }
 
 .question-card-button + .question-card-button {
@@ -30,11 +23,6 @@
 
 .question-card-button:hover:before {
     opacity: 1;
-}
-
-.question-card-button--inactive,
-.question-card-button .question-card-button__icon {
-    color: var(--text-gray);
 }
 
 .question-card-button .question-card-button__icon {

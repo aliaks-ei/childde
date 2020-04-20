@@ -34,7 +34,7 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitl
             each option in votingOptions
                 .question-card__vote-bar
                     .question-card__vote-bar__progress(style=`width: ${ option.power }%; background-color: ${ option.bgColor }`)
-                        span= option.name
+                        span.question-card__vote-bar__name= option.name
                     .question-card__vote-bar__percentage= `${ option.power }%`
 
         

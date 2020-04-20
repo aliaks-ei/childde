@@ -1,0 +1,23 @@
+.question-info__subtitle {
+    font-size     : 18px;
+    margin-top    : -10px;
+    margin-bottom : 14px;
+}
+
+.question-card__vote-bar {
+    height: 44px;
+}
+
+.question-card__vote-bar + .question-card__vote-bar {
+    margin-top: 16px;
+}
+
+.question-card__vote-bar__progress {
+    padding     : 8px 22px;
+    height      : 40px;
+    line-height : 26px;
+}
+
+.question-card__vote-bar__percentage {
+    font-size: 14px;
+}
