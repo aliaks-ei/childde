@@ -1,7 +1,5 @@
 .pre-footer-wrapper {
-    height           : 250px;
-    margin-top       : 64px;
-    background-color : var(--orange-color-2);
+    background-color: var(--orange-color-2);
 }
 
 .pre-footer-container {
@@ -9,8 +7,4 @@
     flex-direction   : column;
     height           : 100%;
     background-color : inherit;
-}
-
-.pre-footer__title {
-    margin-bottom: 32px;
 }
