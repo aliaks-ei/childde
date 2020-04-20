@@ -1,11 +1,17 @@
-.popularThemesWidget
-	h3.popularThemesWidget__title Popular themes
+include ../theme-chips/desktop/dt-themeChips
 
-	.popularThemesWidget__tagsList
-		.popularThemesWidget__tag Blog
-		.popularThemesWidget__tag Business
-		.popularThemesWidget__tag Economy
-		.popularThemesWidget__tag Real estate
-		.popularThemesWidget__tag Career
-		.popularThemesWidget__tag Health
-		.popularThemesWidget__tag Future
+.popular-themes
+	h3.popular-themes__title Popular themes
+
+	+themeChips({ 
+		themes: [
+			{ to: '#', name: 'Blog' }, 
+			{ to: '#', name: 'Business' },
+			{ to: '#', name: 'Career' },
+			{ to: '#', name: 'Real estate' }, 
+			{ to: '#', name: 'Health' },
+			{ to: '#', name: 'Economy' }, 
+			{ to: '#', name: 'Future' }
+		],
+		withoutLimit: true
+	})

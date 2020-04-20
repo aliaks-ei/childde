@@ -93,26 +93,6 @@
     font-family: var(--font-montserrat);
 }
 
-.question-info__chips {
-    display     : flex;
-    align-items : center;
-    flex-wrap   : wrap;
-}
-
-.question-info__chip {
-    position         : relative;
-    height           : 32px;
-    padding          : 0 13px;
-    font-size        : 14px;
-    font-family      : var(--font-open-sans);
-    line-height      : 32px;
-    border-radius    : 40px;
-    background-color : rgba(241, 244, 246, .22);
-    margin-bottom    : 9px;
-    margin-right     : 9px;
-    cursor           : pointer;
-}
-
 .question-header__dropdown-icon {
     top: 16px;
 }
@@ -204,10 +184,6 @@
 
 .question-card--default .question-user__name {
     color: var(--text-blue);
-}
-
-.question-card--default .question-info__chip {
-    background-color: var(--background-color-gray);
 }
 
 .question-card--default .question-card__reactions-wrapper:before {

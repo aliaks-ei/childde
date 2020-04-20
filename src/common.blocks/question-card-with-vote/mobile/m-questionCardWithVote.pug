@@ -1,3 +1,5 @@
+include ../../theme-chips/mobile/m-themeChips
+
 mixin questionCardWithVote({ overlay, bgImage, avatar, title, subtitle, chips = [], votingOptions = [] })
     - let isDefaultQuestion = !(overlay && bgImage);
 
@@ -17,13 +19,16 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, title, subtitle, chips = 
                         span.question-user__date yesterday at 12:20
                     h3.question-info__title !{ title }
                     .question-info__subtitle !{ subtitle }
-                    .question-info__chips
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href="#")
-                            span Real estate 
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href="#")
-                            span Career 
+                    +themeChips({ 
+                        themes: [
+                            { to: '#', name: 'Real estate' }, 
+                            { to: '#', name: 'Career' },
+                            { to: '#', name: 'Health' },
+                            { to: '#', name: 'Economy' }, 
+                            { to: '#', name: 'Future' }
+                        ],
+                        light: !isDefaultQuestion
+                    })
                 button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark
                     span.material-icons-round more_vert
             .question-card__content.question-card__content--vote 

@@ -3,6 +3,9 @@ const searchBarEl         = document.getElementById('searchBar');
 
 for (const activator of searchBarActivators) {
     activator.addEventListener('click', () => {
-        searchBarEl && searchBarEl.classList.toggle('search-bar--visible');
+        if (searchBarEl) {
+            searchBarEl.classList.toggle('search-bar--visible');
+            setTimeout(() => searchBarEl.querySelector('.search-bar__input').focus(), 100);
+        }
     });
 }

@@ -1,0 +1,14 @@
+include ../themeChip.pug
+
+mixin themeChips({ themes = [], light = false, limitTo = 0 })
+    .theme-chips-wrapper
+        if !withoutLimit && themes.length > 1
+            - let visibleThemes = themes.slice(0, 1);
+
+            each theme in visibleThemes
+                +themeChip(theme, light)
+            .theme-chip(class = light ? 'theme-chip--light' : '')
+                span +!{ themes.length - visibleThemes.length }
+        else 
+            each theme in themes
+                +themeChip(theme, light)

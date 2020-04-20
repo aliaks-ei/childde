@@ -1,4 +1,5 @@
 include ../../svg-icon/svgIcon
+include ../../theme-chips/mobile/m-themeChips
 
 mixin questionCard({ overlay, bgImage, avatar, title, interested })
     - let isDefaultQuestion = !(overlay && bgImage);
@@ -19,13 +20,10 @@ mixin questionCard({ overlay, bgImage, avatar, title, interested })
                             span.question-user__name Philip Djones
                         span.question-user__date yesterday at 12:20
                     h3.question-info__title !{ title }
-                    .question-info__chips
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href="#")
-                            span Real estate 
-                        .question-info__chip 
-                            a.question-card__overlapping-link(href="#")
-                            span Career 
+                    +themeChips({ 
+                        themes : [{ to: '#', name: 'Real estate' }, { to: '#', name: 'Career' }],
+                        light  : !isDefaultQuestion 
+                    })
                 button.base-icon-btn.question-header__dropdown-icon(
                     class = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null
                 )
