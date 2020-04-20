@@ -1,0 +1,47 @@
+include ../../svg-icon/svgIcon
+
+mixin linkToStore(icon, subtitle, title)
+    a.links-to-store(href="#")
+        +svgIcon(icon)
+        .link-to-store__text-wrapper
+            .links-to-store__subtitle= subtitle
+            .links-to-store__title= title
+
+.footer-wrapper
+    .footer
+        +baseButton({ text: 'Für Unternehmen', height: 36 })
+        .footer__pages-links
+            div
+                a.footer__pages-links__item(href="#") FAQ
+                span &#183;
+                a.footer__pages-links__item(href="#") Alle Themen
+                span &#183;
+                a.footer__pages-links__item(href="#") AGB
+                span &#183;
+                a.footer__pages-links__item(href="#") Datenschutz
+            div
+                a.footer__pages-links__item(href="#") Richtlinien
+                span &#183;
+                a.footer__pages-links__item(href="#") Kontakt
+                span &#183;
+                a.footer__pages-links__item(href="#") Impressum
+        .footer__downloads__store-links
+            +linkToStore('app-store', 'Available on the', 'App Store')
+            +linkToStore('google-play', 'Android App on', 'Google Play')
+        .footer__socials
+            .footer__socials__icons
+                a.footer__social-link(href="https://www.linkedin.com/", target="_blank")
+                    +svgIcon("linkedin")
+                a.footer__social-link(href="https://www.twitter.com/", target="_blank")
+                    +svgIcon("twitter")
+                a.footer__social-link(href="https://www.facebook.com/", target="_blank")
+                    +svgIcon("facebook")
+                a.footer__social-link(href="https://www.pinterest.com/", target="_blank")
+                    +svgIcon("pinterest")
+                a.footer__social-link(href="https://www.youtube.com/", target="_blank")
+                    +svgIcon("youtube")
+            .footer__copyright 
+                span 2013-2020 — child.de. 
+                span All rights reserved
+            a.footer__logo(href="#")
+                +svgIcon("logo")
