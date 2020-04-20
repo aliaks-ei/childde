@@ -1,5 +1,7 @@
 extends ../common.blocks/layouts/m-pageLayout
 
+include ../common.blocks/question-card/questionCard
+
 block title
     title Index
 
@@ -10,7 +12,11 @@ block content
         h3 Nur so sind alle Erfahrungen, Meinungen und Antworten zuganglich.
     include ../common.blocks/personages/mobile/m-personages
     include ../common.blocks/enter-question/mobile/m-enterQuestion
-    include ../common.blocks/date-filter/dateFilter
+    include ../common.blocks/filter-by-dates/filterByDates
     include ../common.blocks/opinion-card/mobile/m-opinionCard
-
+    +questionCard({ 
+        avatar     : 'question-0-avatar.png',
+        title      : 'Reverse engineering of a binary format <br> on the example of Korg.',
+        interested : true
+    })
     include ../common.blocks/questions-slider/mobile/m-questionsSlider

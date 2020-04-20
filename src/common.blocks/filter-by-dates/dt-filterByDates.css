@@ -9,6 +9,10 @@
     cursor    : pointer;
 }
 
+.date-filter__item + .date-filter__item {
+    margin-left: 4px;
+}
+
 .date-filter__item:hover {
     background-color : var(--background-color-white );
     color            : var(--red-color);

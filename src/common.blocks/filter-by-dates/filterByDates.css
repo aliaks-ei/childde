@@ -18,10 +18,6 @@
     transition       : transform .1s ease-out;
 }
 
-.date-filter__item + .date-filter__item {
-    margin-left: 4px;
-}
-
 .date-filter__item--active {
     background-color : var(--background-color-white );
     color            : var(--red-color);

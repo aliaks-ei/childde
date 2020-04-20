@@ -7,3 +7,7 @@
 .date-filter__item {
     font-size : 12px;
 }
+
+.date-filter__item + .date-filter__item {
+    margin-left: 2px;
+}
