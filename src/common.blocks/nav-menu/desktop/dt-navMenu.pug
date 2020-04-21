@@ -1,44 +1,44 @@
-include ../buttons/base-button/baseButton
-include ../svg-icon/svgIcon
+include ../../buttons/base-button/baseButton
+include ../../svg-icon/svgIcon
 
-nav.left-nav-menu
+nav.nav-menu
 	div
-		.left-nav-menu__item.nav-item.nav-item--selected
+		.nav-menu__item.nav-item.nav-item--selected
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('newspaper')
 				span Feed
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('user')
 				span Profil
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('compass')
 				span Neu
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('edit')
-				span Anworten
-		.left-nav-menu__item.nav-item
+				span Antworten
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('trophy')
 				span Top
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('themen')
 				span Themen
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('surface')
 				span Bewertung
-		.left-nav-menu__item.nav-item
+		.nav-menu__item.nav-item
 			a.nav-item__link(href="#")
 				.nav-item__icon
 					+svgIcon('teamwork')
@@ -48,6 +48,6 @@ nav.left-nav-menu
 			bgColor   : 'var(--background-color-black)',
 			color     : 'var(--text-white)',
 			width     : 171
-		})(class="left-nav-menu__button", data-target="qModal")
-		button.left-nav-menu__button.left-nav-menu__button--tablet(data-target="qModal")
+		})(class="nav-menu__button", data-target="qModal")
+		button.nav-menu__button.nav-menu__button--tablet(data-target="qModal")
 			span.material-icons help_outline

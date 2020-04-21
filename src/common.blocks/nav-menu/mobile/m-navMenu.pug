@@ -1,0 +1,18 @@
+include ../../svg-icon/svgIcon
+
+mixin navItem({ icon, title, materialIcon = false })
+    a.nav-menu__item.nav-item(href="#")
+        .nav-item__icon
+            if materialIcon
+                span.material-icons-round= icon
+            else
+                +svgIcon(icon)
+        .nav-item__title= title
+
+.nav-menu-wrapper#bottomNavMenu
+    .nav-menu
+        +navItem({ icon: 'newspaper', title: 'Feed' })
+        +navItem({ icon: 'edit', title: 'Antworten' })
+        +navItem({ icon: 'help', title: 'Beitrag', materialIcon: true })
+        +navItem({ icon: 'user', title: 'Profil' })
+        +navItem({ icon: 'menu', title: 'Menu', materialIcon: true })
