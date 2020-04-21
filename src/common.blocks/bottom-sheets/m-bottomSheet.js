@@ -1,6 +1,6 @@
-const bottomSheet         = document.getElementById('bottomSheet');
-const bottomSheetCloseBtn = document.getElementById('closeBottomSheet');
-const mainContent         = document.body.firstElementChild;
+const bottomSheet                = document.getElementById('bottomSheet');
+const bottomSheetCloseActivators = document.querySelectorAll('[data-target="closeBottomSheet"]');
+const mainContent                = document.body.firstElementChild;
 
 function showBottomSheet() {
     if (bottomSheet) {
@@ -22,9 +22,13 @@ function hideBottomSheet() {
         document.querySelector('.modal-overlay').remove();
 
         setTimeout(() => {
-            bottomSheet.querySelector('.bottom-sheet__content').style.display = 'none';
+            for (let el of bottomSheet.querySelector('.bottom-sheet__content').children) {
+                el.style.display = 'none';
+            };
         }, 300);
     }
 }
 
-bottomSheetCloseBtn.addEventListener('click', hideBottomSheet);
+for (const el of bottomSheetCloseActivators) {
+    el.addEventListener('click', hideBottomSheet);
+}

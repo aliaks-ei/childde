@@ -1,14 +1,5 @@
-const shortDescEls = document.getElementsByClassName('question-card__content__short-desc');
-
 let qTopDropdownEl;
 let qBottomDropdownEl;
-
-for (const elem of shortDescEls) {
-    elem.addEventListener('click', () => {
-        elem.nextElementSibling.style.display = 'block';
-        elem.remove();
-    });
-}
 
 function generateQTopDropdownEl(x, y) {
     const xPos = x - 195;
