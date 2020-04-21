@@ -1,7 +1,7 @@
 include ../../svg-icon/svgIcon
 
-mixin navItem({ icon, title, materialIcon = false })
-    a.nav-menu__item.nav-item(href="#")
+mixin navItem({ icon, title, materialIcon = false, target })
+    a.nav-menu__item.nav-item(data-target=target)
         .nav-item__icon
             if materialIcon
                 span.material-icons-round= icon
@@ -9,10 +9,10 @@ mixin navItem({ icon, title, materialIcon = false })
                 +svgIcon(icon)
         .nav-item__title= title
 
-.nav-menu-wrapper#bottomNavMenu
+.nav-menu-wrapper#bottomNav
     .nav-menu
         +navItem({ icon: 'newspaper', title: 'Feed' })
         +navItem({ icon: 'edit', title: 'Antworten' })
         +navItem({ icon: 'help', title: 'Beitrag', materialIcon: true })
         +navItem({ icon: 'user', title: 'Profil' })
-        +navItem({ icon: 'menu', title: 'Menu', materialIcon: true })
+        +navItem({ icon: 'menu', title: 'Menu', materialIcon: true, target: 'bottomMenu' })

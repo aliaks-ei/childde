@@ -39,7 +39,6 @@
 .footer__socials {
     display        : flex;
     flex-direction : column;
-    align-items    : center;
 }
 
 .footer__socials__icons {

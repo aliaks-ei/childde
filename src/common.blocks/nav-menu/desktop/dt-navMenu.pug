@@ -1,48 +1,23 @@
 include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
+mixin navItem({ icon, title })
+	.nav-menu__item.nav-item&attributes(attributes)
+		a.nav-item__link(href="#")
+			.nav-item__icon
+				+svgIcon(icon)
+			span= title
+
 nav.nav-menu
 	div
-		.nav-menu__item.nav-item.nav-item--selected
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('newspaper')
-				span Feed
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('user')
-				span Profil
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('compass')
-				span Neu
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('edit')
-				span Antworten
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('trophy')
-				span Top
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('themen')
-				span Themen
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('surface')
-				span Bewertung
-		.nav-menu__item.nav-item
-			a.nav-item__link(href="#")
-				.nav-item__icon
-					+svgIcon('teamwork')
-				span Community
+		+navItem({ icon: 'newspaper', title: 'Feed' })(class="nav-item--selected")
+		+navItem({ icon: 'user', title: 'Profil' })
+		+navItem({ icon: 'compass', title: 'Neu' })
+		+navItem({ icon: 'edit', title: 'Antworten' })
+		+navItem({ icon: 'trophy', title: 'Top' })
+		+navItem({ icon: 'themen', title: 'Themen' })
+		+navItem({ icon: 'surface', title: 'Bewertung' })
+		+navItem({ icon: 'teamwork', title: 'Community' })
 		+baseButton({ 
 			text      : 'Frage stellen',
 			bgColor   : 'var(--background-color-black)',

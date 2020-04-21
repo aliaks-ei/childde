@@ -57,5 +57,12 @@ block content
         ]
     })
     include ../common.blocks/pre-footer/mobile/m-preFooter
-    include ../common.blocks/footer/mobile/m-footer
     include ../common.blocks/nav-menu/mobile/m-navMenu
+
+block modals
+    .bottom-sheet-wrapper#bottomSheet
+        .bottom-sheet
+            .bottom-sheet__arrow-icon#closeBottomSheet
+                span.material-icons-round expand_more
+            .bottom-sheet__content
+                include ../common.blocks/bottom-sheets/bottom-menu/m-bottomMenu
