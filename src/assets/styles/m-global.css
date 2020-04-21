@@ -1,5 +1,11 @@
 html, body {
-    font-size: 14px;
+    font-size  : 14px;
+    overflow-y : hidden;
+}
+
+.main {
+    height     : 100vh;
+    overflow-y : auto;
 }
 
 .page-title-wrapper {
