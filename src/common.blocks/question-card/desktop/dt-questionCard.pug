@@ -30,7 +30,8 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                     light  : !isDefaultQuestion 
                 })
             button.base-icon-btn.question-header__dropdown-icon(
-                class = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null
+                class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
+                data-target = "qcTopDropdown"
             )
                 span.material-icons-round more_vert
         .question-card__reactions-wrapper
@@ -78,7 +79,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                             button.question-card-button
                                 span.question-card-button__icon(class=`material-icons${ interested ? '-outlined' : '' }`) thumb_down
                                 span= interested ? 0 : 1
-                        button.base-icon-btn.question-reviews__horizontal-dropdown
+                        button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
                             span.material-icons-round more_horiz
                     button.question-card__read-all-answers-btn Weitere Antworten lesen
 

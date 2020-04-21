@@ -1,6 +1,4 @@
-const userImageEl    = document.getElementById('userImage');
-const dropdownMenuEl = document.getElementById('accountDropdown');
-const shortDescEls   = document.getElementsByClassName('question-card__content__short-desc');
+const shortDescEls = document.getElementsByClassName('question-card__content__short-desc');
 
 let qTopDropdownEl;
 let qBottomDropdownEl;
@@ -28,13 +26,6 @@ function generateQBottomDropdownEl(x, y) {
     qBottomDropdownEl.style.display   = 'block';
 }
 
-function toggleQuestionNotifications() {
-    const notifyToggleEl = document.getElementById('notifyTogglerOption');
-    const { checked } = notifyToggleEl.querySelector('input');
-
-    notifyToggleEl.querySelector('input').checked = !checked;
-}
-
 window.addEventListener('click', event => {
     if (qTopDropdownEl && !qTopDropdownEl.contains(event.target)) {
         qTopDropdownEl.style.display = 'none';
@@ -44,22 +35,13 @@ window.addEventListener('click', event => {
         qBottomDropdownEl.style.display = 'none';
     }
 
-    dropdownMenuEl.style.display = 'none';
-
-    if (userImageEl.contains(event.target) || dropdownMenuEl.contains(event.target)) {
-        dropdownMenuEl.style.display = 'block';
-    }
-
-    if (event.target.classList.contains('question-header__dropdown-icon')) {
+    if (event.target.dataset && event.target.dataset.target === 'qcTopDropdown') {
         const { x, y } = event.target.getBoundingClientRect();
 
         qTopDropdownEl = document.getElementById('qTopDropdown');
         generateQTopDropdownEl(x, y);
-
-        qTopDropdownEl.querySelector('#notifyTogglerOption').addEventListener('click', toggleQuestionNotifications);
     }
-
-    if (event.target.classList.contains('question-reviews__horizontal-dropdown')) {
+    else if (event.target.dataset && event.target.dataset.target === 'qcBottomDropdown') {
         const { x, y } = event.target.getBoundingClientRect();
 
         qBottomDropdownEl = document.getElementById('qBottomDropdown');
