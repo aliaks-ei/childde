@@ -1,4 +1,4 @@
-include ../../symbols-counter/symbolsCounter
+include ../../../symbols-counter/symbolsCounter
 
 .base-modal-wrapper#answerModal(style="display: none")
     .base-modal(tabindex="0").answer-modal-container
@@ -22,13 +22,13 @@ include ../../symbols-counter/symbolsCounter
                         span.answer-options__btn__content.material-icons-round format_quote
                     button.answer-options__btn(data-target="uploadImageDropdown")
                         span.answer-options__btn__content.material-icons-round insert_photo
-                    include ../../dropdowns/upload-image/uploadImage
+                    include ../../../dropdowns/upload-image/uploadImage
                     button.answer-options__btn.answer-options__btn--link(data-target="addLinkDropdown")
                         span.answer-options__btn__content.material-icons-round insert_link
-                    include ../../dropdowns/add-link/addLink
+                    include ../../../dropdowns/add-link/addLink
             .answer-modal__bottom-wrapper
                 .answer-modal__bottom-container
-                    include ../../dropdowns/user-select-dropdown/userSelectDropdown
+                    include ../../../dropdowns/user-select-dropdown/userSelectDropdown
                     .asnwer-modal__answer-button-wrapper
                         +symbolsCounter({ label: 20, success: true })
                         button.asnwer-modal__answer-button.answer-modal__answer-button--disabled Antworten

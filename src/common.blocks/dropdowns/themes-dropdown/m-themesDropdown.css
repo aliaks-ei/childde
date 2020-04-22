@@ -1,0 +1,41 @@
+.themes-header__title {
+    font-size: 18px;
+}
+
+.themes-header__close-btn {
+    font-size     : 12px;
+    font-weight   : 600;
+    border-radius : 25px;
+    height        : 28px;
+    padding       : 4px 16px;
+}
+
+.themes-search__field {
+    height: 36px;
+}
+
+.themes-search__results-wrapper {
+    padding-top: 16px;
+}
+
+.themes-options {
+    padding: 0 4px;
+}
+
+.themes-options__option {
+    padding: 6px 0;
+}
+
+.themes-options__option__add-btn {
+    width     : 26px;
+    min-width : 26px;
+    height    : 26px;
+}
+
+.themes-options__option__add-btn .material-icons-round {
+    font-size: 20px;
+}
+
+.themes-select__search-results {
+    padding: 15px 0 16px;
+}

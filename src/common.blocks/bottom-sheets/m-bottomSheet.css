@@ -6,7 +6,7 @@
     border-radius    : 8px 8px 0 0;
     padding          : 8px 16px 10px;
     background-color : var(--background-color-white);
-    z-index          : 1003;
+    z-index          : 1005;
     transition       : bottom .25s ease-out;
     will-change      : bottom;
     box-shadow       : 0 11px 15px -7px rgba(62, 62, 62, .3), 

@@ -1,32 +1,12 @@
-.upload-cover-wrapper {
-    position      : absolute;
-    top           : -10px;
-    width         : 340px;
-    margin-bottom : 24px;
-    z-index       : 1100;
-}
-
 .upload-cover-header {
-    position        : relative;
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-    padding         : 30px 32px;
+    position    : relative;
+    display     : flex;
+    align-items : center;
 }
 
 .upload-cover-header__title {
     font-family : var(--font-montserrat);
     font-weight : 700;
-    font-size   : 22px;
-}
-
-.upload-cover__close-btn {
-    top   : 20px;
-    right : 16px;
-}
-
-.upload-cover__content {
-    padding: 0 32px 30px;
 }
 
 .upload-cover__upload-btn {
@@ -35,26 +15,19 @@
     background-color : var(--background-color-gray);
     font-family      : var(--font-montserrat);
     font-weight      : 700;
-    font-size        : 14px;
     width            : 100%;
     height           : 40px;
-    cursor           : pointer;
     outline          : none;
     user-select      : none;
 }
 
-.upload-cover__upload-btn:hover {
-    background-color: var(--background-color-gray-3);
-}
-
 .upload-cover__delimiter {
-    font-size : 12px;
-    margin    : 14px 0;
+    font-size: 12px;
 }
 
 .upload-cover__input-wrapper {
-    display: flex;
-    align-items: center;
+    display     : flex;
+    align-items : center;
 }
 
 .upload-cover__upload-icon {
@@ -74,6 +47,5 @@
 }
 
 .upload-cover__upload-icon .material-icons {
-    font-size   : 20px;
-    line-height : inherit;
+    line-height: inherit;
 }

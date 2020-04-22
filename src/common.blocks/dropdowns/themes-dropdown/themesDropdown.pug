@@ -1,11 +1,11 @@
-.themes-select-wrapper#qThemesDropdown(style="display: none")
+.themes-select-wrapper#qThemesDropdown
     .themes-select.base-dropdown
         .themes-select__header.themes-header
             .themes-header__title Themen
-            button.themes-header__close-btn#qThemesDropdownClose Close
+            button.themes-header__close-btn#qThemesDropdownClose(data-target="closeBottomSheet") Close
         .themes-select__search-results.themes-search
             .themes-search__field-wrapper
-                input.themes-search__field(type="text", placeholder="Themen")
+                input.themes-search__field(type="text", placeholder="Search themen")
             .themes-search__results-wrapper
                 .themes-options
                     .themes-options__option Family

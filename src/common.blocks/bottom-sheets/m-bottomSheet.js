@@ -9,7 +9,7 @@ function showBottomSheet() {
 
         bottomSheet.style.bottom = '-6px';
 
-        bottomSheet.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block"></div>');
+        bottomSheet.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block; z-index: 1004"></div>');
         document.querySelector('.modal-overlay').addEventListener('click', hideBottomSheet);
     }
 }

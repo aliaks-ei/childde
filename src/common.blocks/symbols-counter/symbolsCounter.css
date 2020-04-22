@@ -1,18 +1,13 @@
 .symbols-counter {
-    position    : relative;
-    width       : 40px;
-    height      : 40px;
-    line-height : 40px;
-    margin      : auto 12px;
-    font-size   : 3em;
-    color       : var(--text-gray-2);
+    position : relative;
+    margin   : auto 12px;
+    color    : var(--text-gray-2);
 }
 
 .symbols-counter__label {
     line-height : inherit;
     text-align  : center;
     font-family : var(--font-open-sans);
-    font-size   : 16px;
     font-weight : 600;
     height      : 100%;
 }
@@ -34,7 +29,6 @@
 .symbols-counter__circle__half {
     height        : 100%;
     width         : 100%;
-    border        : .075em solid currentColor;
     border-radius : 50%;
     clip          : rect(0, .5em, 1em, 0);
     left          : 0;

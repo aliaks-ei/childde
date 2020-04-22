@@ -1,0 +1,9 @@
+.base-dropdown {
+    border-radius    : 10px;
+    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
+    background-color : var(--background-color-white);
+}
+
+.base-dropdown__input {
+    font-size: 14px;
+}
