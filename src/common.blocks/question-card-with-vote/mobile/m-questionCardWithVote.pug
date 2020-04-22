@@ -29,8 +29,8 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, title, subtitle, chips = 
                         ],
                         light: !isDefaultQuestion
                     })
-                button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark
-                    span.material-icons-round more_vert
+                button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark(data-target="qcTopMenu")
+                    span.material-icons-round(data-target="qcTopMenu") more_vert
             .question-card__content.question-card__content--vote 
                 each option in votingOptions
                     .question-card__vote-bar

@@ -7,7 +7,7 @@ let prevScrollPos = mainContent.scrollTop;
 mainContent.addEventListener('scroll', function () {
     const currentScrollPos = mainContent.scrollTop;
 
-    bottomNav.style.bottom = `${ prevScrollPos > currentScrollPos ? 24 : -96 }px`;
+    bottomNav.style.bottom = `${ prevScrollPos > currentScrollPos ? 12 : -96 }px`;
     prevScrollPos = currentScrollPos;
 });
 
