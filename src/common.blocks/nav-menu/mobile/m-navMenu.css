@@ -25,6 +25,7 @@
 }
 
 .nav-item {
+    position        : relative;
     flex            : 1 1 20%;
     display         : block;
     text-decoration : none;
@@ -37,7 +38,19 @@
     transform: scale(.96);
 }
 
+.nav-item--highlighted:before {
+    position      : absolute;
+    content       : "";
+    top           : -4px;
+    bottom        : -4px;
+    left          : 2px;
+    right         : 2px;
+    border-radius : 15% / 20%;
+    background    : var(--background-color-gray);
+}
+
 .nav-item .nav-item__icon {
+    position        : relative;
     display         : flex;
     align-items     : center;
     justify-content : center;
@@ -47,4 +60,8 @@
 .nav-item .nav-item__icon svg {
     width  : 18px;
     height : 24px;
+}
+
+.nav-item .nav-item__title {
+    position: relative;
 }

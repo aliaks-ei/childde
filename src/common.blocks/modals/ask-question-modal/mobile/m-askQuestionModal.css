@@ -37,17 +37,17 @@
 .question-modal__textarea {
     font-size   : 16px;
     line-height : 22px;
-    padding     : 16px 12px 8px 16px;
+    padding     : 16px 12px 12px;
 }
 
 .question-modal__textarea.question-modal__textarea--small {
     font-size      : 14px;
-    padding-top    : 8px;
-    padding-bottom : 4px;
+    padding-top    : 12px;
+    padding-bottom : 8px;
 }
 
 .question-modal__selected-themes-wrapper {
-    padding: 0 14px 12px;
+    padding: 0 12px 14px;
 }
 
 .question-modal__selected-themes-wrapper .theme-chip:first-of-type {
@@ -56,13 +56,13 @@
 }
 
 .question-modal__cover-colors {
-    padding: 8px 12px 16px;
+    padding: 16px 12px;
 }
 
 .question-modal__color-btn {
-    min-width     : 30px;
-    width         : 30px;
-    height        : 30px;
+    min-width     : 32px;
+    width         : 32px;
+    height        : 32px;
     border-radius : 10px;
     padding       : 0;
 }
@@ -97,8 +97,9 @@
 }
 
 .question-modal__bottom-container {
-    margin-top : 16px;
-    padding    : 0 14px;
+    margin-top    : 18px;
+    padding-left  : 12px;
+    padding-right : 16px;
 }
 
 .q-bottom-container .user-select__avatar,
