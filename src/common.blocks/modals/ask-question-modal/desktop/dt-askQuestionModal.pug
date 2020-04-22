@@ -1,6 +1,7 @@
 include ../../../buttons/base-button/baseButton
 include ../../../svg-icon/svgIcon
 include ../../../symbols-counter/symbolsCounter
+include ../../../theme-chips/desktop/dt-themeChips
 
 mixin optionBtn({ icon, text })
     button.question-modal__option-btn&attributes(attributes)
@@ -17,16 +18,16 @@ mixin optionBtn({ icon, text })
             .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="3")
-            //- .question-modal__selected-themes-wrapper
-            //-     .question-modal__selected-themes.q-selected-themes
-            //-         button.q-selected-themes__theme.question-info__chip(data-target="qThemesDropdown")
-            //-              span.material-icons-round add
-            //-         .q-selected-themes__theme.question-info__chip Family
-            //-             span.material-icons-round close
-            //-         .q-selected-themes__theme.question-info__chip Sport
-            //-             span.material-icons-round close
-            //-         .q-selected-themes__theme.question-info__chip Chillout
-            //-             span.material-icons-round close
+            .question-modal__selected-themes-wrapper
+                +themeChips({ 
+                    themes: [
+                        { name: '&#43;', target: 'qThemesDropdown' },
+                        { name: 'Family', removable: true }, 
+                        { name: 'Sport', removable: true },
+                        { name: 'Chillout', removable: true }
+                    ],
+                    withoutLimit: true
+                })
         .question-modal__cover-colors#qCoverColors
             button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
                 span.material-icons-round done

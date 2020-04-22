@@ -6,3 +6,7 @@
     margin-bottom : 6px;
     margin-right  : 6px;
 }
+
+.theme-chip .material-icons-round {
+    font-size: 16px;
+}

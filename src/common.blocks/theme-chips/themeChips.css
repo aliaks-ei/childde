@@ -5,13 +5,15 @@
 }
 
 .theme-chip {
+    display          : flex;
+    align-items      : center;
     position         : relative;
     font-family      : var(--font-open-sans);
     border-radius    : 40px;
     background-color : var(--background-color-gray);
 }
 
-.theme-chip--light {
+.theme-chips-wrapper--light .theme-chip {
     background-color : rgba(241, 244, 246, .22);
 }
 
@@ -27,4 +29,10 @@
 .theme-chip:active {
     transform : scale(.96);
     opacity   : .65;
+}
+
+.theme-chip .material-icons-round {
+    margin-left : 6px;
+    margin-top  : 1px;
+    color       : inherit;
 }

@@ -1,4 +1,7 @@
-mixin themeChip({ to, name }, light)
-    .theme-chip(class = light ? 'theme-chip--light' : '')
-        a.theme-chip__link(href=to)
-        span= name
+mixin themeChip({ to, name, target, removable = false })
+    .theme-chip(data-target=target)            
+        span !{ name }
+        if removable
+            span.material-icons-round close
+        else
+            a.theme-chip__link(href=to)

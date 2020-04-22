@@ -16,3 +16,7 @@
 .theme-chip--light:hover {
     background-color: rgba(241, 244, 246, .15);
 }
+
+.theme-chip .material-icons-round {
+    font-size: 20px;
+}

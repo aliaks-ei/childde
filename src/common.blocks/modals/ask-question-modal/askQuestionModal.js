@@ -10,6 +10,7 @@ let selectedQColorBtnIdx = 0;
 
 function changeQCoverColor(targetEl) {
     const pressedColorBtn = targetEl.closest('.question-modal__color-btn');
+    const themeChipsWrapper = qModalCover.querySelector('.theme-chips-wrapper');
 
     if (pressedColorBtn && qColorBtns[selectedQColorBtnIdx] !== pressedColorBtn) {
         qCoverBgColor.style.backgroundColor = pressedColorBtn.style.backgroundColor;
@@ -23,9 +24,11 @@ function changeQCoverColor(targetEl) {
 
         if (pressedColorBtn.id == 'qColorBtnWhite') {
             qModalCover.classList.remove('question-modal__cover--white-text');
+            themeChipsWrapper.classList.remove('theme-chips-wrapper--light');
         }
         else {
             qModalCover.classList.add('question-modal__cover--white-text');
+            themeChipsWrapper.classList.add('theme-chips-wrapper--light');
         }
     }
 }

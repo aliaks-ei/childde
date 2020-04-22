@@ -47,11 +47,12 @@
 }
 
 .question-modal__selected-themes-wrapper {
-    padding-bottom: 12px;
+    padding: 0 14px 12px;
 }
 
-.q-selected-themes {
-    padding: 0 14px;
+.question-modal__selected-themes-wrapper .theme-chip:first-of-type {
+    font-size : 20px;
+    padding   : 0 7px;
 }
 
 .question-modal__cover-colors {

@@ -110,26 +110,8 @@
     z-index  : 2;
 }
 
-.q-selected-themes {
-    display     : flex;
-    align-items : center;
-    flex-wrap   : wrap;
-}
-
-.q-selected-themes__theme {
-    display     : flex;
-    align-items : center;
-    border      : 0;
-    font-weight : 600;
-}
-
-.q-selected-themes__theme .material-icons-round {
-    color: inherit;
-}
-
-.q-selected-themes__theme:not(:first-child) .material-icons-round {
-    font-size   : 20px;
-    margin-left : 6px;
+.question-modal__selected-themes-wrapper .theme-chip:first-of-type {
+    font-weight: 600;
 }
 
 .question-modal__cover--white-text .question-modal__textarea {
@@ -140,10 +122,6 @@
     color: hsla(0, 100%, 100%, .5);
 }
 
-.question-modal__cover:not(.question-modal__cover--white-text) .q-selected-themes__theme {
-    background-color: var(--background-color-gray);
-}
-
-.question-modal__cover--white-text .q-selected-themes__theme {
+.question-modal__cover--white-text .theme-chips-wrapper .theme-chip {
     color: var(--text-white);
 }
