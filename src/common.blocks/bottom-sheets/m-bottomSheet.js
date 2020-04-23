@@ -3,6 +3,36 @@ const bottomSheetContent         = bottomSheet.querySelector('.bottom-sheet__con
 const modalOverlay               = document.querySelector('.modal-overlay');
 const bottomSheetCloseActivators = document.querySelectorAll('[data-target="closeBottomSheet"]');
 
+const draggie = new Draggabilly(bottomSheet, { axis: 'y' });
+
+let dragDownVector    = 0;
+let dragStartPosition = 0;
+
+draggie.on('dragMove', function (event, pointer, moveVector) {
+    if (dragStartPosition - draggie.position.y >= 100) {
+        draggie._pointerUp(event.originalEvent, pointer);
+    }
+
+    dragDownVector = moveVector.y;
+});
+
+draggie.on('pointerDown', function () {
+    draggie.enable(); 
+
+    dragDownVector = 0;
+    dragStartPosition = bottomSheet.offsetTop;
+});
+
+draggie.on('pointerUp', function () {
+    if (dragDownVector >= 40) {
+        hideBottomSheet();
+    }
+    else {
+        draggie.disable();
+        bottomSheet.style.transform = 'translate3d(0, 0, 0)';
+    }
+});
+
 function showBottomSheet() {
     if (bottomSheet) {
         document.documentElement.style.overflow = 'hidden';
