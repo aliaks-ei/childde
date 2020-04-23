@@ -4,7 +4,6 @@ const babel            = require('gulp-babel');
 const pug              = require('gulp-pug');
 const postcss          = require('gulp-postcss');
 const concat           = require('gulp-concat');
-const imagemin         = require('gulp-imagemin');
 const plumber          = require('gulp-plumber');
 const livereload       = require('gulp-livereload');
 const svgSymbols       = require('gulp-svg-symbols')
@@ -126,9 +125,6 @@ function js(cb) {
 function images(cb) {
 	src(paths.images)
 		.pipe(plumber())
-		.pipe(imagemin([
-			imagemin.optipng({ optimizationLevel: 5 })
-		]))
 		.pipe(dest('build/assets/images'))
 		.pipe(livereload());
 

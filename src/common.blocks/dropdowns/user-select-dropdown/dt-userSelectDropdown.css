@@ -11,6 +11,10 @@
     z-index       : 1100;
 }
 
+.user-select__avatar img {
+    width: 40px;
+}
+
 .select-dropdown {
     padding: 16px 20px 16px;
 }

@@ -84,3 +84,7 @@
 .question-card__content__read-more-btn {
     cursor: pointer;
 }
+
+.question-card__user-avatar {
+    width: 40px;
+}
