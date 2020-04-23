@@ -39,3 +39,8 @@
 .app-bs-active {
     overflow: hidden;
 }
+
+.bs--keyboard-active {
+    position : absolute;
+    height   : 100%;
+}

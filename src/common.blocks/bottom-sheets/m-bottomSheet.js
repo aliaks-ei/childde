@@ -35,7 +35,6 @@ draggie.on('pointerUp', function () {
 
 function showBottomSheet() {
     if (bottomSheet) {
-        document.documentElement.classList.add('app-bs-active');
         document.body.classList.add('app-bs-active');
 
         bottomSheet.classList.remove('bottom-sheet-wrapper--hidden');
@@ -57,7 +56,6 @@ function hideBottomSheet() {
         bottomSheet.style.transform  = 'translate3d(0, 100%, 0)';
         modalOverlay.style.opacity   = 0;
 
-        document.documentElement.classList.remove('app-bs-active');
         document.body.classList.remove('app-bs-active'); 
 
         bottomSheet.addEventListener('transitionend', () => {
