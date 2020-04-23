@@ -1,17 +1,24 @@
 .bottom-sheet-wrapper {
     position         : fixed;
-    bottom           : -100%;
+    top              : auto;
+    bottom           : 0;
     left             : 0;
     right            : 0;
     border-radius    : 8px 8px 0 0;
     padding          : 8px 16px 10px;
     background-color : var(--background-color-white);
     z-index          : 1005;
-    transition       : bottom .25s ease-out;
-    will-change      : bottom;
+    width            : 100%;
+    transform        : translate3d(0, 100%, 0);
+    transition       : transform .3s ease-out;
+    will-change      : transform;
     box-shadow       : 0 11px 15px -7px rgba(62, 62, 62, .3), 
                        0 24px 38px 3px rgba(62, 62, 62, .24), 
                        0 9px 46px 8px rgba(62, 62, 62, .22);
+}
+
+.bottom-sheet-wrapper--hidden {
+    display: none;
 }
 
 .bottom-sheet {

@@ -3,6 +3,7 @@
 }
 
 html, body {
+    position                    : relative;
     font-family                 : 'Open Sans', sans-serif;
     color                       : #282a2d;
     margin                      : 0;
@@ -54,19 +55,6 @@ button:active {
 
 .spaceVertical--100 {
     height: 100px;
-}
-
-.modal-overlay {
-    position   : fixed;
-    z-index    : 1002;
-    top        : 0;
-    left       : 0;
-    bottom     : 0;
-    right      : 0;
-    width      : 100%;
-    background : #000000;
-    display    : none;
-    opacity    : 0.5;
 }
 
 .material-icons,

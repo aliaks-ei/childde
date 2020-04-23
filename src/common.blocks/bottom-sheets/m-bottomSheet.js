@@ -1,28 +1,45 @@
 const bottomSheet                = document.getElementById('bottomSheet');
+const bottomSheetContent         = bottomSheet.querySelector('.bottom-sheet__content');
+const modalOverlay               = document.querySelector('.modal-overlay');
 const bottomSheetCloseActivators = document.querySelectorAll('[data-target="closeBottomSheet"]');
 
 function showBottomSheet() {
     if (bottomSheet) {
-        bottomSheet.querySelector('.bottom-sheet__content').style.display = 'block';
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
 
-        bottomSheet.style.bottom = '-6px';
+        bottomSheet.classList.remove('bottom-sheet-wrapper--hidden');
+        modalOverlay.classList.remove('modal-overlay--hidden');
 
-        bottomSheet.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block; z-index: 1004"></div>');
-        document.querySelector('.modal-overlay').addEventListener('click', hideBottomSheet);
+        bottomSheetContent.style.display = 'block';
+
+        setTimeout(() => {
+            bottomSheet.style.transform = 'translate3d(0, 0, 0)';
+            modalOverlay.style.opacity = '0.4';
+
+            modalOverlay.addEventListener('click', hideBottomSheet);
+        }, 100);
     }
 }
 
-function hideBottomSheet() {
+function hideBottomSheet(event) {
     if (bottomSheet) {
-        bottomSheet.style.bottom = '-100%';
+        bottomSheet.style.transform  = 'translate3d(0, 100%, 0)';
+        modalOverlay.style.opacity   = 0;
 
-        document.querySelector('.modal-overlay').remove();
+        document.documentElement.style.overflow = null;
+        document.body.style.overflow = null;
 
-        setTimeout(() => {
-            for (let el of bottomSheet.querySelector('.bottom-sheet__content').children) {
+        bottomSheet.addEventListener('transitionend', () => {
+            bottomSheet.classList.add('bottom-sheet-wrapper--hidden');
+            modalOverlay.classList.add('modal-overlay--hidden');
+
+            modalOverlay.removeEventListener('click', hideBottomSheet);
+
+            for (let el of bottomSheetContent.children) {
                 el.style.display = 'none';
             };
-        }, 300);
+        }, { once: true });
     }
 }
 

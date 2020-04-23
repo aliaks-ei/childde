@@ -8,6 +8,9 @@ function handleQModalClick(event) {
     else if (qModalCloseBtn.contains(event.target)) {
         this.style.display = 'none';
 
+        document.documentElement.style.overflow = null;
+        document.body.style.overflow = null;
+
         this.removeEventListener('click', handleQModalClick);
     }
 }
@@ -20,6 +23,9 @@ for (const activator of qModalActivators) {
 
         qModal.style.display = 'block';
         qModal.addEventListener('click', handleQModalClick);
+
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
 
         autosize(document.querySelectorAll('textarea'));
     });

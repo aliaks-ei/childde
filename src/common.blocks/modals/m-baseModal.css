@@ -33,3 +33,14 @@
     display     : flex;
     align-items : center;
 }
+
+.modal-overlay {
+    z-index     : 1004;
+    opacity     : 0;
+    transition  : opacity .3s ease-out;
+    will-change : opacity;
+}
+
+.modal-overlay--hidden {
+    display: none;
+}

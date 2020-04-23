@@ -9,11 +9,11 @@
     margin-right  : 9px;
 }
 
-.theme-chip:not(.theme-chip--light):hover {
+.theme-chip:hover {
     background-color: var(--background-color-gray-3);
 }
 
-.theme-chip--light:hover {
+.theme-chips-wrapper--light .theme-chip:hover {
     background-color: rgba(241, 244, 246, .15);
 }
 

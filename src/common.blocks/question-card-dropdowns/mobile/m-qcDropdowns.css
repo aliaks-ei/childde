@@ -38,4 +38,5 @@
     font-weight      : 600;
     font-family      : var(--font-montserrat);
     margin-bottom    : 16px;
+    transition       : none;
 }
