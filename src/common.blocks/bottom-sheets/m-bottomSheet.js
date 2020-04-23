@@ -1,11 +1,9 @@
 const bottomSheet                = document.getElementById('bottomSheet');
 const bottomSheetCloseActivators = document.querySelectorAll('[data-target="closeBottomSheet"]');
-const mainContent                = document.body.firstElementChild;
 
 function showBottomSheet() {
     if (bottomSheet) {
         bottomSheet.querySelector('.bottom-sheet__content').style.display = 'block';
-        mainContent.style.overflowY = 'hidden';
 
         bottomSheet.style.bottom = '-6px';
 
@@ -17,7 +15,6 @@ function showBottomSheet() {
 function hideBottomSheet() {
     if (bottomSheet) {
         bottomSheet.style.bottom = '-100%';
-        mainContent.style.overflowY = 'auto';
 
         document.querySelector('.modal-overlay').remove();
 

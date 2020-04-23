@@ -1,11 +1,10 @@
 const bottomNav           = document.getElementById('bottomNav');
 const bottomMenuActivator = bottomNav.querySelector('[data-target="bottomMenu"]');
-const mainContent         = document.body.firstElementChild;
 
-let prevScrollPos = mainContent.scrollTop;
+let prevScrollPos = window.scrollY;
 
-mainContent.addEventListener('scroll', function () {
-    const currentScrollPos = mainContent.scrollTop;
+window.addEventListener('scroll', function () {
+    const currentScrollPos = window.scrollY;
 
     bottomNav.style.bottom = `${ prevScrollPos > currentScrollPos ? 12 : -96 }px`;
     prevScrollPos = currentScrollPos;

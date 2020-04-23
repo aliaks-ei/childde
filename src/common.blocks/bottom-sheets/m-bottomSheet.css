@@ -1,5 +1,5 @@
 .bottom-sheet-wrapper {
-    position         : absolute;
+    position         : fixed;
     bottom           : -100%;
     left             : 0;
     right            : 0;

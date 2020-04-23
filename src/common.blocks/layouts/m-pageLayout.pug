@@ -23,11 +23,9 @@ html(lang="de")
 		block title
 			title Default title
 	body
-		main.main
-			include ../cookies-warning/mobile/m-cookiesWarning
-			block content
-		#modals
-			block modals
+		include ../cookies-warning/mobile/m-cookiesWarning
+		block content
+		block modals
 
 		script(src="https://unpkg.com/swiper/js/swiper.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
