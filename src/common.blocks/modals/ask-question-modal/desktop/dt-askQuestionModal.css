@@ -95,3 +95,8 @@
 .question-modal__bottom-container {
     padding: 32px 36px 44px;
 }
+
+.q-actions {
+    display     : flex;
+    align-items : center;
+}

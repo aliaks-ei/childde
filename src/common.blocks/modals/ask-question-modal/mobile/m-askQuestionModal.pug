@@ -10,13 +10,13 @@ mixin optionBtn({ icon, text })
 
 .base-modal-wrapper#qModal(style="display: none")
     .base-modal.question-modal
-        .question-modal__top-controls
-            button.base-icon-btn.question-modal__close-btn#qModalCloseBtn
+        .base-modal__top-controls
+            button.base-icon-btn.base-modal__close-btn#qModalCloseBtn
                 span.material-icons-round keyboard_backspace
-            .q-actions
+            .base-modal__top-controls__right-block
                 +symbolsCounter({ label: 20 })
-                +baseButton({ text: 'Speichern', width: 96, height: 32 })(class="q-bottom-container__btn")
-        .question-modal__scrollable-content
+                +baseButton({ text: 'Frage stellen', width: 106, height: 32 })(class="q-bottom-container__btn--disabled")
+        .base-modal__scrollable-content
             .question-modal__cover
                 .question-modal__cover__bg-image#qCoverBgImage
                 .question-modal__cover__bg-color#qCoverBgColor

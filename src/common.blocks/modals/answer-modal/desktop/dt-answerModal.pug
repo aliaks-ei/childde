@@ -31,4 +31,10 @@ include ../../../symbols-counter/symbolsCounter
                     include ../../../dropdowns/user-select-dropdown/userSelectDropdown
                     .asnwer-modal__answer-button-wrapper
                         +symbolsCounter({ label: 20, success: true })
-                        button.asnwer-modal__answer-button.answer-modal__answer-button--disabled Antworten
+                        +baseButton({ 
+                            text    : 'Antworten',
+                            width   : 134,
+                            height  : 40,
+                            bgColor : 'var(--background-color-black)',
+                            color   : 'var(--text-white)'
+                        })(class="answer-modal__answer-button--disabled")

@@ -100,11 +100,6 @@
     pointer-events   : none;
 }
 
-.q-actions {
-    display     : flex;
-    align-items : center;
-}
-
 .question-modal__selected-themes-wrapper {
     position : relative;
     z-index  : 2;
