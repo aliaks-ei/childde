@@ -30,6 +30,7 @@
     justify-content : center;
     align-items     : center;
     width           : 32px;
+    margin-right    : 4px;
 }
 
 .bottom-menu__link__icon svg {

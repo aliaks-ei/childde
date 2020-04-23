@@ -14,16 +14,15 @@ include ../../../symbols-counter/symbolsCounter
                     bgColor : 'var(--background-color-black)',
                     color   : 'var(--text-white)'
                 })(class="answer-modal__answer-button--disabled")
-        .base-modal__scrollable-content
-            .answer-modal__content-wrapper
-                .answer-modal__content
-                    .answer-modal__header__title Wie macht man aus einem Eimer ein Hundehalsband?
-                    textarea.answer-modal__textarea(placeholder="Response no more than 90 characters", rows="1")
-            .answer-modal__bottom-wrapper(data-target="bsAuthorSelect")
-                .answer-modal__bottom-container
-                    .user-select__selected
-                        .user-select__avatar
-                            img(src="./assets/images/question-vote-avatar.png")
-                        span.user-select__name Philip Djones
-                    .answer-modal__icon-wrapper
-                        span.material-icons-round more_vert
+        .answer-modal__content-wrapper
+            .answer-modal__content
+                .answer-modal__header__title Wie macht man aus einem Eimer ein Hundehalsband?
+                textarea.answer-modal__textarea(placeholder="Response no more than 90 characters", rows="1")
+        .answer-modal__bottom-wrapper(data-target="bsAuthorSelect")
+            .answer-modal__bottom-container
+                .user-select__selected
+                    .user-select__avatar
+                        img(src="./assets/images/question-vote-avatar.png")
+                    span.user-select__name Philip Djones
+                .answer-modal__icon-wrapper
+                    span.material-icons-round more_vert

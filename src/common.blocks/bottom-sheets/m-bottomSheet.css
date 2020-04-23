@@ -35,3 +35,7 @@
     font-size : 28px;
     color     : var(--text-gray);
 }
+
+.app-bs-active {
+    overflow: hidden;
+}

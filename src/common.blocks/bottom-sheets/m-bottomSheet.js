@@ -35,8 +35,8 @@ draggie.on('pointerUp', function () {
 
 function showBottomSheet() {
     if (bottomSheet) {
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
+        document.documentElement.classList.add('app-bs-active');
+        document.body.classList.add('app-bs-active');
 
         bottomSheet.classList.remove('bottom-sheet-wrapper--hidden');
         modalOverlay.classList.remove('modal-overlay--hidden');
@@ -52,13 +52,13 @@ function showBottomSheet() {
     }
 }
 
-function hideBottomSheet(event) {
+function hideBottomSheet() {
     if (bottomSheet) {
         bottomSheet.style.transform  = 'translate3d(0, 100%, 0)';
         modalOverlay.style.opacity   = 0;
 
-        document.documentElement.style.overflow = null;
-        document.body.style.overflow = null;
+        document.documentElement.classList.remove('app-bs-active');
+        document.body.classList.remove('app-bs-active'); 
 
         bottomSheet.addEventListener('transitionend', () => {
             bottomSheet.classList.add('bottom-sheet-wrapper--hidden');

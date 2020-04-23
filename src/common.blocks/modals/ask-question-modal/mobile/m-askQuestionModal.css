@@ -61,9 +61,8 @@
 }
 
 .question-modal__bottom-container {
-    margin-top    : 18px;
-    padding-left  : 12px;
-    padding-right : 16px;
+    margin-top : 18px;
+    padding    : 0 16px 8px 12px;
 }
 
 .q-bottom-container__icon-wrapper {

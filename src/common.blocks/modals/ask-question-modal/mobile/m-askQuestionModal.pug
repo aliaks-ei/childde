@@ -16,36 +16,35 @@ mixin optionBtn({ icon, text })
             .base-modal__top-controls__right-block
                 +symbolsCounter({ label: 20 })
                 +baseButton({ text: 'Frage stellen', width: 106, height: 32 })(class="q-bottom-container__btn--disabled")
-        .base-modal__scrollable-content
-            .question-modal__cover
-                .question-modal__cover__bg-image#qCoverBgImage
-                .question-modal__cover__bg-color#qCoverBgColor
-                textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="2")
-                .question-modal__selected-themes-wrapper
-                    +themeChips({ 
-                        themes: [
-                            { name: '&#43;', target: 'bsThemesSelect' },
-                            { name: 'Family', removable: true }, 
-                            { name: 'Sport', removable: true },
-                            { name: 'Chillout', removable: true }
-                        ],
-                        withoutLimit: true
-                    })
-            .question-modal__cover-colors#qCoverColors
-                button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
-                    span.material-icons-round done
-                each color in ['#fabb4f', '#75d0c4', '#ffcf62', '#9494c5', '#8ba4c6', '#ff7150', '#e57497']
-                    button.question-modal__color-btn(style=`background-color: ${ color }`)
-                        span.material-icons-round notes
-            .question-modal__options-wrapper 
-                .question-modal__options 
-                    +optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")
-                    +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="bsCoverUpload")
-                    +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
-            .question-modal__bottom-container.q-bottom-container(data-target="bsAuthorSelect")
-                .user-select__selected
-                    .user-select__avatar
-                        img(src="./assets/images/question-vote-avatar.png")
-                    span.user-select__name Philip Djones
-                .q-bottom-container__icon-wrapper
-                    span.material-icons-round more_vert
+        .question-modal__cover
+            .question-modal__cover__bg-image#qCoverBgImage
+            .question-modal__cover__bg-color#qCoverBgColor
+            textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="2")
+            .question-modal__selected-themes-wrapper
+                +themeChips({ 
+                    themes: [
+                        { name: '&#43;', target: 'bsThemesSelect' },
+                        { name: 'Family', removable: true }, 
+                        { name: 'Sport', removable: true },
+                        { name: 'Chillout', removable: true }
+                    ],
+                    withoutLimit: true
+                })
+        .question-modal__cover-colors#qCoverColors
+            button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
+                span.material-icons-round done
+            each color in ['#fabb4f', '#75d0c4', '#ffcf62', '#9494c5', '#8ba4c6', '#ff7150', '#e57497']
+                button.question-modal__color-btn(style=`background-color: ${ color }`)
+                    span.material-icons-round notes
+        .question-modal__options-wrapper 
+            .question-modal__options 
+                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")
+                +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="bsCoverUpload")
+                +optionBtn({ icon: 'pencil', text: 'Details' })(id="qDetailsBtn")
+        .question-modal__bottom-container.q-bottom-container(data-target="bsAuthorSelect")
+            .user-select__selected
+                .user-select__avatar
+                    img(src="./assets/images/question-vote-avatar.png")
+                span.user-select__name Philip Djones
+            .q-bottom-container__icon-wrapper
+                span.material-icons-round more_vert
