@@ -1,11 +1,11 @@
 include ../../svg-icon/svgIcon
 include ../../buttons/base-button/baseButton
 
-mixin topNavigation({ bgColor, large = false, isUserAuthorized = true })
+mixin topNavigation({ bgColor, isUserAuthorized = true })
 	.top-navigation(
 		style = `background-color: ${ bgColor }`, 
-		class = large ? 'top-navigation--large' : isUserAuthorized ? 'top-navigation--auth' : ''
-	)
+		class = isUserAuthorized ? '' : 'top-navigation--auth',
+	)&attributes(attributes)
 		.top-navigation__container.container-1024
 			a.top-navigation__logo(href="#")
 				+svgIcon(isUserAuthorized ? 'logo' : 'logo-bold')
