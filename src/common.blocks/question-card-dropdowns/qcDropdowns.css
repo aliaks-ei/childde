@@ -9,6 +9,7 @@
 .question-dropdown__item--with-toggle {
     flex-direction : column;
     align-items    : flex-start;
+    user-select    : none;
 }
 
 .question-dropdown__item__icon {

@@ -79,6 +79,11 @@
     line-height   : 55px;
     font-size     : 14px;
     cursor        : pointer;
+    transition    : .1s ease out;
+}
+
+.question-card__read-all-answers-btn:hover {
+    background-color: var(--background-color-gray-3);
 }
 
 .question-card__content__read-more-btn {

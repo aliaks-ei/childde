@@ -8,13 +8,3 @@
 	color           : var(--text-black);
 	text-decoration : underline;
 }
-
-.cookies-warning__button {
-	background-color : var(--red-color);
-	border           : none;
-	border-radius    : 15px;
-	color            : var(--text-white);
-	font-size        : 14px;
-	font-weight      : 700;
-	font-family      : var(--font-montserrat);
-}

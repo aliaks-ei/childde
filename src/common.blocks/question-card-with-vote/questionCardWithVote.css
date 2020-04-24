@@ -12,6 +12,7 @@
     align-items      : center;
     background-color : var(--background-color-gray);
     border-radius    : 20px;
+    user-select      : none;
 }
 
 .question-card__vote-bar__progress {

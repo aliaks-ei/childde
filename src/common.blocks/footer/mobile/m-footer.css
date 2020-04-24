@@ -38,8 +38,9 @@
 }
 
 .footer__socials {
-    margin-top : 20px;
-    padding    : 0 6px 8px;
+    align-items : flex-start;
+    margin-top  : 20px;
+    padding     : 0 6px 8px;
 }
 
 .footer__social-link svg {
