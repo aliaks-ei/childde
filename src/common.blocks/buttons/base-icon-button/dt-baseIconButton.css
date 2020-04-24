@@ -1,5 +1,7 @@
 .base-icon-btn {
     --btn-size: 42px;
+
+    cursor: pointer;
 }
 
 .base-icon-btn:before {

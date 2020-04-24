@@ -32,7 +32,6 @@
     border-radius    : 25px;
     background-color : var(--background-color-gray);
     border           : 0;
-    user-select      : none;
     line-height      : 36px;
     text-align       : center;
     font-weight      : 600;

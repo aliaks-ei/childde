@@ -52,6 +52,7 @@
     justify-content : flex-start;
     font-weight     : 500;
     font-family     : var(--font-montserrat);
+    user-select     : none;
 }
 
 .question-user__name {

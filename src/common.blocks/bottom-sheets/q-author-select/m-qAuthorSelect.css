@@ -18,7 +18,6 @@
     width            : 100%;
     height           : 40px;
     outline          : none;
-    user-select      : none;
     font-weight      : 700;
     font-family      : var(--font-montserrat);
     transition       : none;

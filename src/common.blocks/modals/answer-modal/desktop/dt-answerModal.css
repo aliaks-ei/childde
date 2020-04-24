@@ -22,7 +22,6 @@
     border           : 0;
     background-color : transparent;
     cursor           : pointer;
-    user-select      : none;
     outline          : none;
     color            : var(--text-gray-3);
 }

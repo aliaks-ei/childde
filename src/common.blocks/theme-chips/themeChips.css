@@ -11,6 +11,7 @@
     font-family      : var(--font-open-sans);
     border-radius    : 40px;
     background-color : var(--background-color-gray);
+    user-select      : none;
 }
 
 .theme-chips-wrapper--light .theme-chip {

@@ -4,7 +4,8 @@
 }
 
 .account-widget__item {
-    line-height: 45px;
+    line-height : 45px;
+    cursor      : pointer;
 }
 
 .account-widget__item:hover {

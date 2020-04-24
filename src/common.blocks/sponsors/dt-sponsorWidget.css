@@ -1,6 +1,7 @@
 .sponsorWidget__head {
 	display       : flex;
 	margin-bottom : 13px;
+	user-select   : none;
 }
 
 .sponsorWidget__companyTitle {

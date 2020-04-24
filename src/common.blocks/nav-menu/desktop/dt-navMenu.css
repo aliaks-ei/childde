@@ -1,5 +1,6 @@
 .nav-menu__item {
-	height: 44px;
+	height      : 44px;
+	user-select : none;
 }
 
 .nav-menu__item + .nav-menu__item {

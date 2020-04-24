@@ -37,6 +37,15 @@ h5 {
     line-height : 18px;
 }
 
+button,
+a,
+img,
+svg,
+.material-icons,
+.material-icons-round {
+    user-select: none;
+}
+
 button:focus,
 a:focus {
     outline: none;

@@ -53,7 +53,6 @@
     border          : 0;
     cursor          : pointer;
     outline         : none;
-    user-select     : none;
 }
 
 .question-modal__color-btn:not(.question-modal__color-btn--bordered) .material-icons-round {
@@ -85,7 +84,6 @@
     background-color : var(--background-color-gray);
     border           : 1px solid var(--border-color-lightblue);
     outline          : none;
-    user-select      : none;
 }
 
 .question-modal__bottom-container {
