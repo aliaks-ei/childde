@@ -72,12 +72,3 @@ button:active {
 .material-icons-round {
     color: #282a2d;
 }
-
-.main {
-    width  : 100%;
-    height : 100%;
-}
-
-.main--lightblue {
-    background-color: var(--background-color-lightblue);
-}
