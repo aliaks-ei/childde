@@ -95,8 +95,8 @@ function css(cb) {
 function js(cb) {
 	src(paths.dtJs)
 		.pipe(plumber())
-		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(concat('index.js'))
+		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(minify({
 			ext: {
 				src:'.js',
@@ -108,8 +108,8 @@ function js(cb) {
 	
 	src(paths.mJs)
 		.pipe(plumber())
-		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(concat('m.index.js'))
+		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(minify({
 			ext: {
 				src:'.js',

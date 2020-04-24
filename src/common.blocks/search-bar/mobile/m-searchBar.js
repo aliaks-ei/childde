@@ -1,6 +1,5 @@
 const searchBarActivators = document.querySelectorAll('[data-target="searchBar"]');
 const searchBarEl         = document.getElementById('searchBar');
-const bottomNav           = document.getElementById('bottomNav');
 
 for (const activator of searchBarActivators) {
     activator.addEventListener('click', () => {

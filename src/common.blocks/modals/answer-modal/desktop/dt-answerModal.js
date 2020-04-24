@@ -1,6 +1,5 @@
 let uploadImageActivator;
 let addLinkActivator;
-let userSelectDropdownActivator;
 
 function handleAnswerModalClick(event) {
     uploadImageActivator.nextElementSibling.style.display = 'none';
