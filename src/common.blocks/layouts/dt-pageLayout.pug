@@ -8,19 +8,20 @@ html(lang="de")
 		link(href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined", rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet")
-
-		link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
-		link(rel="stylesheet", href="./assets/icons/svg-symbols.css")
-		link(rel="stylesheet", href="./css/index.min.css")
 		
+		block stylesheets
+
+		link(href="./assets/icons/svg-symbols.css", rel="stylesheet")
+		link(href="./css/index.min.css", rel="stylesheet")
+			
 		block title
 			title Default
 	body
-		include ../cookies-warning/desktop/dt-cookiesWarning
 		block content
+		
 		#modals
 			block modals
+		
+		block scripts
 
-		script(src="https://unpkg.com/swiper/js/swiper.min.js")
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
 		script(src="./js/index.min.js")

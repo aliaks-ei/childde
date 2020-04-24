@@ -3,10 +3,14 @@ extends ../common.blocks/layouts/m-pageLayout
 include ../common.blocks/question-card/mobile/m-questionCard
 include ../common.blocks/question-card-with-vote/mobile/m-questionCardWithVote
 
+block stylesheets
+    link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+
 block title
     title Index
 
 block content
+    include ../common.blocks/cookies-warning/mobile/m-cookiesWarning
     include ../common.blocks/top-navigation/mobile/m-topNavigation
     include ../common.blocks/search-bar/mobile/m-searchBar
     .page-title-wrapper
@@ -74,3 +78,8 @@ block modals
     include ../common.blocks/modals/ask-question-modal/mobile/m-askQuestionModal
     include ../common.blocks/modals/answer-modal/mobile/m-answerModal
     .modal-overlay.modal-overlay--hidden
+
+block scripts
+    script(src="https://unpkg.com/swiper/js/swiper.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+    script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")

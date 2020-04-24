@@ -3,10 +3,14 @@ extends ../common.blocks/layouts/dt-pageLayout
 include ../common.blocks/question-card/desktop/dt-questionCard
 include ../common.blocks/question-card-with-vote/desktop/dt-questionCardWithVote
 
+block stylesheets
+	link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+
 block title 
-	title Index 
+	title Index
 
 block content
+	include ../common.blocks/cookies-warning/desktop/dt-cookiesWarning
 	include ../common.blocks/top-navigation/desktop/dt-topNavigation
 	.spaceVertical--100
 	.three-column-layout
@@ -84,3 +88,7 @@ block modals
 	include ../common.blocks/question-card-dropdowns/qcBottomDropdown
 	include ../common.blocks/modals/ask-question-modal/desktop/dt-askQuestionModal
 	include ../common.blocks/modals/answer-modal/desktop/dt-answerModal
+
+block scripts
+	script(src="https://unpkg.com/swiper/js/swiper.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
