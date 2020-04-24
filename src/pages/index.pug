@@ -16,7 +16,13 @@ html(lang="de")
 
 		title Registration	
 	body.page--registration
-		+topNavigation({ bgColor: 'transparent', isUserAuthorized: false })
-		main.main
+		+topNavigation({ bgColor: 'transparent', large: true, isUserAuthorized: false })
+		main.authorization-form-container.container-1024
+			h1.authorization-form-title Willkommen!
+			.authorization-form-subtitle 
+				| Erstellen Sie Ihr Konto, um alle Funktionen von 
+				br
+				| meinung.de wahrnehmen zu können
+			include ../common.blocks/authorization/registration-form/desktop/dt-registrationForm
 
 		script(src="./js/index.min.js")

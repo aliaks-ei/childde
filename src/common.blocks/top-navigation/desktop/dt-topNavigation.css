@@ -2,6 +2,8 @@
 	height: 100px;
 }
 
+.top-navigation__container
+
 .top-navigation__container {
 	padding: 0 20px;
 }
@@ -44,4 +46,16 @@
 
 .sign-in-line--2, .sign-in-line--5 {
 	stroke-dasharray: 18px;
+}
+
+.top-navigation--large {
+	height: 142px;
+}
+
+.top-navigation--auth .top-navigation__logo {
+	margin-right: 80px;
+}
+
+.top-navigation--auth .search-bar {
+	margin-right: 80px;
 }

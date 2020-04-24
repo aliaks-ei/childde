@@ -5,20 +5,22 @@
 	--green-color    : #8cc761;
 	--purple-color   : #a461c7;
 
-	--background-color-pink       : #ffb3bf;
-	--background-color-white      : #ffffff;
-	--background-color-black      : #282a2d;
-	--background-color-personage1 : #faf4dc;
-	--background-color-personage2 : #cfe8fa;
-	--background-color-personage3 : #c5f0ed;
-	--background-color-gray       : #f1f4f6;
-	--background-color-gray-2     : #f2f7f7;
-	--background-color-gray-3     : #eaeaea;
-	--background-color-lightblue  : #f4f7f9;
-	--background-color-orange     : #ffeddc;
+	--background-color-pink        : #ffb3bf;
+	--background-color-white       : #ffffff;
+	--background-color-black       : #282a2d;
+	--background-color-personage1  : #faf4dc;
+	--background-color-personage2  : #cfe8fa;
+	--background-color-personage3  : #c5f0ed;
+	--background-color-gray        : #f1f4f6;
+	--background-color-gray-2      : #f2f7f7;
+	--background-color-gray-3      : #eaeaea;
+	--background-color-lightblue   : #f4f7f9;
+	--background-color-lightblue-2 : #e3e8eb;
+	--background-color-orange      : #ffeddc;
 
 	--border-color-lightblue : #f3f7f8;
 	--border-color-lightgray : #e9ecef;
+	--border-color-green     : #08a002;
 
 	--box-shadow-gray:rgba(54, 54, 54, .1);
 

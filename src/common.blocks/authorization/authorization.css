@@ -1,0 +1,166 @@
+.authorization-form-container {
+    flex-direction : column;
+    align-items    : center;
+    padding        : 65px 0;
+}
+
+.authorization-form-title {
+    font-size     : 60px;
+    font-family   : var(--font-montserrat);
+    margin-bottom : 28px;
+}
+
+.authorization-form-subtitle {
+    font-weight   : 600;
+    line-height   : 26px;
+    text-align    : center;
+    margin-bottom : 80px;
+}
+
+.authorization-form {
+    width            : 665px;
+    border-radius    : 10px;
+    background-color : var(--background-color-white);
+}
+
+.auth-form__main-content {
+    padding: 48px 57px 0;
+}
+
+.auth-form__field-wrapper {
+    display        : flex;
+    flex-direction : column;
+    margin-bottom  : 24px;
+}
+
+.auth-form__field-label {
+    font-weight   : 600;
+    line-height   : 26px;
+    margin-bottom : 13px;
+    user-select   : none;
+}
+
+.auth-form__field {
+    height           : 66px;
+    border           : 0;
+    border-radius    : 6px;
+    background-color : var(--background-color-lightblue-2);
+    padding          : 12px 24px;
+    font-size        : 16px;
+    font-family      : var(--font-open-sans);
+    font-weight      : 600;
+    line-height      : 26px;
+    outline          : none;
+    transition       : .1s ease-out;
+}
+
+.auth-form__field:focus {
+    border: 1px solid var(--border-color-green);
+}
+
+.auth-form__field[type="password"] {
+    letter-spacing : 12px;
+    font-variant   : small-caption;
+    font-size      : 18px;
+    font-weight    : 700;
+}
+
+.auth-form__checkbox-wrapper {
+    display       : block;
+    position      : relative;
+    font-weight   : 600;
+    margin-bottom : 44px;
+    padding-left  : 30px;
+    cursor        : pointer;
+    user-select   : none;
+}
+
+.auth-form__checkbox-input {
+    position : absolute;
+    opacity  : 0;
+    cursor   : pointer;
+    height   : 0;
+    width    : 0;
+    left     : 0;
+}
+
+.auth-form__checkbox {
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    width            : 21px;
+    min-width        : 21px;
+    height           : 21px;
+    line-height      : 21px;
+    text-align       : center;
+    border-radius    : 6px;
+    background-color : var(--background-color-white);
+    border           : 1px solid var(--text-gray);
+}
+
+.auth-form__checkbox .material-icons-round {
+    display     : none;
+    font-size   : 14px;
+    font-weight : 700;
+    line-height : inherit;
+    color       : var(--text-white);
+}
+
+.auth-form__checkbox-input:checked + .auth-form__checkbox .material-icons-round {
+    display: inline;
+}
+
+.auth-form__checkbox-input:checked + .auth-form__checkbox {
+    background-color : var(--red-color);
+    border           : 0;
+}
+
+.base-btn.auth-form__action-btn {
+    border-radius : 33px;
+    font-size     : 18px;
+    margin        : 0 auto 20px;
+}
+
+.auth-form__sign-in-fb-btn {
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    width            : 362px;
+    height           : 66px;
+    border           : 0;
+    border-radius    : 33px;
+    font-size        : 16px;
+    font-family      : var(--font-open-sans);
+    font-weight      : 600;
+    line-height      : 66px;
+    background-color : var(--background-color-lightblue);
+    margin           : 0 auto 45px;
+    cursor           : pointer;
+}
+
+.auth-form__sign-in-fb-btn:hover {
+    background-color: var(--background-color-gray-3);
+}
+
+.auth-form__sign-in-fb-btn svg {
+    margin-right: 12px;
+}
+
+.auth-form__footer-wrapper {
+    border-top: 1px solid var(--background-color-lightblue-2);
+}
+
+.auth-form__footer {
+    text-align  : center;
+    padding     : 30px 0;
+    font-weight : 600;
+}
+
+.auth-form__footer__link {
+    color           : var(--text-blue);
+    text-decoration : none;
+}
+
+.auth-form__footer__link:hover {
+    text-decoration: underline;
+}
