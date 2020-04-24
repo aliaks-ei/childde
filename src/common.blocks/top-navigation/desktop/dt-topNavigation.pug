@@ -1,15 +1,33 @@
 include ../../svg-icon/svgIcon
+include ../../buttons/base-button/baseButton
 
-.top-navigation
-	.top-navigation__container.container-1024
-		a(href="#")
-			+svgIcon("logo")
+mixin topNavigation({ bgColor, isUserAuthorized = true })
+	.top-navigation(
+		style = `background-color: ${ bgColor }`, 
+		class = isUserAuthorized ? '' : 'top-navigation--search-centered'
+	)
+		.top-navigation__container.container-1024
+			a.top-navigation__logo(href="#")
+				+svgIcon(isUserAuthorized ? 'logo' : 'logo-bold')
 
-		include ../../search-bar/desktop/dt-searchBar
+			include ../../search-bar/desktop/dt-searchBar
 
-		.top-navigation-right-block
-			.top-navigation-right-block__item
-				+svgIcon('notification')
-			a.top-navigation-right-block__item#userImage
-				img(src="./assets/images/avatar.png")
-			include ../../account-widget/accountWidget
+			.top-navigation-right-block
+				if isUserAuthorized
+					.top-navigation-right-block__item
+						+svgIcon('notification')
+					a.top-navigation-right-block__item#userImage
+						img(src="./assets/images/avatar.png")
+					include ../../account-widget/accountWidget
+				else
+					a.top-navigation__link(href="#") Startseite
+					a.top-navigation__link.top-navigation__link--highlighted#signInLink(href="#") Anmelden
+						svg(xmlns="http://www.w3.org/2000/svg", width="52.5", height="33.4", viewBox="0 0 52.5 33.4")
+							path(class="sign-in-line sign-in-line--1", d="M6,18-2.3-.4", transform="translate(0.3 13.4)", fill="none", stroke-width="6")
+							path(class="sign-in-line sign-in-line--2", d="M22,16.1V-11.4", transform="translate(4.3 15.4)", fill="none", stroke-width="6")
+							path(class="sign-in-line sign-in-line--3", d="M37.9,18,46.2-1.4", transform="translate(8.3 13.4)", fill="none", stroke-width="6")
+						svg(xmlns="http://www.w3.org/2000/svg", width="52.5", height="33.4", viewBox="0 0 52.5 33.4")
+							path(class="sign-in-line sign-in-line--4", d="M6,18-2.3-.4", transform="translate(0.3 13.4)", fill="none", stroke-width="6")
+							path(class="sign-in-line sign-in-line--5", d="M22,16.1V-11.4", transform="translate(4.3 15.4)", fill="none", stroke-width="6")
+							path(class="sign-in-line sign-in-line--6", d="M37.9,18,46.2-1.4", transform="translate(8.3 13.4)", fill="none", stroke-width="6")
+					+baseButton({ text: 'Registrieren', width: 123, height: 40 })

@@ -1,10 +1,5 @@
-.top-navigation {
-	background-color: var(--background-color-pink);
-}
-
 .top-navigation__container {
 	height           : 100%;
-	justify-content  : space-between;
 	align-items      : center;
 	padding          : 0 20px;
 	background-color : inherit;
@@ -14,4 +9,49 @@
 	position    : relative; 
 	display     : flex;
 	align-items : center;
+}
+
+.top-navigation .search-bar {
+	margin-left  : auto;
+	margin-right : auto;
+}
+
+.top-navigation__link {
+	position        : relative;
+	font-weight     : 600;
+	text-decoration : none;
+	color           : var(--text-black);
+	margin-right    : 32px;
+}
+
+.top-navigation__link--highlighted {
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.top-navigation__link--highlighted svg {
+	position       : absolute;
+	left           : 50%;
+	height         : 18px;
+	width          : 32px;
+	pointer-events : none;
+	stroke         : var(--red-color);
+}
+
+.top-navigation__link--highlighted svg:first-of-type {
+	top       : 0;
+	transform : translateX(-50%) translateY(-20px);
+}
+
+.top-navigation__link--highlighted svg:last-of-type {
+	bottom    : 0;
+	transform : translateX(-50%) translateY(20px) rotate(180deg);
+}
+
+.top-navigation--search-centered .top-navigation__logo {
+	margin-right: 80px;
+}
+
+.top-navigation--search-centered .search-bar {
+	margin-right: 80px;
 }
