@@ -17,7 +17,6 @@
     color       : var(--text-blue-2);
     text-align  : center;
     padding     : 12px 0;
-    cursor      : pointer;
     font-weight : 600;
     font-family : var(--font-montserrat);
     transition  : color .1s ease-out;
@@ -42,7 +41,6 @@
     position  : absolute;
     right     : 0;
     top       : 0;
-    cursor    : pointer;
     opacity   : .001;
     font-size : 200px;
     z-index   : 2;

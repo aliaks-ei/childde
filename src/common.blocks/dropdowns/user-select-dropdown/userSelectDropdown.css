@@ -5,7 +5,6 @@
     font-weight : 500;
     color       : var(--text-blue);
     user-select : none;
-    cursor      : pointer;
 }
 
 .user-select__selected,

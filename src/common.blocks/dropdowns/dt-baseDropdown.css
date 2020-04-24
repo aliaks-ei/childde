@@ -4,6 +4,11 @@
     background-color : var(--background-color-white);
 }
 
+.base-dropdown__action,
+.base-dropdown__file-input {
+    cursor: pointer;
+}
+
 .base-dropdown__input {
     font-size: 14px;
 }

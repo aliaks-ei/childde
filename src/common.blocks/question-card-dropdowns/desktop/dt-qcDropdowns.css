@@ -37,3 +37,7 @@
     line-height : 22px;
     margin      : -6px 16px 8px 33px;
 }
+
+.item-toggle__slider {
+    cursor: pointer;
+}

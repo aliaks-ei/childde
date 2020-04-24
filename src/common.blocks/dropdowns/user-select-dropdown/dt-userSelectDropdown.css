@@ -2,6 +2,11 @@
     position: relative;
 }
 
+.user-select,
+.select-dropdown__btn {
+    cursor: pointer;
+}
+
 .user-select__dropdown-wrapper {
     position      : absolute;
     top           : -17px;

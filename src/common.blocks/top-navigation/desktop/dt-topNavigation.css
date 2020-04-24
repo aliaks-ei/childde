@@ -6,6 +6,10 @@
 	padding: 0 20px;
 }
 
+.top-navigation-right-block__item {
+	cursor: pointer;
+}
+
 .top-navigation-right-block__item + .top-navigation-right-block__item {
 	margin-left: 22px;
 }

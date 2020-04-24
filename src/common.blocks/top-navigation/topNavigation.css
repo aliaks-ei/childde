@@ -15,7 +15,3 @@
 	display     : flex;
 	align-items : center;
 }
-
-.top-navigation-right-block__item {
-	cursor: pointer;
-}
