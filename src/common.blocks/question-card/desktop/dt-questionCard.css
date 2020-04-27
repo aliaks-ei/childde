@@ -1,5 +1,11 @@
 .question-card {
     --card-horizontal-padding: 36px;
+
+    transition: box-shadow .2s ease-out;
+}
+
+.question-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .04);
 }
 
 .question-card + .question-card {
