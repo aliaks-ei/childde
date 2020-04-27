@@ -1,3 +1,7 @@
+.question-card {
+    border-radius: 10px;
+}
+
 .question-card__overlapping-link {
     display  : block;
     position : absolute;

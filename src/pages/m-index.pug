@@ -1,5 +1,6 @@
 extends ../common.blocks/layouts/m-pageLayout
 
+include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/question-card/mobile/m-questionCard
 include ../common.blocks/question-card-with-vote/mobile/m-questionCardWithVote
 
@@ -11,7 +12,7 @@ block title
 
 block content
     include ../common.blocks/cookies-warning/mobile/m-cookiesWarning
-    include ../common.blocks/top-navigation/mobile/m-topNavigation
+    +topNavigation({ bgColor: 'var(--background-color-pink)' })
     include ../common.blocks/search-bar/mobile/m-searchBar
     .page-title-wrapper
         h3 Nur so sind alle Erfahrungen, Meinungen und Antworten zuganglich.

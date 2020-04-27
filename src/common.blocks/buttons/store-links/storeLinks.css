@@ -14,6 +14,7 @@
     text-decoration  : none;
     color            : var(--text-black);
     background-color : var(--background-color-gray-2);
+    transition       : .1s ease-out;
 }
 
 .store-link:first-of-type {
@@ -38,6 +39,10 @@
 .store-link__subtitle {
     font-size : 9px;
     color     : var(--text-gray-2);
+}
+
+.store-link:hover {
+    background-color: var(--background-color-gray-3);
 }
 
 @media (max-width: 600px) {

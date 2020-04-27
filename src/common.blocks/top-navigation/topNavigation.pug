@@ -1,5 +1,5 @@
-include ../../svg-icon/svgIcon
-include ../../buttons/base-button/baseButton
+include ../svg-icon/svgIcon
+include ../buttons/base-button/baseButton
 
 mixin topNavigation({ bgColor, isUserAuthorized = true })
 	.top-navigation(
@@ -10,15 +10,17 @@ mixin topNavigation({ bgColor, isUserAuthorized = true })
 			a.top-navigation__logo(href="#")
 				+svgIcon(isUserAuthorized ? 'logo' : 'logo-bold')
 
-			include ../../search-bar/desktop/dt-searchBar
+			include ../search-bar/desktop/dt-searchBar
 
 			.top-navigation-right-block
+				.top-navigation-right-block__item(data-target="searchBar")
+					span.material-icons-round.top-navigation-right-block__search-icon search
 				if isUserAuthorized
 					.top-navigation-right-block__item
-						+svgIcon('notification')
+						+svgIcon('notification')(class="top-navigation-right-block__notification-icon")
 					a.top-navigation-right-block__item#userImage
-						img(src="./assets/images/avatar.png")
-					include ../../account-widget/accountWidget
+						img.top-navigation-right-block__user-image(src="./assets/images/avatar.png")
+					include ../account-widget/accountWidget
 				else
 					a.top-navigation__link(href="#") Startseite
 					a.top-navigation__link.top-navigation__link--highlighted#signInLink(href="#") Anmelden
