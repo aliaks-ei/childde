@@ -46,3 +46,9 @@
 .footer__logo svg {
     width: 104px;
 }
+
+.footer__action-btn {
+    width       : 197px;
+    height      : 36px;
+    line-height : 36px;
+}

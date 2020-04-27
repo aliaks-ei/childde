@@ -2,7 +2,7 @@ include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
 .authorization-form.auth-form.auth-form--registration
-    .auth-form__main-content
+    form.auth-form__main-content(autocomplete="off")
         .auth-form__field-wrapper
             label.auth-form__field-label(for="email") Email
             input.auth-form__field(type="email", id="email", name="email")
@@ -19,11 +19,11 @@ include ../../svg-icon/svgIcon
             input.auth-form__checkbox-input(type="checkbox")
             .auth-form__checkbox 
                 span.material-icons-round done
-        +baseButton({ width: 362, height: 66, text: 'Registration', withArrow: true })(class="auth-form__action-btn")
-        button.auth-form__sign-in-with-social
+        +baseButton({ text: 'Registration', withArrow: true })(class="auth-form__action-btn", type="submit")
+        button.auth-form__sign-in-with-social(type="button")
             +svgIcon('facebook-colored')
             | Log in with Facebook
-        button.auth-form__sign-in-with-social
+        button.auth-form__sign-in-with-social(type="button")
             +svgIcon('google-colored')
             | Log in with Google
     .auth-form__footer-wrapper

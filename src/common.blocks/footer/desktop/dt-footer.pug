@@ -4,11 +4,7 @@ include ../../in-column-links/inColumnLinks
     .footer.container-1024
         .footer__top-block
             .footer__downloads
-                +baseButton({ 
-                    text      : 'Für Unternehmen',
-                    withArrow : true,
-                    width     : 208
-                })
+                +baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
                 include ../../buttons/store-links/storeLinks
             .in-column-links-wrapper
                 +inColumnLinks('Dein Konto', ['Profil', 'Einstellungen', 'Abmelden'])

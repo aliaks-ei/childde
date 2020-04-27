@@ -88,3 +88,9 @@
     display     : flex;
     align-items : center;
 }
+
+.base-btn.answer-modal__answer-button {
+    width       : 134px;
+    height      : 40px;
+    line-height : 40px;
+}

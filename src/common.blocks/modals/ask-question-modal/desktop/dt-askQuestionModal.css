@@ -24,7 +24,10 @@
     color       : var(--text-black-2);
 }
 
-.base-btn.q-bottom-container__btn {
+.base-btn.q-bottom-container__btn { 
+    width         : 208px;
+    height        : 66px;
+    line-height   : 66px;
     font-size     : 18px;
     border-radius : 33px;
 }

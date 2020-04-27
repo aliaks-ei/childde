@@ -73,3 +73,9 @@
 .q-bottom-container__icon-wrapper .material-icons-round {
     font-size: 20px;
 }
+
+.base-btn.q-bottom-container__btn {
+    width       : 106px;
+    height      : 32px;
+    line-height : 32px;
+}

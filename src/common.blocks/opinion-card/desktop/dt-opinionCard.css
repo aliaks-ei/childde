@@ -8,6 +8,11 @@
     margin: 0 15px;
 }
 
+.opinion-card__button {
+    height      : 50px;
+    line-height : 50px;
+}
+
 .card-content {
     line-height: 26px;
 }

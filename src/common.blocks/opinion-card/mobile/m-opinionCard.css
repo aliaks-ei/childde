@@ -15,6 +15,11 @@
     width  : 128px;
 }
 
+.opinion-card__button {
+    height      : 36px;
+    line-height : 36px;
+}
+
 .card-content__text {
     font-size     : 12px;
     line-height   : 22px;

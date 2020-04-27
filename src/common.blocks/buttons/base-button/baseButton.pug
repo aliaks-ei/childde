@@ -1,6 +1,6 @@
-mixin baseButton({ text, withArrow, width = 197, height = 50, bgColor = 'var(--red-color)', color = 'var(--text-white)' })
+mixin baseButton({ text, withArrow, bgColor = 'var(--red-color)', color = 'var(--text-white)' })
     button.base-btn(
-        style = `width: ${ width }px; height: ${ height }px; line-height: ${ height }px; background-color: ${ bgColor }; color: ${ color }`,
+        style = `background-color: ${ bgColor }; color: ${ color }`,
         class = withArrow ? 'base-btn--animated' : ''
     )&attributes(attributes)
         if withArrow

@@ -5,10 +5,4 @@ include ../../buttons/base-button/baseButton
         h3 We want to know what you think about all this
         img.opinion-card__img(src="./assets/images/books_personage.png")
         .card-content__text Technological competition startups. Provides IT industry promising technologies.
-        +baseButton({ 
-            text      : 'Learn opinion',
-            bgColor   : 'var(--text-blue)',
-            color     : 'var(--text-white)',
-            width     : 183,
-            height    : 36
-        })
+        +baseButton({  text: 'Learn opinion', bgColor: 'var(--text-blue)', color: 'var(--text-white)' })(class="opinion-card__button")

@@ -109,6 +109,17 @@
 	margin-right: 56px;
 }
 
+.top-navigation__auth-options {
+	display     : flex;
+	align-items : center;
+}
+
+.top-navigation__register-btn {
+	width       : 152px;
+	height      : 40px;
+	line-height : 40px;
+}
+
 @media (max-width: 600px) {
 	.top-navigation {
 		height: 64px;
@@ -142,5 +153,10 @@
 	
 	.top-navigation-right-block__user-image {
 		width: 34px;
-	}	
+	}
+
+	.top-navigation__link,
+	.top-navigation-right-block .top-navigation__register-btn {
+		display: none;
+	}
 }

@@ -14,15 +14,14 @@ nav.nav-menu
 		+navItem({ icon: 'user', title: 'Profil' })
 		+navItem({ icon: 'compass', title: 'Neu' })
 		+navItem({ icon: 'edit', title: 'Antworten' })
-		+navItem({ icon: 'trophy', title: 'Top' })
+		+navItem({ icon: 'trophy', title: 'Top' }) 
 		+navItem({ icon: 'themen', title: 'Themen' })
 		+navItem({ icon: 'surface', title: 'Bewertung' })
 		+navItem({ icon: 'teamwork', title: 'Community' })
 		+baseButton({ 
 			text      : 'Frage stellen',
 			bgColor   : 'var(--background-color-black)',
-			color     : 'var(--text-white)',
-			width     : 171
+			color     : 'var(--text-white)'
 		})(class="nav-menu__button", data-target="qModal")
 		button.nav-menu__button.nav-menu__button--tablet(data-target="qModal")
 			span.material-icons help_outline

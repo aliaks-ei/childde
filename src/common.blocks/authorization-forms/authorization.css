@@ -7,7 +7,6 @@
 
 .authorization-form-title {
     font-size     : 60px;
-    font-family   : var(--font-montserrat);
     margin-bottom : 28px;
 }
 
@@ -60,7 +59,7 @@
 
 .auth-form__field[type="password"] {
     letter-spacing : 12px;
-    font-variant   : small-caption;
+    font           : small-caption;
     font-size      : 18px;
     font-weight    : 700;
 }
@@ -86,7 +85,8 @@
 
 .auth-form__checkbox {
     position         : absolute;
-    top              : 0;
+    top              : 50%;
+    transform        : translateY(-50%);
     left             : 0;
     width            : 21px;
     min-width        : 21px;
@@ -115,26 +115,28 @@
     border           : 0;
 }
 
-.base-btn.auth-form__action-btn {
+.base-btn.auth-form__action-btn,
+.auth-form__sign-in-with-social {
+    width         : 362px;
+    height        : 66px;
+    line-height   : 66px;
     border-radius : 33px;
-    font-size     : 18px;
     margin        : 0 auto 20px;
+}
+
+.base-btn.auth-form__action-btn {
+    font-size: 18px;
 }
 
 .auth-form__sign-in-with-social {
     display          : flex;
     align-items      : center;
     justify-content  : center;
-    width            : 362px;
-    height           : 66px;
     border           : 0;
-    border-radius    : 33px;
     font-size        : 16px;
     font-family      : var(--font-open-sans);
     font-weight      : 600;
-    line-height      : 66px;
     background-color : var(--background-color-lightblue);
-    margin           : 0 auto 20px;
     cursor           : pointer;
 }
 
@@ -151,8 +153,8 @@
 }
 
 .auth-form__sign-in-with-social:last-of-type svg {
-    width  : 20px;
-    height : 20px;
+    width  : 18px;
+    height : 18px;
 }
 
 .auth-form__footer-wrapper {
@@ -172,4 +174,76 @@
 
 .auth-form__footer__link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .authorization-form-container.container-1024 {
+        padding: 16px 14px 48px;
+    }
+
+    .authorization-form-title {
+        font-size     : 24px;
+        margin-bottom : 14px;
+    }
+
+    .authorization-form-subtitle {
+        line-height   : 22px;
+        margin-bottom : 32px;
+    }
+
+    .auth-form__main-content {
+        padding: 32px 24px 0;
+    }
+
+    .auth-form__field-wrapper {
+        margin-bottom: 18px;
+    }
+
+    .auth-form__field-label {
+        margin-bottom: 4px;
+    }
+
+    .auth-form__field {
+        height      : 36px;
+        padding     : 4px 14px;
+        font-size   : 14px;
+        line-height : 26px;
+    }
+
+    .auth-form__field[type="password"] {
+        font-size      : 16px;
+        letter-spacing : 4px;
+    }
+
+    .auth-form__checkbox-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .base-btn.auth-form__action-btn,
+    .auth-form__sign-in-with-social {
+        width         : 100%;
+        height        : 42px;
+        line-height   : 42px;
+    }
+
+    .base-btn.auth-form__action-btn {
+        font-size: 16px;
+    }
+
+    .auth-form__sign-in-with-social {
+        font-size: 14px;
+    }
+
+    .auth-form__sign-in-with-social:last-of-type {
+        margin-bottom: 24px;
+    }
+
+    .auth-form__sign-in-with-social svg {
+        width  : 16px;
+        height : 16px;
+    }
+
+    .auth-form__footer {
+        padding: 20px 0;
+    }
 }

@@ -6,3 +6,9 @@
     display         : flex;
     justify-content : center;
 }
+
+.pre-footer__button {
+    width       : 128px;
+    height      : 36px;
+    line-height : 36px;
+}

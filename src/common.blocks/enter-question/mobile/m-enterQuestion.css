@@ -9,3 +9,9 @@
     font-size    : 12px;
     margin-right : 8px;
 }
+
+.enter-question-wrapper__button {
+    width       : 96px;
+    height      : 36px;
+    line-height : 36px;
+}

@@ -6,11 +6,7 @@ footer.footer-wrapper-auth
             .footer__downloads
                 a.footer-auth__logo-wrapper(href="#")
                     +svgIcon('logo-italic')
-                +baseButton({ 
-                    text      : 'Für Unternehmen',
-                    withArrow : true,
-                    width     : 208
-                })
+                +baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
                 .footer-auth__social-icons
                     a.footer-auth__social-icons__item(href="https://www.linkedin.com/", target="_blank")
                         svg(xmlns='http://www.w3.org/2000/svg' width='14.63' height='14.63' viewbox='0 0 14.63 14.63')

@@ -4,3 +4,7 @@
     background-color : var(--background-color-gray-2);
     border-radius    : 10px;
 }
+
+.opinion-card__button {
+    width: 183px;
+}

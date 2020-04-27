@@ -76,12 +76,14 @@ button:active {
 }
 
 .page--registration {
+    --delimiter-point: 894px;
+
     background: 
-        url('../assets/images/registration-bg.png') top left / 100% 894px repeat-x, 
+        url('../assets/images/registration-bg.png') top left / 100% var(--delimiter-point) no-repeat, 
         linear-gradient(
             to bottom, 
-            var(--background-color-orange) 894px, 
-            var(--background-color-lightblue) 894px 100%
+            var(--background-color-orange) var(--delimiter-point), 
+            var(--background-color-lightblue) var(--delimiter-point) 100%
         ) no-repeat; 
 }
 
@@ -117,5 +119,9 @@ button:active {
     .page-title-wrapper {
         margin-top : 36px;
         padding    : 0 12px;
-    }    
+    }
+
+    .page--registration {
+        --delimiter-point: 544px;
+    }
 }

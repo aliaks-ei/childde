@@ -8,3 +8,9 @@
 	color           : var(--text-black);
 	text-decoration : underline;
 }
+
+.cookies-warning__button {
+    width       : 64px;
+    height      : 28px;
+    line-height : 28px;
+}
