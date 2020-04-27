@@ -1,12 +1,5 @@
 include ../../svg-icon/svgIcon
 
-mixin linkToStore(icon, subtitle, title)
-    a.links-to-store(href="#")
-        +svgIcon(icon)
-        .link-to-store__text-wrapper
-            .links-to-store__subtitle= subtitle
-            .links-to-store__title= title
-
 .footer
     +baseButton({ text: 'Für Unternehmen', height: 36 })
     .footer__pages-links
@@ -24,9 +17,7 @@ mixin linkToStore(icon, subtitle, title)
             a.footer__pages-links__item(href="#") Kontakt
             span &#183;
             a.footer__pages-links__item(href="#") Impressum
-    .footer__downloads__store-links
-        +linkToStore('app-store', 'Available on the', 'App Store')
-        +linkToStore('google-play', 'Android App on', 'Google Play')
+    include ../../buttons/store-links/storeLinks
     .footer__socials
         .footer__socials__icons
             a.footer__social-link(href="https://www.linkedin.com/", target="_blank")

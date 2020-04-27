@@ -1,19 +1,4 @@
-include ../../svg-icon/svgIcon
-
-mixin linkToStore(icon, subtitle, title)
-    a.links-to-store(href="#")
-        +svgIcon(icon)
-        .link-to-store__text-wrapper
-            .links-to-store__subtitle= subtitle
-            .links-to-store__title= title
-
-mixin columnLinks(title, links = [])
-    .column-links
-        .column-links__title= title
-        ul.column-links__container
-            each link in links 
-                li.column-links__item
-                    a.column-links__item__link(href=link.to)= link.text
+include ../../in-column-links/inColumnLinks
 
 .footer-wrapper
     .footer.container-1024
@@ -24,22 +9,11 @@ mixin columnLinks(title, links = [])
                     withArrow : true,
                     width     : 208
                 })
-                .footer__downloads__store-links
-                    +linkToStore('app-store', 'Available on the', 'App Store')
-                    +linkToStore('google-play', 'Android App on', 'Google Play')
-            .footer__links
-                +columnLinks(
-                    'Dein Konto', 
-                    [{ text: 'Profil', to: '#' }, { text: 'Einstellungen', to: '#' }, { text: 'Abmelden', to: '#' }]
-                )
-                +columnLinks(
-                    'Meinung.de', 
-                    [{ text: 'Startseite', to: '#' }, { text: 'Alle Themen', to: '#' }, { text: 'FAQ', to: '#' }, { text: 'Kontakt', to: '#' }]
-                )
-                +columnLinks(
-                    'Rechtliches', 
-                    [{ text: 'AGB', to: '#' }, { text: 'Datenschutz', to: '#' }, { text: 'Richtlinien', to: '#' }, { text: 'Impressum', to: '#' }]
-                )
+                include ../../buttons/store-links/storeLinks
+            .in-column-links-wrapper
+                +inColumnLinks('Dein Konto', ['Profil', 'Einstellungen', 'Abmelden'])
+                +inColumnLinks('Meinung.de', ['Startseite', 'Alle Themen', 'FAQ', 'Kontakt'])
+                +inColumnLinks('Rechtliches', ['AGB', 'Datenschutz', 'Richtlinien', 'Impressum'])
         .footer__socials
             .footer__socials__icons
                 a(href="https://www.linkedin.com/", target="_blank")

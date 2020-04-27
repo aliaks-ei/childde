@@ -1,7 +1,8 @@
-.authorization-form-container {
-    flex-direction : column;
-    align-items    : center;
-    padding        : 65px 0;
+.authorization-form-container.container-1024 {
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : flex-start;
+    padding         : 65px 0;
 }
 
 .authorization-form-title {
