@@ -121,7 +121,7 @@
     margin        : 0 auto 20px;
 }
 
-.auth-form__sign-in-fb-btn {
+.auth-form__sign-in-with-social {
     display          : flex;
     align-items      : center;
     justify-content  : center;
@@ -134,16 +134,25 @@
     font-weight      : 600;
     line-height      : 66px;
     background-color : var(--background-color-lightblue);
-    margin           : 0 auto 45px;
+    margin           : 0 auto 20px;
     cursor           : pointer;
 }
 
-.auth-form__sign-in-fb-btn:hover {
+.auth-form__sign-in-with-social:hover {
     background-color: var(--background-color-gray-3);
 }
 
-.auth-form__sign-in-fb-btn svg {
+.auth-form__sign-in-with-social svg {
     margin-right: 12px;
+}
+
+.auth-form__sign-in-with-social:last-of-type {
+    margin-bottom: 45px;
+}
+
+.auth-form__sign-in-with-social:last-of-type svg {
+    width  : 20px;
+    height : 20px;
 }
 
 .auth-form__footer-wrapper {
