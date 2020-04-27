@@ -18,14 +18,12 @@ const postcssPresetEnv = require('postcss-preset-env');
 const paths = {
 	dtCss: [
 		'src/assets/styles/variables.css',
-		'src/assets/styles/dt-global.css', 
 		'src/assets/styles/global.css', 
 		'src/common.blocks/**/*.css', 
 		'!src/common.blocks/**/m-*.css'
 	],
 	mCss: [
 		'src/assets/styles/variables.css',
-		'src/assets/styles/m-global.css',
 		'src/assets/styles/global.css',
 		'src/common.blocks/**/*.css',
 		'!src/common.blocks/**/dt-*.css'

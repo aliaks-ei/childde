@@ -19,9 +19,7 @@
 }
 
 .authorization-form {
-    width            : 665px;
-    border-radius    : 10px;
-    background-color : var(--background-color-white);
+    background-color: var(--background-color-white);
 }
 
 .auth-form__main-content {
@@ -51,6 +49,7 @@
     font-family      : var(--font-open-sans);
     font-weight      : 600;
     line-height      : 26px;
+    border           : 1px solid transparent;
     outline          : none;
     transition       : .1s ease-out;
 }

@@ -14,16 +14,16 @@ html(lang="de")
 		link(href="./assets/icons/svg-symbols.css", rel="stylesheet")
 		link(href="./css/index.min.css", rel="stylesheet")
 
-		title Log in	
-	body.page--login
+		title Registration	
+	body.page--registration
 		+topNavigation({ bgColor: 'transparent', isUserAuthorized: false })(class="top-navigation--large")
 		main.authorization-form-container.container-1024
-			h1.authorization-form-title Enter
+			h1.authorization-form-title Willkommen!
 			.authorization-form-subtitle 
 				| Erstellen Sie Ihr Konto, um alle Funktionen von 
 				br
 				| meinung.de wahrnehmen zu können
-			include ../common.blocks/authorization-forms/login-form/loginForm
+			include ../common.blocks/authorization-forms/registration-form/registrationForm
 		include ../common.blocks/footer/authorization/authFooter
 
 		script(src="./js/index.min.js")

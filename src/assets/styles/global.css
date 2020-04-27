@@ -4,6 +4,7 @@
 
 html, body {
     position                    : relative;
+    font-size                   : 16px;
     font-family                 : 'Open Sans', sans-serif;
     color                       : #282a2d;
     margin                      : 0;
@@ -67,7 +68,51 @@ button:active {
     height: 100px;
 }
 
+.container-1024 {
+    display         : flex;
+	justify-content : center;
+	max-width       : 1400px;
+	margin          : 0 auto;
+}
+
+.page--registration {
+    background: 
+        url('../assets/images/registration-bg.png') top left / 100% 894px repeat-x, 
+        linear-gradient(
+            to bottom, 
+            var(--background-color-orange) 894px, 
+            var(--background-color-lightblue) 894px 100%
+        ) no-repeat; 
+}
+
+.page--login {
+    background: 
+        linear-gradient(
+            to bottom, 
+            var(--green-color-2) 804px, 
+            var(--background-color-lightblue) 804px 100%
+        ) no-repeat; 
+}
+
 .material-icons,
 .material-icons-round {
     color: #282a2d;
+}
+
+@media (max-width: 1279px) {
+	html, body, .container-1024 {
+		width: 1024px;
+	}
+}
+
+@media (max-width: 600px) {
+    html, body {
+        font-size : 14px;
+        height    : 100vh;
+    }
+    
+    .page-title-wrapper {
+        margin-top : 36px;
+        padding    : 0 12px;
+    }    
 }

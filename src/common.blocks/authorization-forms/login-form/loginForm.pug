@@ -1,0 +1,26 @@
+.login-form-wrapper
+    .login-form__picture-wrapper
+        img(src="./assets/images/login-personage.png")
+    .authorization-form.auth-form.auth-form--login
+        .auth-form__main-content
+            .auth-form__field-wrapper
+                label.auth-form__field-label(for="email") Email
+                input.auth-form__field(type="email", id="email", name="email")
+            .auth-form__field-wrapper
+                label.auth-form__field-label(for="password") Password
+                input.auth-form__field(type="password", id="password", name="password")
+            label.auth-form__checkbox-wrapper Remember me
+                input.auth-form__checkbox-input(type="checkbox")
+                .auth-form__checkbox 
+                    span.material-icons-round done
+            +baseButton({ width: 362, height: 66, text: 'Sign up', withArrow: true })(class="auth-form__action-btn")
+            button.auth-form__sign-in-with-social
+                +svgIcon('facebook-colored')
+                | Log in with Facebook
+            button.auth-form__sign-in-with-social
+                +svgIcon('google-colored')
+                | Log in with Google
+        .auth-form__footer-wrapper
+            .auth-form__footer
+                span Don\'t have an account?&nbsp;
+                a.auth-form__footer__link(href="#") Registration
