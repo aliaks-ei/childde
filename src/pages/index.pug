@@ -1,6 +1,4 @@
 include ../common.blocks/top-navigation/desktop/dt-topNavigation
-include ../common.blocks/question-card/desktop/dt-questionCard
-include ../common.blocks/question-card-with-vote/desktop/dt-questionCardWithVote
 
 doctype html
 html(lang="de")
@@ -13,91 +11,19 @@ html(lang="de")
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet")
 		
-		link(href="https://unpkg.com/swiper/css/swiper.min.css", rel="stylesheet")
 		link(href="./assets/icons/svg-symbols.css", rel="stylesheet")
 		link(href="./css/index.min.css", rel="stylesheet")
-			
-		title Index
-	body
-		include ../common.blocks/cookies-warning/desktop/dt-cookiesWarning
-		+topNavigation({ bgColor: 'var(--background-color-pink)' })
-		.spaceVertical--100
-		.three-column-layout
-			.container-1024
-				.three-column-layout__left
-					include ../common.blocks/nav-menu/desktop/dt-navMenu
-				.three-column-layout__center
-					h1
-						| Nur so sind alle Erfahrungen,
-						br
-						| Meinungen und Antworten zuganglich.
-					include ../common.blocks/personages/desktop/dt-personages
-					include ../common.blocks/enter-question/desktop/dt-enterQuestion
-					include ../common.blocks/filter-by-dates/filterByDates
-					include ../common.blocks/opinion-card/desktop/dt-opinionCard
-					+questionCard({ 
-						avatar     : 'question-0-avatar.png',
-						title      : 'Reverse engineering of a binary format <br> on the example of Korg.',
-						interested : true
-					})
-					include ../common.blocks/questions-slider/desktop/dt-questionsSlider
-					+questionCard({ 
-						overlay   : 'var(--red-color)',
-						bgImage   : 'question-1-image.png',
-						avatar    : 'question-1-avatar.png',
-						withLabel : true,
-						title     : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
-					})
-					+questionCard({ 
-						overlay : 'var(--orange-color)',
-						bgImage : 'question-2-image.png',
-						avatar  : 'question-2-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
-					})
-					+questionCard({ 
-						overlay : 'var(--green-color)',
-						bgImage : 'question-3-image.png',
-						avatar  : 'question-3-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
-					})
-					+questionCard({ 
-						overlay : 'var(--purple-color)',
-						bgImage : 'question-4-image.png',
-						avatar  : 'question-4-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
-					})
-					+questionCardWithVote({
-						avatar        : 'question-vote-avatar.png',
-						title         : 'Which movie do you like more?',
-						subtitle      : 'Please vote below',
-						votingOptions : [
-							{ name: 'Das Boot', power: 75, bgColor: '#fabb4f' },
-							{ name: 'Aquaman', power: 45, bgColor: '#75d0c4' },
-							{ name: 'The house that Jack has built', power: 55, bgColor: '#e57497' },
-							{ name: 'Brothers sisters', power: 45, bgColor: '#ffcf62' }
-						]
-					})
-				.three-column-layout__right
-					.widgetsList
-						.widgetsList__block
-							include ../common.blocks/comments/dt-comments
-						.widgetsList__block
-							include ../common.blocks/sponsors/dt-sponsor
-						.widgetsList__block
-							include ../common.blocks/popular-themes/dt-popularThemes
-						.widgetsList__block
-							include ../common.blocks/best-companies/dt-bestCompanies
-						.widgetsList__block
-							include ../common.blocks/we-are-read/dt-weAreRead	
-		include ../common.blocks/pre-footer/desktop/dt-preFooter
-		include ../common.blocks/footer/desktop/dt-footer
 
-		#modals
-			include ../common.blocks/question-card-dropdowns/qcTopDropdown
-			include ../common.blocks/question-card-dropdowns/qcBottomDropdown
-			include ../common.blocks/modals/ask-question-modal/desktop/dt-askQuestionModal
-			include ../common.blocks/modals/answer-modal/desktop/dt-answerModal
-		
-		script(src="https://unpkg.com/swiper/js/swiper.min.js")
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+		title Registration	
+	body.page--registration
+		+topNavigation({ bgColor: 'transparent', isUserAuthorized: false })(class="top-navigation--large")
+		main.authorization-form-container.container-1024
+			h1.authorization-form-title Willkommen!
+			.authorization-form-subtitle 
+				| Erstellen Sie Ihr Konto, um alle Funktionen von 
+				br
+				| meinung.de wahrnehmen zu können
+			include ../common.blocks/authorization-forms/registration-form/registrationForm
+		include ../common.blocks/footer/authorization/authFooter
+
 		script(src="./js/index.min.js")

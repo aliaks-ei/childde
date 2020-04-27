@@ -16,7 +16,7 @@ html, body {
             to bottom, 
             var(--background-color-orange) 894px, 
             var(--background-color-lightblue) 894px 100%
-        ); 
+        ) no-repeat; 
 }
 
 @media (max-width: 1279px) {
