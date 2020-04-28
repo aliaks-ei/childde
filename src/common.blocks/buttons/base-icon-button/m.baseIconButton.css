@@ -1,0 +1,5 @@
+@media (max-width: 600px) {
+    .base-icon-btn {
+        --btn-size: 32px;
+    }
+}
