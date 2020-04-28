@@ -1,6 +1,8 @@
 .account-widget {
     display          : none;
     position         : absolute;
+    top              : 64px;
+    padding          : 14px 0;
     width            : 235px;
     background-color : var(--background-color-white);
     box-shadow       : 0 3px 30px var(--box-shadow-gray);
@@ -13,9 +15,15 @@
     display         : flex;
     align-items     : center;
     padding         : 0 22px;
+    line-height     : 45px;
+    cursor          : pointer;
     font-weight     : 600;
     text-decoration : none;
     color           : var(--text-black-2);
+}
+
+.account-widget__item:hover {
+    background-color: var(--background-color-gray);
 }
 
 .account-widget__item + .account-widget__item {
