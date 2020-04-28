@@ -1,7 +1,6 @@
 .login-form-wrapper {
     display       : flex;
     width         : 1235px;
-    height        : 736px;
     margin-bottom : 255px;
 }
 
@@ -33,7 +32,6 @@
 @media (max-width: 600px) {
     .login-form-wrapper {
         width         : 100%;
-        height        : auto;
         margin-bottom : 0;
     }
 
