@@ -129,6 +129,10 @@
 		padding         : 0 14px;
 		justify-content : space-between;
 	}
+
+	.top-navigation__logo {
+		z-index: 2;
+	}
 	
 	.top-navigation__logo svg {
 		width: 96px;
@@ -155,8 +159,12 @@
 		width: 34px;
 	}
 
-	.top-navigation__link,
+	.top-navigation-right-block .top-navigation__link,
 	.top-navigation-right-block .top-navigation__register-btn {
 		display: none;
+	}
+
+	.top-navigation__link:not(.top-navigation__link--highlighted):before {
+		content: none;
 	}
 }

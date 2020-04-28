@@ -101,6 +101,10 @@ button:active {
     color: #282a2d;
 }
 
+.app-no-scroll {
+    overflow: hidden;
+}
+
 @media (max-width: 1279px) and (min-width: 600px) {
     html, body {
         min-width: 1024px;
