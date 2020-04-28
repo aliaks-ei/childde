@@ -19,3 +19,17 @@
 .footer__copyright span:last-of-type {
     color: var(--text-gray-2);
 }
+
+.footer__action-btn {
+    width       : 208px;
+    height      : 50px;
+    line-height : 50px;
+}
+
+@media (max-width: 600px) {
+    .footer__action-btn {
+        width       : 197px;
+        height      : 36px;
+        line-height : 36px;
+    }
+}
