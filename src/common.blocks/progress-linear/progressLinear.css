@@ -1,0 +1,15 @@
+.progress-linear-wrapper {
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    right          : 0;
+    height         : 3px;
+    width          : 100%;
+    z-index        : 1200;
+    user-select    : none;
+    pointer-events : none;
+}
+
+.progress-linear {
+    height: 100%;
+}
