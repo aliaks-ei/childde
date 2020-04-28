@@ -73,9 +73,3 @@
 .base-btn:not(.base-btn--animated):hover:before {
 	opacity: 1;
 }
-
-@media (max-width: 600px) {
-	.base-btn {
-		font-size: 12px;
-	}
-}

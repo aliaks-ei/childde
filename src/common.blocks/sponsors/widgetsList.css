@@ -1,9 +1,0 @@
-.widgetsList__block {
-	margin-bottom: 57px;
-}
-
-@media (max-width: 600px) {
-	.widgetsList {
-		display: none;
-	}
-}
