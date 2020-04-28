@@ -3,18 +3,22 @@ include ../../svg-icon/svgIcon
 
 .authorization-form.auth-form.auth-form--registration
     form.auth-form__main-content(autocomplete="off")
-        .auth-form__field-wrapper
+        .auth-form__field-wrapper.auth-form__field-wrapper--error
             label.auth-form__field-label(for="email") Email
-            input.auth-form__field(type="email", id="email", name="email", required)
+            input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
+            span.auth-form__field__error-message Please enter a valid email address
         .auth-form__field-wrapper
             label.auth-form__field-label(for="nickname") Nickname
             input.auth-form__field(type="text", id="nickname", name="nickname", required)
+            span.auth-form__field__error-message
         .auth-form__field-wrapper
             label.auth-form__field-label(for="password") Password
             input.auth-form__field(type="password", id="password", name="password", required)
+            span.auth-form__field__error-message
         .auth-form__field-wrapper
             label.auth-form__field-label(for="passConfirm") Password again
             input.auth-form__field(type="password", id="passConfirm", name="passConfirm", required)
+            span.auth-form__field__error-message
         label.auth-form__checkbox-wrapper I agree with the terms of service and privacy policy
             input.auth-form__checkbox-input(type="checkbox", required)
             .auth-form__checkbox 

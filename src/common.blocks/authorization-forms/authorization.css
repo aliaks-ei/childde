@@ -26,9 +26,10 @@
 }
 
 .auth-form__field-wrapper {
+    position       : relative;
     display        : flex;
     flex-direction : column;
-    margin-bottom  : 24px;
+    margin-bottom  : 32px;
 }
 
 .auth-form__field-label {
@@ -53,7 +54,26 @@
     transition       : .1s ease-out;
 }
 
-.auth-form__field:focus {
+.auth-form__field__error-message {
+    font-size   : 11px;
+    position    : absolute;
+    bottom      : 0;
+    transform   : translateY(calc(100% + .2rem));
+    transition  : opacity .1s;
+    font-weight : 600;
+    color       : var(--red-color);
+    opacity     : 0;
+}
+
+.auth-form__field-wrapper--error .auth-form__field {
+    border: 1px solid var(--red-color);
+}
+
+.auth-form__field-wrapper--error .auth-form__field__error-message {
+    opacity: 1;
+}
+
+.auth-form__field-wrapper .auth-form__field:focus {
     border: 1px solid var(--border-color-green);
 }
 
@@ -196,7 +216,7 @@
     }
 
     .auth-form__field-wrapper {
-        margin-bottom: 18px;
+        margin-bottom: 24px;
     }
 
     .auth-form__field-label {
@@ -204,10 +224,9 @@
     }
 
     .auth-form__field {
-        height      : 36px;
-        padding     : 4px 14px;
-        font-size   : 14px;
-        line-height : 26px;
+        height    : 42px;
+        padding   : 4px 14px;
+        font-size : 14px;
     }
 
     .auth-form__field[type="password"] {

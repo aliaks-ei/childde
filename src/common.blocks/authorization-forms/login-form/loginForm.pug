@@ -5,10 +5,12 @@
         form.auth-form__main-content(autocomplete="off")
             .auth-form__field-wrapper
                 label.auth-form__field-label(for="email") Email
-                input.auth-form__field(type="email", id="email", name="email", required)
+                input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
+                span.auth-form__field__error-message Please enter a valid email address
             .auth-form__field-wrapper
                 label.auth-form__field-label(for="password") Password
                 input.auth-form__field(type="password", id="password", name="password", required)
+                span.auth-form__field__error-message
             label.auth-form__checkbox-wrapper Remember me
                 input.auth-form__checkbox-input(type="checkbox")
                 .auth-form__checkbox 
