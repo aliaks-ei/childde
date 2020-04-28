@@ -29,3 +29,21 @@
         width: 450px;
     }
 }
+
+@media (max-width: 600px) {
+    .login-form-wrapper {
+        width         : 100%;
+        height        : auto;
+        margin-bottom : 0;
+    }
+
+    .login-form__picture-wrapper {
+        display: none;
+    }
+
+    .auth-form--login {
+        flex          : 1 1 100%;
+        border-radius : 10px;
+        width         : 100%;
+    }
+}

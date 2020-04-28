@@ -88,11 +88,13 @@ button:active {
 }
 
 .page--login {
+    --delimiter-point: 804px;
+
     background: 
         linear-gradient(
             to bottom, 
-            var(--green-color-2) 804px, 
-            var(--background-color-lightblue) 804px 100%
+            var(--green-color-2) var(--delimiter-point), 
+            var(--background-color-lightblue) var(--delimiter-point) 100%
         ) no-repeat; 
 }
 
@@ -127,5 +129,9 @@ button:active {
 
     .page--registration {
         --delimiter-point: 594px;
+    }
+
+    .page--login {
+        --delimiter-point: 516px;
     }
 }
