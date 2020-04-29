@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+	.swiper-card {
+		padding: 24px;
+	}
+
+	.swiper-card--with-image {
+		height: 330px;
+	}
+
+	.swiper-card__content {
+		font-size     : 12px;
+		line-height   : 22px;
+		margin-bottom : 16px;
+	}
+
+	.swiper-card__button {
+		height      : 36px;
+		line-height : 36px;
+	}
+}

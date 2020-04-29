@@ -1,12 +1,26 @@
 const swiperParams = {
-    slidesPerView : 2.4,
-    spaceBetween  : 15,
-    freeMode      : true,
-    grabCursor    : true,
-    breakpoints   : {
+    freeMode    : true,
+    grabCursor  : true,
+    breakpoints : {
         1280: {
             slidesPerView : 2.8,
             spaceBetween  : 20
+        },
+        600: {
+            slidesPerView : 2.4,
+            spaceBetween  : 15
+        },
+        375: {
+            slidesPerView      : 1.5,
+            slidesOffsetBefore : 12,
+            slidesOffsetAfter  : 12,
+            spaceBetween       : 12
+        },
+        320: {
+            slidesPerView      : 1.25,
+            slidesOffsetBefore : 12,
+            slidesOffsetAfter  : 12,
+            spaceBetween       : 12
         }
     }
 };

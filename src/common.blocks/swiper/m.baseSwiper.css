@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+    .base-swiper-button,
+    .base-swiper__right-shadow,
+    .base-swiper__left-shadow {
+        display: none;
+    }
+}
