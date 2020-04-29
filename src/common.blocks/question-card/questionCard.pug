@@ -1,5 +1,5 @@
 include ../svg-icon/svgIcon
-include ../theme-chips/mobile/m-themeChips
+include ../theme-chips/themeChips
 
 mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
     - let isDefaultQuestion = !(overlay && bgImage);
@@ -27,7 +27,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                                 span Kinderfrage
                     h3.question-info__title !{ title }
                     +themeChips({ 
-                        themes : [{ to: '#', name: 'Real estate' }, { to: '#', name: 'Career' }],
+                        themes : [{ name: 'Real estate' }, { name: 'Career' }],
                         light  : !isDefaultQuestion 
                     })
                 button.base-icon-btn.question-header__dropdown-icon(

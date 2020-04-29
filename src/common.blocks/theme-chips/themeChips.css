@@ -12,6 +12,22 @@
     border-radius    : 40px;
     background-color : var(--background-color-gray);
     user-select      : none;
+    height           : 32px;
+    padding          : 0 13px;
+    font-size        : 14px;
+    line-height      : 32px;
+    cursor           : pointer;
+    transition       : .1s ease-out;
+    margin-bottom    : 9px;
+    margin-right     : 9px;
+}
+
+.theme-chip:hover {
+    background-color: var(--background-color-gray-3);
+}
+
+.theme-chips-wrapper--light .theme-chip:hover {
+    background-color: rgba(241, 244, 246, .15);
 }
 
 .theme-chips-wrapper--light .theme-chip {
@@ -33,6 +49,7 @@
 }
 
 .theme-chip .material-icons-round {
+    font-size   : 20px;
     margin-left : 6px;
     margin-top  : 1px;
     color       : inherit;

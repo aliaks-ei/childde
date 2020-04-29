@@ -1,17 +1,17 @@
-include ../theme-chips/desktop/dt-themeChips
+include ../theme-chips/themeChips
 
 .popular-themes
 	h3.popular-themes__title Popular themes
 
 	+themeChips({ 
 		themes: [
-			{ to: '#', name: 'Blog' }, 
-			{ to: '#', name: 'Business' },
-			{ to: '#', name: 'Career' },
-			{ to: '#', name: 'Real estate' }, 
-			{ to: '#', name: 'Health' },
-			{ to: '#', name: 'Economy' }, 
-			{ to: '#', name: 'Future' }
+			{ name: 'Blog' }, 
+			{ name: 'Business' },
+			{ name: 'Career' },
+			{ name: 'Real estate' }, 
+			{ name: 'Health' },
+			{ name: 'Economy' }, 
+			{ name: 'Future' }
 		],
 		withoutLimit: true
 	})

@@ -1,9 +1,15 @@
-include ../themeChip.pug
+mixin themeChip({ name, target, removable = false })
+    .theme-chip(data-target=target)            
+        span !{ name }
+        if removable
+            span.material-icons-round close
+        else
+            a.theme-chip__link(href='#')
 
 mixin themeChips({ themes = [], light = false, withoutLimit = false })
     .theme-chips-wrapper(class = light ? 'theme-chips-wrapper--light' : '')
-        if !withoutLimit && themes.length > 1
-            - let visibleThemes = themes.slice(0, 1);
+        if !withoutLimit && themes.length > 2
+            - let visibleThemes = themes.slice(0, 2);
 
             each theme in visibleThemes
                 +themeChip(theme)

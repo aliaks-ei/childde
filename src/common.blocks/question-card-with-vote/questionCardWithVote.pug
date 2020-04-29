@@ -1,4 +1,4 @@
-include ../theme-chips/mobile/m-themeChips
+include ../theme-chips/themeChips
 
 mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitle, chips = [], votingOptions = [] })
     - let isDefaultQuestion = !(overlay && bgImage);
@@ -26,11 +26,11 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitl
                     .question-info__subtitle !{ subtitle }
                     +themeChips({ 
                         themes: [
-                            { to: '#', name: 'Real estate' }, 
-                            { to: '#', name: 'Career' },
-                            { to: '#', name: 'Health' },
-                            { to: '#', name: 'Economy' }, 
-                            { to: '#', name: 'Future' }
+                            { name: 'Real estate' }, 
+                            { name: 'Career' },
+                            { name: 'Health' },
+                            { name: 'Economy' }, 
+                            { name: 'Future' }
                         ],
                         light: !isDefaultQuestion
                     })
