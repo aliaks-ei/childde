@@ -21,6 +21,10 @@
         line-height : 36px;
     }
 
+    .base-btn.pre-footer__button .base-btn__content {
+        transition: none;
+    }
+
     .pre-footer__button .base-btn__icon {
         display: none;
     }

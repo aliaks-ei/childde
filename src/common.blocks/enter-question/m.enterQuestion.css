@@ -17,6 +17,10 @@
         line-height : 36px;
     }
 
+    .base-btn.enter-question-wrapper__button .base-btn__content {
+        transition: none;
+    }
+
     .enter-question-wrapper__button .base-btn__icon {
         display: none;
     }

@@ -11,7 +11,7 @@
 
     .question-dropdown-wrapper,
     .question-dropdown--bottom .question-dropdown-wrapper {
-        padding: 0;
+        padding-top: 0;
     }
 
     .question-dropdown__item {

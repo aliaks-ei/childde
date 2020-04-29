@@ -24,8 +24,7 @@ const paths = {
 		'!src/common.blocks/**/m.*.css'
 	],
 	mCss   : [ 'src/assets/styles/m.global.css', 'src/common.blocks/**/m.*.css' ],
-	dtJs   : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/m-*.js' ],
-	mJs    : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/dt-*.js' ],
+	js     : 'src/common.blocks/**/*.js',
 	html   : 'src/pages/*.pug',
 	images : 'src/assets/images/*.png',
 	icons  : 'src/assets/icons/*.svg'
@@ -74,22 +73,9 @@ function css(cb) {
 }
 
 function js(cb) {
-	src(paths.dtJs)
+	src(paths.js)
 		.pipe(plumber())
 		.pipe(concat('index.js'))
-		.pipe(babel({ presets: ['@babel/env'] }))
-		.pipe(minify({
-			ext: {
-				src:'.js',
-				min:'.min.js'
-			}
-		}))
-		.pipe(dest('build/js'))
-		.pipe(livereload());
-	
-	src(paths.mJs)
-		.pipe(plumber())
-		.pipe(concat('m.index.js'))
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(minify({
 			ext: {

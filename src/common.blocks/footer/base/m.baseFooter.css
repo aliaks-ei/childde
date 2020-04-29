@@ -4,7 +4,8 @@
     }
 
     .footer {
-        display: flex;
+        display : flex;
+        padding : 0;
     }
     
     .footer__pages-links {
@@ -23,11 +24,20 @@
     .footer .store-links-wrapper {
         margin-top: 16px;
     }
+
+    .footer .store-links-wrapper .store-link {
+        margin-top: 0;
+    }
     
     .footer__socials {
         align-items : flex-start;
         margin-top  : 20px;
         padding     : 0 6px 8px;
+    }
+
+    .footer__socials__icons {
+        width         : auto;
+        margin-bottom : 0;
     }
     
     .footer__social-link svg {
@@ -40,8 +50,9 @@
     }
     
     .footer__copyright {
-        margin-top : 16px;
-        font-size  : 12px;
+        font-size     : 12px;
+        margin-top    : 16px;
+        margin-bottom : 0;
     }
     
     .footer__logo {
