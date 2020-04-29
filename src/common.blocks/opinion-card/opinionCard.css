@@ -1,10 +1,28 @@
 .opinion-card {
+    position         : relative;
     display          : flex;
-    justify-content  : space-between;
+    flex-direction   : column;
     background-color : var(--background-color-gray-2);
     border-radius    : 10px;
+    height           : 250px;
+    padding          : 32px 40px 25px;
+    margin-bottom    : 30px;
+}
+
+.opinion-card__img {
+    position : absolute;
+    right    : 55px;
+    top      : 32px;
 }
 
 .opinion-card__button {
-    width: 183px;
+    width       : 183px;
+    height      : 50px;
+    line-height : 50px;
+}
+
+.card-content__text {
+    margin-bottom : 25px;
+    width         : 338px;
+    line-height   : 26px;
 }
