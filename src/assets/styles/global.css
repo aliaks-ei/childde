@@ -107,6 +107,10 @@ button:active {
     overflow: hidden;
 }
 
+.page-title--mobile {
+    display: none;
+}
+
 @media (max-width: 1279px) and (min-width: 600px) {
     html, body {
         min-width: 1024px;

@@ -16,4 +16,8 @@
         height      : 36px;
         line-height : 36px;
     }
+
+    .enter-question-wrapper__button .base-btn__icon {
+        display: none;
+    }
 }

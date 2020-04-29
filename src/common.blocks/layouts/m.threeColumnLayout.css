@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+    .three-column-layout__left,
+    .three-column-layout__right {
+		display: none;
+	}
+
+	.three-column-layout__center {
+		width   : 100%;
+		padding : 0;
+	}
+}

@@ -1,4 +1,8 @@
 @media (max-width: 600px) {
+    .base-swiper .swiper-wrapper {
+        padding: 0;
+    }
+
     .base-swiper-button,
     .base-swiper__right-shadow,
     .base-swiper__left-shadow {

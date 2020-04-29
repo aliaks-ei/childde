@@ -16,5 +16,6 @@
 	.swiper-card__button {
 		height      : 36px;
 		line-height : 36px;
+		margin-top  : 0;
 	}
 }
