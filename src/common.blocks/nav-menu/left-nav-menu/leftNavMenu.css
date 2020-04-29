@@ -1,17 +1,17 @@
-.nav-menu__item {
+.left-nav-menu__item {
 	height      : 44px;
 	user-select : none;
 }
 
-.nav-menu__item + .nav-menu__item {
+.left-nav-menu__item + .left-nav-menu__item {
   	margin-top: 2px;
 }
 
-.nav-item {
+.left-nav-item {
 	position: relative;
 }
 
-.nav-item:before {
+.left-nav-item:before {
 	position         : absolute;
 	content          : "";
 	top              : 0;
@@ -24,12 +24,12 @@
 	transition       : opacity .1s ease-out;
 }
 
-.nav-item:hover:before,
-.nav-item--selected:before {
+.left-nav-item:hover:before,
+.left-nav-item--selected:before {
 	opacity: 1;
 }
 
-.nav-item__icon {
+.left-nav-item__icon {
 	position        : relative;
 	display         : flex;
 	justify-content : center;
@@ -37,7 +37,7 @@
 	width           : 32px;
 }
 
-.nav-item__link {
+.left-nav-item__link {
 	position        : relative;
 	display         : flex;
 	align-items     : center;
@@ -49,26 +49,26 @@
 	transition      : transform .1s ease-out;
 }
 
-.nav-item__link:focus {
+.left-nav-item__link:focus {
 	outline: none;
 }
 
-.nav-item__link:active {
+.left-nav-item__link:active {
 	transform : scale(.96);
 }
 
-.nav-item__link span {
+.left-nav-item__link span {
 	margin-left: 8px;
 }
 
-.nav-menu__button {
+.left-nav-menu__button {
 	width       : 171px;
 	height      : 50px;
 	line-height : 50px;
 	margin-top  : 30px;
 }
 
-.nav-menu__button--tablet {
+.left-nav-menu__button--tablet {
 	display          : none;
 	border           : 0;
 	padding          : 0;
@@ -81,26 +81,26 @@
 	background-color : var(--background-color-black);
 }
 
-.nav-menu__button--tablet .material-icons {
+.left-nav-menu__button--tablet .material-icons {
 	line-height : inherit;
 	color       : var(--text-white);
 }
 
 @media (max-width: 1279px) {
-	.nav-item__link span {
+	.left-nav-item__link span {
 		display: none;
 	}
 
-	.nav-item:before {
+	.left-nav-item:before {
 		left  : 0;
 		right : 0;
 	}
 
-	.nav-menu__button.base-btn {
+	.left-nav-menu__button.base-btn {
 		display: none;
 	}
 
-	.nav-menu__button--tablet {
+	.left-nav-menu__button--tablet {
 		display: block;
 	}
 }

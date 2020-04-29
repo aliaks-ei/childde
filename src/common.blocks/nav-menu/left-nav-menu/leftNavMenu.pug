@@ -2,15 +2,15 @@ include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
 mixin navItem({ icon, title })
-	.nav-menu__item.nav-item&attributes(attributes)
-		a.nav-item__link(href="#")
-			.nav-item__icon
+	.left-nav-menu__item.left-nav-item&attributes(attributes)
+		a.left-nav-item__link(href="#")
+			.left-nav-item__icon
 				+svgIcon(icon)
 			span= title
 
-nav.nav-menu
+nav.left-nav-menu
 	div
-		+navItem({ icon: 'newspaper', title: 'Feed' })(class="nav-item--selected")
+		+navItem({ icon: 'newspaper', title: 'Feed' })(class="left-nav-item--selected")
 		+navItem({ icon: 'user', title: 'Profil' })
 		+navItem({ icon: 'compass', title: 'Neu' })
 		+navItem({ icon: 'edit', title: 'Antworten' })
@@ -22,6 +22,6 @@ nav.nav-menu
 			text      : 'Frage stellen',
 			bgColor   : 'var(--background-color-black)',
 			color     : 'var(--text-white)'
-		})(class="nav-menu__button", data-target="qModal")
-		button.nav-menu__button.nav-menu__button--tablet(data-target="qModal")
+		})(class="left-nav-menu__button", data-target="qModal")
+		button.left-nav-menu__button.left-nav-menu__button--tablet(data-target="qModal")
 			span.material-icons help_outline
