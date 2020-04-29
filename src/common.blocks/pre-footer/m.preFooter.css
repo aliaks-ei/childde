@@ -1,0 +1,22 @@
+@media (max-width: 600px) {
+    .pre-footer-wrapper {
+        height     : auto;
+        margin-top : 0;
+        padding    : 48px 12px;
+    }
+
+    .pre-footer__title {
+        font-size: 16px;
+    }
+
+    .pre-footer-container {
+        display         : flex;
+        justify-content : center;
+    }
+
+    .pre-footer__button {
+        width       : 128px;
+        height      : 36px;
+        line-height : 36px;
+    }
+}
