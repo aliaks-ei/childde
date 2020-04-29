@@ -1,5 +1,28 @@
+.question-modal {
+    width: 778px;
+}
+
+.question-modal__close-btn {
+    top   : 20px;
+    right : 12px;
+}
+
+.question-modal__header {
+    position : relative;
+    padding  : 42px 36px 0;
+    z-index  : 3;
+}
+
+.question-modal__header__title {
+    font-size   : 22px;
+    font-weight : 700;
+    font-family : var(--font-montserrat);
+    color       : var(--text-black-2);
+}
+
 .question-modal__cover {
-    position: relative;
+    position      : relative;
+    margin-bottom : 16px;
 }
 
 .question-modal__cover__bg-color {
@@ -27,6 +50,9 @@
     position         : relative;
     font-weight      : 700;
     font-family      : var(--font-montserrat);
+    font-size        : 18px;
+    padding          : 32px 36px 20px;
+    line-height      : 26px;
     color            : var(--text-black-2);
     background-color : transparent;
     border           : 0;
@@ -38,12 +64,16 @@
 }
 
 .question-modal__textarea--small {
-    font-weight: 500;
+    font-weight    : 500;
+    padding-top    : 4px;
+    padding-bottom : 12px;
 }
 
 .question-modal__cover-colors {
-    display     : flex;
-    align-items : center;
+    display       : flex;
+    align-items   : center;
+    padding       : 20px 36px;
+    margin-bottom : 36px;
 }
 
 .question-modal__color-btn {
@@ -52,6 +82,15 @@
     justify-content : center;
     border          : 0;
     outline         : none;
+    min-width       : 50px;
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 16px;
+    cursor          : pointer;
+}
+
+.question-modal__color-btn + .question-modal__color-btn {
+    margin-left: 10px;
 }
 
 .question-modal__color-btn:not(.question-modal__color-btn--bordered) .material-icons-round {
@@ -70,7 +109,15 @@
 
 .question-modal__options {
     position : relative;
-    display  : inline-flex;
+    padding  : 0 36px;
+}
+
+.question-modal__options[data-desktop-hidden] {
+    display: none;
+}
+
+.question-modal__options[data-mobile-hidden] {
+    display: inline-flex;
 }
 
 .question-modal__option-btn {
@@ -83,12 +130,36 @@
     background-color : var(--background-color-gray);
     border           : 1px solid var(--border-color-lightblue);
     outline          : none;
+    height           : 50px;
+    font-size        : 14px;
+    line-height      : 50px;
+    padding          : 0 16px;
+    margin-right     : 8px;
+    margin-bottom    : 16px;
+    font-weight      : 700;
+    cursor           : pointer;
 }
 
 .question-modal__bottom-container {
-    display         : flex;
     align-items     : center;
     justify-content : space-between;
+    padding         : 32px 36px 44px;
+}
+
+.question-modal__bottom-container[data-desktop-hidden] {
+    display: none;
+}
+
+.question-modal__bottom-container[data-mobile-hidden] {
+    display: flex;
+}
+
+.base-btn.q-bottom-container__btn { 
+    width         : 208px;
+    height        : 66px;
+    line-height   : 66px;
+    font-size     : 18px;
+    border-radius : 33px;
 }
 
 .base-btn.q-bottom-container__btn--disabled {
@@ -99,21 +170,36 @@
 
 .question-modal__selected-themes-wrapper {
     position : relative;
+    padding  : 0 36px 8px;
     z-index  : 2;
 }
 
 .question-modal__selected-themes-wrapper .theme-chip:first-of-type {
-    font-weight: 600;
-}
-
-.question-modal__cover--white-text .question-modal__textarea {
-    color: var(--text-white);
+    font-size   : 24px;
+    padding     : 0 9px;
+    font-weight : 600;
 }
 
 .question-modal__cover--white-text .question-modal__textarea:not(.question-modal__textarea--small)::placeholder {
     color: hsla(0, 100%, 100%, .5);
 }
 
-.question-modal__cover--white-text .theme-chips-wrapper .theme-chip {
+.question-modal__cover--white-text .theme-chips-wrapper .theme-chip,
+.question-modal__cover--white-text .question-modal__close-btn .material-icons-round,
+.question-modal__cover--white-text .question-modal__header__title,
+.question-modal__cover--white-text .question-modal__textarea {
     color: var(--text-white);
+}
+
+.question-modal__cover--white-text .question-modal__close-btn:before {
+    background-color: hsla(0, 100%, 100%, .2);
+}
+
+.q-actions {
+    display     : flex;
+    align-items : center;
+}
+
+.base-modal__top-controls {
+    display: none;
 }

@@ -4,7 +4,7 @@ function showModal(element) {
     element.style.display = 'block';
 
     document.body.style.paddingRight = `${ window.innerWidth - document.documentElement.clientWidth }px`;
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('app-no-scroll');
 
     element.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block"></div>');
 }
@@ -17,5 +17,5 @@ function hideModal(element) {
     document.querySelector('.modal-overlay').remove();
     
     document.body.style.paddingRight = null;
-    document.body.style.overflow = null;
+    document.body.classList.remove('app-no-scroll');
 }

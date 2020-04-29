@@ -1,0 +1,111 @@
+@media (max-width: 600px) {
+    .question-modal__header {
+        display: none;
+    }
+
+    .question-modal__textarea {
+        font-size   : 16px;
+        line-height : 22px;
+        padding     : 16px 12px 12px;
+    }
+
+    .question-modal__textarea.question-modal__textarea--small {
+        font-size      : 14px;
+        padding-top    : 12px;
+        padding-bottom : 8px;
+    }
+
+    .question-modal__selected-themes-wrapper {
+        padding: 0 12px 14px;
+    }
+
+    .question-modal__selected-themes-wrapper .theme-chip:first-of-type {
+        font-size : 20px;
+        padding   : 0 7px;
+    }
+
+    .question-modal__cover {
+        margin-bottom: 0;
+    }
+
+    .question-modal__cover-colors {
+        padding       : 16px 12px;
+        margin-bottom : 0;
+    }
+
+    .question-modal__color-btn {
+        min-width     : 32px;
+        width         : 32px;
+        height        : 32px;
+        border-radius : 10px;
+        padding       : 0;
+    }
+
+    .question-modal__color-btn + .question-modal__color-btn {
+        margin-left: 6px;
+    }
+
+    .question-modal__color-btn .material-icons-round {
+        font-size: 16px;
+    }
+
+    .question-modal__options {
+        padding: 0 12px;
+    }
+
+    .question-modal__options[data-mobile-hidden] {
+        display: none;
+    }
+    
+    .question-modal__options[data-desktop-hidden] {
+        display: inline-flex;
+    }    
+
+    .question-modal__option-btn {
+        height        : 32px;
+        font-size     : 12px;
+        line-height   : 32px;
+        padding       : 0 12px;
+        font-weight   : 600;
+        margin-right  : 0;
+        margin-bottom : 0;
+    }
+
+    .question-modal__option-btn + .question-modal__option-btn {
+        margin-left: 8px;
+    }
+
+    .question-modal__option-btn svg {
+        width  : 12px;
+        height : 12px;
+    }
+
+    .question-modal__bottom-container {
+        margin-top : 18px;
+        padding    : 0 16px 8px 12px;
+    }
+
+    .question-modal__bottom-container[data-mobile-hidden] {
+        display: none;
+    }
+    
+    .question-modal__bottom-container[data-desktop-hidden] {
+        display: flex;
+    }
+
+    .q-bottom-container__icon-wrapper {
+        display     : flex;
+        align-items : center;
+    }
+
+    .q-bottom-container__icon-wrapper .material-icons-round {
+        font-size: 20px;
+    }
+
+    .base-btn.q-bottom-container__btn {
+        width       : 106px;
+        height      : 32px;
+        line-height : 32px;
+        font-size   : 12px;
+    }
+}
