@@ -3,7 +3,7 @@ const swiperParams = {
     grabCursor  : true,
     breakpoints : {
         1280: {
-            slidesPerView : 2.8,
+            slidesPerView : 2.7,
             spaceBetween  : 20
         },
         600: {
