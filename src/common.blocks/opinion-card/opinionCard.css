@@ -9,6 +9,10 @@
     margin-bottom    : 30px;
 }
 
+.opinion-card__title {
+    margin-right: 170px;
+}
+
 .opinion-card__img {
     position : absolute;
     right    : 55px;

@@ -1,6 +1,7 @@
 @media (max-width: 600px) {
 	.swiper-card {
-		padding: 24px;
+		padding : 24px;
+		height  : 220px;
 	}
 
 	.swiper-card--with-image {

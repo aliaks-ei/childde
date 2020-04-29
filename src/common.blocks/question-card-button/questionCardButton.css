@@ -1,7 +1,14 @@
 .question-card-button {
-    font-size   : 14px;
-    line-height : 26px;
-    cursor      : pointer;
+    position         : relative;
+    display          : flex;
+    align-items      : center;
+    font-family      : var(--font-open-sans);
+    font-weight      : 600;
+    border           : 0;
+    background-color : transparent;
+    font-size        : 14px;
+    line-height      : 26px;
+    cursor           : pointer;
 }
 
 .question-card-button + .question-card-button {
@@ -26,7 +33,8 @@
 }
 
 .question-card-button .question-card-button__icon {
-    font-size: 20px;
+    font-size : 20px;
+    color     : var(--text-gray);
 }
 
 .question-card-button .question-card-button__icon:not(:only-child) {

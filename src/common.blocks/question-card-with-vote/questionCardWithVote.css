@@ -3,10 +3,14 @@
 }
 
 .question-info__subtitle {
-    line-height: 26px;
+    font-size     : 18px;
+    margin-top    : -10px;
+    margin-bottom : 14px;
+    line-height   : 26px;
 }
 
 .question-card__vote-bar {
+    height           : 44px;
     position         : relative;
     display          : flex;
     align-items      : center;
@@ -15,16 +19,24 @@
     user-select      : none;
 }
 
+.question-card__vote-bar + .question-card__vote-bar {
+    margin-top: 16px;
+}
+
 .question-card__vote-bar__progress {
     display       : flex;
     align-items   : center;
     color         : var(--text-white);
     border-radius : inherit;
+    padding       : 8px 22px;
+    height        : 40px;
+    line-height   : 26px;
 }
 
 .question-card__vote-bar__percentage {
     position    : absolute;
     right       : 10px;
+    font-size   : 14px;
     font-family : var(--font-montserrat);
     font-weight : 700;
 }

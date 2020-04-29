@@ -1,6 +1,6 @@
 include ../common.blocks/top-navigation/topNavigation
-include ../common.blocks/question-card/desktop/dt-questionCard
-include ../common.blocks/question-card-with-vote/desktop/dt-questionCardWithVote
+include ../common.blocks/question-card/questionCard
+include ../common.blocks/question-card-with-vote/questionCardWithVote
 
 doctype html
 html(lang="de")
@@ -41,7 +41,7 @@ html(lang="de")
 					include ../common.blocks/opinion-card/opinionCard
 					+questionCard({ 
 						avatar     : 'question-0-avatar.png',
-						title      : 'Reverse engineering of a binary format <br> on the example of Korg.',
+						title      : 'Reverse engineering of a binary format on the example of Korg.',
 						interested : true
 					})
 					include ../common.blocks/questions-slider/questionsSlider
@@ -50,25 +50,25 @@ html(lang="de")
 						bgImage   : 'question-1-image.png',
 						avatar    : 'question-1-avatar.png',
 						withLabel : true,
-						title     : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
+						title     : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
 					+questionCard({ 
 						overlay : 'var(--orange-color)',
 						bgImage : 'question-2-image.png',
 						avatar  : 'question-2-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
+						title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
 					+questionCard({ 
 						overlay : 'var(--green-color)',
 						bgImage : 'question-3-image.png',
 						avatar  : 'question-3-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
+						title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
 					+questionCard({ 
 						overlay : 'var(--purple-color)',
 						bgImage : 'question-4-image.png',
 						avatar  : 'question-4-avatar.png',
-						title   : 'Wie macht man aus einem Eimer <br> ein Hundehalsband?'
+						title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
 					+questionCardWithVote({
 						avatar        : 'question-vote-avatar.png',

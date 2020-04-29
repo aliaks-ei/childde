@@ -4,6 +4,10 @@
         margin-bottom : 24px;
     }
 
+    .opinion-card__title {
+        margin-right: 0;
+    }
+
     .opinion-card {
         height      : auto;
         align-items : center;
