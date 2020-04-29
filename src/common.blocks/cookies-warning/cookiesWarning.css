@@ -2,15 +2,19 @@
 	display         : flex;
 	justify-content : center;
 	align-items     : center;
+	height          : 60px;
+	padding         : 8px;
 }
 
 .cookies-warning__details-link {
 	color           : var(--text-black);
 	text-decoration : underline;
+	margin-left     : 4px;
 }
 
 .cookies-warning__button {
     width       : 64px;
     height      : 28px;
-    line-height : 28px;
+	line-height : 28px;
+	margin-left : 14px;
 }

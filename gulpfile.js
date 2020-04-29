@@ -11,25 +11,21 @@ const clean            = require('gulp-clean');
 const csso             = require('gulp-csso');
 const minify           = require('gulp-minify');
 const rename           = require('gulp-rename');
+const addsrc           = require('gulp-add-src');
 const autoprefixer     = require('autoprefixer')
 const postCssImport    = require('postcss-easy-import');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const paths = {
-	dtCss: [
-		'src/assets/styles/variables.css',
-		'src/assets/styles/global.css', 
-		'src/common.blocks/**/*.css', 
-		'!src/common.blocks/**/m-*.css'
-	],
-	mCss: [
+	css: [
 		'src/assets/styles/variables.css',
 		'src/assets/styles/global.css',
-		'src/common.blocks/**/*.css',
-		'!src/common.blocks/**/dt-*.css'
+		'src/common.blocks/**/*.css', 
+		'!src/common.blocks/**/m.*.css'
 	],
-	dtJs : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/m-*.js' ],
-	mJs  : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/dt-*.js' ],
+	mCss   : [ 'src/assets/styles/m.global.css', 'src/common.blocks/**/m.*.css' ],
+	dtJs   : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/m-*.js' ],
+	mJs    : [ 'src/common.blocks/**/*.js', '!src/common.blocks/**/dt-*.js' ],
 	html   : 'src/pages/*.pug',
 	images : 'src/assets/images/*.png',
 	icons  : 'src/assets/icons/*.svg'
@@ -59,7 +55,8 @@ function html(cb) {
 }
 
 function css(cb) {
-  	src(paths.dtCss)
+	src(paths.css)
+		.pipe(addsrc.append(paths.mCss))
 		.pipe(plumber())
 		.pipe(postcss([
 			postCssImport(),
@@ -69,20 +66,6 @@ function css(cb) {
 		.pipe(concat('index.css'))
 		.pipe(dest('build/css'))
 		.pipe(rename('index.min.css'))
-		.pipe(csso())
-		.pipe(dest('build/css'))
-		.pipe(livereload());
-
-	src(paths.mCss)
-		.pipe(plumber())
-		.pipe(postcss([
-			postCssImport(),
-			postcssPresetEnv(),
-			autoprefixer()
-		]))
-		.pipe(concat('m.index.css'))
-		.pipe(dest('build/css'))
-		.pipe(rename('m.index.min.css'))
 		.pipe(csso())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
