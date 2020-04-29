@@ -1,3 +1,9 @@
+.enter-question-wrapper {
+    height        : 50px;
+	margin-bottom : 92px;
+	cursor        : pointer;
+}
+
 .enter-question-wrapper__container {
 	display        : flex;
 	align-items    : center;
@@ -13,4 +19,13 @@
 	font-weight      : 500;
 	background-color : var(--background-color-gray-3);
 	pointer-events   : none;
+	padding          : 0 24px;
+	line-height      : 60px;
+	margin-right     : 17px;
+	cursor           : pointer;
+}
+
+.enter-question-wrapper__button {
+	width  : 197px;
+	height : 50px;
 }
