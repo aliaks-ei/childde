@@ -1,0 +1,5 @@
+@media (max-width: 600px) {
+    .base-dropdown__input {
+        font-size: 12px;
+    }
+}

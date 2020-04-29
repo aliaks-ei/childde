@@ -2,6 +2,12 @@
     margin-bottom: 10px;
 }
 
+.base-dropdown {
+    border-radius    : 10px;
+    box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
+    background-color : var(--background-color-white);
+}
+
 .base-dropdown__input {
     width            : 100%;
     border           : 0;
@@ -11,6 +17,7 @@
     padding          : 0 16px;
     font-family      : var(--font-montserrat);
     font-weight      : 500;
+    font-size        : 14px;
 }
 
 .base-dropdown__action {
@@ -20,6 +27,7 @@
     font-weight : 600;
     font-family : var(--font-montserrat);
     transition  : color .1s ease-out;
+    cursor      : pointer;
 }
 
 .base-dropdown__action:hover {
@@ -44,4 +52,5 @@
     opacity   : .001;
     font-size : 200px;
     z-index   : 2;
+    cursor    : pointer;
 }

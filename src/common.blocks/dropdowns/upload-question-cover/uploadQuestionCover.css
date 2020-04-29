@@ -1,12 +1,28 @@
+.upload-cover-wrapper {
+    display       : none;
+    position      : absolute;
+    top           : -10px;
+    width         : 340px;
+    margin-bottom : 24px;
+    z-index       : 1100;
+}
+
 .upload-cover-header {
-    position    : relative;
-    display     : flex;
-    align-items : center;
+    position        : relative;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    padding         : 30px 32px;
 }
 
 .upload-cover-header__title {
+    font-size   : 22px;
     font-family : var(--font-montserrat);
     font-weight : 700;
+}
+
+.upload-cover__content {
+    padding: 0 32px 30px;
 }
 
 .upload-cover__upload-btn {
@@ -18,10 +34,13 @@
     width            : 100%;
     height           : 40px;
     outline          : none;
+    font-size        : 14px;
+    cursor           : pointer;
 }
 
 .upload-cover__delimiter {
-    font-size: 12px;
+    font-size : 12px;
+    margin    : 14px 0;
 }
 
 .upload-cover__input-wrapper {
@@ -41,8 +60,15 @@
     text-align       : center;
     border           : 0;
     outline          : none;
+    cursor           : pointer;
 }
 
 .upload-cover__upload-icon .material-icons {
-    line-height: inherit;
+    font-size   : 20px;
+    line-height : inherit;
+}
+
+.upload-cover__close-btn {
+    top   : 20px;
+    right : 16px;
 }

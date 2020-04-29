@@ -1,0 +1,26 @@
+@media (max-width: 600px) {
+    .upload-cover-header {
+        justify-content : center;
+        margin-bottom   : 16px;
+    }
+
+    .base-icon-btn.upload-cover__close-btn {
+        display: none;
+    }
+
+    .upload-cover-header__title {
+        font-size: 18px;
+    }
+
+    .upload-cover__content {
+        padding-bottom: 16px;
+    }
+
+    .upload-cover__delimiter {
+        margin: 8px 0;
+    }
+
+    .upload-cover__upload-icon .material-icons {
+        font-size: 16px;
+    }
+}
