@@ -2,11 +2,6 @@
     html, body {
         font-size: 14px;
     }
-    
-    .page-title-wrapper {
-        margin-top : 36px;
-        padding    : 0 12px;
-    }
 
     .page--registration {
         --delimiter-point: 594px;
@@ -14,5 +9,9 @@
 
     .page--login {
         --delimiter-point: 516px;
+    }
+
+    .spaceVertical--100 {
+        height: 36px;
     }
 }

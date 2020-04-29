@@ -10,7 +10,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true })
 			a.top-navigation__logo(href="#")
 				+svgIcon('logo')
 
-			include ../search-bar/desktop/dt-searchBar
+			include ../search-bar/searchBar
 
 			.top-navigation-right-block
 				if isUserAuthorized
