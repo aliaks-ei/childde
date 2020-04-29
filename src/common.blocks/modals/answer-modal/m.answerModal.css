@@ -1,0 +1,47 @@
+@media (max-width: 600px) {
+    .answer-modal__content-wrapper {
+        padding: 16px 16px 0;
+    }
+
+    .answer-modal__header-wrapper,
+    .answer-options {
+        display: none;
+    }
+
+    .answer-modal__header__title {
+        font-size: 16px;
+    }
+
+    .answer-modal__header__title[data-desktop-hidden] {
+        display: block;
+    }
+
+    .answer-modal__textarea {
+        padding    : 0;
+        margin-top : 16px;
+        min-height : auto;
+    }
+
+    .answer-modal__bottom-wrapper {
+        margin-top : 14px;
+        border     : none;
+    }
+
+    .answer-modal__bottom-wrapper[data-desktop-hidden] {
+        display: block;
+    }
+
+    .answer-modal__bottom-wrapper[data-mobile-hidden] {
+        display: none;
+    }
+
+    .answer-modal__bottom-container {
+        padding: 0 16px 8px 14px;
+    }
+
+    .base-btn.answer-modal__answer-button {
+        width       : 96px;
+        height      : 32px;
+        line-height : 32px;
+    }
+}

@@ -19,6 +19,10 @@
     background-color : var(--background-color-white);
 }
 
+.base-modal__top-controls {
+    display: none;
+}
+
 .modal-overlay {
     position   : fixed;
     top        : 0;

@@ -199,7 +199,3 @@
     display     : flex;
     align-items : center;
 }
-
-.base-modal__top-controls {
-    display: none;
-}
