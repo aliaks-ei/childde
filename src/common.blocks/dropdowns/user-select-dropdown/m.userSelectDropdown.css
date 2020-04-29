@@ -1,4 +1,8 @@
 @media (max-width: 600px) {
+    .select-dropdown {
+        padding: 0 4px;
+    }
+
     .select-dropdown__btn__check-icon {
         width     : 28px;
         min-width : 28px;
@@ -10,7 +14,8 @@
     }
 
     .select-dropdown__btn {
-        padding: 0;
+        padding     : 0;
+        line-height : 36px;
     }
 
     .select-dropdown__btn + .select-dropdown__btn {

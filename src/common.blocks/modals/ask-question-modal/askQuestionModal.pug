@@ -43,9 +43,11 @@ mixin optionBtn({ icon, text })
         .question-modal__options-wrapper 
             .question-modal__options(data-mobile-hidden)
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
-                include ../../dropdowns/themes-dropdown/themesDropdown
+                .themes-select-wrapper#qThemesDropdown
+                    include ../../dropdowns/themes-dropdown/themesDropdown 
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="qUploadCoverBtn")
-                include ../../dropdowns/upload-question-cover/uploadQuestionCover
+                .upload-cover-wrapper#qCoverUploadDropdown
+                    include ../../dropdowns/upload-question-cover/uploadQuestionCover
                 +optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
             .question-modal__options(data-desktop-hidden)
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")

@@ -1,8 +1,17 @@
 @media (max-width: 600px) {
     .question-dropdown {
+        position      : static;
+        width         : 100%;
         margin-top    : 8px;
         margin-bottom : 24px;
         padding       : 0 4px;
+        border-radius : 0;
+        box-shadow    : none;
+    }
+
+    .question-dropdown-wrapper,
+    .question-dropdown--bottom .question-dropdown-wrapper {
+        padding: 0;
     }
 
     .question-dropdown__item {
@@ -11,6 +20,11 @@
         text-decoration : none;
         color           : var(--text-black-2);
         line-height     : 36px;
+        padding         : 0 2px;
+    }
+    
+    .question-dropdown__item:hover {
+        background-color: transparent;
     }
 
     .question-dropdown__item + .question-dropdown__item {

@@ -23,7 +23,8 @@
     display: none;
 }
 
-.modal-overlay {
+.modal-overlay,
+.bs-overlay {
     position   : fixed;
     top        : 0;
     left       : 0;
@@ -31,6 +32,18 @@
     right      : 0;
     width      : 100%;
     background : var(--background-color-black);
-    z-index    : 1002;
     opacity    : 0.5;
+}
+
+.modal-overlay {
+    z-index: 1002;
+}
+
+.bs-overlay {
+    z-index  : 1006;
+    overflow : hidden;
+}
+
+.bs-overlay--hidden {
+    display: none;
 }

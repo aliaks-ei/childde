@@ -36,6 +36,10 @@
     background-color : var(--background-color-gray);
 }
 
+.themes-header__close-btn[data-desktop-hidden] {
+    display: none;
+}
+
 .themes-search__field {
     height           : 43px;
     border           : 0;

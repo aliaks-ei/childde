@@ -1,15 +1,15 @@
-const qCoverColors              = document.getElementById('qCoverColors');
-const qCoverBgColor             = document.getElementById('qCoverBgColor');
-const qColorBtns                = document.getElementsByClassName('question-modal__color-btn');
-const qModalActivators          = document.querySelectorAll('[data-target="qModal"]');
-const qThemesDropdown           = document.getElementById('qThemesDropdown');
-const qThemesDropdownClose      = document.getElementById('qThemesDropdownClose');
-const qCoverUploadDropdown      = document.getElementById('qCoverUploadDropdown');
-const qCoverUploadCloseBtn      = document.getElementById('qCoverUploadCloseBtn');
-const qThemesDropdownActivators = document.querySelectorAll('[data-target="qThemesDropdown"]');
-const qModalCloseActivators     = document.querySelectorAll('[data-target-close="qModal"]');
-const qUploadCoverActivator     = document.querySelector('[data-target="qUploadCoverBtn"]');
-const qDetailsActivators        = document.querySelectorAll('[data-target="qDetails"]');
+const qCoverColors                   = document.getElementById('qCoverColors');
+const qCoverBgColor                  = document.getElementById('qCoverBgColor');
+const qColorBtns                     = document.getElementsByClassName('question-modal__color-btn');
+const qModalActivators               = document.querySelectorAll('[data-target="qModal"]');
+const qThemesDropdown                = document.getElementById('qThemesDropdown');
+const qCoverUploadDropdown           = document.getElementById('qCoverUploadDropdown');
+const qThemesDropdownActivators      = document.querySelectorAll('[data-target="qThemesDropdown"]');
+const qModalCloseActivators          = document.querySelectorAll('[data-target-close="qModal"]');
+const qUploadCoverActivator          = document.querySelector('[data-target="qUploadCoverBtn"]');
+const qDetailsActivators             = document.querySelectorAll('[data-target="qDetails"]');
+const qThemesDropdownCloseActivators = document.querySelectorAll('[data-target-close="qThemesDropdown"]');
+const qCoverUploadCloseActivators    = document.querySelectorAll('[data-target-close="qCoverUpload"]');
 
 let qModalCover;
 let userSelectDropdownActivator; 
@@ -97,7 +97,11 @@ function handleQModalClick(event) {
 function handleQThemesDropdownClick(event) {
     event.stopPropagation();
 
-    if (qThemesDropdownClose.contains(event.target)) {
+    const isQThemesDropdownCloseActivatorClicked = [...qThemesDropdownCloseActivators].some(
+        activator => activator.contains(event.target)
+    );
+
+    if (isQThemesDropdownCloseActivatorClicked) {
         qThemesDropdown.style.display = 'none';
     }
 }
@@ -105,7 +109,11 @@ function handleQThemesDropdownClick(event) {
 function handleQUploadCoverClick(event) {
     event.stopPropagation();
 
-    if (qCoverUploadCloseBtn.contains(event.target)) {
+    const isQCoverUploadCloseActivatorClicked = [...qCoverUploadCloseActivators].some(
+        activator => activator.contains(event.target)
+    );
+
+    if (isQCoverUploadCloseActivatorClicked) {
         qCoverUploadDropdown.style.display = 'none';
     }
 }

@@ -8,6 +8,11 @@
         display: none;
     }
 
+    .upload-cover-header,
+    .upload-cover__content {
+        padding: 0;
+    }
+
     .upload-cover-header__title {
         font-size: 18px;
     }
