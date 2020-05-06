@@ -2,4 +2,8 @@
     .base-icon-btn {
         --btn-size: 32px;
     }
+
+    .base-icon-btn:before {
+        content: none;
+    }
 }

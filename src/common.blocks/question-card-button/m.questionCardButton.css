@@ -4,6 +4,10 @@
         padding   : 0;
     }
 
+    .question-card-button:before {
+        content: none;
+    }
+
     .question-card-button + .question-card-button {
         margin-left: 16px;
     }
