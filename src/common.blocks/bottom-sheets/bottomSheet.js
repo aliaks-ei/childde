@@ -17,7 +17,7 @@ function showBottomSheet() {
             bsOverlay.style.opacity = '0.4';
 
             bsOverlay.addEventListener('click', hideBottomSheet);
-        }, 100);
+        });
     }
 }
 

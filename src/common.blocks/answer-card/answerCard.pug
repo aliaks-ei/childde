@@ -1,0 +1,34 @@
+include ../svg-icon/svgIcon
+
+.answer-card
+    .answer-card__header
+        .question-info__user.question-user
+            div.question-user__link-wrapper
+                a.question-card__overlapping-link(href="#")
+                img.question-card__user-avatar(src='./assets/images/question-0-avatar.png')
+                span.question-user__name Philip Djones
+            span.question-user__date yesterday at 12:20
+        button.answer-card__subscribe-btn
+            +svgIcon('subscribe')
+            span Abonnieren
+    .answer-card__content
+        p TickTok ist ein relativ junges soziales Netzwerk. Infolgedessen sind die Angaben zum Einkommen widersprüchlich.
+        p Einige sagen, dass es aufgrund der Besonderheiten des Publikums - und dies sind insolvente Jugendliche - keinen Sinn macht, Geld zu verdienen und im Netzwerk zu werben. Andere argumentieren, dass TikTok eine Zukunft hat und Sie sollten auf jeden Fall versuchen, das Glück in Form von Einnahmen am Schwanz zu packen.
+        p Wenn Sie sich auf das Feedback erfahrener Ticker verlassen, können Sie sich auf folgende Einnahmen konzentrieren:
+        p 1. Ein junger Ticktaker führt seit Herbst 19 ein Konto - spezialisiert auf bezahlte Duette. Versammelte ein Publikum von 160.000 Abonnenten und verdient von 2.000.000 bis 15.000 Rubel pro Woche. Nicht schlecht für einen Kerl!
+        p 2. Es gibt auch einen merkwürdigen Tipp von einem Schönheitssalonmeister. Sie drehte Videos über ihre Arbeit, anfangs gab es nur wenige Aufrufe. Und dann - überflutet! In einem der Videos hat sie 100.000 Aufrufe gesammelt. Für was ich Monetarisierung in Form eines Stroms neuer Kunden erhalten habe - echtes Geld! Nun, 8.000 Rubel)
+        p 3. Es gibt auch Informationen darüber, dass Großkunden - etwa 2 Millionen Abonnenten - mit Werbung mehr als 100.000 Rubel verdienen können.
+    .question-card__content__reviews.question-reviews
+        .question-reviews__likes
+            button.question-card-button
+                span.question-card-button__icon.material-icons thumb_up
+                span.question-card-button__text Gute antwort&nbsp
+                span +75
+            button.question-card-button
+                span.question-card-button__icon.material-icons-outlined thumb_down
+                span 0
+        span.answer-card__date 30 dec
+        button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
+            span.material-icons-round more_horiz
+        button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomMenu")
+            span.material-icons-round(data-target="qcBottomMenu") more_horiz

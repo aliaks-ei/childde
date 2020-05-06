@@ -1,15 +1,107 @@
-.question-card--opened .question-card__header {
+.question-card-wrapper--opened .question-card__header {
     height: 360px;
 }
 
-.question-card--opened .question-header__info {
+.question-card-wrapper--opened .question-header__info {
     display         : flex;
     flex-direction  : column;
     justify-content : flex-end;
 }
 
-.question-card--opened .question-card__reactions-wrapper {
+.question-card-wrapper--opened .question-info__user {
+    margin-right: 0;
+}
+
+.question-card-wrapper--opened .question-info__title {
+    font-size    : 1.875em;
+    margin-right : 0;
+}
+
+.question-card-wrapper--opened .question-card__reactions-wrapper {
     border-width : 0 0 1px;
     padding      : 28px 0 16px;
     margin-left  : -4px;
+}
+
+.question-card-wrapper--opened .question-card__mobile-actions {
+    display: none;
+}
+
+.q-mob-action-button {
+    display          : flex;
+    flex-direction   : column;
+    align-items      : center;
+    background-color : transparent;
+    border           : 0;
+    outline          : none;
+    user-select      : none;
+}
+
+.q-mob-action-button * {
+    pointer-events: none;
+}
+
+.q-mob-action-button .q-mob-action-button__circle {
+    --circle-size: 40px;
+
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    position         : relative;
+    width            : var(--circle-size);
+    height           : var(--circle-size);
+    min-width        : var(--circle-size);
+    line-height      : var(--circle-size);
+    border-radius    : var(--circle-size);
+    background-color : var(--background-color-gray);
+}
+
+.q-mob-action-button svg {
+    width  : 14px;
+    height : 14px;
+}
+
+.q-mob-action-button .material-icons-round {
+    font-size: 16px;
+}
+
+.q-mob-action-button:last-of-type .material-icons-round {
+    font-size : 20px;
+    transform : rotate(90deg);
+}
+
+.q-mob-action-button + .q-mob-action-button {
+    margin-left: 12px;
+}
+
+.q-mob-action-button:last-of-type {
+    margin-left: auto;
+}
+
+.q-mob-action-button__title {
+    font-size   : 12px;
+    margin-top  : 6px;
+    font-weight : 600;
+    font-family : var(--font-montserrat);
+}
+
+.q-mob-action-button__count {
+    --count-size: 20px;
+
+    position         : absolute;
+    background-color : var(--text-black);
+    color            : var(--text-white);
+    width            : var(--count-size);
+    height           : var(--count-size);
+    border-radius    : var(--count-size);
+    line-height      : var(--count-size);
+    font-size        : 9px;
+    top              : -5px;
+    right            : -8px;
+    border           : 1px solid var(--text-white);
+    font-weight      : 600;
+    font-family      : var(--font-open-sans);
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
 }

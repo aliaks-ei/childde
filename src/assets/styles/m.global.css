@@ -21,7 +21,8 @@
         --delimiter-point: 516px;
     }
 
-    .spaceVertical--100 {
+    .spaceVertical--100,
+    .space-vertical--80 {
         display: none;
     }
 }

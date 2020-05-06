@@ -26,25 +26,25 @@ window.addEventListener('click', event => {
         qBottomDropdownEl.style.display = 'none';
     }
 
-    if (event.target.dataset && event.target.dataset.target === 'qcTopDropdown') {
+    if (event.target.dataset.target === 'qcTopDropdown') {
         const { x, y } = event.target.getBoundingClientRect();
 
         qTopDropdownEl = document.getElementById('qTopDropdown');
         generateQTopDropdownEl(x, y);
     }
-    else if (event.target.dataset && event.target.dataset.target === 'qcBottomDropdown') {
+    else if (event.target.dataset.target === 'qcBottomDropdown') {
         const { x, y } = event.target.getBoundingClientRect();
 
         qBottomDropdownEl = document.getElementById('qBottomDropdown');
         generateQBottomDropdownEl(x, y)
     }
 
-    if (event.target.dataset && event.target.dataset.target === 'qcTopMenu') {
+    if (event.target.dataset.target === 'qcTopMenu') {
         document.getElementById('qcTopMenu').style.display = 'block';
 
         showBottomSheet();
     }
-    else if (event.target.dataset && event.target.dataset.target === 'qcBottomMenu') {
+    else if (event.target.dataset.target === 'qcBottomMenu') {
         document.getElementById('qcBottomMenu').style.display = 'block';
 
         showBottomSheet();

@@ -5,7 +5,7 @@
     transition    : box-shadow .2s ease-out;
 }
 
-.question-card:not(.question-card--opened):hover {
+.question-card-wrapper:not(.question-card-wrapper--opened) .question-card:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .04);
 }
 
@@ -40,6 +40,8 @@
     border-radius         : 10px 10px 0 0;
     background-size       : cover;
     background-blend-mode : soft-light;
+    background-position   : center;
+    background-repeat     : no-repeat;
 }
 
 .question-header__link,
