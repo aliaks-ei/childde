@@ -5,6 +5,7 @@
     font-family      : var(--font-open-sans);
     font-weight      : 600;
     border           : 0;
+    color            : var(--text-black);
     background-color : transparent;
     font-size        : 14px;
     line-height      : 26px;
@@ -18,10 +19,10 @@
 .question-card-button:before {
     content       : "";
     position      : absolute;
-    top           : 0;
+    top           : -2px;
     left          : -6px;
     right         : -6px;
-    bottom        : 0;
+    bottom        : -2px;
     background    : rgba(32, 35, 51, .07);
     transition    : opacity .1s ease-out;
     opacity       : 0;

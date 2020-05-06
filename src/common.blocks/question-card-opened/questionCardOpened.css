@@ -1,0 +1,15 @@
+.question-card--opened .question-card__header {
+    height: 360px;
+}
+
+.question-card--opened .question-header__info {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : flex-end;
+}
+
+.question-card--opened .question-card__reactions-wrapper {
+    border-width : 0 0 1px;
+    padding      : 28px 0 16px;
+    margin-left  : -4px;
+}

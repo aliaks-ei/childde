@@ -8,9 +8,9 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
         .question-card(class={ 'question-card--default': isDefaultQuestion })
             .question-card__header.question-header
                 .question-header__image-wrapper.question-image
-                    if bgImage
-                        .question-image__background(style=`background-image: url('./assets/images/${ bgImage }')`)
-                    .question-image__overlay(style=`background-color: ${ overlay || 'var(--background-color-white )' }`)
+                    .question-image__overlay(
+                        style=`background-color: ${ overlay || 'var(--background-color-white )' }; background-image: url('./assets/images/${ bgImage }')`
+                    )
                 a.question-header__link(href="#")
                 .question-header__info.question-info 
                     .question-info__user.question-user
