@@ -41,3 +41,7 @@
 .question-card-button .question-card-button__icon:not(:only-child) {
     margin-right: 10px;
 }
+
+.question-card-button--inactive {
+    color: var(--text-gray);
+}

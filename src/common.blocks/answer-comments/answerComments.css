@@ -1,0 +1,27 @@
+.answer-comments-wrapper {
+    margin-top: 40px;
+}
+
+.answer-comments {
+    padding: 8px 0;
+}
+
+.answer-comments__caption-wrapper {
+    display       : inline-flex;
+    align-items   : center;
+    margin-bottom : 28px;
+}
+
+.answer-comments__caption {
+    margin-bottom: 0;
+}
+
+.answer-comments__total-comments {
+    border-radius    : 28px;
+    padding          : 0 11px;
+    font-size        : 14px;
+    font-weight      : 600;
+    line-height      : 26px;
+    margin-left      : 12px;
+    background-color : var(--background-color-gray-2);
+}

@@ -1,0 +1,60 @@
+.answer-comment-card-wrapper {
+    margin-bottom: 26px;
+}
+
+.answer-comment-card {
+    max-width        : 600px;
+    padding          : 24px 22px 16px 30px;
+    background-color : var(--border-color-lightblue);
+    border-radius    : 10px;
+}
+
+.answer-comment-card__header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+}
+
+.answer-comment-card__header .question-info__user.question-user {
+    margin: 0;
+}
+
+.answer-comment-card__header .question-info__user .question-user__name {
+    color: var(--text-blue);
+}
+
+.answer-comment-card__header .question-card-button .question-card-button__icon:not(:only-child) {
+    margin-right: 6px;
+}
+
+.answer-comment-card__content {
+    padding-top : 6px;
+    line-height : 26px;
+}
+
+.answer-comment-card__actions {
+    display     : flex;
+    align-items : center;
+}
+
+.answer-comment-card__answer-btn {
+    padding          : 0;
+    margin-top       : -2px;
+    margin-right     : 12px;
+    border           : 0;
+    background-color : transparent;
+    color            : var(--text-gray-3);
+    font-size        : 14px;
+    font-family      : var(--font-open-sans);
+    font-weight      : 600;
+    cursor           : pointer;
+    user-select      : none;
+}
+
+.answer-comment-card__answer-btn:hover {
+    color: #000000;
+}
+
+.answer-comment-card__actions .question-reviews__likes {
+    display: none;
+}

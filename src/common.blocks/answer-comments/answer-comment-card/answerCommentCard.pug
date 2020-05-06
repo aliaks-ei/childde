@@ -1,0 +1,32 @@
+mixin answerCommentCard({ author, avatar, text })
+    .answer-comment-card-wrapper&attributes(attributes)
+        .answer-comment-card
+            .answer-comment-card__header
+                .question-info__user.question-user
+                    .question-user__link-wrapper
+                        a.question-card__overlapping-link(href="#")
+                        img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`)
+                        span.question-user__name= author
+                    span.question-user__date yesterday at 12:20
+                .question-reviews__likes
+                    button.question-card-button
+                        span.question-card-button__icon.material-icons thumb_up
+                        span +75
+                    button.question-card-button.question-card-button--inactive
+                        span.question-card-button__icon.material-icons-outlined thumb_down
+                        span 0
+            .answer-comment-card__content
+                p= text
+            .answer-comment-card__actions
+                button.answer-comment-card__answer-btn(type='button') Answer
+                button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
+                    span.material-icons-round more_horiz
+                button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomMenu")
+                    span.material-icons-round(data-target="qcBottomMenu") more_horiz
+                .question-reviews__likes
+                    button.question-card-button
+                        span.question-card-button__icon.material-icons thumb_up
+                        span +75
+                    button.question-card-button.question-card-button--inactive
+                        span.question-card-button__icon.material-icons-outlined thumb_down
+                        span 0

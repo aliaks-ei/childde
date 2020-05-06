@@ -55,3 +55,7 @@
     font-weight : 600;
     line-height : 26px;
 }
+
+.answer-card .question-card__content__reviews.question-reviews {
+    margin-bottom: 0;
+}
