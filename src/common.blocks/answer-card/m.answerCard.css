@@ -1,6 +1,7 @@
 @media (max-width: 600px) {
     .answer-card {
-        padding: 0 14px;
+        padding       : 0 14px;
+        margin-bottom : 16px;
     }
 
     .answer-card__header {

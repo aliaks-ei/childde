@@ -1,3 +1,7 @@
+.answer-card {
+    margin-bottom: 8px;
+}
+
 .answer-card__header {
     display         : flex;
     align-items     : center;

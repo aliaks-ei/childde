@@ -2,6 +2,7 @@ extends ../layouts/pageLayout
 
 include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/question-card-opened/questionCardOpened
+include ../common.blocks/answer-card/answerCard
 
 block title
 	title Question
@@ -24,8 +25,13 @@ block body
 						withLabel : true,
 						title     : 'Wie viel verdienen Ticktoker?'
 					})
-					include ../common.blocks/answer-card/answerCard
+					+answerCard({ avatar: 'question-0-avatar', nickname: 'Philip Djones', isBrief: false })
 					include ../common.blocks/answer-comments/answerComments
+					include ../common.blocks/adverts/adverts
+					.similar-answers-title
+						h3 Noch zwei antworten
+					+answerCard({ avatar: 'question-4-avatar', nickname: 'Stacy Kim' })
+					+answerCard({ avatar: 'question-vote-avatar', nickname: 'Philip Djones' })
 				.three-column-layout__right
 					.widgetsList
 						.widgetsList__block

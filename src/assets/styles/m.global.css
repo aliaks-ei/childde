@@ -25,4 +25,10 @@
     .space-vertical--80 {
         display: none;
     }
+
+    .similar-answers-title {
+        padding       : 0 12px;
+        margin-top    : 24px;
+        margin-bottom : 8px;
+    }
 }

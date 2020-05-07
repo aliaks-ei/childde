@@ -1,0 +1,9 @@
+mixin advertCard({ image, text })
+    a.advert-card(href="javascript:void(0)")
+        img.advert-card__image(src=`./assets/images/${ image }.png`)
+        .advert-card__content= text
+
+.adverts-wrapper
+    +advertCard({ image: 'advert-1-image', text: 'Nur so sind alle Erfahrungen, Meinungen' })
+    +advertCard({ image: 'advert-2-image', text: 'Nur so sind alle Erfahrungen, Meinungen' })
+    +advertCard({ image: 'advert-3-image', text: 'Nur so sind alle Erfahrungen, Meinungen' })
