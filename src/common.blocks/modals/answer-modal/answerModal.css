@@ -67,12 +67,6 @@
     line-height : 40px;
 }
 
-.base-btn.answer-modal__answer-button--disabled {
-    color            : var(--text-black-2) !important;
-    background-color : var(--background-color-gray) !important;
-    pointer-events   : none;
-}
-
 .answer-options {
     position    : relative;
     display     : flex;

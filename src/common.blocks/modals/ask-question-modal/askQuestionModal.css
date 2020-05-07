@@ -162,16 +162,6 @@
     border-radius : 33px;
 }
 
-.base-btn.q-bottom-container__btn--disabled {
-    background-color : var(--background-color-gray) !important;
-    color            : var(--text-black-2) !important;
-    pointer-events   : none;
-}
-
-.base-btn.q-bottom-container__btn--disabled .base-btn__icon {
-    display: none;
-}
-
 .question-modal__selected-themes-wrapper {
     position : relative;
     padding  : 0 36px 8px;

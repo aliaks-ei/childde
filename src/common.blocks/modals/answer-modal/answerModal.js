@@ -48,7 +48,5 @@ for (const activator of answerModalActivators) {
         answerModal.addEventListener('click', handleAnswerModalClick);
         uploadImageActivator.nextElementSibling.addEventListener('click', stopPropagationOnDropdown);
         addLinkActivator.nextElementSibling.addEventListener('click', stopPropagationOnDropdown);
-
-        autosize(document.querySelectorAll('textarea'));
     });
 }

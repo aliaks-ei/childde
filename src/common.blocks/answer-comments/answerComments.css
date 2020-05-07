@@ -2,6 +2,10 @@
     margin-top: 40px;
 }
 
+.answer-comments__comments-container {
+    padding-bottom: 4px;
+}
+
 .answer-comments {
     padding: 8px 0;
 }

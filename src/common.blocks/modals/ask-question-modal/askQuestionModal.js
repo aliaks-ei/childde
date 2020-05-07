@@ -15,6 +15,8 @@ let qModalCover;
 let userSelectDropdownActivator; 
 let selectedQColorBtnIdx = 0;
 
+autosize(document.querySelectorAll('textarea'));
+
 function changeQCoverColor(targetEl) {
     const pressedColorBtn = targetEl.closest('.question-modal__color-btn');
     const themeChipsWrapper = qModalCover.querySelector('.theme-chips-wrapper');
@@ -130,7 +132,5 @@ for (const activator of qModalActivators) {
         qModal.addEventListener('click', handleQModalClick);
         qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
         qCoverUploadDropdown.addEventListener('click', handleQUploadCoverClick);
-
-        autosize(document.querySelectorAll('textarea'));
     });
 }

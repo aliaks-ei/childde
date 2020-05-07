@@ -15,7 +15,7 @@ mixin optionBtn({ icon, text })
                 span.material-icons-round keyboard_backspace
             .base-modal__top-controls__right-block
                 +symbolsCounter({ label: 20 })
-                +baseButton({ text: 'Frage stellen' })(class="q-bottom-container__btn q-bottom-container__btn--disabled")
+                +baseButton({ text: 'Frage stellen' })(class="q-bottom-container__btn", disabled)
         .question-modal__cover
             .question-modal__header 
                 .question-modal__header__title Frage stellen
@@ -60,7 +60,7 @@ mixin optionBtn({ icon, text })
                 +baseButton({ 
                     text      : 'Speichern',
                     withArrow : true
-                })(class="q-bottom-container__btn q-bottom-container__btn--disabled")
+                })(class="q-bottom-container__btn", disabled)
         .question-modal__bottom-container.q-bottom-container(data-target="bsAuthorSelect", data-desktop-hidden)
             .user-select__selected
                 .user-select__avatar
