@@ -3,10 +3,9 @@
 }
 
 .answer-comment-card {
-    max-width        : 600px;
-    padding          : 24px 22px 16px 30px;
-    background-color : var(--border-color-lightblue);
-    border-radius    : 10px;
+    max-width     : 600px;
+    padding       : 24px 22px 16px 30px;
+    border-radius : 10px;
 }
 
 .answer-comment-card__header {
