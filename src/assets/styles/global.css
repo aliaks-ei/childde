@@ -117,11 +117,8 @@ button:active {
 }
 
 .similar-answers-title {
-    margin-top: 60px;
-}
-
-.similar-answers-title h3 {
-    margin: 0;
+    margin-top    : 60px;
+    margin-bottom : 32px;
 }
 
 @media (max-width: 1279px) and (min-width: 600px) {

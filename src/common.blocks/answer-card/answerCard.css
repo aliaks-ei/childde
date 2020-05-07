@@ -1,12 +1,12 @@
 .answer-card {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 }
 
 .answer-card__header {
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    padding         : 32px 0;
+    padding-bottom  : 32px;
 }
 
 .answer-card .question-info__user {
@@ -52,6 +52,10 @@
     margin-bottom : 2rem;
 }
 
+.answer-card--small .answer-card__content p {
+    margin-bottom: 1rem;
+}
+
 .answer-card__date {
     margin-left : auto;
     padding     : 0 12px;
@@ -62,4 +66,8 @@
 
 .answer-card .question-card__content__reviews.question-reviews {
     margin-bottom: 0;
+}
+
+.answer-card--small.answer-card .question-card__content__reviews.question-reviews {
+    margin-top: 0;
 }

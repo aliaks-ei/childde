@@ -1,7 +1,7 @@
 include ../svg-icon/svgIcon
 
 mixin answerCard({ avatar, nickname, isBrief = true })
-    .answer-card
+    .answer-card(class = isBrief ? 'answer-card--small' : '')
         .answer-card__header
             .question-info__user.question-user
                 div.question-user__link-wrapper

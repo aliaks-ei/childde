@@ -3,6 +3,7 @@ extends ../layouts/pageLayout
 include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/question-card-opened/questionCardOpened
 include ../common.blocks/answer-card/answerCard
+include ../common.blocks/answer-comments/answer-comment-card/answerCommentCard
 
 block title
 	title Question
@@ -32,6 +33,12 @@ block body
 						h3 Noch zwei antworten
 					+answerCard({ avatar: 'question-4-avatar', nickname: 'Stacy Kim' })
 					+answerCard({ avatar: 'question-vote-avatar', nickname: 'Philip Djones' })
+					.answer-comments__comments-container
+						+answerCommentCard({ 
+							author : 'Jhon Dow',
+							avatar : 'question-3-avatar',
+							text   : 'I still do not understand from the article: the law of conservation of energy - a myth or reality?'
+						})
 				.three-column-layout__right
 					.widgetsList
 						.widgetsList__block

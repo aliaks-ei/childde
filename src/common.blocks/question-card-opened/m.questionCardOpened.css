@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
     .question-card-wrapper.question-card-wrapper--opened {
         margin-top    : 12px;
-        margin-bottom : 0;
+        margin-bottom : 12px;
     }
 
     .question-card-wrapper--opened .question-info__title {

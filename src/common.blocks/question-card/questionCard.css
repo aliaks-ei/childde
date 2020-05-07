@@ -1,3 +1,7 @@
+.question-card-wrapper.question-card-wrapper--opened {
+    margin-bottom: 32px;
+}
+
 .question-card {
     --card-horizontal-padding: 36px;
 
