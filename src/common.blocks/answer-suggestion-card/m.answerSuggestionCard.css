@@ -1,0 +1,33 @@
+@media (max-width: 600px) {
+    .answer-suggestion-card-wrapper {
+        padding: 0 12px;
+    }
+
+    .answer-suggestion-card {
+        padding: 32px 24px;
+    }
+
+    .answer-suggestion-card__title {
+        font-size: 18px;
+    }
+
+    .answer-suggestion-card__subtitle {
+        font-size   : 14px;
+        line-height : 22px;
+    }
+
+    .answer-suggestion-card__button {
+        max-width : 264px;
+        width     : 100%;
+    }
+
+    .answer-suggestion-card__button.base-btn .base-btn__icon {
+        display: none;
+    }
+
+    .answer-suggestion-card__button.base-btn .base-btn__content {
+        transition  : none;
+        transform   : none;
+        margin-left : 0;
+    }
+}

@@ -1,0 +1,14 @@
+include ../buttons/base-button/baseButton
+
+.answer-suggestion-card-wrapper
+    .answer-suggestion-card
+        .answer-suggestion-card__image
+            img(src="./assets/images/question-0-avatar.png")
+        h2.answer-suggestion-card__title Andrej, wissen Sie die Antwort auf diese Frage?
+        .answer-suggestion-card__subtitle Teilen Sie Ihre Erfahrungen und Kenntnisse.
+        +baseButton({ 
+            text      : 'Auf die Frage antworten',
+            withArrow : true,
+            bgColor   : 'var(--background-color-white)',
+            color     : 'var(--text-black-2)'
+        })(class="answer-suggestion-card__button")

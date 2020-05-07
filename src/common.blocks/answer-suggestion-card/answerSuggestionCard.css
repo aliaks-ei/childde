@@ -1,0 +1,40 @@
+.answer-suggestion-card-wrapper {
+    margin: 24px 0;
+}
+
+.answer-suggestion-card {
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    flex-direction   : column;
+    border-radius    : 20px;
+    padding          : 48px 24px 40px;
+    background-color : #ffe3c7;
+}
+
+.answer-suggestion-card__image {
+    display : flex;
+    width   : 50px;
+}
+
+.answer-suggestion-card__image img {
+    width: 100%;
+}
+
+.answer-suggestion-card__title {
+    margin-top : 24px;
+    text-align : center;
+}
+
+.answer-suggestion-card__subtitle {
+    line-height   : 26px;
+    font-weight   : 600;
+    margin-bottom : 32px;
+    text-align    : center;
+}
+
+.answer-suggestion-card__button {
+    width       : 264px;
+    height      : 50px;
+    line-height : 50px;
+}
