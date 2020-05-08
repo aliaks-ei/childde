@@ -43,6 +43,10 @@
     margin-right: 12px;
 }
 
+.answer-card__subscribe-btn--active {
+    color: var(--text-blue);
+}
+
 .answer-card__content {
     line-height: 26px;
 }

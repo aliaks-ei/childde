@@ -11,6 +11,10 @@
     text-decoration: underline;
 }
 
+.question-card-small:active {
+    opacity: .65;
+}
+
 .question-card-small__link {
     position : absolute;
     top      : 0;

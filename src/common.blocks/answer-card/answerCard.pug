@@ -1,6 +1,6 @@
 include ../svg-icon/svgIcon
 
-mixin answerCard({ avatar, nickname, isBrief = true })
+mixin answerCard({ avatar, nickname, isBrief = true, isSubscribed = false })
     .answer-card(class = isBrief ? 'answer-card--small' : '')
         .answer-card__header
             .question-info__user.question-user
@@ -9,8 +9,8 @@ mixin answerCard({ avatar, nickname, isBrief = true })
                     img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`)
                     span.question-user__name= nickname
                 span.question-user__date yesterday at 12:20
-            button.answer-card__subscribe-btn
-                +svgIcon('subscribe')
+            button.answer-card__subscribe-btn(class = isSubscribed ? 'answer-card__subscribe-btn--active' : '')
+                +svgIcon(`${ isSubscribed ? 'subscribe-done' : 'subscribe' }`)
                 span Abonnieren
         .answer-card__content
             if isBrief
