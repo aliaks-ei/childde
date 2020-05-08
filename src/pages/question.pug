@@ -4,6 +4,7 @@ include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/question-card-opened/questionCardOpened
 include ../common.blocks/answer-card/answerCard
 include ../common.blocks/answer-comments/answer-comment-card/answerCommentCard
+include ../common.blocks/question-card-small/questionCardSmall
 
 block title
 	title Question
@@ -40,6 +41,33 @@ block body
 							text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time '
 						})
 					include ../common.blocks/answer-suggestion-card/answerSuggestionCard
+					+questionCardSmall({ 
+						bgColor   : '#fAf4dc',
+						image     : 'blue_personage',
+						interests : 53,
+						title     : 'Wie viel verdienen Illustratoren?',
+						themes    : [{ name: 'Real estate' }, { name: 'Career' }]
+					})
+					+questionCardSmall({ 
+						bgColor   : 'var(--background-color-personage2)',
+						image     : 'yellow_personage',
+						title     : 'Wie viel verdienen Automechaniker?',
+						themes    : [{ name: 'Career' }]
+					})
+					+questionCardSmall({ 
+						bgColor   : '#efdbeb',
+						interests : 53,
+						image     : 'green_personage',
+						title     : 'Ist es realistisch, mit Faberlic aus der Ferne Geld zu verdienen?',
+						themes    : [{ name: 'Real estate' }]
+					})
+					+questionCardSmall({ 
+						bgColor   : '#e2f5cc',
+						interests : 53,
+						image     : 'books_personage',
+						title     : 'Wie macht man aus einem Eimer ein Hundehalsband?',
+						themes    : [{ name: 'Real estate' }, { name: 'Career' }]
+					})
 				.three-column-layout__right
 					.widgetsList
 						.widgetsList__block

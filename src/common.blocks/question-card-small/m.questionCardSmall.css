@@ -1,0 +1,5 @@
+@media (max-width: 600px) {
+    .question-card-wrapper.question-card-wrapper--small {
+        display: none;
+    }
+}

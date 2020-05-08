@@ -1,6 +1,7 @@
 @media (max-width: 600px) {
     .answer-suggestion-card-wrapper {
-        padding: 0 12px;
+        padding       : 0 12px;
+        margin-bottom : 24px;
     }
 
     .answer-suggestion-card {
