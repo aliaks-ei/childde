@@ -9,7 +9,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
             .question-card__header.question-header
                 .question-header__image-wrapper.question-image
                     .question-image__overlay(
-                        style=`background-color: ${ overlay || 'var(--background-color-white )' }; background-image: url('./assets/images/${ bgImage }')`
+                        style=`background-color: ${ overlay || 'var(--background-color-white )' }; background-image: ${ bgImage ? `url('./assets/images/${ bgImage }')` : '' }`
                     )
                 a.question-header__link(href="#")
                 .question-header__info.question-info 

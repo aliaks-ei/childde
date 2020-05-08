@@ -8,7 +8,7 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitl
             .question-card__header.question-header
                 .question-header__image-wrapper.question-image
                     .question-image__overlay(
-                        style=`background-color: ${ overlay || 'var(--background-color-white )' }; background-image: url('./assets/images/${ bgImage }')`
+                        style=`background-color: ${ overlay || 'var(--background-color-white )' }; background-image: ${ bgImage ? `url('./assets/images/${ bgImage }')` : '' }`
                     )
                 .question-header__info.question-info 
                     .question-info__user.question-user

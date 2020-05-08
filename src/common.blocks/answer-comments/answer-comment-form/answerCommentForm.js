@@ -2,7 +2,7 @@
     const commentFormActivator      = document.querySelector('[data-target="new-comment"]');
     const commentFormCloseActivator = document.querySelector('[data-target-close="new-comment"]');
     const newCommentForm            = document.getElementById('new-comment');
-    const newCommentSendBtn         = newCommentForm.querySelector('.new-comment-form__send-btn');
+    const newCommentSendBtn         = newCommentForm && newCommentForm.querySelector('.new-comment-form__send-btn');
 
     function handleCommentTextareaChange(event) {
         const isSendBtnActive = Boolean(event.target.value && event.target.value.length);
@@ -10,7 +10,7 @@
         newCommentSendBtn.disabled = !isSendBtnActive;
     }
 
-    commentFormActivator.addEventListener('click', function () {
+    commentFormActivator && commentFormActivator.addEventListener('click', function () {
         const textareaEl = newCommentForm.querySelector('.new-comment-form__textarea');
 
         this.parentElement.style.display = 'none';
@@ -21,7 +21,7 @@
         textareaEl.addEventListener('input', handleCommentTextareaChange);
     });
 
-    commentFormCloseActivator.addEventListener('click', function () {
+    commentFormCloseActivator && commentFormCloseActivator.addEventListener('click', function () {
         const textareaEl = newCommentForm.querySelector('.new-comment-form__textarea');
 
         newCommentForm.style.display = 'none';
@@ -29,7 +29,9 @@
 
         textareaEl.removeEventListener('input', handleCommentTextareaChange);
         
-        textareaEl.value = null;
+        textareaEl.value = '';
         textareaEl.style.height = null;
+
+        newCommentSendBtn.disabled = true;
     });
 })();
