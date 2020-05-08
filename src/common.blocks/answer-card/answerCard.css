@@ -53,7 +53,11 @@
 
 .answer-card__content p {
     margin-top    : 0;
-    margin-bottom : 2rem;
+    margin-bottom : 0;
+}
+
+.answer-card__content p:not(:last-of-type) {
+    margin-bottom: 2rem;
 }
 
 .answer-card--small .answer-card__content p {
@@ -69,9 +73,81 @@
 }
 
 .answer-card .question-card__content__reviews.question-reviews {
-    margin-bottom: 0;
+    margin-top    : 16px;
+    margin-bottom : 0;
 }
 
 .answer-card--small.answer-card .question-card__content__reviews.question-reviews {
     margin-top: 0;
+}
+
+.best-answer-toggler {
+    display       : flex;
+    align-items   : center;
+    padding       : 12px 16px;
+    margin-top    : 16px;
+    border-radius : 10px;
+}
+
+.best-answer-toggler:not(.best-answer-toggler--active) {
+    cursor     : pointer;
+    transition : box-shadow .1s ease-out;
+    box-shadow : 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .2);
+}
+
+.best-answer-toggler:not(.best-answer-toggler--active):hover {
+    box-shadow: 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .4);
+}
+
+.best-answer-toggler__content {
+    flex         : 1 1 auto;
+    margin-right : 16px;
+    font-family  : var(--font-montserrat);
+    font-size    : 14px;
+    font-weight  : 500;
+    line-height  : 20px;
+    color        : rgba(32, 35, 51, .7);
+}
+
+.best-answer-toggler--active {
+    background-color: var(--border-color-lightgray);
+}
+
+.best-answer-toggler--active .best-answer-toggler__content {
+    margin-right: 20px;
+}
+
+.best-answer-toggler__cancel-btn {
+    display          : none;
+    border           : 0;
+    padding          : 0;
+    margin           : 0;
+    background-color : transparent;
+    cursor           : pointer;
+    font-family      : var(--font-montserrat);
+    font-weight      : 600;
+    color            : var(--text-black-2);
+}
+
+.best-answer-toggler__cancel-btn:hover {
+    opacity: .5;
+}
+
+.answer-card__best-answer-label {
+    display          : none;
+    align-items      : center;
+    padding          : 8px 16px;
+    border-radius    : 10px 10px 0 0;
+    line-height      : 26px;
+    margin-bottom    : 12px;
+    font-size        : 14px;
+    font-weight      : 600;
+    background-color : #FFEDDC;
+    color            : #dea33d;
+}
+
+.answer-card__best-answer-label .material-icons-round {
+    font-size    : 18px;
+    margin-right : 12px;
+    color        : inherit;
 }

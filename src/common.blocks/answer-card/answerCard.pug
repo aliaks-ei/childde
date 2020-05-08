@@ -2,6 +2,9 @@ include ../svg-icon/svgIcon
 
 mixin answerCard({ avatar, nickname, isBrief = true, isSubscribed = false })
     .answer-card(class = isBrief ? 'answer-card--small' : '')
+        .answer-card__best-answer-label
+            span.material-icons-round check
+            | The author of the question considers this answer the best.
         .answer-card__header
             .question-info__user.question-user
                 div.question-user__link-wrapper
@@ -22,6 +25,15 @@ mixin answerCard({ avatar, nickname, isBrief = true, isSubscribed = false })
                 p 1. Ein junger Ticktaker führt seit Herbst 19 ein Konto - spezialisiert auf bezahlte Duette. Versammelte ein Publikum von 160.000 Abonnenten und verdient von 2.000.000 bis 15.000 Rubel pro Woche. Nicht schlecht für einen Kerl!
                 p 2. Es gibt auch einen merkwürdigen Tipp von einem Schönheitssalonmeister. Sie drehte Videos über ihre Arbeit, anfangs gab es nur wenige Aufrufe. Und dann - überflutet! In einem der Videos hat sie 100.000 Aufrufe gesammelt. Für was ich Monetarisierung in Form eines Stroms neuer Kunden erhalten habe - echtes Geld! Nun, 8.000 Rubel)
                 p 3. Es gibt auch Informationen darüber, dass Großkunden - etwa 2 Millionen Abonnenten - mit Werbung mehr als 100.000 Rubel verdienen können.
+        if !isBrief
+            div
+                .answer-card__best-answer-toggler.best-answer-toggler(data-toggle="bestAnswerLabel")
+                    .best-answer-toggler__content
+                        span This is the best answer to my question
+                    .question-dropdown__item__toggle.item-toggle
+                        input(type='checkbox')
+                        span.item-toggle__slider
+                    button.best-answer-toggler__cancel-btn(type="button") Cansel
         .question-card__content__reviews.question-reviews
             .question-reviews__likes
                 button.question-card-button

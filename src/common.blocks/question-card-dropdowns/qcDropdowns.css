@@ -70,9 +70,10 @@
 }
 
 .item-toggle {
-    position : relative;
-    width    : 40px;
-    height   : 24px;
+    position  : relative;
+    width     : 40px;
+    min-width : 40px;
+    height    : 24px;
 }
   
 .item-toggle input {
