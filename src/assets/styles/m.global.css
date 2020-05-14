@@ -31,4 +31,8 @@
         margin-top    : 24px;
         margin-bottom : 8px;
     }
+
+    .main--page-not-found {
+        border-bottom: 0;
+    }
 }
