@@ -85,22 +85,13 @@ button:active {
 
     background: 
         url('../assets/images/registration-bg.png') top left / 100% var(--delimiter-point) no-repeat, 
-        linear-gradient(
-            to bottom, 
-            var(--background-color-orange) var(--delimiter-point), 
-            var(--background-color-lightblue) var(--delimiter-point) 100%
-        ) no-repeat; 
+        linear-gradient(to bottom, var(--background-color-orange) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
 }
 
 .page--login {
     --delimiter-point: 804px;
 
-    background: 
-        linear-gradient(
-            to bottom, 
-            var(--green-color-2) var(--delimiter-point), 
-            var(--background-color-lightblue) var(--delimiter-point) 100%
-        ) no-repeat; 
+    background: linear-gradient(to bottom, var(--green-color-2) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
 }
 
 .material-icons,
