@@ -6,6 +6,7 @@
     --card-horizontal-padding: 36px;
 
     border-radius : 10px;
+    overflow      : hidden;
     transition    : box-shadow .2s ease-out;
 }
 
@@ -41,11 +42,20 @@
 }
 
 .question-image__overlay {
-    border-radius         : 10px 10px 0 0;
-    background-size       : cover;
-    background-blend-mode : soft-light;
-    background-position   : center;
-    background-repeat     : no-repeat;
+    border-radius       : 10px 10px 0 0;
+    background-size     : cover;
+    background-position : center;
+    background-repeat   : no-repeat;
+    opacity             : .25;
+}
+
+.question-image__bg-color {
+    position      : absolute;
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    bottom        : 0;
+    border-radius : 10px 10px 0 0;
 }
 
 .question-header__link,
