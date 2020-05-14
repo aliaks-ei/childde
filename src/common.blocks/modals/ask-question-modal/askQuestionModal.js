@@ -15,7 +15,9 @@ let qModalCover;
 let userSelectDropdownActivator; 
 let selectedQColorBtnIdx = 0;
 
-autosize(document.querySelectorAll('textarea'));
+if ('autosize' in window) {
+    autosize(document.querySelectorAll('textarea'));
+}
 
 function changeQCoverColor(targetEl) {
     const pressedColorBtn = targetEl.closest('.question-modal__color-btn');

@@ -41,7 +41,7 @@
 	margin-right    : 32px;
 }
 
-.top-navigation__link:not(.top-navigation__link--highlighted):last-of-type {
+.top-navigation__link--last {
 	margin-right: 16px;
 }
 

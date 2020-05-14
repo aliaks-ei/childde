@@ -3,15 +3,17 @@ extends ../layouts/pageLayout
 include ../common.blocks/top-navigation/topNavigation
 
 block title
-	title Question
+	title Page not found
 
 block body
 	body
 		+topNavigation({ bgColor: '#e3f0f5', showAdditionalLinks: true })
 		.search-bar-container#searchBar
 			include ../common.blocks/search-bar/searchBar
-		
+
+		main.main--page-not-found
+			include ../common.blocks/page-not-found/pageNotFound
+
 		include ../common.blocks/footer/base/baseFooter
 
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
 		script(src="./js/index.min.js")

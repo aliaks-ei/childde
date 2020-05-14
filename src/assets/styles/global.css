@@ -121,6 +121,10 @@ button:active {
     margin-bottom : 32px;
 }
 
+.main--page-not-found {
+    border-bottom: 1px solid var(--background-color-gray-2);
+}
+
 @media (max-width: 1279px) and (min-width: 600px) {
     html, body {
         min-width: 1024px;

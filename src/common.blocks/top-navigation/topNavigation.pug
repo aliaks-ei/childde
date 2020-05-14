@@ -17,7 +17,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 					if showAdditionalLinks
 						a.top-navigation__link(href="/") Startseite
 						a.top-navigation__link(href="#") Suche
-						a.top-navigation__link(href="#") Hilfe
+						a.top-navigation__link.top-navigation__link--last(href="#") Hilfe
 					.top-navigation-right-block__item(data-target="searchBar")
 						span.material-icons-round.top-navigation-right-block__search-icon search
 				else
