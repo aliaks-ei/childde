@@ -1,3 +1,5 @@
+let qNotificationsToggler = document.querySelectorAll('[data-target="qNotificationsToggler"]');
+
 let qTopDropdownEl;
 let qBottomDropdownEl;
 
@@ -7,8 +9,6 @@ function generateQTopDropdownEl(x, y) {
 
     qTopDropdownEl.style.transform = `translate3d(${ xPos }px, ${ yPos }px, 0px)`;
     qTopDropdownEl.style.display   = 'block';
-
-    qTopDropdownEl.querySelector('input[type="checkbox"]').addEventListener('click', toggleQuestionNotifications);
 }
 
 function generateQBottomDropdownEl(x, y) {
@@ -19,25 +19,9 @@ function generateQBottomDropdownEl(x, y) {
     qBottomDropdownEl.style.display   = 'block';
 }
 
-function toggleQuestionNotifications() {
-    const bellIcon = qTopDropdownEl.querySelector('.question-dropdown__item__icon .bell');
-    const bellCrossedIcon = qTopDropdownEl.querySelector('.question-dropdown__item__icon .bell-crossed');
-
-    if (this.checked) {
-        bellCrossedIcon.style.display = 'none';
-        bellIcon.style.display = 'block';
-    }
-    else {
-        bellIcon.style.display = 'none';
-        bellCrossedIcon.style.display = 'block';
-    }
-}
-
 window.addEventListener('click', event => {
     if (qTopDropdownEl && !qTopDropdownEl.contains(event.target)) {
         qTopDropdownEl.style.display = 'none';
-
-        document.getElementById('notifyTogglerOption').querySelector('input[type="checkbox"]').addEventListener('click', toggleQuestionNotifications);
     }
 
     if (qBottomDropdownEl && !qBottomDropdownEl.contains(event.target)) {
@@ -68,3 +52,24 @@ window.addEventListener('click', event => {
         showBottomSheet();
     }
 });
+
+for (let toggler of qNotificationsToggler) {
+    toggler.addEventListener('click', function () {
+        const checkboxEl = this.querySelector('input[type="checkbox"]');
+        const bellIcon = this.querySelector('.question-dropdown__item__icon .bell');
+        const bellCrossedIcon = this.querySelector('.question-dropdown__item__icon .bell-crossed');
+
+        checkboxEl.checked = !checkboxEl.checked;
+
+        if (!(bellIcon && bellCrossedIcon)) return;
+
+        if (checkboxEl.checked) {
+            bellCrossedIcon.style.display = 'none';
+            bellIcon.style.display = 'block';
+        }
+        else {
+            bellIcon.style.display = 'none';
+            bellCrossedIcon.style.display = 'block';
+        }
+    });
+}

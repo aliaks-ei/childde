@@ -27,8 +27,9 @@
 }
 
 .bottom-sheet__arrow-icon {
-    margin     : 0 -16px;
-    text-align : center;
+    padding-bottom : 8px;
+    margin         : 0 -16px;
+    text-align     : center;
 }
 
 .bottom-sheet__arrow-icon .material-icons-round {

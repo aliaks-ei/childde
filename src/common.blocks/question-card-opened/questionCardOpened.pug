@@ -1,8 +1,8 @@
 include ../svg-icon/svgIcon
 include ../theme-chips/themeChips
 
-mixin mobileActionButton({ title, icon, count, isMaterial = false })
-    button.q-mob-action-button&attributes(attributes)
+mixin mobileActionButton({ title, icon, count, isMaterial = false, isActive = false })
+    button.q-mob-action-button(class = isActive ? 'q-mob-action-button--active' : '')&attributes(attributes)
         .q-mob-action-button__circle
             if isMaterial
                 span.material-icons-round= icon
@@ -45,19 +45,27 @@ mixin questionCardOpened({ overlay, bgImage, avatar, withLabel, title })
                     data-target = "qcTopDropdown"
                 )
                     span.material-icons-round more_vert
-            .question-card__reactions-wrapper
-                .question-card__reactions
+            .question-card__controls-wrapper
+                .question-card__reactions-wrapper
+                    .question-card__reactions
+                        button.question-card-button
+                            span.question-card-button__icon.material-icons favorite
+                            span Interessant 53
+                        button.question-card-button(data-target="answerModal")
+                            span.question-card-button__icon
+                                +svgIcon("answer")
+                            span Antworten
                     button.question-card-button
-                        span.question-card-button__icon.material-icons favorite
-                        span Interessant 53
-                    button.question-card-button(data-target="answerModal")
-                        span.question-card-button__icon
-                            +svgIcon("answer")
-                        span Antworten
-                button.question-card-button
-                    span.question-card-button__icon.material-icons visibility
-                    span 536
-            .question-card__mobile-actions
-                +mobileActionButton({ title: 'Antworten', icon: 'edit', count: 12 })(data-target="answerModal")
-                +mobileActionButton({ title: 'Interessant', icon: 'favorite', count: 53, isMaterial: true })
-                +mobileActionButton({ title: 'More', icon: 'more_vert', isMaterial: true })(data-target="qcTopMenu")
+                        span.question-card-button__icon.material-icons visibility
+                        span 536
+                .question-card__mobile-actions
+                    +mobileActionButton({ title: 'Antworten', icon: 'edit', count: 12 })(data-target="answerModal")
+                    +mobileActionButton({ title: 'Interessant', icon: 'interest', count: 53, isActive: true })
+                    +mobileActionButton({ title: 'More', icon: 'more_vert', isMaterial: true })(data-target="qcTopMenu")
+                .question-card__notifications-wrapper(data-target="qNotificationsToggler")
+                    .answer-card__best-answer-toggler.best-answer-toggler
+                        .best-answer-toggler__content
+                            span Erhalten Sie Benachrichtigungen über neue Antworten und Kommentare
+                        .question-dropdown__item__toggle.item-toggle
+                            input(type='checkbox')
+                            span.item-toggle__slider

@@ -14,7 +14,7 @@
         transition: none;
     }
 
-    .question-card:hover {
+    .question-card-wrapper:not(.question-card-wrapper--opened) .question-card:hover {
         box-shadow: none;
     }
 

@@ -13,7 +13,7 @@ mixin themeChips({ themes = [], light = false, withoutLimit = false })
 
             each theme in visibleThemes
                 +themeChip(theme)
-            .theme-chip
+            .theme-chip(data-target="qcThemesBottomMenu")
                 span +!{ themes.length - visibleThemes.length }
         else 
             each theme in themes

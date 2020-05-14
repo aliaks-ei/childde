@@ -18,9 +18,13 @@
     }
 
     .question-card-wrapper--opened .question-card__mobile-actions {
-        display       : flex;
-        align-items   : center;
-        padding       : 20px 0 16px;
-        border-bottom : 1px solid var(--border-color-lightgray);
+        display     : flex;
+        align-items : center;
+        padding     : 20px 0 16px;
+    }
+
+    .question-card__notifications-wrapper {
+        padding       : 0 4px;
+        margin-bottom : 16px;
     }
 }
