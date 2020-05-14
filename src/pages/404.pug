@@ -8,6 +8,10 @@ block title
 block body
 	body
 		+topNavigation({ bgColor: '#e3f0f5', showAdditionalLinks: true })
+		.search-bar-container#searchBar
+			include ../common.blocks/search-bar/searchBar
+		
+		include ../common.blocks/footer/base/baseFooter
 
 		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
 		script(src="./js/index.min.js")

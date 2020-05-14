@@ -30,7 +30,7 @@
 	}
 
 	.search-bar__icon:last-of-type {
-		display: block;
+		display: flex;
 	}
 
 	.search-bar__icon .material-icons-round {
