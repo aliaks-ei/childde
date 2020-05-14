@@ -27,16 +27,16 @@ window.addEventListener('click', event => {
     }
 
     if (event.target.dataset.target === 'qcTopDropdown') {
-        const { x, y } = event.target.getBoundingClientRect();
+        const { left, top } = event.target.getBoundingClientRect();
 
         qTopDropdownEl = document.getElementById('qTopDropdown');
-        generateQTopDropdownEl(x, y);
+        generateQTopDropdownEl(left, top);
     }
     else if (event.target.dataset.target === 'qcBottomDropdown') {
-        const { x, y } = event.target.getBoundingClientRect();
+        const { left, top } = event.target.getBoundingClientRect();
 
         qBottomDropdownEl = document.getElementById('qBottomDropdown');
-        generateQBottomDropdownEl(x, y)
+        generateQBottomDropdownEl(left, top)
     }
 
     if (event.target.dataset.target === 'qcTopMenu') {

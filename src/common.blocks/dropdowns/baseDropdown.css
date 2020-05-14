@@ -18,6 +18,12 @@
     font-family      : var(--font-montserrat);
     font-weight      : 500;
     font-size        : 14px;
+    border           : 1px solid transparent;
+    outline          : none;
+}
+
+.base-dropdown__input:focus {
+    border-color: var(--text-blue);
 }
 
 .base-dropdown__action {
