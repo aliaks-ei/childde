@@ -6,6 +6,7 @@
 
 .answer-comment-form__avatar {
     display      : flex;
+    align-items  : center;
     width        : 50px;
     min-width    : 50px;
     margin-right : 8px;

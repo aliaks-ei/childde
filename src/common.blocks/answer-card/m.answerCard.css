@@ -32,6 +32,11 @@
     }
 
     .answer-card__best-answer-label {
-        line-height: 20px;
+        line-height: 18px;
+    }
+
+    
+    .best-answer-toggler__content {
+        font-size: 12px;
     }
 }

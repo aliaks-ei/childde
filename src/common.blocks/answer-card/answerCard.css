@@ -110,7 +110,9 @@
 }
 
 .best-answer-toggler--active {
-    background-color: var(--border-color-lightgray);
+    background-color : var(--border-color-lightgray);
+    padding-top      : 14px;
+    padding-bottom   : 14px;
 }
 
 .best-answer-toggler--active .best-answer-toggler__content {

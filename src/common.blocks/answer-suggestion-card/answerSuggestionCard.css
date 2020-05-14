@@ -14,8 +14,9 @@
 }
 
 .answer-suggestion-card__image {
-    display : flex;
-    width   : 50px;
+    display     : flex;
+    align-items : center;
+    width       : 50px;
 }
 
 .answer-suggestion-card__image img {

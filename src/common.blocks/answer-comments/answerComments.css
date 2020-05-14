@@ -50,9 +50,10 @@
 }
 
 .collapsed-comments__avatars__item {
-    display   : flex;
-    width     : 24px;
-    min-width : 24px;
+    display     : flex;
+    align-items : center;
+    width       : 24px;
+    min-width   : 24px;
 }
 
 .collapsed-comments__avatars__item + .collapsed-comments__avatars__item {
