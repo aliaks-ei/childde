@@ -41,6 +41,10 @@
 	margin-right    : 32px;
 }
 
+.top-navigation__link:not(.top-navigation__link--highlighted):last-of-type {
+	margin-right: 16px;
+}
+
 .top-navigation__link--highlighted {
 	font-weight: 700;
 	line-height: 24px;

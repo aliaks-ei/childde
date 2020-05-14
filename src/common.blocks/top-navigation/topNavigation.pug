@@ -1,7 +1,7 @@
 include ../svg-icon/svgIcon
 include ../buttons/base-button/baseButton
 
-mixin topNavigation({ bgColor, isUserAuthorized = true })
+mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = false })
 	header.top-navigation(
 		style = `background-color: ${ bgColor }`, 
 		class = isUserAuthorized ? '' : 'top-navigation--auth',
@@ -14,6 +14,10 @@ mixin topNavigation({ bgColor, isUserAuthorized = true })
 
 			.top-navigation-right-block
 				if isUserAuthorized
+					if showAdditionalLinks
+						a.top-navigation__link(href="/") Startseite
+						a.top-navigation__link(href="#") Suche
+						a.top-navigation__link(href="#") Hilfe
 					.top-navigation-right-block__item(data-target="searchBar")
 						span.material-icons-round.top-navigation-right-block__search-icon search
 				else
@@ -28,7 +32,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true })
 						img.top-navigation-right-block__user-image(src="./assets/images/avatar.png")
 					include ../account-widget/accountWidget
 				else
-					a.top-navigation__link(href="#") Startseite
+					a.top-navigation__link(href="/") Startseite
 					a.top-navigation__link.top-navigation__link--highlighted#signInLink(href="/login") Anmelden
 						svg(xmlns="http://www.w3.org/2000/svg", width="52.5", height="33.4", viewBox="0 0 52.5 33.4")
 							path(class="sign-in-line sign-in-line--1", d="M6,18-2.3-.4", transform="translate(0.3 13.4)", fill="none", stroke-width="6")
