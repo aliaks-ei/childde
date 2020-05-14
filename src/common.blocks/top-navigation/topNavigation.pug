@@ -7,7 +7,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 		class = isUserAuthorized ? '' : 'top-navigation--auth',
 	)&attributes(attributes)
 		.top-navigation__container.container-1024
-			a.top-navigation__logo(href="#")
+			a.top-navigation__logo(href="javascript:void(0)")
 				+svgIcon('logo')
 
 			include ../search-bar/searchBar
@@ -16,8 +16,8 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 				if isUserAuthorized
 					if showAdditionalLinks
 						a.top-navigation__link(href="/") Startseite
-						a.top-navigation__link(href="#") Suche
-						a.top-navigation__link.top-navigation__link--last(href="#") Hilfe
+						a.top-navigation__link(href="javascript:void(0)") Suche
+						a.top-navigation__link.top-navigation__link--last(href="javascript:void(0)") Hilfe
 					.top-navigation-right-block__item(data-target="searchBar")
 						span.material-icons-round.top-navigation-right-block__search-icon search
 				else
@@ -46,7 +46,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 		.top-navigation__hamburger-menu.hamburger-menu#hamburgerMenu
 			ul.hamburger-menu__links
 				li.hamburger-menu__links__item
-					a.top-navigation__link(href="#") Startseite
+					a.top-navigation__link(href="/") Startseite
 				li.hamburger-menu__links__item
 					a.top-navigation__link.top-navigation__link--highlighted#signInLink(href="/login") Anmelden
 						svg(xmlns="http://www.w3.org/2000/svg", width="52.5", height="33.4", viewBox="0 0 52.5 33.4")

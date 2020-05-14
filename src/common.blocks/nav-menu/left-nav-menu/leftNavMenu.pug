@@ -3,7 +3,7 @@ include ../../svg-icon/svgIcon
 
 mixin navItem({ icon, title })
 	.left-nav-menu__item.left-nav-item&attributes(attributes)
-		a.left-nav-item__link(href="#")
+		a.left-nav-item__link(href="javascript:void(0)")
 			.left-nav-item__icon
 				+svgIcon(icon)
 			span= title
