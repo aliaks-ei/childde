@@ -18,7 +18,9 @@
 }
 
 .authorization-form {
-    background-color: var(--background-color-white);
+    width            : 660px;
+    border-radius    : 10px;
+    background-color : var(--background-color-white);
 }
 
 .auth-form__main-content {
@@ -49,7 +51,7 @@
     font-family      : var(--font-open-sans);
     font-weight      : 600;
     line-height      : 26px;
-    border           : 1px solid transparent;
+    border           : 2px solid transparent;
     outline          : none;
     transition       : .1s ease-out;
 }
@@ -66,7 +68,7 @@
 }
 
 .auth-form__field-wrapper--error .auth-form__field {
-    border: 1px solid var(--red-color);
+    border-color: var(--red-color);
 }
 
 .auth-form__field-wrapper--error .auth-form__field__error-message {
@@ -74,7 +76,7 @@
 }
 
 .auth-form__field-wrapper .auth-form__field:focus {
-    border: 1px solid var(--border-color-green);
+    border-color: var(--border-color-green);
 }
 
 .auth-form__field[type="password"] {

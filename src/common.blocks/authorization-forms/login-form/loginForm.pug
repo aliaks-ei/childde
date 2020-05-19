@@ -1,28 +1,25 @@
-.login-form-wrapper
-    .login-form__picture-wrapper
-        img(src="./assets/images/login-personage.png")
-    .authorization-form.auth-form.auth-form--login
-        form.auth-form__main-content(autocomplete="off")
-            .auth-form__field-wrapper
-                label.auth-form__field-label(for="email") Email
-                input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
-                span.auth-form__field__error-message Please enter a valid email address
-            .auth-form__field-wrapper
-                label.auth-form__field-label(for="password") Password
-                input.auth-form__field(type="password", id="password", name="password", required)
-                span.auth-form__field__error-message
-            label.auth-form__checkbox-wrapper Remember me
-                input.auth-form__checkbox-input(type="checkbox")
-                .auth-form__checkbox 
-                    span.material-icons-round done
-            +baseButton({ text: 'Sign in', withArrow: true })(class="auth-form__action-btn", type="submit")
-            button.auth-form__sign-in-with-social(type="button")
-                +svgIcon('facebook-colored')
-                | Log in with Facebook
-            button.auth-form__sign-in-with-social(type="button")
-                +svgIcon('google-colored')
-                | Log in with Google
-        .auth-form__footer-wrapper
-            .auth-form__footer
-                span Don't have an account?&nbsp;
-                a.auth-form__footer__link(href="/registration") Registration
+.authorization-form.auth-form
+    form.auth-form__main-content(autocomplete="off")
+        .auth-form__field-wrapper
+            label.auth-form__field-label(for="email") Email
+            input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
+            span.auth-form__field__error-message Please enter a valid email address
+        .auth-form__field-wrapper
+            label.auth-form__field-label(for="password") Password
+            input.auth-form__field(type="password", id="password", name="password", required)
+            span.auth-form__field__error-message
+        label.auth-form__checkbox-wrapper Remember me
+            input.auth-form__checkbox-input(type="checkbox")
+            .auth-form__checkbox 
+                span.material-icons-round done
+        +baseButton({ text: 'Sign in', withArrow: true })(class="auth-form__action-btn", type="submit")
+        button.auth-form__sign-in-with-social(type="button")
+            +svgIcon('facebook-colored')
+            | Log in with Facebook
+        button.auth-form__sign-in-with-social(type="button")
+            +svgIcon('google-colored')
+            | Log in with Google
+    .auth-form__footer-wrapper
+        .auth-form__footer
+            span Don't have an account?&nbsp;
+            a.auth-form__footer__link(href="/registration") Registration

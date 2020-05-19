@@ -13,6 +13,10 @@
         margin-bottom : 32px;
     }
 
+    .authorization-form {
+        width: 100%;
+    }
+
     .auth-form__main-content {
         padding: 32px 24px 0;
     }
