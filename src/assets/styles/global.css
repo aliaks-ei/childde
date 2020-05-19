@@ -83,9 +83,20 @@ button:active {
 .page--registration {
     --delimiter-point: 894px;
 
-    background: 
-        url('../assets/images/registration-bg.png') top left / 100% var(--delimiter-point) no-repeat, 
-        linear-gradient(to bottom, var(--background-color-orange) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
+    background: linear-gradient(to bottom, var(--background-color-orange) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
+}
+
+.page--registration:before {
+    content             : "";
+    position            : absolute;
+    top                 : 0;
+    left                : 0;
+    right               : 0;
+    height              : var(--delimiter-point);
+    background-image    : url('../assets/images/registration-bg.png');
+    background-position : top left;
+    background-size     : cover;
+    z-index             : -2;
 }
 
 .page--login {
