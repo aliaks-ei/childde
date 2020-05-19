@@ -57,12 +57,12 @@
 }
 
 .auth-form__field__error-message {
-    font-size   : 11px;
+    font-size   : 14px;
     position    : absolute;
     bottom      : 0;
     transform   : translateY(calc(100% + .2rem));
     transition  : opacity .1s;
-    font-weight : 600;
+    font-weight : 700;
     color       : var(--red-color);
     opacity     : 0;
 }
@@ -185,13 +185,25 @@
 
 .auth-form__footer {
     text-align  : center;
-    padding     : 30px 0;
+    padding     : 30px 16px;
     font-weight : 600;
 }
 
+.auth-form__footer__info {
+    margin-top    : 0;
+    margin-bottom : 0;
+    line-height   : 26px;
+}
+
+.auth-form__footer__info + .auth-form__footer__info {
+    margin-top: 6px;
+}
+
 .auth-form__footer__link {
+    margin-left     : 4px;
     color           : var(--text-blue);
     text-decoration : none;
+    white-space     : nowrap;
 }
 
 .auth-form__footer__link:hover {

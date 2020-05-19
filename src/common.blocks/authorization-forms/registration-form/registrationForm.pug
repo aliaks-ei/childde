@@ -2,7 +2,7 @@ include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
 .authorization-form.auth-form
-    form.auth-form__main-content(autocomplete="off")
+    form.auth-form__main-content(autocomplete="off", novalidate)
         .auth-form__field-wrapper
             label.auth-form__field-label(for="email") Email
             input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
@@ -32,5 +32,6 @@ include ../../svg-icon/svgIcon
             | Log in with Google
     .auth-form__footer-wrapper
         .auth-form__footer
-            span Already have an account?&nbsp;
-            a.auth-form__footer__link(href="/login") Log in
+            p.auth-form__footer__info
+                | Already have an account?&nbsp;
+                a.auth-form__footer__link(href="/login") Log in

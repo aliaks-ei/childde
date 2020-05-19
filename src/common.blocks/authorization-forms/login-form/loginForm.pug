@@ -1,5 +1,5 @@
 .authorization-form.auth-form
-    form.auth-form__main-content(autocomplete="off")
+    form.auth-form__main-content(autocomplete="off", novalidate)
         .auth-form__field-wrapper
             label.auth-form__field-label(for="email") Email
             input.auth-form__field(type="email", id="email", name="email", pattern=".+@.+\..+$", required)
@@ -21,5 +21,9 @@
             | Log in with Google
     .auth-form__footer-wrapper
         .auth-form__footer
-            span Don't have an account?&nbsp;
-            a.auth-form__footer__link(href="/registration") Registration
+            p.auth-form__footer__info
+                | Don't have an account?
+                a.auth-form__footer__link(href="/registration") Registration
+            p.auth-form__footer__info
+                | Passwort vergessen?
+                a.auth-form__footer__link(href="/forgot-password") Passwort wiederherstellen

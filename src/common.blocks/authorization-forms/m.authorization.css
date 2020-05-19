@@ -69,6 +69,14 @@
     }
 
     .auth-form__footer {
-        padding: 20px 0;
+        padding: 24px 12px;
+    }
+
+    .auth-form__footer__info {
+        line-height: 20px;
+    }
+
+    .auth-form__field__error-message {
+        font-size: 12px;
     }
 }
