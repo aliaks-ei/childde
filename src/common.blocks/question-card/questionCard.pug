@@ -10,7 +10,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                 .question-header__image-wrapper.question-image
                     .question-image__bg-color(style=`background-color: ${ overlay || 'var(--background-color-white )' }`)
                     .question-image__overlay(style=`${ bgImage ? `background-image: url("./assets/images/${ bgImage }")` : '' }`)
-                a.question-header__link(href="javascript:void(0)")
+                a.question-header__link(href="/question")
                 .question-header__info.question-info 
                     .question-info__user.question-user
                         div.question-user__link-wrapper
