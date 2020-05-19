@@ -25,12 +25,12 @@
 		right: 14px;
 	}
 
-	.search-bar__icon:first-of-type {
-		display: none;
-	}
-
-	.search-bar__icon:last-of-type {
+	.search-bar__icon:not(.search-bar__icon--search) {
 		display: flex;
+	}
+	
+	.search-bar__icon--search {
+		display: none;
 	}
 
 	.search-bar__icon .material-icons-round {
