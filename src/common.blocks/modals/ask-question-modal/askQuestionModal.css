@@ -141,6 +141,7 @@
 }
 
 .question-modal__bottom-container {
+    display         : flex;
     align-items     : center;
     justify-content : space-between;
     padding         : 32px 36px 44px;
@@ -148,10 +149,6 @@
 
 .question-modal__bottom-container[data-desktop-hidden] {
     display: none;
-}
-
-.question-modal__bottom-container[data-mobile-hidden] {
-    display: flex;
 }
 
 .base-btn.q-bottom-container__btn { 

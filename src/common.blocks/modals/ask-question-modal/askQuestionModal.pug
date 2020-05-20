@@ -13,9 +13,6 @@ mixin optionBtn({ icon, text })
         .base-modal__top-controls
             button.base-icon-btn.base-modal__close-btn(data-target-close="qModal")
                 span.material-icons-round keyboard_backspace
-            .base-modal__top-controls__right-block
-                +symbolsCounter({ label: 20 })
-                +baseButton({ text: 'Frage stellen' })(class="q-bottom-container__btn", disabled)
         .question-modal__cover
             .question-modal__header 
                 .question-modal__header__title Frage stellen
@@ -23,7 +20,7 @@ mixin optionBtn({ icon, text })
                     span.material-icons-round close
             .question-modal__cover__bg-color#qCoverBgColor
             .question-modal__cover__bg-image#qCoverBgImage
-            textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="2")
+            textarea.question-modal__textarea#qModalTitle(placeholder="Welche frage möchtest du beantworten?", rows="2")
             .question-modal__selected-themes-wrapper
                 +themeChips({ 
                     themes: [
@@ -53,10 +50,10 @@ mixin optionBtn({ icon, text })
                 +optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")
                 +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="bsCoverUpload")
                 +optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
-        .question-modal__bottom-container.q-bottom-container(data-mobile-hidden)
+        .question-modal__bottom-container.q-bottom-container
             include ../../dropdowns/user-select-dropdown/userSelectDropdown
             .q-bottom-container__actions.q-actions
-                +symbolsCounter({ label: 20 })
+                +symbolsCounter({ limit: 150, isCountDown: true })
                 +baseButton({ 
                     text      : 'Speichern',
                     withArrow : true

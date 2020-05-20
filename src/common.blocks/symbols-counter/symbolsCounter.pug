@@ -1,4 +1,4 @@
-mixin symbolsCounter({ error = false, success = false, symbolsLimit = 1, isCountDown = false })
+mixin symbolsCounter({ error = false, success = false, limit, isCountDown = false })
     - 
         let additionalClasses = '';
         
@@ -6,14 +6,14 @@ mixin symbolsCounter({ error = false, success = false, symbolsLimit = 1, isCount
         if (success) additionalClasses += ' symbols-counter-container--success';
 
     .symbols-counter-container(
-        class              = additionalClasses,
-        data-symbols-limit = symbolsLimit,
-        data-count-down    = isCountDown
+        class                  = additionalClasses,
+        data-symbols-limit     = limit,
+        data-symbols-countdown = isCountDown
     )&attributes(attributes)
-        svg.symbols-counter(width='40' height='40' fill='none')
-            circle.symbols-counter__bg-circle(cx='20' cy='20' r='18' stroke-width='4')
-            circle.symbols-counter__fill-circle(cx='20' cy='20' r='18' stroke-width='4')
+        svg.symbols-counter(width='36' height='36' fill='none')
+            circle.symbols-counter__bg-circle(cx='18' cy='18' r='16' stroke-width='2')
+            circle.symbols-counter__fill-circle(cx='18' cy='18' r='16' stroke-width='2', stroke-dashoffset="101.24778", stroke-dasharray="101.24778", style="stroke-dashoffset: 101.24778; stroke-dasharray: 101.24778")
 
         .symbols-counter__label 
-            span.symbols-counter__label__text= symbolsLimit
+            span.symbols-counter__label__text
             span.material-icons-round check

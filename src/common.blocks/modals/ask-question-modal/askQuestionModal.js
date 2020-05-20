@@ -122,9 +122,51 @@ function handleQUploadCoverClick(event) {
     }
 }
 
+function handleQModalTitleChange(event) {
+    const symbolsCounter     = qModal.querySelector('.symbols-counter-container');
+    const submitBtn          = qModal.querySelector('.q-bottom-container__btn');
+
+    const svgFillCircle       = symbolsCounter.querySelector('.symbols-counter__fill-circle');
+    const symbolsCounterLabel = symbolsCounter.querySelector('.symbols-counter__label__text');
+
+    const svgStrokeDasharray = svgFillCircle.style.strokeDasharray;
+
+    const symbolsLimit = parseInt(symbolsCounter.dataset.symbolsLimit, 10);
+    const counterStep  = svgStrokeDasharray / symbolsLimit;
+
+    const questionLength = event.target.value.length;
+
+    let newStrokeDashoffset;
+    let currentSymbols;
+
+    if (symbolsCounter.dataset.symbolsCountdown !== undefined) {
+        newStrokeDashoffset = questionLength * counterStep;
+        currentSymbols = symbolsLimit - questionLength;
+    }
+    else {
+        newStrokeDashoffset = svgStrokeDasharray - (questionLength * counterStep);
+        currentSymbols = questionLength;
+    }
+
+    symbolsCounter.style.opacity = currentSymbols <= 19 ? 1 : 0;
+
+    if (currentSymbols <= 9) {
+        symbolsCounter.classList.add('symbols-counter-container--error');
+    }
+    else {
+        symbolsCounter.classList.remove('symbols-counter-container--error');
+    }
+
+    symbolsCounterLabel.textContent = currentSymbols <= -999 ? -999 : currentSymbols;
+    svgFillCircle.style.strokeDashoffset = newStrokeDashoffset;
+
+    submitBtn.disabled = Boolean(currentSymbols < 0 || currentSymbols == symbolsLimit);
+}
+
 for (const activator of qModalActivators) {
     activator.addEventListener('click', () => {
         const qModal = document.getElementById('qModal');
+        const qModalTitle = qModal.querySelector('#qModalTitle');
 
         qModalCover = qModal.querySelector('.question-modal__cover');
         userSelectDropdownActivator = qModal.querySelector('[data-target="userSelectDropdown"]');
@@ -134,5 +176,6 @@ for (const activator of qModalActivators) {
         qModal.addEventListener('click', handleQModalClick);
         qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
         qCoverUploadDropdown.addEventListener('click', handleQUploadCoverClick);
+        qModalTitle.addEventListener('input', handleQModalTitleChange);
     });
 }

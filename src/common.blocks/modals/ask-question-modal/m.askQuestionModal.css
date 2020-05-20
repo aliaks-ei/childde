@@ -84,10 +84,6 @@
         margin-top : 18px;
         padding    : 0 16px 8px 12px;
     }
-
-    .question-modal__bottom-container[data-mobile-hidden] {
-        display: none;
-    }
     
     .question-modal__bottom-container[data-desktop-hidden] {
         display: flex;
@@ -104,8 +100,29 @@
 
     .base-btn.q-bottom-container__btn {
         width       : 106px;
-        height      : 32px;
-        line-height : 32px;
+        height      : 36px;
+        line-height : 36px;
         font-size   : 12px;
+    }
+
+    .base-btn.q-bottom-container__btn .base-btn__icon {
+        display: none;
+    }
+
+    .base-btn.q-bottom-container__btn .base-btn__content {
+        transform   : none;
+        transition  : none;
+        margin-left : 0;
+    }
+
+    .question-modal__bottom-container .user-select {
+        display: none;
+    }
+
+    .q-actions {
+        position : fixed;
+        top      : 6px;
+        right    : 8px;
+        z-index  : 5;
     }
 }

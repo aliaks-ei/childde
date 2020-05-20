@@ -33,10 +33,10 @@
         position: relative;
     }
 
-    .base-modal__top-controls__right-block {
+    /* .base-modal__top-controls__right-block {
         display     : flex;
         align-items : center;
-    }
+    } */
 
     .modal-overlay {
         opacity        : 0;

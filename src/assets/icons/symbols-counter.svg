@@ -1,0 +1,4 @@
+<svg class="symbols-counter" width="36" height="36" fill="none">
+    <circle class="symbols-counter__bg-circle" cx="18" cy="18" r="16" stroke-width="2"></circle>
+    <circle class="symbols-counter__fill-circle" cx="18" cy="18" r="16" stroke-width="2" stroke-dashoffset="101.24778" stroke-dasharray="101.24778" style="stroke-dashoffset: 101.24778; stroke-dasharray: 101.24778"></circle>
+</svg>
