@@ -31,7 +31,7 @@
         display: block;
     }
 
-    .answer-modal__bottom-wrapper[data-mobile-hidden] {
+    .answer-modal__bottom-wrapper .user-select {
         display: none;
     }
 
@@ -40,8 +40,15 @@
     }
 
     .base-btn.answer-modal__answer-button {
-        width       : 96px;
-        height      : 32px;
-        line-height : 32px;
+        width       : 112px;
+        height      : 36px;
+        line-height : 36px;
+    }
+
+    .asnwer-modal__answer-button-wrapper {
+        position : fixed;
+        top      : 6px;
+        right    : 9px;
+        z-index  : 5;
     }
 }

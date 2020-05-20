@@ -28,11 +28,63 @@ function handleAnswerModalClick(event) {
         this.removeEventListener('click', handleAnswerModalClick);
         uploadImageActivator.nextElementSibling.removeEventListener('click', stopPropagationOnDropdown);
         addLinkActivator.nextElementSibling.removeEventListener('click', stopPropagationOnDropdown);
+        answerModal.querySelector('#answerModalContent').removeEventListener('input', handleAnswerModalContentChange);
     }
 }
 
 function stopPropagationOnDropdown(event) {
     event.stopPropagation();
+}
+
+function handleAnswerModalContentChange() {
+    const symbolsCounter = answerModal.querySelector('.symbols-counter-container');
+    const submitBtn      = answerModal.querySelector('.answer-modal__answer-button');
+
+    const svgFillCircle       = symbolsCounter.querySelector('.symbols-counter__fill-circle');
+    const svgBgCircle         = symbolsCounter.querySelector('.symbols-counter__bg-circle');
+    const symbolsCounterLabel = symbolsCounter.querySelector('.symbols-counter__label__text');
+    const checkIcon           = symbolsCounter.querySelector('.symbols-counter__label .material-icons-round');
+
+    const svgStrokeDasharray = svgFillCircle.style.strokeDasharray;
+
+    const symbolsLimit = parseInt(symbolsCounter.dataset.symbolsLimit, 10);
+    const counterStep  = svgStrokeDasharray / symbolsLimit;
+
+    const answerLength = event.target.value.length;
+
+    let newStrokeDashoffset;
+    let currentSymbols;
+
+    if (symbolsCounter.dataset.symbolsCountdown !== undefined) {
+        newStrokeDashoffset = answerLength * counterStep;
+        currentSymbols = symbolsLimit - answerLength;
+    }
+    else {
+        newStrokeDashoffset = svgStrokeDasharray - (answerLength * counterStep);
+        currentSymbols = answerLength;
+    }
+
+    symbolsCounter.style.opacity = currentSymbols >=1 ? 1 : 0;
+
+    if (currentSymbols >= symbolsLimit) {
+        symbolsCounterLabel.style.display = 'none';
+        checkIcon.style.display = 'block';
+        
+        svgBgCircle.style.strokeOpacity = 1;
+
+        submitBtn.disabled = false;
+    }
+    else {
+        checkIcon.style.display = 'none';
+        symbolsCounterLabel.style.display = 'block';
+        
+        svgBgCircle.style.strokeOpacity = 0.07;
+
+        submitBtn.disabled = true;
+    }
+
+    symbolsCounterLabel.textContent = currentSymbols;
+    svgFillCircle.style.strokeDashoffset = newStrokeDashoffset;
 }
 
 for (const activator of answerModalActivators) {
@@ -48,5 +100,6 @@ for (const activator of answerModalActivators) {
         answerModal.addEventListener('click', handleAnswerModalClick);
         uploadImageActivator.nextElementSibling.addEventListener('click', stopPropagationOnDropdown);
         addLinkActivator.nextElementSibling.addEventListener('click', stopPropagationOnDropdown);
+        answerModal.querySelector('#answerModalContent').addEventListener('input', handleAnswerModalContentChange);
     });
 }

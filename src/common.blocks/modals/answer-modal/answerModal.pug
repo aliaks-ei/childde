@@ -6,13 +6,13 @@ include ../../symbols-counter/symbolsCounter
             .base-modal__top-controls
                 button.base-icon-btn.base-modal__close-btn(data-target-close="answerModal")
                     span.material-icons-round close
-                .base-modal__top-controls__right-block
-                    +symbolsCounter({ label: 20, success: true })
-                    +baseButton({ 
-                        text    : 'Antworten',
-                        bgColor : 'var(--background-color-black)',
-                        color   : 'var(--text-white)'
-                    })(class="answer-modal__answer-button", disabled)
+                //- .base-modal__top-controls__right-block
+                //-     +symbolsCounter({ label: 20, success: true })
+                //-     +baseButton({ 
+                //-         text    : 'Antworten',
+                //-         bgColor : 'var(--background-color-black)',
+                //-         color   : 'var(--text-white)'
+                //-     })(class="answer-modal__answer-button", disabled)
             .answer-modal__header-wrapper
                 .answer-modal__header
                     .answer-modal__header__title Wie macht man aus einem Eimer ein Hundehalsband?
@@ -21,7 +21,7 @@ include ../../symbols-counter/symbolsCounter
             .answer-modal__content-wrapper
                 .answer-modal__content
                     .answer-modal__header__title(data-desktop-hidden) Wie macht man aus einem Eimer ein Hundehalsband?
-                    textarea.answer-modal__textarea(placeholder="Response no more than 90 characters", rows="1")
+                    textarea.answer-modal__textarea#answerModalContent(placeholder="Response no more than 90 characters", rows="1")
                 .answer-modal__option-buttons.answer-options
                     button.answer-options__btn.answer-options__btn--bold
                         span.answer-options__btn__content Ж
@@ -37,11 +37,11 @@ include ../../symbols-counter/symbolsCounter
                     button.answer-options__btn.answer-options__btn--link(data-target="addLinkDropdown")
                         span.answer-options__btn__content.material-icons-round insert_link
                     include ../../dropdowns/add-link/addLink
-            .answer-modal__bottom-wrapper(data-mobile-hidden)
+            .answer-modal__bottom-wrapper
                 .answer-modal__bottom-container
                     include ../../dropdowns/user-select-dropdown/userSelectDropdown
                     .asnwer-modal__answer-button-wrapper
-                        +symbolsCounter({ label: 20, success: true })
+                        +symbolsCounter({ limit: 90, success: true })
                         +baseButton({ 
                             text    : 'Antworten',
                             bgColor : 'var(--background-color-black)',

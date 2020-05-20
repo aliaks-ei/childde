@@ -95,6 +95,7 @@ function handleQModalClick(event) {
         this.removeEventListener('click', handleQModalClick);
         qThemesDropdown.removeEventListener('click', handleQThemesDropdownClick);
         qCoverUploadDropdown.removeEventListener('click', handleQUploadCoverClick);
+        qModal.querySelector('#qModalTitle').removeEventListener('input', handleQModalTitleChange);
     }
 }
 
@@ -123,8 +124,8 @@ function handleQUploadCoverClick(event) {
 }
 
 function handleQModalTitleChange(event) {
-    const symbolsCounter     = qModal.querySelector('.symbols-counter-container');
-    const submitBtn          = qModal.querySelector('.q-bottom-container__btn');
+    const symbolsCounter = qModal.querySelector('.symbols-counter-container');
+    const submitBtn      = qModal.querySelector('.q-bottom-container__btn');
 
     const svgFillCircle       = symbolsCounter.querySelector('.symbols-counter__fill-circle');
     const symbolsCounterLabel = symbolsCounter.querySelector('.symbols-counter__label__text');
@@ -166,7 +167,6 @@ function handleQModalTitleChange(event) {
 for (const activator of qModalActivators) {
     activator.addEventListener('click', () => {
         const qModal = document.getElementById('qModal');
-        const qModalTitle = qModal.querySelector('#qModalTitle');
 
         qModalCover = qModal.querySelector('.question-modal__cover');
         userSelectDropdownActivator = qModal.querySelector('[data-target="userSelectDropdown"]');
@@ -176,6 +176,6 @@ for (const activator of qModalActivators) {
         qModal.addEventListener('click', handleQModalClick);
         qThemesDropdown.addEventListener('click', handleQThemesDropdownClick);
         qCoverUploadDropdown.addEventListener('click', handleQUploadCoverClick);
-        qModalTitle.addEventListener('input', handleQModalTitleChange);
+        qModal.querySelector('#qModalTitle').addEventListener('input', handleQModalTitleChange);
     });
 }
