@@ -21,8 +21,8 @@ mixin optionBtn({ icon, text })
                 .question-modal__header__title Frage stellen
                 button.base-icon-btn.question-modal__close-btn(data-target-close="qModal")
                     span.material-icons-round close
-            .question-modal__cover__bg-image#qCoverBgImage
             .question-modal__cover__bg-color#qCoverBgColor
+            .question-modal__cover__bg-image#qCoverBgImage
             textarea.question-modal__textarea(placeholder="Welche frage möchtest du beantworten?", rows="2")
             .question-modal__selected-themes-wrapper
                 +themeChips({ 

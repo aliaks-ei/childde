@@ -10,7 +10,7 @@ mixin answerCommentCard({ author, avatar, text, level })
                     span.question-user__date yesterday at 12:20
                 .question-reviews__likes
                     button.question-card-button
-                        span.question-card-button__icon.material-icons thumb_up
+                        span.question-card-button__icon.question-card-button__icon--active.material-icons thumb_up
                         span +75
                     button.question-card-button.question-card-button--inactive
                         span.question-card-button__icon.material-icons-outlined thumb_down
@@ -25,7 +25,7 @@ mixin answerCommentCard({ author, avatar, text, level })
                     span.material-icons-round(data-target="qcBottomMenu") more_horiz
                 .question-reviews__likes
                     button.question-card-button
-                        span.question-card-button__icon.material-icons thumb_up
+                        span.question-card-button__icon.question-card-button__icon--active.material-icons thumb_up
                         span +75
                     button.question-card-button.question-card-button--inactive
                         span.question-card-button__icon.material-icons-outlined thumb_down

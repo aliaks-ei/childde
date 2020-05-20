@@ -1,10 +1,10 @@
 @media (max-width: 600px) {
-    .symbols-counter {
+    /* .symbols-counter {
         width       : 28px;
         height      : 28px;
         line-height : 28px;
         font-size   : 2em;
-    }
+    } */
 
     .symbols-counter__label {
         font-size: 12px;
@@ -14,7 +14,7 @@
         font-size: 16px;
     }
 
-    .symbols-counter__circle__half {
+    /* .symbols-counter__circle__half {
         border: .05em solid currentColor;
-    }
+    } */
 }

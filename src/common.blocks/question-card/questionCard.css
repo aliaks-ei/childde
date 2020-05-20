@@ -181,10 +181,8 @@
 }
 
 .question-card__visibility-btn.question-card-button:before {
-    top    : 0;
-    bottom : 0;
-    left   : -4px;
-    right  : -4px;
+    left  : -12px;
+    right : -12px;
 }
 
 .question-card__reactions  {
@@ -221,13 +219,17 @@
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    margin          : 32px 0;
+    margin-top      : 32px 0;
 }
 
 .question-reviews__likes {
     display     : flex;
     align-items : center;
     flex-wrap   : wrap;
+}
+
+.question-reviews__likes .question-card-button .question-card-button__icon--active {
+    color: var(--text-black);
 }
 
 .question-card__read-all-answers-btn {
@@ -240,6 +242,7 @@
     border-radius    : 28px;
     line-height      : 55px;
     font-size        : 14px;
+    margin-top       : 32px;
     cursor           : pointer;
     transition       : .1s ease out;
 }

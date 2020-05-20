@@ -1,12 +1,19 @@
-mixin symbolsCounter({ label, error, success, withCheck })
-    .symbols-counter(
-        class = error ? 'symbols-counter--error' : success ? 'symbols-counter--success' : ''
+mixin symbolsCounter({ error = false, success = false, symbolsLimit = 1, isCountDown = false })
+    - 
+        let additionalClasses = '';
+        
+        if (error) additionalClasses += ' symbols-counter-container--error';
+        if (success) additionalClasses += ' symbols-counter-container--success';
+
+    .symbols-counter-container(
+        class              = additionalClasses,
+        data-symbols-limit = symbolsLimit,
+        data-count-down    = isCountDown
     )&attributes(attributes)
-        .symbols-counter__label
-            if withCheck
-                span.material-icons-round check
-            else
-                | !{ label }
-        .symbols-counter__circle
-            .symbols-counter__circle__half.symbols-counter__circle__half--left
-            .symbols-counter__circle__half.symbols-counter__circle__half--right 
+        svg.symbols-counter(width='40' height='40' fill='none')
+            circle.symbols-counter__bg-circle(cx='20' cy='20' r='18' stroke-width='4')
+            circle.symbols-counter__fill-circle(cx='20' cy='20' r='18' stroke-width='4')
+
+        .symbols-counter__label 
+            span.symbols-counter__label__text= symbolsLimit
+            span.material-icons-round check

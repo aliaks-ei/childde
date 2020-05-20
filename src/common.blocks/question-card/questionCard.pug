@@ -41,7 +41,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                     span.material-icons-round(data-target="qcTopMenu") more_vert
             .question-card__reactions-wrapper
                 .question-card__reactions
-                    button.question-card-button
+                    button.question-card-button(class = interested ? 'question-card-button--active' : '')
                         if interested
                             span.question-card-button__icon
                                 +svgIcon("interest")
@@ -79,11 +79,15 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                         .question-card__content__reviews.question-reviews
                             .question-reviews__likes
                                 button.question-card-button
-                                    span.question-card-button__icon(class=`material-icons${ interested ? '' : '-outlined' }`) thumb_up
+                                    span.question-card-button__icon.material-icons(
+                                        class=interested ? 'question-card-button__icon--active' : 'material-icons-outlined'
+                                    ) thumb_up
                                     span.question-card-button__text Gute antwort&nbsp
                                     span +75
                                 button.question-card-button
-                                    span.question-card-button__icon(class=`material-icons${ interested ? '-outlined' : '' }`) thumb_down
+                                    span.question-card-button__icon.material-icons(
+                                        class=interested ? 'material-icons-outlined' : 'question-card-button__icon--active'
+                                    ) thumb_down
                                     span= interested ? 0 : 1
                             button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
                                 span.material-icons-round more_horiz
