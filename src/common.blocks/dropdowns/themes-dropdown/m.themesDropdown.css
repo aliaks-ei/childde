@@ -42,7 +42,8 @@
     }
 
     .themes-options {
-        padding: 0 4px;
+        padding    : 0 4px;
+        max-height : unset;
     }
 
     .themes-options__option {

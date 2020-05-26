@@ -23,6 +23,7 @@
 .question-modal__cover {
     position      : relative;
     margin-bottom : 16px;
+    border-radius : 8px 8px 0 0;
 }
 
 .question-modal__cover__bg-color {
@@ -32,6 +33,7 @@
     right            : 0;
     left             : 0;
     z-index          : 1;
+    border-radius    : inherit;
 }
 
 .question-modal__cover__bg-image {
@@ -42,7 +44,8 @@
     left                : 0;
     background-size     : cover;
     background-position : 50%;
-    opacity             : .6;
+    border-radius       : inherit;
+    opacity             : .25;
     z-index             : 1;
 }
 
@@ -86,11 +89,8 @@
     width           : 50px;
     height          : 50px;
     border-radius   : 16px;
+    margin-right    : 10px;
     cursor          : pointer;
-}
-
-.question-modal__color-btn + .question-modal__color-btn {
-    margin-left: 10px;
 }
 
 .question-modal__color-btn:not(.question-modal__color-btn--bordered) .material-icons-round {

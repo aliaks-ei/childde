@@ -25,7 +25,8 @@
     }
 
     .question-modal__cover {
-        margin-bottom: 0;
+        margin-bottom : 0;
+        border-radius : 0;
     }
 
     .question-modal__cover-colors {
@@ -39,10 +40,7 @@
         height        : 32px;
         border-radius : 10px;
         padding       : 0;
-    }
-
-    .question-modal__color-btn + .question-modal__color-btn {
-        margin-left: 6px;
+        margin-right  : 6px;
     }
 
     .question-modal__color-btn .material-icons-round {
@@ -65,14 +63,9 @@
         height        : 32px;
         font-size     : 12px;
         line-height   : 32px;
-        padding       : 0 12px;
+        padding       : 0 10px;
         font-weight   : 600;
-        margin-right  : 0;
         margin-bottom : 0;
-    }
-
-    .question-modal__option-btn + .question-modal__option-btn {
-        margin-left: 8px;
     }
 
     .question-modal__option-btn svg {
