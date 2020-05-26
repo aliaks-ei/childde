@@ -1,17 +1,17 @@
 include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
-mixin navItem({ icon, title })
+mixin navItem({ icon, title, href = 'javascript:void(0)' })
 	.left-nav-menu__item.left-nav-item&attributes(attributes)
-		a.left-nav-item__link(href="javascript:void(0)")
+		a.left-nav-item__link(href=href)
 			.left-nav-item__icon
 				+svgIcon(icon)
 			span= title
 
 nav.left-nav-menu
 	div
-		+navItem({ icon: 'newspaper', title: 'Feed' })(class="left-nav-item--selected")
-		+navItem({ icon: 'user', title: 'Profil' })
+		+navItem({ icon: 'newspaper', title: 'Feed', href: '/' })(class="left-nav-item--selected")
+		+navItem({ icon: 'user', title: 'Profil', href: '/profile' })
 		+navItem({ icon: 'compass', title: 'Neu' })
 		+navItem({ icon: 'edit', title: 'Antworten' })
 		+navItem({ icon: 'trophy', title: 'Top' }) 

@@ -1,0 +1,41 @@
+extends ../layouts/pageLayout
+
+include ../common.blocks/top-navigation/topNavigation
+include ../common.blocks/progress-linear/progressLinear
+
+block title
+	title Profile
+
+block body
+	body
+		+progressLinear({ color: '#3e8fad', percent: 30 })
+		+topNavigation({ bgColor: '#e3f0f5' })
+		.search-bar-container#searchBar
+			include ../common.blocks/search-bar/searchBar
+		.space-vertical--80
+		.three-column-layout
+			.container-1024
+				.three-column-layout__left
+					include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
+				.three-column-layout__center
+					include ../common.blocks/profile/profile-header/profileHeader
+				.three-column-layout__right
+					.widgetsList
+						.widgetsList__block
+							include ../common.blocks/comments/comments
+		include ../common.blocks/footer/base/baseFooter
+		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
+
+		#modals
+			.bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
+				.bottom-sheet
+					.bottom-sheet__arrow-icon(data-target="closeBottomSheet")
+						span.material-icons-round expand_more
+					.bottom-sheet__content
+						include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
+			.bs-overlay.bs-overlay--hidden
+			include ../common.blocks/modals/ask-question-modal/askQuestionModal
+
+		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
+		script(src="./js/index.min.js")

@@ -1,0 +1,15 @@
+include ../../svg-icon/svgIcon
+
+mixin updateProfileOption({ icon = '', text = '' })
+    .update-profile-menu__item-wrapper
+        .update-profile-menu__item
+            .update-profile-menu__item__icon
+                +svgIcon(icon)
+            span.update-profile-menu__item__text= text
+
+.update-profile-menu.base-dropdown#updateProfileMenu
+    .update-profile-menu__content
+        +updateProfileOption({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })
+        +updateProfileOption({ icon: 'profile-cover', text: 'Titelbild ändern' })
+        +updateProfileOption({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })
+            

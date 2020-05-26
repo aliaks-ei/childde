@@ -1,0 +1,117 @@
+.profile-header-wrapper {
+    width         : 100%;
+    margin-bottom : 22px;
+}
+
+.profile-header {
+    padding-bottom : 24px;
+    border-bottom  : 1px solid var(--border-color-lightgray);
+}
+
+.profile-header__cover {
+    position      : relative;
+    width         : 100%;
+    padding-top   : 33.3333%;
+    border-radius : 10px;
+    margin-bottom : 56px;
+}
+
+.profile-header__cover__bg-color,
+.profile-header__cover__bg-image {
+    position      : absolute;
+    top           : 0;
+    bottom        : 0;
+    left          : 0;
+    right         : 0;
+    border-radius : inherit;
+}
+
+.profile-header__cover__bg-color {
+    background-color: #ef9842;
+}
+
+.profile-header__cover__bg-image {
+    opacity             : .4;
+    background-image    : url('../assets/images/profile-image.png');
+    background-position : center;
+    background-size     : cover;
+}
+
+.profile-header__avatar {
+    position      : absolute;
+    bottom        : -40px;
+    left          : 35px;
+    width         : 100px;
+    height        : 100px;
+    min-width     : 100px;
+    border        : 5px solid var(--text-white);
+    border-radius : 34px;
+    overflow      : hidden;
+    z-index       : 1;
+}
+
+.profile-header__avatar__img {
+    width: 100%;
+}
+
+.profile-header__info {
+    position : relative;
+    width    : 100%;
+}
+
+.profile-header__info__username {
+    display         : flex;
+    align-items     : center;
+    font-size       : 30px;
+    font-family     : var(--font-montserrat);
+    font-weight     : 700;
+    line-height     : 40px;
+    color           : var(--text-black-2);
+    text-decoration : none;
+    margin-bottom   : 4px;
+    padding-right   : 48px;
+}
+
+.profile-header__info__username .material-icons-round {
+    font-size   : 26px;
+    color       : var(--text-gray-2);
+    margin-left : 8px;
+}
+
+.profile-header__info__username:hover .material-icons-round {
+    color: currentColor;
+}
+
+.profile-header__info__registry-date {
+    font-size     : 12px;
+    font-family   : var(--font-montserrat);
+    font-weight   : 500;
+    margin-top    : 6px;
+    margin-bottom : 12px;
+}
+
+.profile-header__info__action-btns {
+    position    : relative;
+    display     : flex;
+    align-items : center;
+    margin-top  : 20px;
+}
+
+.profile-action-btns__update-profile,
+.profile-action-btns__themes-subscribe {
+    height      : 42px;
+    line-height : 42px;
+}
+
+.profile-action-btns__update-profile {
+    padding      : 0 24px;
+    margin-right : 20px;
+}
+
+.profile-action-btns__themes-subscribe {
+    padding: 0 20px;
+}
+
+.profile-action-btns__themes-subscribe.base-btn:not(.base-btn--animated):before {
+    background-color: var(--background-color-gray-3);
+}

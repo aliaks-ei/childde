@@ -1,14 +1,11 @@
 .account-widget {
-    display          : none;
-    position         : absolute;
-    top              : 64px;
-    padding          : 14px 0;
-    width            : 235px;
-    background-color : var(--background-color-white);
-    box-shadow       : 0 3px 30px var(--box-shadow-gray);
-    border-radius    : 10px;
-    right            : 0;
-    z-index          : 50;
+    display  : none;
+    position : absolute;
+    top      : 64px;
+    padding  : 14px 0;
+    width    : 235px;
+    right    : 0;
+    z-index  : 50;
 }
 
 .account-widget__item {

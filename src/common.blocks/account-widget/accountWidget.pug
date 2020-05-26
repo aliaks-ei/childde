@@ -6,8 +6,8 @@ mixin accountWidgetItem({ iconName, title, href = 'javascript:void(0)' })
             +svgIcon(iconName)
         span= title
 
-.account-widget#accountDropdown
-    +accountWidgetItem({ iconName: 'user', title: 'Profil' })
+.account-widget.base-dropdown#accountDropdown
+    +accountWidgetItem({ iconName: 'user', title: 'Profil', href: '/profile' })
     +accountWidgetItem({ iconName: 'message', title: 'Nachrichten' })
     +accountWidgetItem({ iconName: 'bookmark', title: 'Lesezeichen' })
     +accountWidgetItem({ iconName: 'question', title: 'Hilfe' })

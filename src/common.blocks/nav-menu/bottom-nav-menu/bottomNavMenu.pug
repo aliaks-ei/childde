@@ -1,9 +1,10 @@
 include ../../svg-icon/svgIcon
 
-mixin navItem({ icon, title, materialIcon = false, highlighted = false, target })
+mixin navItem({ icon, title, materialIcon = false, highlighted = false, target, href = 'javascript:void(0)' })
     a.nav-menu__item.nav-item(
         class       = highlighted ? 'nav-item--highlighted' : '',
-        data-target = target
+        data-target = target,
+        href        = href
     )
         .nav-item__icon
             if materialIcon
@@ -14,8 +15,8 @@ mixin navItem({ icon, title, materialIcon = false, highlighted = false, target }
 
 .nav-menu-wrapper#bottomNav
     .nav-menu
-        +navItem({ icon: 'newspaper', title: 'Feed' })
+        +navItem({ icon: 'newspaper', title: 'Feed', href: '/' })
         +navItem({ icon: 'edit', title: 'Antworten' })
         +navItem({ icon: 'help', title: 'Fragen', materialIcon: true, highlighted: true, target: 'qModal' })
-        +navItem({ icon: 'user', title: 'Profil' })
+        +navItem({ icon: 'user', title: 'Profil', href: '/profile' })
         +navItem({ icon: 'menu', title: 'Menu', materialIcon: true, target: 'bottomMenu' })

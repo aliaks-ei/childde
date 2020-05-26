@@ -1,14 +1,11 @@
 .question-dropdown {
-    display          : none;
-    position         : absolute;
-    top              : 0;
-    left             : 0;
-    width            : 240px;
-    background-color : var(--background-color-white );
-    border-radius    : 10px;
-    box-shadow       : 0 3px 30px var(--box-shadow-gray);
-    z-index          : 1001;
-    will-change      : transform;
+    display     : none;
+    position    : absolute;
+    top         : 0;
+    left        : 0;
+    width       : 240px;
+    z-index     : 1001;
+    will-change : transform;
 }
 
 .question-dropdown--bottom {

@@ -69,6 +69,7 @@
 }
 
 .left-nav-menu__button--tablet {
+	position         : relative;
 	display          : none;
 	border           : 0;
 	padding          : 0;
@@ -79,6 +80,21 @@
 	line-height      : 44px;
 	cursor           : pointer;
 	background-color : var(--background-color-black);
+}
+
+.left-nav-menu__button--tablet:before {
+	position         : absolute;
+	top              : 0;
+	right            : 0;
+	bottom           : 0;
+	left             : 0;
+	content          : "";
+	background-color : rgba(255,255,255,.1);
+	opacity          : 0;
+}
+
+.left-nav-menu__button--tablet:hover:before {
+	opacity: 1;
 }
 
 .left-nav-menu__button--tablet .material-icons {
