@@ -1,0 +1,24 @@
+include ../../svg-icon/svgIcon
+include ../../buttons/base-button/baseButton
+
+.base-modal-wrapper#profileAvatarModal(style="display: none")
+    .base-modal.profile-avatar-modal
+        .profile-avatar-modal__header
+            h2.profile-avatar-modal__title Profilbild und Profilname ändern
+            button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="profileAvatarModal")
+                span.material-icons-round close
+        .profile-avatar-modal__image-uploader.avatar-image-uploader
+            .avatar-image-uploader__current-avatar
+                svg(xmlns='http://www.w3.org/2000/svg' width='96.911' height='104.848' viewbox='0 0 96.911 104.848')
+                    g(transform='translate(0 0.162)')
+                        circle(cx='23.5' cy='23.5' r='23.5' transform='translate(24.305 -0.162)' fill='#fff')
+                        path(d='M97.5,25.154a73.079,73.079,0,0,0-94.092,0A3.933,3.933,0,0,0,2,28.174V48.4a8.076,8.076,0,0,0,8.076,8.076H90.835A8.076,8.076,0,0,0,98.911,48.4V29.749C98.911,27,98.394,25.905,97.5,25.154Z' transform='translate(-2 48.206)' fill='#fff')
+                button.avatar-image-uploader__upload-btn(type="button")
+                    +svgIcon('camera')
+        form.profile-avatar-modal__form(autocomplete="off", novalidate)
+            .profile-avatar-modal__input-wrapper
+                input.profile-avatar-modal__input(type="text", placeholder="Name on child.de", value="Philip Djones")
+                span.material-icons-round.profile-avatar-modal__input__clear-icon close
+            .profile-avatar-modal__save-btn-wrapper
+                +baseButton({ text: 'Save' })(class="profile-avatar-modal__save-btn")
+            
