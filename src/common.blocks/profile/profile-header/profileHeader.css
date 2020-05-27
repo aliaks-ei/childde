@@ -98,18 +98,34 @@
 }
 
 .profile-action-btns__update-profile,
-.profile-action-btns__themes-subscribe {
+.profile-action-btns__themes-subscribe,
+.profile-action-btns__ask-question-btn {
     height      : 42px;
     line-height : 42px;
 }
 
+.profile-action-btns__update-profile,
+.profile-action-btns__ask-question-btn {
+    margin-right: 16px;
+}
+
 .profile-action-btns__update-profile {
-    padding      : 0 24px;
-    margin-right : 20px;
+    padding: 0 24px;
 }
 
 .profile-action-btns__themes-subscribe {
     padding: 0 20px;
+}
+
+.profile-action-btns__ask-question-btn {
+    padding-left     : 18px;
+    padding-right    : 26px;
+    color            : var(--text-white);
+    background-color : var(--red-color);
+}
+
+.profile-action-btns__ask-question-btn svg {
+    margin-right: 12px;
 }
 
 .profile-action-btns__themes-subscribe.base-btn:not(.base-btn--animated):before {

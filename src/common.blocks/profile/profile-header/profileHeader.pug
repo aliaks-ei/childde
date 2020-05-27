@@ -1,4 +1,5 @@
 include ../../buttons/base-button/baseButton
+include ../../svg-icon/svgIcon
 
 section.profile-header-wrapper
     .profile-header
@@ -21,3 +22,12 @@ section.profile-header-wrapper
                     bgColor : 'var(--background-color-gray)',
                     color   : 'var(--text-black-2)'
                 })(class="profile-action-btns__themes-subscribe", data-target="subscribeToThemesModal")
+
+            .profile-header__info__action-btns.profile-action-btns(style="display: none")
+                button.profile-action-btns__ask-question-btn.base-btn(data-target="qModal")
+                    +svgIcon('profile-ask-question')
+                    | Frage stellen
+
+                button.answer-card__subscribe-btn.answer-card__subscribe-btn
+                    +svgIcon('subscribe')
+                    span Abonnieren
