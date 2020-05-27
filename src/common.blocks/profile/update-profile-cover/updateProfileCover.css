@@ -1,0 +1,8 @@
+.profile-update-cover {
+    display  : none;
+    position : absolute;
+    top      : 60px;
+    left     : 0;
+    width    : 385px;
+    z-index  : 2;
+}
