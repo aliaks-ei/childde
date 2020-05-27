@@ -8,7 +8,9 @@
     }
 
     .themes-select.base-dropdown {
-        background-color: transparent;
+        background-color : transparent;
+        box-shadow       : none;
+        border-radius    : 0;
     }
 
     .themes-select__header,
