@@ -11,5 +11,5 @@ mixin updateProfileOption({ icon = '', text = '' })
     .update-profile-menu__content
         +updateProfileOption({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
         +updateProfileOption({ icon: 'profile-cover', text: 'Titelbild ändern' })
-        +updateProfileOption({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })
+        +updateProfileOption({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
             
