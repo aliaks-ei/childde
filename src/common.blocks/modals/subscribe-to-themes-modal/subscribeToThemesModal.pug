@@ -1,0 +1,33 @@
+mixin themeCard({ name = '', bgImage = '', bgColor = '' })
+    .theme-card-wrapper
+        .theme-card-container
+            .theme-card
+                h2.theme-card__title= name
+                .theme-card__cover
+                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
+                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
+                a.theme-card__link(href="javascript:void(0)")
+                button.theme-card__subscribe-button(type="button")
+                    span.material-icons-round add_circle
+                    | Abonnieren
+                    span.theme-card__subscribe-button__amount 43 543
+
+.base-modal-wrapper#subscribeToThemesModal(style="display: none")
+    .base-modal.themes-subscribe-modal
+        .themes-subscribe-modal__header
+            h2.themes-subscribe-modal__title Wähle was du antworten möchtest
+            button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="subscribeToThemesModal")
+                span.material-icons-round close
+        .themes-subscribe-modal__search-wrapper
+            .profile-avatar-modal__input-wrapper
+                input.profile-avatar-modal__input(type="text", placeholder="Search for themes")
+        .themes-subscribe-modal__themes-wrapper
+            +themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
+            +themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
+            +themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})
+            +themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b'})
+            +themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465'})
+            +themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7'})
+            
+
+        
