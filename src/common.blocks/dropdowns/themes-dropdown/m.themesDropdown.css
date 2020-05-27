@@ -7,6 +7,10 @@
         z-index       : initial;
     }
 
+    .themes-select.base-dropdown {
+        background-color: transparent;
+    }
+
     .themes-select__header,
     .themes-search__field-wrapper {
         padding: 0;

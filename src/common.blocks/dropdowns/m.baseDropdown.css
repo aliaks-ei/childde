@@ -1,9 +1,8 @@
 @media (max-width: 600px) {
     
     .base-dropdown {
-        border-radius    : 0;
-        box-shadow       : none;
-        background-color : transparent;
+        border-radius : 0;
+        box-shadow    : none;
     }
 
     .base-dropdown__input {

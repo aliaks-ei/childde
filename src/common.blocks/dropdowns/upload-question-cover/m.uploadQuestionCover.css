@@ -1,4 +1,8 @@
 @media (max-width: 600px) {
+    .upload-cover.base-dropdown {
+        background-color: transparent;
+    }
+
     .upload-cover-header {
         justify-content : center;
         margin-bottom   : 16px;
