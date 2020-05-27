@@ -9,8 +9,15 @@ section.profile-header-wrapper
             .profile-header__avatar
                 img.profile-header__avatar__img(src="./assets/images/profile-avatar.png", alt="Philip Djones")
         .profile-header__info
+            button.profile-header__menu-btn.base-icon-btn(data-target="otherProfileMenu", style="display: none")
+                span.material-icons-round more_vert
+            include ../other-profile-menu/otherProfileMenu
+
             a.profile-header__info__username(href="javascript:void(0)", data-target="profileAvatarModal") Philip Djones
                 span.material-icons-round create
+
+            span.profile-header__info__username(style="display: none") Devid Brown
+
             .profile-header__info__registry-date Mitglied seit März 2019
             .profile-header__info__action-btns.profile-action-btns
                 +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu")

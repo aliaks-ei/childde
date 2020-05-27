@@ -59,6 +59,23 @@
     width    : 100%;
 }
 
+.profile-header__menu-btn {
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    z-index  : 1;
+}
+
+.profile-header__menu-btn .material-icons-round {
+    font-size  : 26px;
+    color      : rgba(32, 35, 51, .5);
+    transition : color .1s ease-out;
+}
+
+.profile-header__menu-btn:hover .material-icons-round {
+    color: var(--text-black);
+}
+
 .profile-header__info__username {
     display         : flex;
     align-items     : center;
