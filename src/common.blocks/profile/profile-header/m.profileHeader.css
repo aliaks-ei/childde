@@ -76,4 +76,12 @@
     .profile-action-btns__themes-subscribe.base-btn {
         margin-right: 20px;
     }
+
+    .profile-action-btns__update-profile.base-btn[data-desktop-hidden] {
+        display: inline-flex;
+    }
+
+    .profile-action-btns__update-profile.base-btn[data-mobile-hidden] {
+        display: none;
+    }
 }

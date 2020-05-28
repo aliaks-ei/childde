@@ -1,5 +1,6 @@
 include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
+include ../update-profile-menu/updateProfileMenuItem
 
 mixin profileHeader({ name = '', isOwnProfile = false })
     section.profile-header-wrapper
@@ -25,8 +26,15 @@ mixin profileHeader({ name = '', isOwnProfile = false })
                 
                 if isOwnProfile
                     .profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
-                        +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu")
-                        include ../update-profile-menu/updateProfileMenu
+                        +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu", data-mobile-hidden)
+                        +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="bsUpdateProfile", data-desktop-hidden)
+                        
+                        .update-profile-menu.base-dropdown#updateProfileMenu
+                            .update-profile-menu__content
+                                +updateProfileMenuItem({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
+                                +updateProfileMenuItem({ icon: 'profile-cover', text: 'Titelbild ändern' })(data-target="profileUpdateCover")
+                                +updateProfileMenuItem({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
+                        
                         include ../update-profile-cover/updateProfileCover
                         
                         +baseButton({ 

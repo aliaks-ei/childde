@@ -135,6 +135,10 @@
     flex-shrink : 0;
 }
 
+.profile-action-btns__update-profile.base-btn[data-desktop-hidden] {
+    display: none;
+}
+
 .profile-action-btns__themes-subscribe.base-btn {
     display     : inline-flex;
     padding     : 0 20px;
