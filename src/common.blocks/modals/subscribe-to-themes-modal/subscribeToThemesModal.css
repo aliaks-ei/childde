@@ -1,8 +1,7 @@
 .themes-subscribe-modal {
-    position  : relative;
-    width     : 780px;
-    min-width : 780px;
-    padding   : 48px 56px;
+    position : relative;
+    width    : 780px;
+    padding  : 48px 56px;
 }
 
 .themes-subscribe-modal__search-wrapper {
@@ -138,4 +137,8 @@
 
 .theme-card--dark .theme-card__subscribe-button:before {
     background-color: rgba(0, 0, 0, .1);
+}
+
+.theme-card--mobile {
+    display: none;
 }

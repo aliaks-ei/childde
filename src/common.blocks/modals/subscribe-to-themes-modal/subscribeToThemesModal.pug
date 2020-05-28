@@ -11,9 +11,25 @@ mixin themeCard({ name = '', bgImage = '', bgColor = '' })
                     span.material-icons-round add_circle
                     | Abonnieren
                     span.theme-card__subscribe-button__amount 43 543
+            .theme-card.theme-card--mobile
+                .theme-card__content
+                    h2.theme-card__title= name
+                    .theme-card__subscriptions Abonnieren
+                        span.theme-card__subscribe-button__amount 43 543
+                .theme-card__cover
+                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
+                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
+                a.theme-card__link(href="javascript:void(0)")
+                button.theme-card__subscribe-button(type="button")
+                    span.material-icons-round add_circle
 
 .base-modal-wrapper#subscribeToThemesModal(style="display: none")
     .base-modal.themes-subscribe-modal
+        .base-modal__top-controls
+            button.base-icon-btn.base-modal__close-btn(data-target-close="subscribeToThemesModal")
+                span.material-icons-round keyboard_backspace
+            .themes-subscribe-modal__title-wrapper
+                h3.themes-subscribe-modal__title Themen abonnieren
         .themes-subscribe-modal__header
             h2.themes-subscribe-modal__title Wähle was du antworten möchtest
             button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="subscribeToThemesModal")

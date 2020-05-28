@@ -7,6 +7,10 @@
         font-size: 20px;
     }
 
+    .profile-avatar-modal__close-btn {
+        display: none;
+    }
+
     .profile-avatar-modal__image-uploader {
         padding-top    : 16px;
         padding-bottom : 36px;
