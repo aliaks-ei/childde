@@ -3,6 +3,9 @@ include ../../buttons/base-button/baseButton
 
 .base-modal-wrapper#profileAvatarModal(style="display: none")
     .base-modal.profile-avatar-modal
+        .base-modal__top-controls
+            button.base-icon-btn.base-modal__close-btn(data-target-close="profileAvatarModal")
+                span.material-icons-round keyboard_backspace
         .profile-avatar-modal__header
             h2.profile-avatar-modal__title Profilbild und Profilname ändern
             button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="profileAvatarModal")
