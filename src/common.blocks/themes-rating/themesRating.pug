@@ -1,0 +1,34 @@
+include ../buttons/base-button/baseButton
+
+mixin themeRating({ theme = '', amount = '', barWidth = 0 })
+    a.theme-rating(href="javascript:void(0)")
+        .theme-rating__bar(style=`width: ${ barWidth }%`)
+        .theme-rating__content
+            span= theme
+            span= amount
+
+.themes-rating-wrapper
+    h3.theme-rating-title Themenbewertung
+    .themes-rating
+        +themeRating({ theme: 'die Polizei', amount: 54, barWidth: 100 })
+        +themeRating({ theme: 'Psychologie', amount: 33, barWidth: 90 })
+        +themeRating({ theme: 'Gewalt', amount: 24, barWidth: 80 })
+        +themeRating({ theme: 'die Wirtschaft', amount: 32, barWidth: 80 })
+        +themeRating({ theme: 'Korruption', amount: 54, barWidth: 75 })
+        +themeRating({ theme: 'Politik', amount: 65, barWidth: 65 })
+        +themeRating({ theme: 'Religion', amount: 3, barWidth: 65 })
+        +themeRating({ theme: 'das Gesetz', amount: 6, barWidth: 60 })
+        +themeRating({ theme: 'das Recht', amount: 3, barWidth: 50 })
+        +themeRating({ theme: 'Rechtsprechung', amount: 7, barWidth: 50 })
+        +themeRating({ theme: 'Bildung', amount: 3, barWidth: 45 })
+        +themeRating({ theme: 'Seele', amount: 23, barWidth: 40 })
+        +themeRating({ theme: 'Buddhismus', amount: 63, barWidth: 40 })
+        +themeRating({ theme: 'übernatürlich', amount: 6, barWidth: 30 })
+        +themeRating({ theme: 'Tod', amount: 7, barWidth: 20 })
+        +themeRating({ theme: 'Glaube', amount: 75, barWidth: 10 })
+    .themes-rating__more-themes-btn-wrapper
+        +baseButton({ 
+            text    : 'Mehr anzeigen',
+            bgColor : 'var(--background-color-gray)',
+            color   : 'var(--text-black-2)'
+        })(class="themes-rating__more-themes-btn")

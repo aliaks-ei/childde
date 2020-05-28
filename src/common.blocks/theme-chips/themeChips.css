@@ -22,6 +22,10 @@
     margin-right     : 9px;
 }
 
+.theme-chip[data-desktop-hidden] {
+    display: none;
+}
+
 .theme-chip:hover {
     background-color: var(--background-color-gray-3);
 }

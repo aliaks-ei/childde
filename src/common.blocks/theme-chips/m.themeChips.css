@@ -8,6 +8,14 @@
         margin-right  : 6px;
     }
 
+    .theme-chip[data-desktop-hidden] {
+        display: flex;
+    }
+
+    .theme-chip[data-mobile-hidden] {
+        display: none;
+    }
+
     .theme-chip .material-icons-round {
         font-size: 16px;
     }
