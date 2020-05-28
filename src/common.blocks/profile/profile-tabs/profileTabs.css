@@ -30,7 +30,7 @@
 }
 
 .profile-tabs__link:hover,
-.profile-tabs__tab--active .profile-tabs__link {
+.profile-tabs__link--active {
     background-color : var(--background-color-gray);
     color            : var(--text-black-2);
 }

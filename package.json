@@ -2,7 +2,6 @@
 	"name": "child_de",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"serve": "concurrently --kill-others \"gulp\" \"http-server ./build\"",
 		"build": "gulp",
@@ -35,7 +34,5 @@
 		"map": false,
 		"plugins": {}
 	},
-	"dependencies": {
-		"gulp-webserver": "^0.9.1"
-	}
+	"dependencies": {}
 }

@@ -1,6 +1,6 @@
 mixin profileTab({ name = '', amount, isActive = false, href })
-    li.profile-tabs__tab(class = isActive ? 'profile-tabs__tab--active' : '')
-        a.profile-tabs__link(href=`#${ href }`)= name
+    li.profile-tabs__tab
+        a.profile-tabs__link(href=`#${ href }`, class = isActive ? 'profile-tabs__link--active' : '')= name
             span.profile-tabs__link__amount= amount
 
 section.profile-tabs-wrapper

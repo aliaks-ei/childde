@@ -1,14 +1,22 @@
 (function () {
-    const profileTabsWrapper = document.querySelector('.profile-tabs');
-    const profileTabs        = document.querySelectorAll('.profile-tabs__tab');
+    const profileTabsWrapper = document.querySelector('.profile-tabs-wrapper');
+    const profileTabLinks    = document.querySelectorAll('.profile-tabs__link');
+    const tabsContent        = profileTabsWrapper.nextElementSibling.children;
 
     profileTabsWrapper && profileTabsWrapper.addEventListener('click', function (event) {
-        const currentProfileTab = event.target.closest('.profile-tabs__tab');
+        const currentProfileTabLink = event.target.closest('.profile-tabs__link');
 
-        if (currentProfileTab) {
-            [...profileTabs].forEach(profileTab => profileTab.classList.remove('profile-tabs__tab--active'));
+        if (currentProfileTabLink) {
+            const hash              = new URL(currentProfileTabLink.href).hash.substr(1);
+            const currentTabContent = document.getElementById(hash);
 
-            currentProfileTab.classList.add('profile-tabs__tab--active');
+            [...profileTabLinks].forEach(profileTab => profileTab.classList.remove('profile-tabs__link--active'));
+            [...tabsContent].forEach(tabContent => tabContent.style.display = 'none');
+
+            currentProfileTabLink.classList.add('profile-tabs__link--active');
+            currentTabContent.style.display = 'block';
+
+            event.preventDefault();
         }
     });
 })();
