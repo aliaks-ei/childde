@@ -13,17 +13,23 @@ block body
 		.search-bar-container#searchBar
 			include ../common.blocks/search-bar/searchBar
 		.space-vertical--80
-		.three-column-layout
-			.container-1024
-				.three-column-layout__left
-					include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
-				.three-column-layout__center
-					include ../common.blocks/profile/profile-header/profileHeader
-					include ../common.blocks/profile/profile-tabs/profileTabs
-				.three-column-layout__right
-					.widgetsList
-						.widgetsList__block
-							include ../common.blocks/comments/comments
+		main.main--with-bottom-border
+			.three-column-layout
+				.container-1024
+					.three-column-layout__left
+						include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
+					.three-column-layout__center
+						include ../common.blocks/profile/profile-header/profileHeader
+						include ../common.blocks/profile/profile-tabs/profileTabs
+						section
+							include ../common.blocks/profile/profile-tabs/profileQuestionsTab
+							include ../common.blocks/profile/profile-tabs/profileAnswersTab
+							include ../common.blocks/profile/profile-tabs/profileSubscriptionsTab
+					.three-column-layout__right
+						.widgetsList
+							.widgetsList__block
+								include ../common.blocks/comments/comments
+			.space-vertical--80
 		include ../common.blocks/footer/base/baseFooter
 		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
 
@@ -34,7 +40,17 @@ block body
 						span.material-icons-round expand_more
 					.bottom-sheet__content
 						include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
+						include ../common.blocks/bottom-sheets/qc-menus/qcTopMenu
+						include ../common.blocks/bottom-sheets/qc-menus/qcBottomMenu
+						include ../common.blocks/bottom-sheets/qc-menus/qcThemesMenu
+						include ../common.blocks/bottom-sheets/themes-select/themesSelect
+						include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
+						include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
 			.bs-overlay.bs-overlay--hidden
+			#qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
+				include ../common.blocks/question-card-dropdowns/qcTopDropdown
+			#qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
+				include ../common.blocks/question-card-dropdowns/qcBottomDropdown
 			include ../common.blocks/modals/ask-question-modal/askQuestionModal
 			include ../common.blocks/modals/profile-avatar-modal/profileAvatarModal
 			include ../common.blocks/modals/profile-information-modal/profileInformationModal

@@ -35,5 +35,7 @@
 		"map": false,
 		"plugins": {}
 	},
-	"dependencies": {}
+	"dependencies": {
+		"gulp-webserver": "^0.9.1"
+	}
 }

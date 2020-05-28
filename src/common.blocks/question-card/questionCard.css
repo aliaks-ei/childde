@@ -197,7 +197,7 @@
     border-style  : solid;
     border-color  : var(--border-color-lightgray);
     border-radius : 0 0 10px 10px;
-    padding       : 16px var(--card-horizontal-padding) 36px;
+    padding       : 16px var(--card-horizontal-padding) 24px;
 }
 
 .question-card__content:not(.question-card__content--vote) div {
@@ -295,4 +295,13 @@
 .base-icon-btn[data-target="qcTopMenu"],
 .base-icon-btn[data-target="qcBottomMenu"] {
     display: none;
+}
+
+.question-card--with-border {
+    border: 1px solid var(--border-color-lightgray);
+}
+
+.question-card--with-border .question-card__header,
+.question-card--with-border .question-card__reactions-wrapper {
+    border: 0;
 }

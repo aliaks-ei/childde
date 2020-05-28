@@ -1,0 +1,32 @@
+.profile-questions-tab#profileQuestionsTab
+    each title in ['Reverse engineering of a binary format on the example of Korg.', 'Wie viel verdienen Automechaniker?', 'Wie macht man aus einem Eimer ein Hundehalsband?']
+        .question-card-wrapper
+            .question-card.question-card--default.question-card--with-border
+                .question-card__header.question-header
+                    .question-header__image-wrapper.question-image
+                        .question-image__bg-color
+                        .question-image__overlay
+                    a.question-header__link(href="/question")
+                    .question-header__info.question-info 
+                        .question-info__user.question-user
+                            div.question-user__link-wrapper
+                                a.question-card__overlapping-link(href="/profile")
+                                img.question-card__user-avatar(src='./assets/images/question-2-avatar.png')
+                                span.question-user__name Philip Djones
+                            span.question-user__date yesterday at 12:20
+                        h3.question-info__title= title
+                    button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark(data-target="qcTopDropdown")
+                        span.material-icons-round more_vert
+                    button.base-icon-btn.question-header__dropdown-icon.question-header__dropdown-icon--dark(data-target="qcTopMenu")
+                        span.material-icons-round more_vert
+                .question-card__reactions-wrapper
+                    .question-card__reactions
+                        button.question-card-button
+                            span.question-card-button__icon.material-icons favorite
+                            span Interessant 53
+                        button.question-card-button
+                            span.question-card-button__icon
+                                +svgIcon("messages")
+                            span 345
+                    button.question-card-button.question-card__visibility-btn
+                        span.question-card-button__icon.material-icons visibility_off

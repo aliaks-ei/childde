@@ -123,7 +123,7 @@ button:active {
     margin-bottom : 32px;
 }
 
-.main--page-not-found {
+.main--with-bottom-border {
     border-bottom: 1px solid var(--background-color-gray-2);
 }
 
