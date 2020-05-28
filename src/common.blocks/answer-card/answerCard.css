@@ -25,6 +25,7 @@
     border           : 0;
     border-radius    : 25px;
     height           : 42px;
+    min-width        : 42px;
     padding          : 8px 24px 8px 11px;
     background-color : var(--background-color-gray);
     color            : var(--text-black-2);

@@ -41,12 +41,12 @@ window.addEventListener('click', event => {
         generateQBottomDropdownEl(left, top)
     }
 
-    if (event.target.dataset.target === 'qcTopMenu') {
+    if (event.target.dataset.target == 'qcTopMenu') {
         document.getElementById('qcTopMenu').style.display = 'block';
 
         showBottomSheet();
     }
-    else if (event.target.dataset.target === 'qcBottomMenu') {
+    else if (event.target.dataset.target == 'qcBottomMenu') {
         document.getElementById('qcBottomMenu').style.display = 'block';
 
         showBottomSheet();

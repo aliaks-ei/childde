@@ -1,0 +1,5 @@
+@media (max-width: 600px) {
+    .subscriber-wrapper + .subscriber-wrapper {
+        margin-top: 14px;
+    }
+}

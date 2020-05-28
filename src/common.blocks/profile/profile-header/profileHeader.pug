@@ -22,9 +22,9 @@ mixin profileHeader({ name = '', isOwnProfile = false })
                     span.profile-header__info__username= name
 
                 .profile-header__info__registry-date Mitglied seit März 2019
-
+                
                 if isOwnProfile
-                    .profile-header__info__action-btns.profile-action-btns
+                    .profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
                         +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu")
                         include ../update-profile-menu/updateProfileMenu
                         include ../update-profile-cover/updateProfileCover
@@ -35,7 +35,7 @@ mixin profileHeader({ name = '', isOwnProfile = false })
                             color   : 'var(--text-black-2)'
                         })(class="profile-action-btns__themes-subscribe", data-target="subscribeToThemesModal")
                 else
-                    .profile-header__info__action-btns.profile-action-btns
+                    .profile-header__info__action-btns.profile-action-btns.profile-header__info__action-btns--flex
                         button.profile-action-btns__ask-question-btn.base-btn(data-target="qModal")
                             +svgIcon('profile-ask-question')
                             | Frage stellen

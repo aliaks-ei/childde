@@ -1,0 +1,79 @@
+@media (max-width: 600px) {
+    .profile-header-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .profile-header {
+        padding-bottom : 0;
+        border-bottom  : 0;
+    }
+
+    .profile-header__cover {
+        padding-top   : 40%;
+        border-radius : 0;
+        margin-bottom : 0;
+    }
+
+    .profile-header__avatar {
+        left          : 20px;
+        bottom        : 0;
+        width         : 70px;
+        height        : 70px;
+        min-width     : 70px;
+        border-radius : 24px;
+        border-width  : 3px;
+    }
+
+    .profile-header__info {
+        margin-top       : -10px;
+        padding          : 20px 20px 0;
+        background-color : var(--background-color-white);
+        border-radius    : 12px 12px 0 0;
+    }
+
+    .profile-header__menu-btn {
+        top   : 14px;
+        right : 4px;
+    }
+
+    .profile-header__info__username {
+        font-size     : 20px;
+        line-height   : 26px;
+        padding-right : 32px;
+    }
+
+    .profile-header__info__username .material-icons-round {
+        font-size: 20px;
+    }
+
+    .profile-action-btns--scroll-x {
+        overflow-x  : auto;
+        white-space : nowrap;
+        transform   : translateZ(0);
+        font-size   : 0;
+        line-height : 0;
+        margin      : 0 -20px;
+    }
+
+    .profile-action-btns--scroll-x::-webkit-scrollbar {
+        display: none;
+    }
+
+    .profile-action-btns__ask-question-btn.base-btn,
+    .profile-action-btns__update-profile.base-btn,
+    .profile-action-btns__themes-subscribe.base-btn {
+        font-size: 14px;
+    }
+
+    .profile-action-btns__ask-question-btn.base-btn {
+        flex: 1;
+    }
+
+    .profile-action-btns__update-profile.base-btn {
+        margin-left: 20px;
+    }
+    
+    .profile-action-btns__themes-subscribe.base-btn {
+        margin-right: 20px;
+    }
+}

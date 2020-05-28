@@ -108,10 +108,13 @@
 }
 
 .profile-header__info__action-btns {
-    position    : relative;
+    position   : relative;
+    margin-top : 20px;
+}
+
+.profile-header__info__action-btns--flex {
     display     : flex;
     align-items : center;
-    margin-top  : 20px;
 }
 
 .profile-action-btns__update-profile,
@@ -126,12 +129,16 @@
     margin-right: 16px;
 }
 
-.profile-action-btns__update-profile {
-    padding: 0 24px;
+.profile-action-btns__update-profile.base-btn {
+    display     : inline-flex;
+    padding     : 0 24px;
+    flex-shrink : 0;
 }
 
-.profile-action-btns__themes-subscribe {
-    padding: 0 20px;
+.profile-action-btns__themes-subscribe.base-btn {
+    display     : inline-flex;
+    padding     : 0 20px;
+    flex-shrink : 0;
 }
 
 .profile-action-btns__ask-question-btn {
