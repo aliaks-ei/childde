@@ -5,7 +5,7 @@
     font-family      : var(--font-open-sans);
     font-weight      : 600;
     border           : 0;
-    color            : var(--text-black);
+    color            : var(--black-color);
     background-color : transparent;
     font-size        : 14px;
     line-height      : 27px;
@@ -47,7 +47,7 @@
 }
 
 .question-card-button--active {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .question-card-button--active:before {

@@ -54,7 +54,7 @@
 }
 
 .themes-search__field:focus {
-    border-color: var(--text-blue);
+    border-color: var(--blue-color);
 }
 
 .themes-search__field-wrapper {
@@ -98,13 +98,13 @@
 }
 
 .themes-options__option__add-btn .material-icons-round {
-    color: var(--text-blue-2);
+    color: var(--blue-color-2);
 }
 
 .themes-options__option--selected .themes-options__option__add-btn {
-    background-color: var(--text-blue-2);
+    background-color: var(--blue-color-2);
 }
 
 .themes-options__option--selected .themes-options__option__add-btn .material-icons-round {
-    color: var(--text-white);
+    color: var(--white-color);
 }

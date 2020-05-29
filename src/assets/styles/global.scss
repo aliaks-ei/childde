@@ -1,3 +1,6 @@
+@import './colors.scss';
+@import './fonts.scss';
+
 * {
     box-sizing: border-box;
 }
@@ -5,8 +8,8 @@
 html, body {
     position                    : relative;
     font-size                   : 16px;
-    font-family                 : 'Open Sans', sans-serif;
-    color                       : #282a2d;
+    font-family                 : var(--font-open-sans);
+    color                       : var(--black-color);
     margin                      : 0;
     padding                     : 0;
     width                       : 100%;
@@ -18,8 +21,8 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family : 'Montserrat', sans-serif;
-    color       : var(--text-black-2);
+    font-family : var(--font-montserrat);
+    color       : var(--black-color-2);
     margin-top  : 0;
 }
 
@@ -58,10 +61,10 @@ a:active {
 
 button {
     transition: transform .1s ease-out;
-}
 
-button:active {
-    transform: scale(.96);
+    &:active {
+        transform: scale(.96);
+    }
 }
 
 .spaceVertical--100 {
@@ -83,31 +86,31 @@ button:active {
 .page--registration {
     --delimiter-point: 894px;
 
-    background: linear-gradient(to bottom, var(--background-color-orange) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
-}
+    background: linear-gradient(to bottom, #ffeddc var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
 
-.page--registration:before {
-    content             : "";
-    position            : absolute;
-    top                 : 0;
-    left                : 0;
-    right               : 0;
-    height              : var(--delimiter-point);
-    background-image    : url('../assets/images/registration-bg.png');
-    background-position : top left;
-    background-size     : cover;
-    z-index             : -2;
+    &:before {
+        content             : "";
+        position            : absolute;
+        top                 : 0;
+        left                : 0;
+        right               : 0;
+        height              : var(--delimiter-point);
+        background-image    : url('../assets/images/registration-bg.png');
+        background-position : top left;
+        background-size     : cover;
+        z-index             : -2;
+    }
 }
 
 .page--login {
     --delimiter-point: 804px;
 
-    background: linear-gradient(to bottom, var(--green-color-2) var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
+    background: linear-gradient(to bottom, #afdd82 var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat; 
 }
 
 .material-icons,
 .material-icons-round {
-    color: #282a2d;
+    color: var(--black-color);
 }
 
 .app-no-scroll {

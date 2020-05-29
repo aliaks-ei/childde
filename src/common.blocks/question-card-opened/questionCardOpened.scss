@@ -51,11 +51,11 @@
 }
 
 .q-mob-action-button--active {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .q-mob-action-button--active .q-mob-action-button__count {
-    background-color: var(--text-blue);
+    background-color: var(--blue-color);
 }
 
 .q-mob-action-button * {
@@ -113,8 +113,8 @@
     --count-size: 20px;
 
     position         : absolute;
-    background-color : var(--text-black);
-    color            : var(--text-white);
+    background-color : var(--black-color);
+    color            : var(--white-color);
     width            : var(--count-size);
     height           : var(--count-size);
     border-radius    : var(--count-size);
@@ -122,7 +122,7 @@
     font-size        : 8px;
     top              : -5px;
     right            : -8px;
-    border           : 1px solid var(--text-white);
+    border           : 1px solid var(--white-color);
     font-weight      : 600;
     font-family      : var(--font-open-sans);
     display          : flex;

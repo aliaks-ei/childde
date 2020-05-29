@@ -15,7 +15,7 @@
 }
 
 .answer-card .question-info__user .question-user__name {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .answer-card__subscribe-btn {
@@ -28,7 +28,7 @@
     min-width        : 42px;
     padding          : 8px 24px 8px 11px;
     background-color : var(--background-color-gray);
-    color            : var(--text-black-2);
+    color            : var(--black-color-2);
     font-size        : 14px;
     font-weight      : 700;
     font-family      : var(--font-montserrat);
@@ -45,7 +45,7 @@
 }
 
 .answer-card__subscribe-btn--active {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .answer-card__content {
@@ -129,7 +129,7 @@
     cursor           : pointer;
     font-family      : var(--font-montserrat);
     font-weight      : 600;
-    color            : var(--text-black-2);
+    color            : var(--black-color-2);
 }
 
 .best-answer-toggler__cancel-btn:hover {

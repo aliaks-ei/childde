@@ -7,7 +7,7 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitl
         .question-card(class={ 'question-card--default': isDefaultQuestion })
             .question-card__header.question-header
                 .question-header__image-wrapper.question-image
-                    .question-image__bg-color(style=`background-color: ${ overlay || 'var(--background-color-white )' }`)
+                    .question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
                     .question-image__overlay(style=`${ bgImage ? `background-image: url("./assets/images/${ bgImage }")` : '' }`)
                 .question-header__info.question-info 
                     .question-info__user.question-user

@@ -12,18 +12,18 @@
 	width            : 100%;
 	font-weight      : 500;
 	font-family      : var(--font-montserrat);
-	color            : var(--text-black);
+	color            : var(--black-color);
 	font-size        : 16px;
 	padding          : 0 48px 0 22px;
 	border-radius    : 25px;
-	background-color : var(--background-color-white);
+	background-color : var(--white-color);
 	transition       : .1s ease-out;
 	outline          : none;
 }
 
 .search-bar__input:focus {
     background-color : var(--background-color-gray-2);
-    border-color     : var(--text-blue);
+    border-color     : var(--blue-color);
 }
 
 .search-bar__icon {

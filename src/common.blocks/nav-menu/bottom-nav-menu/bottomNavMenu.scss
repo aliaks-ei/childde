@@ -15,7 +15,7 @@
         padding          : 10px 12px;
         border-radius    : 16px;
         box-shadow       : 0 3px 20px rgba(62, 62, 62, .3);
-        background-color : var(--background-color-white);
+        background-color : var(--white-color);
         z-index          : 999;
         transition       : bottom .3s ease-out;
         will-change      : bottom;
@@ -35,7 +35,7 @@
         flex            : 1 1 20%;
         display         : block;
         text-decoration : none;
-        color           : var(--text-black);
+        color           : var(--black-color);
         transition      : .1s ease-out;
         user-select     : none;
     }

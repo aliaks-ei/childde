@@ -44,7 +44,7 @@
     width         : 100px;
     height        : 100px;
     min-width     : 100px;
-    border        : 5px solid var(--text-white);
+    border        : 5px solid var(--white-color);
     border-radius : 34px;
     overflow      : hidden;
     z-index       : 1;
@@ -77,7 +77,7 @@
 }
 
 .profile-header__menu-btn:hover .material-icons-round {
-    color: var(--text-black);
+    color: var(--black-color);
 }
 
 .profile-header__info__username {
@@ -87,7 +87,7 @@
     font-family     : var(--font-montserrat);
     font-weight     : 700;
     line-height     : 40px;
-    color           : var(--text-black-2);
+    color           : var(--black-color-2);
     text-decoration : none;
     margin-bottom   : 4px;
     padding-right   : 48px;
@@ -152,7 +152,7 @@
 .profile-action-btns__ask-question-btn {
     padding-left     : 18px;
     padding-right    : 26px;
-    color            : var(--text-white);
+    color            : var(--white-color);
     background-color : var(--red-color);
 }
 

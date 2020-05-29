@@ -18,7 +18,7 @@
 }
 
 .profile-avatar-modal__close-btn:hover .material-icons-round {
-    color: var(--text-black-2);
+    color: var(--black-color-2);
 }
 
 .profile-avatar-modal__image-uploader {
@@ -54,7 +54,7 @@
     border           : 0;
     cursor           : pointer;
     user-select      : none;
-    background-color : var(--text-blue-2);
+    background-color : var(--blue-color-2);
 }
 
 .profile-avatar-modal__form {
@@ -71,12 +71,12 @@
     position  : absolute;
     right     : 16px;
     font-size : 26px;
-    color     : var(--text-blue-2);
+    color     : var(--blue-color-2);
     cursor    : pointer;
 }
 
 .profile-avatar-modal__input__clear-icon:hover {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .profile-avatar-modal__input {
@@ -99,7 +99,7 @@
 }
 
 .profile-avatar-modal__input:focus {
-    border-color: var(--text-blue);
+    border-color: var(--blue-color);
 }
 
 .profile-avatar-modal__input-error-message {

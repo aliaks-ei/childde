@@ -6,7 +6,7 @@
 	border-radius   : 10px;
 	position        : relative;
 	text-decoration : none;
-	color           : var(--text-black);
+	color           : var(--black-color);
 	min-width       : 248px;
 	height          : 270px;
 	padding         : 28px 24px;
@@ -51,14 +51,14 @@
 }
 
 .swiper-card__button {
-	background-color : var(--background-color-white);
+	background-color : var(--white-color);
 	border           : 0;
 	border-radius    : 25px;
 	display          : flex;
 	justify-content  : center;
 	align-items      : center;
 	padding          : 0 30px;
-	color            : var(--text-black-2);
+	color            : var(--black-color-2);
 	font-family      : var(--font-montserrat);
 	font-size        : 12px;
 	font-weight      : 700;
@@ -68,15 +68,15 @@
 }
 
 .swiper-card:first-of-type {
-	background-color: var(--background-color-personage1);
+	background-color: #faf4dc;
 }
 
 .swiper-card:nth-of-type(2) {
-	background-color: var(--background-color-personage2);
+	background-color: #cfe8fa;
 }
 
 .swiper-card:last-of-type {
-	background-color: var(--background-color-personage3);
+	background-color: #c5f0ed;
 }
 
 .swiper-card:active {

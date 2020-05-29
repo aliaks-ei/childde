@@ -39,7 +39,7 @@
     cursor         : pointer;
     height         : 170px;
     padding        : 16px 24px 14px;
-    color          : var(--text-white);
+    color          : var(--white-color);
     z-index        : 1;
     transition     : box-shadow .1s ease-out;
 }
@@ -132,7 +132,7 @@
 }
 
 .theme-card--dark {
-    color: var(--text-black);
+    color: var(--black-color);
 }
 
 .theme-card--dark .theme-card__subscribe-button:before {

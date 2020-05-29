@@ -5,7 +5,7 @@
 .base-dropdown {
     border-radius    : 10px;
     box-shadow       : 0 3px 30px rgba(54, 54, 54, .1);
-    background-color : var(--background-color-white);
+    background-color : var(--white-color);
 }
 
 .base-dropdown__input {
@@ -23,11 +23,11 @@
 }
 
 .base-dropdown__input:focus {
-    border-color: var(--text-blue);
+    border-color: var(--blue-color);
 }
 
 .base-dropdown__action {
-    color       : var(--text-blue-2);
+    color       : var(--blue-color-2);
     text-align  : center;
     padding     : 12px 0;
     font-weight : 600;

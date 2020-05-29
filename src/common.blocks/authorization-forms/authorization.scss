@@ -20,7 +20,7 @@
 .authorization-form {
     width            : 660px;
     border-radius    : 10px;
-    background-color : var(--background-color-white);
+    background-color : var(--white-color);
 }
 
 .auth-form__main-content {
@@ -45,7 +45,7 @@
     height           : 66px;
     border           : 0;
     border-radius    : 6px;
-    background-color : var(--background-color-lightblue-2);
+    background-color : #e3e8eb;
     padding          : 12px 24px;
     font-size        : 16px;
     font-family      : var(--font-open-sans);
@@ -76,7 +76,7 @@
 }
 
 .auth-form__field-wrapper .auth-form__field:focus {
-    border-color: var(--border-color-green);
+    border-color: #08a002;
 }
 
 .auth-form__field[type="password"] {
@@ -116,7 +116,7 @@
     line-height      : 21px;
     text-align       : center;
     border-radius    : 6px;
-    background-color : var(--background-color-white);
+    background-color : var(--white-color);
     border           : 1px solid var(--text-gray);
 }
 
@@ -125,7 +125,7 @@
     font-size   : 14px;
     font-weight : 700;
     line-height : inherit;
-    color       : var(--text-white);
+    color       : var(--white-color);
 }
 
 .auth-form__checkbox-input:checked + .auth-form__checkbox .material-icons-round {
@@ -180,7 +180,7 @@
 }
 
 .auth-form__footer-wrapper {
-    border-top: 1px solid var(--background-color-lightblue-2);
+    border-top: 1px solid #e3e8eb;
 }
 
 .auth-form__footer {
@@ -201,7 +201,7 @@
 
 .auth-form__footer__link {
     margin-left     : 4px;
-    color           : var(--text-blue);
+    color           : var(--blue-color);
     text-decoration : none;
     white-space     : nowrap;
 }

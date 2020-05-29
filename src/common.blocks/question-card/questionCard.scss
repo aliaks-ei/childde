@@ -29,7 +29,7 @@
 
 .question-card__header {
     position : relative;
-    color    : var(--text-white);
+    color    : var(--white-color);
 }
 
 .question-header__image-wrapper,
@@ -86,7 +86,7 @@
 }
 
 .question-user__name {
-    color           : var(--text-white);
+    color           : var(--white-color);
     text-decoration : none;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .question-card:not(.question-card--default) .question-info__title {
-    color: var(--text-white);
+    color: var(--white-color);
 }
 
 .question-info__title {
@@ -142,7 +142,7 @@
 }
 
 .question-header__dropdown-icon .material-icons-round {
-    color: var(--text-white);
+    color: var(--white-color);
 }
 
 .question-header__dropdown-icon.question-header__dropdown-icon--dark .material-icons-round {
@@ -192,7 +192,7 @@
 
 .question-card__content {
     position      : relative;
-    color         : var(--text-black);
+    color         : var(--black-color);
     border-width  : 0 1px 1px 1px;
     border-style  : solid;
     border-color  : var(--border-color-lightgray);
@@ -229,7 +229,7 @@
 }
 
 .question-reviews__likes .question-card-button .question-card-button__icon--active {
-    color: var(--text-black);
+    color: var(--black-color);
 }
 
 .question-card__read-all-answers-btn {
@@ -266,7 +266,7 @@
 }
 
 .question-card--default .question-card__header {
-    color         : var(--text-black-2);
+    color         : var(--black-color-2);
     border-radius : 10px 10px 0 0;
     border-width  : 1px 1px 0;
     border-style  : solid;
@@ -274,7 +274,7 @@
 }
 
 .question-card--default .question-user__name {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .question-card--default .question-card__reactions-wrapper:before {

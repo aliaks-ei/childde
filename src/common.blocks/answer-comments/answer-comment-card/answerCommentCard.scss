@@ -19,7 +19,7 @@
 }
 
 .answer-comment-card__header .question-info__user .question-user__name {
-    color: var(--text-blue);
+    color: var(--blue-color);
 }
 
 .answer-comment-card__header .question-card-button .question-card-button__icon:not(:only-child) {
@@ -51,7 +51,7 @@
 }
 
 .answer-comment-card__answer-btn:hover {
-    color: #000000;
+    color: var(--black-color);
 }
 
 .answer-comment-card__actions .question-reviews__likes {

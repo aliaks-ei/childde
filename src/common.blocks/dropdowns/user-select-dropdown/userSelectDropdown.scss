@@ -3,7 +3,7 @@
     font-family : var(--font-montserrat);
     font-size   : 12px;
     font-weight : 500;
-    color       : var(--text-blue);
+    color       : var(--blue-color);
     user-select : none;
     cursor      : pointer;
 }
@@ -67,7 +67,7 @@
 
 .select-dropdown__btn__check-icon .material-icons-round {
     font-size : 20px;
-    color     : var(--text-blue);
+    color     : var(--blue-color);
 }
 
 .user-select__name {

@@ -34,7 +34,7 @@
     display          : inline-flex;
     position         : relative;
     margin-bottom    : 24px;
-    background-color : var(--background-color-white);
+    background-color : var(--white-color);
     user-select      : none;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .collapsed-comments__avatars__item + .collapsed-comments__avatars__item {
-    box-shadow    : 0 0 0 3px var(--text-white);
+    box-shadow    : 0 0 0 3px var(--white-color);
     border-radius : 8px;
     margin-left   : -4px;
 }
@@ -70,7 +70,7 @@
     align-self      : center;
     font-weight     : 600;
     line-height     : 26px;
-    color           : var(--text-blue);
+    color           : var(--blue-color);
     text-decoration : none;
 }
 

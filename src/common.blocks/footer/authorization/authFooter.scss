@@ -1,5 +1,5 @@
 .footer-wrapper-auth {
-    background-color: var(--background-color-white);
+    background-color: var(--white-color);
 }
 
 .footer-auth {
@@ -40,21 +40,21 @@
     line-height      : 35px;
     border-radius    : 50%;
     border           : 3px solid transparent;
-    background-color : var(--text-blue-2);
+    background-color : var(--blue-color-2);
     transition       : .1s ease-out;
 }
 
 .footer-auth__social-icons__item svg {
-    fill: var(--text-white);
+    fill: var(--white-color);
 }
 
 .footer-auth__social-icons__item:hover {
-    background-color : var(--background-color-white);
-    border-color     : var(--text-blue-2);
+    background-color : var(--white-color);
+    border-color     : var(--blue-color-2);
 }
 
 .footer-auth__social-icons__item:hover svg {
-    fill: var(--text-blue-2);
+    fill: var(--blue-color-2);
 }
 
 .footer-auth__bottom-block-wrapper {

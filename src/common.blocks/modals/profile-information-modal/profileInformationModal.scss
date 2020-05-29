@@ -23,7 +23,7 @@
     font-family      : var(--font-open-sans);
     font-size        : 16px;
     font-weight      : 600;
-    color            : var(--text-black);
+    color            : var(--black-color);
     background-color : var(--background-color-gray);
     line-height      : 26px;
     padding          : 14px 16px;
@@ -33,7 +33,7 @@
 }
 
 .profile-info-modal__textarea:focus {
-    border-color: var(--text-blue);
+    border-color: var(--blue-color);
 }
 
 .profile-info-modal__submit-btn-wrapper {
