@@ -66,6 +66,10 @@
     z-index  : 1;
 }
 
+.profile-header__menu-btn.base-icon-btn[data-desktop-hidden] {
+    display: none;
+}
+
 .profile-header__menu-btn .material-icons-round {
     font-size  : 26px;
     color      : rgba(32, 35, 51, .5);

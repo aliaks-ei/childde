@@ -12,7 +12,9 @@ mixin profileHeader({ name = '', isOwnProfile = false })
                     img.profile-header__avatar__img(src="./assets/images/profile-avatar.png", alt="Philip Djones")
             .profile-header__info
                 if !isOwnProfile
-                    button.profile-header__menu-btn.base-icon-btn(data-target="otherProfileMenu")
+                    button.profile-header__menu-btn.base-icon-btn(data-target="otherProfileMenu", data-mobile-hidden)
+                        span.material-icons-round more_vert
+                    button.profile-header__menu-btn.base-icon-btn(data-target="bsOtherProfileMenu", data-desktop-hidden)
                         span.material-icons-round more_vert
                     include ../other-profile-menu/otherProfileMenu
 

@@ -84,4 +84,12 @@
     .profile-action-btns__update-profile.base-btn[data-mobile-hidden] {
         display: none;
     }
+
+    .profile-header__menu-btn.base-icon-btn[data-desktop-hidden] {
+        display: flex;
+    }
+
+    .profile-header__menu-btn.base-icon-btn[data-mobile-hidden] {
+        display: none;
+    }
 }

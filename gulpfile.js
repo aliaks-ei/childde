@@ -79,8 +79,8 @@ function js(cb) {
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(minify({
 			ext: {
-				src:'.js',
-				min:'.min.js'
+				src :'.js',
+				min :'.min.js'
 			}
 		}))
 		.pipe(dest('build/js'))
