@@ -1,19 +1,38 @@
-.bestCompaniesWidgetCompany {
+.best-companies {
+	margin-bottom: 56px;
+}
+
+.best-companies__content {
+	margin-bottom: 20px;
+}
+
+.best-companies__button {
+	color           : var(--blue-color);
+	font-weight     : 600;
+	line-height     : 26px;
+	text-decoration : none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.best-companies__company {
 	display         : flex;
 	justify-content : space-between;
 	align-items     : center;
+
+	& + & {
+		margin-top: 43px;
+	}
 }
 
-.bestCompaniesWidgetCompany + .bestCompaniesWidgetCompany {
-	margin-top: 43px;
-}
-
-.bestCompaniesWidgetCompany__logo {
+.best-companies__company__logo {
 	width        : 80px;
 	margin-right : 20px;
 }
 
-.bestCompaniesWidgetCompany__title {
+.best-companies__company__title {
 	flex        : 1;
 	color       : var(--blue-color-2);
 	font-family : var(--font-montserrat);
@@ -22,7 +41,7 @@
 	line-height : 30px;
 }
 
-.bestCompaniesWidgetCompany__number {
+.best-companies__company__number {
 	color       : var(--black-color-2);
 	font-size   : 14px;
 	line-height : 30px;

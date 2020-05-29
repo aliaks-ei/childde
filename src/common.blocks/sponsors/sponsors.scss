@@ -1,27 +1,30 @@
-.sponsorWidget__head {
+.sponsors-widget {
+	margin-bottom: 56px;
+}
+
+.sponsors-widget__head {
 	display       : flex;
 	margin-bottom : 13px;
 	user-select   : none;
 }
 
-.sponsorWidget__companyTitle {
-	flex        : 1;
-	line-height : 26px;
+.sponsors-widget__title {
+	margin-right: 32px;
 }
 
-.sponsorWidget__text {
+.sponsors-widget__text {
 	font-weight   : 600;
 	line-height   : 26px;
 	margin-bottom : 15px;
 }
 
-.sponsorWidget__becomeASponsons {
+.sponsors-widget__link {
 	color           : var(--blue-color);
 	font-weight     : 600;
 	line-height     : 26px;
 	text-decoration : none;
-}
 
-.sponsorWidget__becomeASponsons:hover {
-	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
 }

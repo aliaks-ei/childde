@@ -1,4 +1,8 @@
-.commentsWidget__title {
+.comments-widget {
+	margin-bottom: 56px;
+}
+
+.comments-widget__title {
 	margin-bottom: 36px;
 }
 
@@ -8,18 +12,14 @@
 	line-height     : 26px;
 	color           : var(--black-color-2);
 	text-decoration : none;
-}
 
-.comment:hover .comment__text {
-	text-decoration: underline;
-}
+	&:hover .comment__text {
+		text-decoration: underline;
+	}
 
-.comment:focus {
-	outline: none;
-}
-
-.comment + .comment {
-	margin-top: 22px;
+	& + & {
+		margin-top: 22px;
+	}
 }
 
 .comment__text {
@@ -33,21 +33,5 @@
 }
 
 .comment__icon {
-	margin-right: 4px;
-}
-
-.commentsCount {
-	display     : flex;
-	align-items : center;
-}
-
-.commentsCount__icon {
-	display      : flex;
-	align-items  : center;
-	margin-right : 8px;
-}
-
-.commentsCount__text {
-	font-weight : 600;
-	line-height : 26px;
+	margin-right: 8px;
 }

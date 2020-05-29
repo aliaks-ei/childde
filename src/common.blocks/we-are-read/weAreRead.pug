@@ -1,17 +1,17 @@
 include ../svg-icon/svgIcon
 
-mixin weAreReadWidget(text)
-	a.weAreReadWidget(href="javascript:void(0)")
-		.weAreReadWidget__text= text
-		.commentsCount
-			.commentsCount__icon
+mixin weAreReadItem(text)
+	a.we-are-read__item(href="javascript:void(0)")
+		.we-are-read__item__text= text
+		.we-are-read__comments
+			.comment__icon
 				+svgIcon('messages')
-			.commentsCount__text.weAreReadWidget__commentsCount 345
+			span 345
 
-.widget.bestCompaniesWidget
-	h3.widget__title We are read
+.we-are-read
+	h3 We are read
 
-	.widget__content
-		+weAreReadWidget('Technological competition startups. Provides IT industry promising technologies.')
-		+weAreReadWidget('Cloud provider. It supports us in all endeavors, but often draws us into adventures.')
-		+weAreReadWidget('Optimization for newbies: html tags and attributes in SEO')
+	.we-are-read__content
+		+weAreReadItem('Technological competition startups. Provides IT industry promising technologies.')
+		+weAreReadItem('Cloud provider. It supports us in all endeavors, but often draws us into adventures.')
+		+weAreReadItem('Optimization for newbies: html tags and attributes in SEO')
