@@ -1,5 +1,19 @@
 .answer-card {
     margin-bottom: 24px;
+
+    .question-info__user {
+        margin        : 0;
+        padding-right : 8px;
+    }
+
+    .question-info__user .question-user__name {
+        color: var(--blue-color);
+    }
+
+    .question-card__content__reviews.question-reviews {
+        margin-top    : 16px;
+        margin-bottom : 0;
+    }
 }
 
 .answer-card__header {
@@ -7,15 +21,6 @@
     align-items     : center;
     justify-content : space-between;
     padding-bottom  : 32px;
-}
-
-.answer-card .question-info__user {
-    margin        : 0;
-    padding-right : 8px;
-}
-
-.answer-card .question-info__user .question-user__name {
-    color: var(--blue-color);
 }
 
 .answer-card__subscribe-btn {
@@ -34,31 +39,31 @@
     font-family      : var(--font-montserrat);
     cursor           : pointer;
     user-select      : none;
-}
 
-.answer-card__subscribe-btn:hover {
-    background-color: var(--background-color-gray-3);
-}
+    svg {
+        margin-right: 12px;
+    }
 
-.answer-card__subscribe-btn svg {
-    margin-right: 12px;
-}
+    &:hover {
+        background-color: var(--background-color-gray-3);
+    }
 
-.answer-card__subscribe-btn--active {
-    color: var(--blue-color);
+    &--active {
+        color: var(--blue-color);
+    }
 }
 
 .answer-card__content {
     line-height: 26px;
-}
 
-.answer-card__content p {
-    margin-top    : 0;
-    margin-bottom : 0;
-}
+    p {
+        margin-top    : 0;
+        margin-bottom : 0;
+    }
 
-.answer-card__content p:not(:last-of-type) {
-    margin-bottom: 2rem;
+    p:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
 }
 
 .answer-card--small .answer-card__content p {
@@ -73,11 +78,6 @@
     line-height : 26px;
 }
 
-.answer-card .question-card__content__reviews.question-reviews {
-    margin-top    : 16px;
-    margin-bottom : 0;
-}
-
 .answer-card--small.answer-card .question-card__content__reviews.question-reviews {
     margin-top: 0;
 }
@@ -88,16 +88,26 @@
     padding       : 12px 16px;
     margin-top    : 16px;
     border-radius : 10px;
-}
 
-.best-answer-toggler:not(.best-answer-toggler--active) {
-    cursor     : pointer;
-    transition : box-shadow .1s ease-out;
-    box-shadow : 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .2);
-}
+    &:not(.best-answer-toggler--active) {
+        cursor     : pointer;
+        transition : box-shadow .1s ease-out;
+        box-shadow : 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .2);
+    }
 
-.best-answer-toggler:not(.best-answer-toggler--active):hover {
-    box-shadow: 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .4);
+    &:not(.best-answer-toggler--active):hover {
+        box-shadow: 0 0 0 1px rgba(54, 54, 54, .1), 0 2px 7px -4px rgba(54, 54, 54, .4);
+    }
+
+    &--active {
+        background-color : var(--border-color-lightgray);
+        padding-top      : 14px;
+        padding-bottom   : 14px;
+
+        .best-answer-toggler__content {
+            margin-right: 20px;
+        }
+    }
 }
 
 .best-answer-toggler__content {
@@ -110,16 +120,6 @@
     color        : rgba(32, 35, 51, .7);
 }
 
-.best-answer-toggler--active {
-    background-color : var(--border-color-lightgray);
-    padding-top      : 14px;
-    padding-bottom   : 14px;
-}
-
-.best-answer-toggler--active .best-answer-toggler__content {
-    margin-right: 20px;
-}
-
 .best-answer-toggler__cancel-btn {
     display          : none;
     border           : 0;
@@ -130,10 +130,10 @@
     font-family      : var(--font-montserrat);
     font-weight      : 600;
     color            : var(--black-color-2);
-}
 
-.best-answer-toggler__cancel-btn:hover {
-    opacity: .5;
+    &:hover {
+        opacity: .5;
+    }
 }
 
 .answer-card__best-answer-label {
@@ -145,12 +145,12 @@
     margin-bottom    : 12px;
     font-size        : 14px;
     font-weight      : 600;
-    background-color : #FFEDDC;
+    background-color : #ffeddc;
     color            : #dea33d;
-}
 
-.answer-card__best-answer-label .material-icons-round {
-    font-size    : 18px;
-    margin-right : 12px;
-    color        : inherit;
+    .material-icons-round {
+        font-size    : 18px;
+        margin-right : 12px;
+        color        : inherit;
+    }
 }

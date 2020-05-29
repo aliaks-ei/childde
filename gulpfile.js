@@ -19,7 +19,12 @@ const postcssPresetEnv = require('postcss-preset-env');
 sass.compiler = require('node-sass');
 
 const paths = {
-	css    : [ 'src/assets/styles/global.scss', 'src/common.blocks/**/*.scss', '!src/common.blocks/**/m.*.scss' ],
+	css: [
+		'src/assets/styles/variables.scss', 
+		'src/assets/styles/global.scss', 
+		'src/common.blocks/**/*.scss', 
+		'!src/common.blocks/**/m.*.scss' 
+	],
 	mCss   : [ 'src/assets/styles/m.global.scss', 'src/common.blocks/**/m.*.scss' ],
 	js     : 'src/common.blocks/**/*.js',
 	html   : 'src/pages/*.pug',

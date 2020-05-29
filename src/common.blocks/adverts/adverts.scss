@@ -17,17 +17,17 @@
     color            : var(--black-color-2);
     background-color : var(--border-color-lightblue);
     border-radius    : 10px;
-    text-decoration  : none;
     overflow         : hidden;
+    text-decoration  : none;
     user-select      : none;
-}
 
-.advert-card + .advert-card {
-    margin-left: 20px;
-}
+    & + & {
+        margin-left: 20px;
+    }
 
-.advert-card:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .advert-card__image {
