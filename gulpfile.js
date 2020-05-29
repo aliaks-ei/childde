@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 
 const babel            = require('gulp-babel');
 const pug              = require('gulp-pug');
@@ -6,35 +6,34 @@ const postcss          = require('gulp-postcss');
 const concat           = require('gulp-concat');
 const plumber          = require('gulp-plumber');
 const livereload       = require('gulp-livereload');
-const svgSymbols       = require('gulp-svg-symbols')
-const clean            = require('gulp-clean');
+const svgSymbols       = require('gulp-svg-symbols');
 const csso             = require('gulp-csso');
 const minify           = require('gulp-minify');
 const rename           = require('gulp-rename');
 const addsrc           = require('gulp-add-src');
-const autoprefixer     = require('autoprefixer')
-const postCssImport    = require('postcss-easy-import');
+const sass             = require('gulp-sass');
+const autoprefixer     = require('autoprefixer');
+const del              = require('del');
 const postcssPresetEnv = require('postcss-preset-env');
+
+sass.compiler = require('node-sass');
 
 const paths = {
 	css: [
-		'src/assets/styles/variables.css',
-		'src/assets/styles/global.css',
-		'src/common.blocks/**/*.css', 
-		'!src/common.blocks/**/m.*.css'
+		'src/assets/styles/variables.scss',
+		'src/assets/styles/global.scss',
+		'src/common.blocks/**/*.scss', 
+		'!src/common.blocks/**/m.*.scss'
 	],
-	mCss   : [ 'src/assets/styles/m.global.css', 'src/common.blocks/**/m.*.css' ],
+	mCss   : [ 'src/assets/styles/m.global.scss', 'src/common.blocks/**/m.*.scss' ],
 	js     : 'src/common.blocks/**/*.js',
 	html   : 'src/pages/*.pug',
 	images : 'src/assets/images/*.png',
 	icons  : 'src/assets/icons/*.svg'
 };
 
-livereload({ start: true });
-
 function cleanBuild() {
-	src('build/**/*.*', { read: false })
-		.pipe(clean());
+	return del(['build/**/*']);
 }
 
 function svgSprites() {
@@ -57,12 +56,9 @@ function css(cb) {
 	src(paths.css)
 		.pipe(addsrc.append(paths.mCss))
 		.pipe(plumber())
-		.pipe(postcss([
-			postCssImport(),
-			postcssPresetEnv(),
-			autoprefixer()
-		]))
-		.pipe(concat('index.css'))
+		.pipe(postcss([ postcssPresetEnv(), autoprefixer() ]))
+		.pipe(concat('index.scss'))
+		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
 		.pipe(dest('build/css'))
 		.pipe(rename('index.min.css'))
 		.pipe(csso())
@@ -98,14 +94,16 @@ function images(cb) {
     cb();
 }
 
-exports.default = function () {
+function watchChanges() {
 	livereload.listen();
 
-	cleanBuild();
-
 	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
-	watch([ 'src/assets/styles/*.css', 'src/common.blocks/**/*.css' ], { ignoreInitial: false }, css);
+	watch([ 'src/assets/styles/*.scss', 'src/common.blocks/**/*.scss' ], { ignoreInitial: false }, css);
 	watch([ 'src/common.blocks/**/*.js' ], { ignoreInitial: false }, js);
 	watch(paths.images, { ignoreInitial: false }, images);
 	watch(paths.icons, { ignoreInitial: false }, svgSprites);
-};
+}
+
+livereload({ start: true });
+
+exports.default = series(cleanBuild, watchChanges);
