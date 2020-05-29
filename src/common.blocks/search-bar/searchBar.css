@@ -7,7 +7,7 @@
 
 .search-bar__input {
 	border-radius    : inherit;
-	border           : 0;
+	border           : 2px solid transparent;
 	height           : 100%;
 	width            : 100%;
 	font-weight      : 500;
@@ -18,11 +18,12 @@
 	border-radius    : 25px;
 	background-color : var(--background-color-white);
 	transition       : .1s ease-out;
+	outline          : none;
 }
 
 .search-bar__input:focus {
     background-color : var(--background-color-gray-2);
-    outline          : none;
+    border-color     : var(--text-blue);
 }
 
 .search-bar__icon {
