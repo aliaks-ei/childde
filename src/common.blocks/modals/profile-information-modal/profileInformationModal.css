@@ -1,8 +1,7 @@
 .profile-info-modal {
-    position  : relative;
-    width     : 775px;
-    min-width : 775px;
-    padding   : 42px 56px;
+    position : relative;
+    width    : 775px;
+    padding  : 42px 56px;
 }
 
 .profile-info-modal__form {

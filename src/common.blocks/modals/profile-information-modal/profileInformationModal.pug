@@ -3,6 +3,9 @@ include ../../buttons/base-button/baseButton
 
 .base-modal-wrapper#profileInformationModal(style="display: none")
     .base-modal.profile-info-modal
+        .base-modal__top-controls
+            button.base-icon-btn.base-modal__close-btn(data-target-close="profileInformationModal")
+                span.material-icons-round keyboard_backspace
         .profile-info-modal__header
             h2.profile-info-modal__title Profil bearbeiten
             button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="profileInformationModal")
