@@ -12,8 +12,9 @@
     }
 
     .profile-info-modal__form {
-        padding    : 0 16px;
-        margin-top : 16px;
+        padding       : 0 16px;
+        margin-top    : 16px;
+        margin-bottom : 16px;
     }
 
     .profile-info-modal__textarea {
