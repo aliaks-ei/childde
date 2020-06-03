@@ -1,6 +1,10 @@
 @media (max-width: 600px) {
 	.top-navigation {
 		height: 64px;
+
+		.search-bar {
+			display: none;
+		}
 	}
 	
 	.top-navigation__container {
@@ -10,14 +14,10 @@
 
 	.top-navigation__logo {
 		z-index: 2;
-	}
-	
-	.top-navigation__logo svg {
-		width: 96px;
-	}
 
-	.top-navigation .search-bar {
-		display: none;
+		svg {
+			width: 96px;
+		}
 	}
 
 	.top-navigation-right-block__search-icon {
