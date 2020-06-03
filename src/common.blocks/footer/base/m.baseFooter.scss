@@ -6,6 +6,14 @@
     .footer {
         display : flex;
         padding : 0;
+
+        .store-links-wrapper {
+            margin-top: 16px;
+
+            .store-link {
+                margin-top: 0;
+            }
+        }
     }
     
     .footer__pages-links {
@@ -21,14 +29,6 @@
         padding         : 0 8px;
     }
     
-    .footer .store-links-wrapper {
-        margin-top: 16px;
-    }
-
-    .footer .store-links-wrapper .store-link {
-        margin-top: 0;
-    }
-    
     .footer__socials {
         align-items : flex-start;
         margin-top  : 20px;
@@ -40,13 +40,15 @@
         margin-bottom : 0;
     }
     
-    .footer__social-link svg {
-        width  : 16px;
-        height : 16px;
-    }
-    
-    .footer__social-link + .footer__social-link {
-        margin-left: 24px;
+    .footer__social-link {
+        & + & {
+            margin-left: 24px;
+        }
+
+        svg {
+            width  : 16px;
+            height : 16px;
+        }
     }
     
     .footer__copyright {
@@ -57,9 +59,9 @@
     
     .footer__logo {
         margin-top: 16px;
-    }
-    
-    .footer__logo svg {
-        width: 104px;
+
+        svg {
+            width: 104px;
+        }
     }
 }
