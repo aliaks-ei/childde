@@ -7,22 +7,22 @@
         white-space : nowrap;
         overflow-x  : auto;
         overflow-y  : hidden;
-    }
 
-    .profile-tabs::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .profile-tabs__tab {
         margin-right: 8px;
-    }
 
-    .profile-tabs__tab:first-child {
-        margin-left: 20px;
-    }
-
-    .profile-tabs__tab:last-child {
-        margin-right: 20px;
+        &:first-child {
+            margin-left: 20px;
+        }
+    
+        &:last-child {
+            margin-right: 20px;
+        }
     }
 
     .profile-tabs__link {

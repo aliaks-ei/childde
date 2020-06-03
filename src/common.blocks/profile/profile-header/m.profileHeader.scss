@@ -34,16 +34,24 @@
     .profile-header__menu-btn {
         top   : 14px;
         right : 4px;
+
+        &.base-icon-btn[data-desktop-hidden] {
+            display: flex;
+        }
+    
+        &.base-icon-btn[data-mobile-hidden] {
+            display: none;
+        }
     }
 
     .profile-header__info__username {
         font-size     : 20px;
         line-height   : 26px;
         padding-right : 32px;
-    }
 
-    .profile-header__info__username .material-icons-round {
-        font-size: 20px;
+        .material-icons-round {
+            font-size: 20px;
+        }
     }
 
     .profile-action-btns--scroll-x {
@@ -53,10 +61,10 @@
         font-size   : 0;
         line-height : 0;
         margin      : 0 -20px;
-    }
 
-    .profile-action-btns--scroll-x::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .profile-action-btns__ask-question-btn.base-btn,
@@ -71,25 +79,17 @@
 
     .profile-action-btns__update-profile.base-btn {
         margin-left: 20px;
+
+        &[data-desktop-hidden] {
+            display: inline-flex;
+        }
+    
+        &[data-mobile-hidden] {
+            display: none;
+        }
     }
     
     .profile-action-btns__themes-subscribe.base-btn {
         margin-right: 20px;
-    }
-
-    .profile-action-btns__update-profile.base-btn[data-desktop-hidden] {
-        display: inline-flex;
-    }
-
-    .profile-action-btns__update-profile.base-btn[data-mobile-hidden] {
-        display: none;
-    }
-
-    .profile-header__menu-btn.base-icon-btn[data-desktop-hidden] {
-        display: flex;
-    }
-
-    .profile-header__menu-btn.base-icon-btn[data-mobile-hidden] {
-        display: none;
     }
 }

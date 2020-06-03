@@ -27,16 +27,16 @@
     border-radius   : 25px;
     transition      : .1s ease-out;
     text-decoration : none;
-}
 
-.profile-tabs__link:hover,
-.profile-tabs__link--active {
-    background-color : var(--background-color-gray);
-    color            : var(--black-color-2);
-}
+    &:hover,
+    &--active {
+        background-color : var(--background-color-gray);
+        color            : var(--black-color-2);
+    }
 
-.profile-tabs__link:active {
-    transform: scale(.96);
+    &:active {
+        transform: scale(.96);
+    }
 }
 
 .profile-tabs__link__amount {

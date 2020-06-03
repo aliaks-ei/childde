@@ -23,11 +23,11 @@
     font-weight : 600;
     cursor      : pointer;
     user-select : none;
-}
 
-.update-profile-menu__item:active {
-    opacity   : .65;
-    transform : scale(.98);
+    &:active {
+        opacity   : .65;
+        transform : scale(.98);
+    }
 }
 
 .update-profile-menu__item__icon {

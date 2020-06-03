@@ -64,20 +64,20 @@
     top      : 0;
     right    : 0;
     z-index  : 1;
-}
 
-.profile-header__menu-btn.base-icon-btn[data-desktop-hidden] {
-    display: none;
-}
+    .material-icons-round {
+        font-size  : 26px;
+        color      : rgba(32, 35, 51, .5);
+        transition : color .1s ease-out;
+    }
 
-.profile-header__menu-btn .material-icons-round {
-    font-size  : 26px;
-    color      : rgba(32, 35, 51, .5);
-    transition : color .1s ease-out;
-}
+    &.base-icon-btn[data-desktop-hidden] {
+        display: none;
+    }
 
-.profile-header__menu-btn:hover .material-icons-round {
-    color: var(--black-color);
+    &:hover .material-icons-round {
+        color: var(--black-color);
+    }
 }
 
 .profile-header__info__username {
@@ -91,16 +91,16 @@
     text-decoration : none;
     margin-bottom   : 4px;
     padding-right   : 48px;
-}
 
-.profile-header__info__username .material-icons-round {
-    font-size   : 26px;
-    color       : var(--text-gray-2);
-    margin-left : 8px;
-}
+    .material-icons-round {
+        font-size   : 26px;
+        color       : var(--text-gray-2);
+        margin-left : 8px;
+    }
 
-.profile-header__info__username:hover .material-icons-round {
-    color: currentColor;
+    &:hover .material-icons-round {
+        color: currentColor;
+    }
 }
 
 .profile-header__info__registry-date {
@@ -114,11 +114,11 @@
 .profile-header__info__action-btns {
     position   : relative;
     margin-top : 20px;
-}
 
-.profile-header__info__action-btns--flex {
-    display     : flex;
-    align-items : center;
+    &--flex {
+        display     : flex;
+        align-items : center;
+    }
 }
 
 .profile-action-btns__update-profile,
@@ -137,16 +137,20 @@
     display     : inline-flex;
     padding     : 0 24px;
     flex-shrink : 0;
-}
 
-.profile-action-btns__update-profile.base-btn[data-desktop-hidden] {
-    display: none;
+    &[data-desktop-hidden] {
+        display: none;
+    }
 }
 
 .profile-action-btns__themes-subscribe.base-btn {
     display     : inline-flex;
     padding     : 0 20px;
     flex-shrink : 0;
+
+    &:not(.base-btn--animated):before {
+        background-color: var(--background-color-gray-3);
+    }
 }
 
 .profile-action-btns__ask-question-btn {
@@ -154,12 +158,8 @@
     padding-right    : 26px;
     color            : var(--white-color);
     background-color : var(--red-color);
-}
 
-.profile-action-btns__ask-question-btn svg {
-    margin-right: 12px;
-}
-
-.profile-action-btns__themes-subscribe.base-btn:not(.base-btn--animated):before {
-    background-color: var(--background-color-gray-3);
+    svg {
+        margin-right: 12px;
+    }
 }
