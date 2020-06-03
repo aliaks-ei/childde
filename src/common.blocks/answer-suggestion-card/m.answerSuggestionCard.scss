@@ -20,15 +20,15 @@
     .answer-suggestion-card__button {
         max-width : 264px;
         width     : 100%;
-    }
 
-    .answer-suggestion-card__button.base-btn .base-btn__icon {
-        display: none;
-    }
+        &.base-btn .base-btn__icon {
+            display: none;
+        }
 
-    .answer-suggestion-card__button.base-btn .base-btn__content {
-        transition  : none;
-        transform   : none;
-        margin-left : 0;
+        &.base-btn .base-btn__content {
+            transition  : none;
+            transform   : none;
+            margin-left : 0;
+        }
     }
 }

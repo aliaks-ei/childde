@@ -33,11 +33,11 @@
         height    : 42px;
         padding   : 4px 14px;
         font-size : 14px;
-    }
 
-    .auth-form__field[type="password"] {
-        font-size      : 16px;
-        letter-spacing : 4px;
+        &[type="password"] {
+            font-size      : 16px;
+            letter-spacing : 4px;
+        }
     }
 
     .auth-form__checkbox-wrapper {
@@ -57,15 +57,15 @@
 
     .auth-form__sign-in-with-social {
         font-size: 14px;
-    }
 
-    .auth-form__sign-in-with-social:last-of-type {
-        margin-bottom: 24px;
-    }
-
-    .auth-form__sign-in-with-social svg {
-        width  : 16px;
-        height : 16px;
+        &:last-of-type {
+            margin-bottom: 24px;
+        }
+    
+        svg {
+            width  : 16px;
+            height : 16px;
+        }
     }
 
     .auth-form__footer {

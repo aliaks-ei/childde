@@ -17,10 +17,10 @@
     display     : flex;
     align-items : center;
     width       : 50px;
-}
 
-.answer-suggestion-card__image img {
-    width: 100%;
+    img {
+        width: 100%;
+    }
 }
 
 .answer-suggestion-card__title {
