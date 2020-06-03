@@ -2,6 +2,14 @@
     display     : flex;
     align-items : center;
     flex-wrap   : wrap;
+    
+    &--light .theme-chip {
+        background-color: rgba(241, 244, 246, .22);
+
+        &:hover {
+            background-color: rgba(241, 244, 246, .15);
+        }
+    }
 }
 
 .theme-chip {
@@ -20,22 +28,14 @@
     transition       : .1s ease-out;
     margin-bottom    : 9px;
     margin-right     : 9px;
-}
 
-.theme-chip[data-desktop-hidden] {
-    display: none;
-}
-
-.theme-chip:hover {
-    background-color: var(--background-color-gray-3);
-}
-
-.theme-chips-wrapper--light .theme-chip:hover {
-    background-color: rgba(241, 244, 246, .15);
-}
-
-.theme-chips-wrapper--light .theme-chip {
-    background-color : rgba(241, 244, 246, .22);
+    &[data-desktop-hidden] {
+        display: none;
+    }
+    
+    &:hover {
+        background-color: var(--background-color-gray-3);
+    }
 }
 
 .theme-chip__link {
