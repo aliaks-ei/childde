@@ -13,17 +13,19 @@
         margin-right : 8px;
     }
 
-    .enter-question-wrapper__button {
+    .enter-question-wrapper__button.base-btn {
         width       : 96px;
         height      : 36px;
         line-height : 36px;
-    }
 
-    .base-btn.enter-question-wrapper__button .base-btn__content {
-        transition: none;
-    }
+        .base-btn__content {
+            transition  : none;
+            transform   : none;
+            margin-left : 0;
+        }
 
-    .enter-question-wrapper__button .base-btn__icon {
-        display: none;
+        .base-btn__icon {
+            display: none;
+        }
     }
 }

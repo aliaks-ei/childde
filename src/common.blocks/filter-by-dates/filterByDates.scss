@@ -21,22 +21,18 @@
     font-family      : var(--font-montserrat);
     color            : var(--black-color-2);
     transition       : transform .1s ease-out;
-}
 
-.date-filter__item + .date-filter__item {
-    margin-left: 4px;
-}
+    & + & {
+        margin-left: 4px;
+    }
 
-.date-filter__item--active {
-    background-color : var(--white-color );
-    color            : var(--red-color);
-}
-
-.date-filter__item:hover {
-    background-color : var(--white-color );
-    color            : var(--red-color);
-}
-
-.date-filter__item:active {
-    opacity: .65;
+    &--active,
+    &:hover {
+        background-color : var(--white-color );
+        color            : var(--red-color);
+    }
+    
+    &:active {
+        opacity: .65;
+    }
 }
