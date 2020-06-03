@@ -2,10 +2,10 @@
 	.swiper-card {
 		padding : 24px;
 		height  : 220px;
-	}
 
-	.swiper-card--with-image {
-		height: 330px;
+		&--with-image {
+			height: 330px;
+		}
 	}
 
 	.swiper-card__content {
