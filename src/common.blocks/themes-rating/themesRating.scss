@@ -5,10 +5,14 @@
     cursor          : pointer;
     text-decoration : none;
     color           : var(--black-color);
-}
 
-.theme-rating + .theme-rating {
-    margin-top: 12px;
+    &:hover .theme-rating__bar {
+        background-color: var(--border-color-lightgray);
+    }
+
+    & + & {
+        margin-top: 12px;
+    }
 }
 
 .theme-rating__bar {
@@ -34,10 +38,6 @@
     padding         : 4px 20px;
 }
 
-.theme-rating:hover .theme-rating__bar {
-    background-color: var(--border-color-lightgray);
-}
-
 .themes-rating__more-themes-btn-wrapper {
     margin-top    : 36px;
     margin-bottom : 16px;
@@ -47,8 +47,8 @@
     height      : 42px;
     line-height : 42px;
     padding     : 0 24px;
-}
 
-.themes-rating__more-themes-btn.base-btn:hover {
-    background-color: var(--background-color-gray-3) !important;
+    &:hover {
+        background-color: var(--background-color-gray-3) !important;
+    }
 }
