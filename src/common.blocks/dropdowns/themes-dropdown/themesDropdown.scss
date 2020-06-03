@@ -34,10 +34,10 @@
     font-family      : var(--font-montserrat);
     border           : 0;
     background-color : var(--background-color-gray);
-}
 
-.themes-header__close-btn[data-desktop-hidden] {
-    display: none;
+    &[data-desktop-hidden] {
+        display: none;
+    }
 }
 
 .themes-search__field {
@@ -51,10 +51,10 @@
     font-weight      : 500;
     outline          : none;
     transition       : border-color .1s ease-out;
-}
 
-.themes-search__field:focus {
-    border-color: var(--blue-color);
+    &:focus {
+        border-color: var(--blue-color);
+    }
 }
 
 .themes-search__field-wrapper {
@@ -81,6 +81,14 @@
     padding         : 7px 0;
     font-size       : 16px;
     user-select     : none;
+
+    &--selected .themes-options__option__add-btn {
+        background-color: var(--blue-color-2);
+    }
+    
+    &--selected .themes-options__option__add-btn .material-icons-round {
+        color: var(--white-color);
+    }
 }
 
 .themes-options__option__add-btn {
@@ -95,16 +103,8 @@
     min-width        : 30px;
     height           : 30px;
     cursor           : pointer;
-}
 
-.themes-options__option__add-btn .material-icons-round {
-    color: var(--blue-color-2);
-}
-
-.themes-options__option--selected .themes-options__option__add-btn {
-    background-color: var(--blue-color-2);
-}
-
-.themes-options__option--selected .themes-options__option__add-btn .material-icons-round {
-    color: var(--white-color);
+    .material-icons-round {
+        color: var(--blue-color-2);
+    }
 }

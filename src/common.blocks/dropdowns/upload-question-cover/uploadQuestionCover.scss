@@ -61,11 +61,11 @@
     border           : 0;
     outline          : none;
     cursor           : pointer;
-}
 
-.upload-cover__upload-icon .material-icons {
-    font-size   : 20px;
-    line-height : inherit;
+    .material-icons {
+        font-size   : 20px;
+        line-height : inherit;
+    }
 }
 
 .upload-cover__close-btn {

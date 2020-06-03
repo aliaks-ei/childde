@@ -20,10 +20,10 @@
     font-size        : 14px;
     border           : 2px solid transparent;
     outline          : none;
-}
 
-.base-dropdown__input:focus {
-    border-color: var(--blue-color);
+    &:focus {
+        border-color: var(--blue-color);
+    }
 }
 
 .base-dropdown__action {
@@ -34,10 +34,10 @@
     font-family : var(--font-montserrat);
     transition  : color .1s ease-out;
     cursor      : pointer;
-}
 
-.base-dropdown__action:hover {
-    color: var(--red-color);
+    &:hover {
+        color: var(--red-color);
+    }
 }
 
 .base-dropdown__delimiter {

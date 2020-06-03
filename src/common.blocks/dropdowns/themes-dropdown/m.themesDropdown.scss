@@ -29,14 +29,14 @@
         height        : 28px;
         padding       : 4px 16px;
         transition    : none;
-    }
 
-    .themes-header__close-btn[data-desktop-hidden] {
-        display: block;
-    }
-
-    .themes-header__close-btn[data-mobile-hidden] {
-        display: none;
+        &[data-desktop-hidden] {
+            display: block;
+        }
+    
+        &[data-mobile-hidden] {
+            display: none;
+        }
     }
 
     .themes-search__field {
@@ -61,10 +61,10 @@
         width     : 26px;
         min-width : 26px;
         height    : 26px;
-    }
 
-    .themes-options__option__add-btn .material-icons-round {
-        font-size: 20px;
+        .material-icons-round {
+            font-size: 20px;
+        }
     }
 
     .themes-select__search-results {
