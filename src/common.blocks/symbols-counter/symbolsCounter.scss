@@ -13,6 +13,18 @@
     margin          : auto 16px;
     opacity         : 0;
     transition      : .2s ease-out;
+
+    &--error {
+        color: var(--red-color);
+
+        .symbols-counter__bg-circle {
+            stroke-opacity: 1;
+        }
+    }
+    
+    &--success {
+        color: var(--green-color);
+    }
 }
 
 .symbols-counter {
@@ -39,25 +51,11 @@
     font-size   : 14px;
     line-height : 1;
     font-weight : 600;
+
+    .material-icons-round {
+        display     : none;
+        font-size   : 20px;
+        line-height : inherit;
+        color       : currentColor;
+    }
 }
-
-.symbols-counter__label .material-icons-round {
-    display     : none;
-    font-size   : 20px;
-    line-height : inherit;
-    color       : currentColor;
-}
-
-.symbols-counter-container--error {
-    color: var(--red-color);
-}
-
-.symbols-counter-container--error .symbols-counter__bg-circle {
-    stroke-opacity: 1;
-}
-
-.symbols-counter-container--success {
-    color: var(--green-color);
-}
-
-
