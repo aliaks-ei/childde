@@ -2,20 +2,20 @@
     .question-card-wrapper {
         padding       : 0 12px;
         margin-bottom : 24px;
-    }
 
-    .question-card-wrapper + .question-card-wrapper {
-        margin-top: 0;
+        & + & {
+            margin-top: 0;
+        }
+
+        &:not(.question-card-wrapper--opened) .question-card:hover {
+            box-shadow: none;
+        }
     }
 
     .question-card {
         --card-horizontal-padding: 16px;
 
         transition: none;
-    }
-
-    .question-card-wrapper:not(.question-card-wrapper--opened) .question-card:hover {
-        box-shadow: none;
     }
 
     .question-header__info {
@@ -41,6 +41,10 @@
     .question-header__dropdown-icon {
         top   : 12px;
         right : 6px;
+
+        .material-icons-round {
+            font-size: 24px;
+        }
     }
 
     .question-card__reactions-wrapper {
@@ -53,18 +57,22 @@
 
     .question-card__content {
         padding  : 14px var(--card-horizontal-padding) 18px;
-    }
 
-    .question-card__content:not(.question-card__content--vote) div {
-        line-height: 22px;
+        &:not(.question-card__content--vote) div {
+            line-height: 22px;
+        }
     }
 
     .question-card__content__reviews.question-reviews {
-        margin: 16px 0;
+        margin-top: 16px;
     }
 
     .question-reviews__horizontal-dropdown.base-icon-btn {
         right: -6px;
+
+        .material-icons-round {
+            font-size: 24px;
+        }
     }
 
     .question-card__read-all-answers-btn {
@@ -72,6 +80,7 @@
         line-height      : 36px;
         border-radius    : 25px;
         font-size        : 12px;
+        margin-top       : 20px;
     }
 
     .question-user__label,
@@ -84,10 +93,5 @@
     .base-icon-btn[data-target="qcTopMenu"],
     .base-icon-btn[data-target="qcBottomMenu"] {
         display: flex;
-    }
-
-    .question-header__dropdown-icon .material-icons-round,
-    .question-reviews__horizontal-dropdown .material-icons-round {
-        font-size: 24px;
     }
 }

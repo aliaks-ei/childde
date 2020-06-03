@@ -3,31 +3,31 @@
         font-size   : 12px;
         line-height : 22px;
         padding     : 0;
-    }
 
-    .question-card-button:before {
-        content: none;
-    }
+        &:before {
+            content: none;
+        }
 
-    .question-card-button + .question-card-button {
-        margin-left: 16px;
-    }
+        & + & {
+            margin-left: 16px;
+        }
 
-    .question-card-button .question-card-button__icon {
-        font-size   : 16px;
-        display     : flex;
-        align-items : center;
-    }
+        .question-card-button__icon {
+            font-size   : 16px;
+            display     : flex;
+            align-items : center;
 
-    .question-card-button .question-card-button__icon svg {
-        width: 20px;
-    }
+            svg {
+                width: 20px;
+            }
 
-    .question-card-button .question-card-button__icon svg.answer {
-        width: 14px;
-    }
+            svg.answer {
+                width: 14px;
+            }
 
-    .question-card-button .question-card-button__icon:not(:only-child) {
-        margin-right: 6px;
+            &:not(:only-child) {
+                margin-right: 6px;
+            }
+        }
     }
 }

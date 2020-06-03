@@ -1,43 +1,45 @@
-.question-card-wrapper--opened .question-card__header {
-    height: 360px;
-}
+.question-card-wrapper--opened { 
+    .question-card__header {
+        height: 360px;
+    }
 
-.question-card-wrapper--opened .question-header__info {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : flex-end;
-}
+    .question-header__info {
+        display         : flex;
+        flex-direction  : column;
+        justify-content : flex-end;
+    }
 
-.question-card-wrapper--opened .question-info__user {
-    margin-right: 0;
-}
+    .question-info__user {
+        margin-right: 0;
+    }
 
-.question-card-wrapper--opened .question-info__title {
-    font-size    : 1.875em;
-    margin-right : 0;
-}
+    .question-info__title {
+        font-size    : 1.875em;
+        margin-right : 0;
+    }
 
-.question-card-wrapper--opened .question-card__reactions-wrapper {
-    border       : 0;
-    padding      : 28px 10px 16px;
-    margin-left  : -4px;
+    .question-card__reactions-wrapper {
+        border       : 0;
+        padding      : 28px 10px 16px;
+        margin-left  : -4px;
+    }
+
+    .question-card__mobile-actions {
+        display: none;
+    }
 }
 
 .question-card__controls-wrapper {
     border-bottom : 1px solid var(--border-color-lightgray);
 }
 
-.question-card-wrapper--opened .question-card__mobile-actions {
-    display: none;
-}
-
 .question-card__notifications-wrapper {
     padding       : 0 10px;
     margin-bottom : 20px;
-}
 
-.question-card__notifications-wrapper .answer-card__best-answer-toggler.best-answer-toggler {
-    margin-top: 0;
+    .answer-card__best-answer-toggler.best-answer-toggler {
+        margin-top: 0;
+    }
 }
 
 .q-mob-action-button {
@@ -48,58 +50,58 @@
     border           : 0;
     outline          : none;
     user-select      : none;
-}
 
-.q-mob-action-button--active {
-    color: var(--blue-color);
-}
+    .q-mob-action-button__circle {
+        --circle-size: 40px;
+    
+        display          : flex;
+        align-items      : center;
+        justify-content  : center;
+        position         : relative;
+        width            : var(--circle-size);
+        height           : var(--circle-size);
+        min-width        : var(--circle-size);
+        line-height      : var(--circle-size);
+        border-radius    : var(--circle-size);
+        background-color : var(--background-color-gray);
+    }
 
-.q-mob-action-button--active .q-mob-action-button__count {
-    background-color: var(--blue-color);
-}
+    svg {
+        height: 14px;
 
-.q-mob-action-button * {
-    pointer-events: none;
-}
+        &:not(.interest) {
+            width: 14px;
+        }
+    }
 
-.q-mob-action-button .q-mob-action-button__circle {
-    --circle-size: 40px;
+    .material-icons-round {
+        font-size: 16px;
+    }
 
-    display          : flex;
-    align-items      : center;
-    justify-content  : center;
-    position         : relative;
-    width            : var(--circle-size);
-    height           : var(--circle-size);
-    min-width        : var(--circle-size);
-    line-height      : var(--circle-size);
-    border-radius    : var(--circle-size);
-    background-color : var(--background-color-gray);
-}
+    & + & {
+        margin-left: 12px;
+    }
 
-.q-mob-action-button svg {
-    height: 14px;
-}
+    &--active {
+        color: var(--blue-color);
 
-.q-mob-action-button svg:not(.interest) {
-    width: 14px;
-}
+        .q-mob-action-button__count {
+            background-color: var(--blue-color);
+        }
+    }
 
-.q-mob-action-button .material-icons-round {
-    font-size: 16px;
-}
+    &:last-of-type {
+        margin-left: auto;
 
-.q-mob-action-button:last-of-type .material-icons-round {
-    font-size : 20px;
-    transform : rotate(90deg);
-}
+        .material-icons-round {
+            font-size : 20px;
+            transform : rotate(90deg);
+        }
+    }
 
-.q-mob-action-button + .q-mob-action-button {
-    margin-left: 12px;
-}
-
-.q-mob-action-button:last-of-type {
-    margin-left: auto;
+    * {
+        pointer-events: none;
+    }
 }
 
 .q-mob-action-button__title {

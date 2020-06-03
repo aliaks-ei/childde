@@ -2,25 +2,25 @@
     .question-card-wrapper.question-card-wrapper--opened {
         margin-top    : 12px;
         margin-bottom : 12px;
-    }
 
-    .question-card-wrapper--opened .question-info__title {
-        font-size   : 1.5em;
-        line-height : 26px;
-    }
+        .question-info__title {
+            font-size   : 1.5em;
+            line-height : 26px;
+        }
 
-    .question-card-wrapper--opened .question-card__header {
-        height: 300px;
-    }
+        .question-card__header {
+            height: 300px;
+        }
 
-    .question-card-wrapper--opened .question-card__reactions-wrapper {
-        display: none;
-    }
+        .question-card__reactions-wrapper {
+            display: none;
+        }
 
-    .question-card-wrapper--opened .question-card__mobile-actions {
-        display     : flex;
-        align-items : center;
-        padding     : 20px 0 16px;
+        .question-card__mobile-actions {
+            display     : flex;
+            align-items : center;
+            padding     : 20px 0 16px;
+        }
     }
 
     .question-card__notifications-wrapper {

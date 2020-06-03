@@ -5,14 +5,22 @@
 .question-card-small {
     display  : flex;
     position : relative;
-}
 
-.question-card-small:hover .question-info__title {
-    text-decoration: underline;
-}
+    .question-info__title {
+        margin-right: 0;
+    }
+    
+    .question-card__reactions {
+        margin-top: 8px;
+    }
 
-.question-card-small:active {
-    opacity: .65;
+    &:hover .question-info__title {
+        text-decoration: underline;
+    }
+
+    &:active {
+        opacity: .65;
+    }
 }
 
 .question-card-small__link {
@@ -24,34 +32,23 @@
 }
 
 .question-card-small__image-wrapper {
-    width           : 208px;
-    min-width       : 208px;
-    border-radius   : 20px;
     display         : flex;
     align-items     : center;
     justify-content : center;
+    width           : 208px;
+    min-width       : 208px;
+    border-radius   : 20px;
+    margin-right    : 22px;
 }
 
 .question-card-small__image {
     width: 75px;
-}
 
-.question-card-small__image--large {
-    width: 84px;
-}
-
-.question-card-small__image-wrapper {
-    margin-right: 22px;
+    &--large {
+        width: 84px;
+    }
 }
 
 .question-card-small__content {
     padding: 8px 0;
-}
-
-.question-card-small .question-info__title {
-    margin-right: 0;
-}
-
-.question-card-small .question-card__reactions {
-    margin-top: 8px;
 }

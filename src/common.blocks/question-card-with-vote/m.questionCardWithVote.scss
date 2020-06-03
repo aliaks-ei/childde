@@ -9,10 +9,10 @@
     .question-card__vote-bar {
         height    : 32px;
         font-size : 12px;
-    }
 
-    .question-card__vote-bar + .question-card__vote-bar {
-        margin-top: 8px;
+        & + & {
+            margin-top: 8px;
+        }
     }
 
     .question-card__vote-bar__progress {
