@@ -4,10 +4,10 @@
         min-width : 130px;
         height    : auto;
         padding   : 12px 16px;
-    }
-    
-    .store-link:first-of-type {
-        margin-right: 12px;
+
+        &:first-of-type {
+            margin-right: 12px;
+        }
     }
 
     .store-link__title {
