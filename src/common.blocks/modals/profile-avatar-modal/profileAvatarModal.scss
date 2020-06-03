@@ -11,14 +11,14 @@
 .profile-avatar-modal__close-btn {
     top   : 20px;
     right : 12px;
-}
 
-.profile-avatar-modal__close-btn .material-icons-round {
-    color: var(--text-gray-3);
-}
+    .material-icons-round {
+        color: var(--text-gray-3);
+    }
 
-.profile-avatar-modal__close-btn:hover .material-icons-round {
-    color: var(--black-color-2);
+    &:hover .material-icons-round {
+        color: var(--black-color-2);
+    }
 }
 
 .profile-avatar-modal__image-uploader {
@@ -65,6 +65,14 @@
     position    : relative;
     display     : flex;
     align-items : center;
+
+    &--error .profile-avatar-modal__input {
+        border-color: var(--red-color);
+    }
+
+    &--error + .profile-avatar-modal__input-error-message {
+        display: inline-block;
+    }
 }
 
 .profile-avatar-modal__input__clear-icon {
@@ -73,10 +81,10 @@
     font-size : 26px;
     color     : var(--blue-color-2);
     cursor    : pointer;
-}
 
-.profile-avatar-modal__input__clear-icon:hover {
-    color: var(--blue-color);
+    &:hover {
+        color: var(--blue-color);
+    }
 }
 
 .profile-avatar-modal__input {
@@ -92,14 +100,10 @@
     outline          : none;
     padding          : 4px 48px 4px 16px;
     transition       : border-color .1s ease-out;
-}
 
-.profile-avatar-modal__input-wrapper--error .profile-avatar-modal__input {
-    border-color: var(--red-color);
-}
-
-.profile-avatar-modal__input:focus {
-    border-color: var(--blue-color);
+    &:focus {
+        border-color: var(--blue-color);
+    }
 }
 
 .profile-avatar-modal__input-error-message {
@@ -109,10 +113,6 @@
     font-weight : 700;
     margin-top  : 6px;
     margin-left : 2px;
-}
-
-.profile-avatar-modal__input-wrapper--error + .profile-avatar-modal__input-error-message {
-    display: inline-block;
 }
 
 .profile-avatar-modal__save-btn-wrapper {

@@ -31,19 +31,19 @@
         z-index    : 5;
     }
 
-    .profile-info-modal__submit-btn {
+    .profile-info-modal__submit-btn.base-btn {
         width       : 112px;
         height      : 36px;
         line-height : 36px;
-    }
 
-    .profile-info-modal__submit-btn.base-btn .base-btn__icon {
-        display: none;
-    }
-
-    .profile-info-modal__submit-btn.base-btn .base-btn__content {
-        transform   : none;
-        transition  : none;
-        margin-left : 0;
+        .base-btn__icon {
+            display: none;
+        }
+    
+        .base-btn__content {
+            transform   : none;
+            transition  : none;
+            margin-left : 0;
+        }
     }
 }

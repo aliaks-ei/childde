@@ -10,10 +10,10 @@
 
     .answer-modal__header__title {
         font-size: 16px;
-    }
 
-    .answer-modal__header__title[data-desktop-hidden] {
-        display: block;
+        &[data-desktop-hidden] {
+            display: block;
+        }
     }
 
     .answer-modal__textarea {
@@ -25,14 +25,14 @@
     .answer-modal__bottom-wrapper {
         margin-top : 14px;
         border     : none;
-    }
 
-    .answer-modal__bottom-wrapper[data-desktop-hidden] {
-        display: block;
-    }
+        &[data-desktop-hidden] {
+            display: block;
+        }
 
-    .answer-modal__bottom-wrapper .user-select {
-        display: none;
+        .user-select {
+            display: none;
+        }
     }
 
     .answer-modal__bottom-container {

@@ -7,10 +7,10 @@
 .themes-subscribe-modal__search-wrapper {
     margin-top    : 32px;
     margin-bottom : 48px;
-}
 
-.themes-subscribe-modal__search-wrapper .profile-avatar-modal__input {
-    padding-right: 16px;
+    .profile-avatar-modal__input {
+        padding-right: 16px;
+    }
 }
 
 .themes-subscribe-modal__themes-wrapper {
@@ -42,10 +42,22 @@
     color          : var(--white-color);
     z-index        : 1;
     transition     : box-shadow .1s ease-out;
-}
 
-.theme-card:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .04);
+    &:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .08), 0 1px 4px rgba(0, 0, 0, .04);
+    }
+
+    &--dark {
+        color: var(--black-color);
+    }
+    
+    &--dark .theme-card__subscribe-button:before {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    
+    &--mobile {
+        display: none;
+    }
 }
 
 .theme-card__title {
@@ -100,45 +112,33 @@
     font-weight      : 700;
     cursor           : pointer;
     user-select      : none;
-}
 
-.theme-card__subscribe-button:before {
-    position         : absolute;
-    content          : "";
-    top              : -2px;
-    left             : -14px;
-    right            : -14px;
-    bottom           : -2px;
-    background-color : rgba(255, 255, 255, .2);
-    border-radius    : 36px;
-    opacity          : 0;
-    transition       : opacity .1s ease-out;
-}
+    .material-icons-round {
+        font-size    : 26px;
+        color        : currentColor;
+        margin-right : 16px;
+    }
 
-.theme-card__subscribe-button:hover:before {
-    opacity: 1;
-}
-
-.theme-card__subscribe-button .material-icons-round {
-    font-size    : 26px;
-    color        : currentColor;
-    margin-right : 16px;
+    &:before {
+        position         : absolute;
+        content          : "";
+        top              : -2px;
+        left             : -14px;
+        right            : -14px;
+        bottom           : -2px;
+        background-color : rgba(255, 255, 255, .2);
+        border-radius    : 36px;
+        opacity          : 0;
+        transition       : opacity .1s ease-out;
+    }
+    
+    &:hover:before {
+        opacity: 1;
+    }
 }
 
 .theme-card__subscribe-button__amount {
     margin-left : 14px;
     font-family : var(--font-open-sans);
     font-weight : 600;
-}
-
-.theme-card--dark {
-    color: var(--black-color);
-}
-
-.theme-card--dark .theme-card__subscribe-button:before {
-    background-color: rgba(0, 0, 0, .1);
-}
-
-.theme-card--mobile {
-    display: none;
 }

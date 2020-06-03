@@ -42,8 +42,8 @@
 .bs-overlay {
     z-index  : 1006;
     overflow : hidden;
-}
 
-.bs-overlay--hidden {
-    display: none;
+    &--hidden {
+        display: none;
+    }
 }

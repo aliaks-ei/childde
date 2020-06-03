@@ -39,8 +39,7 @@
     }
 
     .bs-overlay {
-        opacity     : 0;
-        transition  : opacity .3s ease-out;
-        will-change : opacity;
+        opacity    : 0;
+        transition : opacity .3s ease-out;
     }
 }

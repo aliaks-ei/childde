@@ -21,11 +21,11 @@
         min-width     : 140px;
         height        : 140px;
         border-radius : 48px;
-    }
 
-    .avatar-image-uploader__current-avatar > svg {
-        width  : 64px;
-        height : auto;
+        & > svg {
+            width  : 64px;
+            height : auto;
+        }
     }
 
     .avatar-image-uploader__upload-btn {
@@ -33,10 +33,10 @@
         height    : 36px;
         min-width : 36px;
         bottom    : -20px;
-    }
 
-    .avatar-image-uploader__upload-btn svg.camera {
-        width: 16px;
+        svg {
+            width: 16px;
+        }
     }
 
     .profile-avatar-modal__form {

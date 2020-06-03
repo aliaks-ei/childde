@@ -30,10 +30,10 @@
     resize           : none;
     outline          : none;
     transition       : border-color .1s ease-out;
-}
 
-.profile-info-modal__textarea:focus {
-    border-color: var(--blue-color);
+    &:focus {
+        border-color: var(--blue-color);
+    }
 }
 
 .profile-info-modal__submit-btn-wrapper {
