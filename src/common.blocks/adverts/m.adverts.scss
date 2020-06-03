@@ -10,12 +10,11 @@
     .advert-card {
         max-width     : 340px;
         margin-bottom : 16px;
-    }
 
-    .advert-card + .advert-card {
-        margin-left: 0;
+        & + & {
+            margin-left: 0;
+        }
     }
-
     
     .advert-card__content { 
         padding: 18px 12px;

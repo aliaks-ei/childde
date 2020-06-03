@@ -2,16 +2,18 @@
     .answer-comment-form__activator-wrapper {
         margin  : 16px 0;
         padding : 0 12px;
+
+        .answer-comment-form__avatar {
+            display: flex;
+        }
+
+        & > .answer-comment-form__avatar {
+            display: none;
+        }
     }
 
-    .answer-comment-form__activator-wrapper > .answer-comment-form__avatar,
     .new-comment-form-container > .answer-comment-form__avatar {
         display: none;
-    }
-
-    .answer-comment-form__activator .answer-comment-form__avatar,
-    .new-comment-form .answer-comment-form__avatar {
-        display: flex;
     }
 
     .new-comment-form-wrapper {
@@ -34,6 +36,10 @@
 
     .new-comment-form {
         padding: 8px;
+
+        .answer-comment-form__avatar {
+            display: flex;
+        }
     }
 
     .new-comment-form__textarea {
@@ -43,7 +49,8 @@
         line-height : 20px;
     }
 
-    .new-comment-form__cancel-btn, .new-comment-form__send-btn {
+    .new-comment-form__cancel-btn, 
+    .new-comment-form__send-btn {
         height      : 36px;
         line-height : 26px;
         margin-top  : 12px;
@@ -56,15 +63,15 @@
 
     .new-comment-form__send-btn {
         width: 112px;
-    }
 
-    .new-comment-form__send-btn.base-btn .base-btn__icon {
-        display: none;
-    }
+        &.base-btn .base-btn__icon {
+            display: none;
+        }
 
-    .new-comment-form__send-btn.base-btn .base-btn__content {
-        transition  : none;
-        transform   : none;
-        margin-left : 0;
+        &.base-btn .base-btn__content {
+            transition  : none;
+            transform   : none;
+            margin-left : 0;
+        }
     }
 }

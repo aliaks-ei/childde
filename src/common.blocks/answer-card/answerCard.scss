@@ -66,8 +66,14 @@
     }
 }
 
-.answer-card--small .answer-card__content p {
-    margin-bottom: 1rem;
+.answer-card.answer-card--small {
+    .answer-card__content p {
+        margin-bottom: 1rem;
+    }
+
+    .question-card__content__reviews.question-reviews {
+        margin-top: 0;
+    }
 }
 
 .answer-card__date {
@@ -76,10 +82,6 @@
     font-size   : 14px;
     font-weight : 600;
     line-height : 26px;
-}
-
-.answer-card--small.answer-card .question-card__content__reviews.question-reviews {
-    margin-top: 0;
 }
 
 .best-answer-toggler {
