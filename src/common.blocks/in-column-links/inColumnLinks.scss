@@ -25,21 +25,21 @@
     color           : var(--black-color);
     font-size       : 14px;
     text-decoration : none;
-}
 
-.in-column-links__item__link:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .in-column-links-wrapper__separated-column {
     display        : flex;
     flex-direction : column;
-}
 
-.in-column-links-wrapper__separated-column .in-column-links:not(:first-child) {
-    margin-top: 53px;
-}
+    .in-column-links:not(:first-child) {
+        margin-top: 53px;
 
-.in-column-links-wrapper__separated-column .in-column-links:not(:first-child) .in-column-links__title {
-    margin-bottom: 24px;
+        .in-column-links__title {
+            margin-bottom: 24px;
+        }
+    }
 }

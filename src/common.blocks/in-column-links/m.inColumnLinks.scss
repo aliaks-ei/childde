@@ -12,15 +12,18 @@
 
     .in-column-links-wrapper__separated-column {
         flex: 1 1 50%;
+
+        .in-column-links:not(:first-child) {
+            margin-top: 0;
+    
+            .in-column-links__title {
+                margin-bottom: 8px;
+            }
+        }
     }
 
-    .in-column-links__title,
-    .in-column-links-wrapper__separated-column .in-column-links:not(:first-child) .in-column-links__title {
+    .in-column-links__title{
         margin-bottom: 8px;
-    }
-
-    .in-column-links-wrapper__separated-column .in-column-links:not(:first-child) {
-        margin-top: 0;
     }
 
     .in-column-links__container {
