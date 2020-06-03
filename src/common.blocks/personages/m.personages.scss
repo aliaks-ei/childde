@@ -1,9 +1,9 @@
 @media (max-width: 600px) {
-    .personages-wrapper {
+    .personages-wrapper.base-swiper {
         margin-bottom: 24px;
-    }
 
-    .personages-wrapper.base-swiper .swiper-wrapper {
-        padding-top: 28px;
+        .swiper-wrapper {
+            padding-top: 28px;
+        }
     }
 }
