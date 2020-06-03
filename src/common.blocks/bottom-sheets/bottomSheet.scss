@@ -13,12 +13,12 @@
     transition       : transform .4s cubic-bezier(.22, 1, .36, 1);
     will-change      : transform;
     box-shadow       : 0 11px 15px -7px rgba(62, 62, 62, .3), 
-                        0 24px 38px 3px rgba(62, 62, 62, .24), 
-                        0 9px 46px 8px rgba(62, 62, 62, .22);
-}
-
-.bottom-sheet-wrapper--hidden {
-    display: none;
+                       0 24px 38px 3px rgba(62, 62, 62, .24), 
+                       0 9px 46px 8px rgba(62, 62, 62, .22);
+    
+    &--hidden {
+        display: none;
+    }
 }
 
 .bottom-sheet {
@@ -30,11 +30,11 @@
     padding-bottom : 8px;
     margin         : 0 -16px;
     text-align     : center;
-}
 
-.bottom-sheet__arrow-icon .material-icons-round {
-    font-size : 28px;
-    color     : var(--text-gray);
+    .material-icons-round {
+        font-size : 28px;
+        color     : var(--text-gray);
+    }
 }
 
 .bs--keyboard-active {

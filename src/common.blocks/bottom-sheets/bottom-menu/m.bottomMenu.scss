@@ -16,14 +16,14 @@
         font-weight     : 600;
         line-height     : 32px;
         transition      : .1s ease-out;
-    }
 
-    .bottom-menu__link:active {
-        transform: scale(.96);
-    }
+        &:active {
+            transform: scale(.96);
+        }
 
-    .bottom-menu__link + .bottom-menu__link {
-        margin-top: 4px;
+        & + & {
+            margin-top: 4px;
+        }
     }
 
     .bottom-menu__link__icon {
@@ -32,10 +32,10 @@
         align-items     : center;
         width           : 32px;
         margin-right    : 4px;
-    }
 
-    .bottom-menu__link__icon svg {
-        width  : 15px;
-        height : 15px;
+        svg {
+            width  : 15px;
+            height : 15px;
+        }
     }
 }
