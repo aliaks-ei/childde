@@ -2,6 +2,11 @@
 	display : flex;
 	flex    : 1 1;
 	width   : 100%;
+
+	&--with-title .three-column-layout__left,
+	&--with-title .three-column-layout__right {
+		margin-top: 140px;
+	}
 }
 
 .three-column-layout__left {
@@ -17,11 +22,6 @@
 .three-column-layout__right {
 	padding : 0 20px;
 	width   : 288px;
-}
-
-.three-column-layout--with-title .three-column-layout__left,
-.three-column-layout--with-title .three-column-layout__right {
-	margin-top: 140px;
 }
 
 @media (max-width: 1279px) {
