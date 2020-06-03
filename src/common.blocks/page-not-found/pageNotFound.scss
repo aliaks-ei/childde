@@ -40,10 +40,10 @@
     color           : var(--blue-color-2);
     text-decoration : none;
     font-weight     : 600;
-}
 
-.page-not-found__links__item:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 @media (max-width: 1279px) and (min-width: 600px) {
