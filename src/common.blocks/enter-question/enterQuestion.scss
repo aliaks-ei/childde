@@ -1,6 +1,6 @@
 .enter-question-wrapper {
     height        : 50px;
-	margin-bottom : 92px;
+	margin-bottom : 48px;
 	cursor        : pointer;
 }
 
@@ -8,21 +8,29 @@
 	display        : flex;
 	align-items    : center;
 	height         : 100%;
+
+	&[data-target] .enter-question-wrapper__input {
+		pointer-events : none;
+		cursor         : pointer;
+	}
 }
 
 .enter-question-wrapper__input {
 	flex             : 1 1 auto;
 	height           : 50px;
-	border           : 0;
+	border           : 2px solid transparent;
 	border-radius    : 25px;
 	font-family      : var(--font-montserrat);
 	font-weight      : 500;
 	background-color : var(--background-color-gray-3);
-	pointer-events   : none;
 	padding          : 0 24px;
 	line-height      : 50px;
 	margin-right     : 17px;
-	cursor           : pointer;
+	transition       : border-color .1s ease-out;
+
+	&:focus {
+		border-color: var(--blue-color);
+	}
 }
 
 .enter-question-wrapper__button {

@@ -1,6 +1,10 @@
 @media (max-width: 600px) {
     .themes-subscribe-modal {
         padding: 0;
+
+        .themes-container {
+            padding: 0 16px;
+        }
     }
 
     .themes-subscribe-modal__title-wrapper {
@@ -18,9 +22,8 @@
     }
 
     .themes-subscribe-modal__search-wrapper {
-        margin-top    : 20px;
-        margin-bottom : 28px;
-        padding       : 0 16px;
+        margin-top : 20px;
+        padding    : 0 16px;
 
         .profile-avatar-modal__input {
             padding-right: 12px;

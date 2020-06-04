@@ -14,13 +14,14 @@ include ../../theme-card/themeCard
         .themes-subscribe-modal__search-wrapper
             .profile-avatar-modal__input-wrapper
                 input.profile-avatar-modal__input(type="text", placeholder="Search for themes")
-        .themes-container
-            +themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
-            +themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
-            +themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})
-            +themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b'})
-            +themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465'})
-            +themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7'})
+        .themes-wrapper
+            .themes-container
+                +themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
+                +themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
+                +themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})
+                +themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b'})
+                +themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465'})
+                +themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7'})
             
 
         
