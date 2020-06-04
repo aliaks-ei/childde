@@ -7,10 +7,10 @@
         flex         : 1;
         text-align   : center;
         margin-right : 32px;
-    }
 
-    .themes-subscribe-modal__title-wrapper .themes-subscribe-modal__title {
-        margin: 0;
+        .themes-subscribe-modal__title {
+            margin: 0;
+        }
     }
 
     .themes-subscribe-modal__header {
@@ -21,85 +21,9 @@
         margin-top    : 20px;
         margin-bottom : 28px;
         padding       : 0 16px;
-    }
 
-    .themes-subscribe-modal__search-wrapper .profile-avatar-modal__input {
-        padding-right: 12px;
-    }
-
-    .themes-subscribe-modal__themes-wrapper {
-        flex-direction : column;
-        flex-wrap      : nowrap;
-        margin         : 0;
-        padding        : 0 16px;
-    }
-
-    .theme-card-wrapper {
-        width : 100%;
-        flex  : 1 1 100%;
-    }
-
-    .theme-card-container {
-        padding: 0;
-    }
-
-    .theme-card:not(.theme-card--mobile) {
-        display: none;
-    }
-
-    .theme-card {
-        height        : 116px;
-        margin-bottom : 12px;
-        padding       : 20px 16px;
-    }
-
-    .theme-card__title {
-        margin-top    : 0;
-        margin-bottom : auto;
-    }
-
-    .theme-card--mobile {
-        display         : flex;
-        flex-direction  : row;
-        justify-content : space-between;
-        align-items     : center;
-    }
-
-    .theme-card--mobile .theme-card__content {
-        display         : flex;
-        flex-direction  : column;
-        justify-content : space-between;
-        flex-grow       : 1;
-        height          : 100%;
-    }
-
-    .theme-card__subscriptions {
-        font-size   : 12px;
-        font-weight : 600;
-    }
-
-    .theme-card--mobile .theme-card__subscribe-button {
-        height        : 44px;
-        width         : 44px;
-        min-width     : 44px;
-        border-radius : 44px;
-    }
-
-    .theme-card--mobile .theme-card__subscribe-button:before {
-        content: none;
-    }
-
-    .theme-card--mobile .theme-card__subscribe-button .material-icons-round {
-        font-size    : 44px;
-        margin-right : 0;
-    }
-
-    .theme-card--mobile.theme-card--subscribed .theme-card__subscribe-button {
-        background-color : rgba(255, 255, 255, .2);
-        justify-content  : center;
-    }
-
-    .theme-card--mobile.theme-card--subscribed .theme-card__subscribe-button .material-icons-round {
-        font-size: 24px;
+        .profile-avatar-modal__input {
+            padding-right: 12px;
+        }
     }
 }

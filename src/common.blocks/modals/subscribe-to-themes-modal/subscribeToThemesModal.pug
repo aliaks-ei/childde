@@ -1,27 +1,4 @@
-mixin themeCard({ name = '', bgImage = '', bgColor = '' })
-    .theme-card-wrapper
-        .theme-card-container
-            .theme-card
-                h2.theme-card__title= name
-                .theme-card__cover
-                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
-                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="javascript:void(0)")
-                button.theme-card__subscribe-button(type="button")
-                    span.material-icons-round add_circle
-                    | Abonnieren
-                    span.theme-card__subscribe-button__amount 43 543
-            .theme-card.theme-card--mobile
-                .theme-card__content
-                    h2.theme-card__title= name
-                    .theme-card__subscriptions Abonnieren
-                        span.theme-card__subscribe-button__amount 43 543
-                .theme-card__cover
-                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
-                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="javascript:void(0)")
-                button.theme-card__subscribe-button(type="button")
-                    span.material-icons-round add_circle
+include ../../theme-card/themeCard
 
 .base-modal-wrapper#subscribeToThemesModal(style="display: none")
     .base-modal.themes-subscribe-modal
@@ -37,7 +14,7 @@ mixin themeCard({ name = '', bgImage = '', bgColor = '' })
         .themes-subscribe-modal__search-wrapper
             .profile-avatar-modal__input-wrapper
                 input.profile-avatar-modal__input(type="text", placeholder="Search for themes")
-        .themes-subscribe-modal__themes-wrapper
+        .themes-container
             +themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
             +themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
             +themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})

@@ -2,6 +2,7 @@ extends ../layouts/pageLayout
 
 include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/progress-linear/progressLinear
+include ../common.blocks/theme-card/themeCard
 
 block title
 	title Themes
@@ -13,13 +14,22 @@ block body
 		.search-bar-container#searchBar
 			include ../common.blocks/search-bar/searchBar
 		.space-vertical--80
-		main.main--with-bottom-border
+		main
 			.three-column-layout
 				.container-1024
 					.three-column-layout__left
 						include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
 					.three-column-layout__center
 						h1 Was interessiert Sie?
+						.themes-container
+							+themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761', large: true})
+							+themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b', large: true})
+							+themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4', large: true})
+							+themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b', large: true})
+							+themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465', large: true})
+							+themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7', large: true})
+							+themeCard({ name: 'Family', bgImage: 'family-theme', bgColor: '#65adeb', large: true})
+							+themeCard({ name: 'Internet', bgImage: 'internet-theme', bgColor: '#f7ae3b', large: true})
 					.three-column-layout__right
 						include ../common.blocks/we-are-read/weAreRead	
 			.space-vertical--80
