@@ -75,16 +75,12 @@
     height: 100%;
 }
 
-.question-header__image-wrapper {
-    z-index: -1;
-}
-
 .question-image__overlay {
     border-radius       : 10px 10px 0 0;
     background-size     : cover;
     background-position : center;
     background-repeat   : no-repeat;
-    opacity             : .3;
+    opacity             : .2;
 }
 
 .question-image__bg-color {
@@ -106,8 +102,9 @@
 }
 
 .question-header__info {
-    height  : 100%;
-    padding : 32px var(--card-horizontal-padding) 22px;
+    position : relative;
+    height   : 100%;
+    padding  : 32px var(--card-horizontal-padding) 22px;
 }
 
 .question-info__user {
