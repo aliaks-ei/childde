@@ -101,6 +101,10 @@
     bottom   : 0;
 }
 
+.question-header__link {
+    z-index: 1;
+}
+
 .question-header__info {
     position : relative;
     height   : 100%;

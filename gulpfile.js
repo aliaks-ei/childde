@@ -12,6 +12,7 @@ const minify           = require('gulp-minify');
 const rename           = require('gulp-rename');
 const addsrc           = require('gulp-add-src');
 const sass             = require('gulp-sass');
+const mjml             = require('gulp-mjml');
 const autoprefixer     = require('autoprefixer');
 const del              = require('del');
 const postcssPresetEnv = require('postcss-preset-env');
@@ -29,7 +30,8 @@ const paths = {
 	js     : 'src/common.blocks/**/*.js',
 	html   : 'src/pages/*.pug',
 	images : 'src/assets/images/*',
-	icons  : 'src/assets/icons/*.svg'
+	icons  : 'src/assets/icons/*.svg',
+	email  : 'src/pages/mailers/*.html'
 };
 
 function cleanBuild() {
@@ -94,6 +96,16 @@ function images(cb) {
     cb();
 }
 
+function mailers(cb) {
+	src(paths.email)
+		.pipe(plumber())
+		.pipe(mjml())
+		.pipe(dest('build/mailers'))
+		.pipe(livereload());
+
+	cb();
+}
+
 function watchChanges() {
 	livereload.listen();
 
@@ -102,6 +114,7 @@ function watchChanges() {
 	watch([ 'src/common.blocks/**/*.js' ], { ignoreInitial: false }, js);
 	watch(paths.images, { ignoreInitial: false }, images);
 	watch(paths.icons, { ignoreInitial: false }, svgSprites);
+	watch(paths.email, { ignoreInitial: true }, mailers);
 }
 
 livereload({ start: true });
