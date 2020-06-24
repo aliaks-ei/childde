@@ -16,8 +16,7 @@ const mjml             = require('gulp-mjml');
 const autoprefixer     = require('autoprefixer');
 const del              = require('del');
 const postcssPresetEnv = require('postcss-preset-env');
-
-sass.compiler = require('node-sass');
+const mjmlEngine       = require('mjml');
 
 const paths = {
 	css: [
@@ -26,16 +25,18 @@ const paths = {
 		'src/common.blocks/**/*.scss', 
 		'!src/common.blocks/**/m.*.scss' 
 	],
-	mCss   : [ 'src/assets/styles/m.global.scss', 'src/common.blocks/**/m.*.scss' ],
-	js     : 'src/common.blocks/**/*.js',
-	html   : 'src/pages/*.pug',
-	images : 'src/assets/images/*',
-	icons  : 'src/assets/icons/*.svg',
-	email  : 'src/pages/mailers/*.html'
+	mCss    : [ 'src/assets/styles/m.global.scss', 'src/common.blocks/**/m.*.scss' ],
+	js      : 'src/common.blocks/**/*.js',
+	html    : 'src/pages/*.pug',
+	images  : 'src/assets/images/*',
+	icons   : 'src/assets/icons/*.svg',
+	mailers : 'src/pages/mailers/*.pug'
 };
 
+sass.compiler = require('node-sass');
+
 function cleanBuild() {
-	return del(['build/**/*']);
+	return del('build/**/*');
 }
 
 function svgSprites() {
@@ -97,11 +98,17 @@ function images(cb) {
 }
 
 function mailers(cb) {
-	src(paths.email)
+	src(paths.mailers)
 		.pipe(plumber())
-		.pipe(mjml())
+		.pipe(pug())
+		.pipe(rename({ extname: '.mjml' }))
 		.pipe(dest('build/mailers'))
-		.pipe(livereload());
+		.pipe(mjml(mjmlEngine, { beautify: true }))
+		.pipe(dest('build/mailers'))
+		.pipe(livereload())
+		.on('end', function () {
+			del('build/mailers/*.mjml');
+		});
 
 	cb();
 }
@@ -111,10 +118,10 @@ function watchChanges() {
 
 	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
 	watch([ 'src/assets/styles/*.scss', 'src/common.blocks/**/*.scss' ], { ignoreInitial: false }, css);
-	watch([ 'src/common.blocks/**/*.js' ], { ignoreInitial: false }, js);
+	watch(paths.js, { ignoreInitial: false }, js);
 	watch(paths.images, { ignoreInitial: false }, images);
 	watch(paths.icons, { ignoreInitial: false }, svgSprites);
-	watch(paths.email, { ignoreInitial: true }, mailers);
+	watch(paths.mailers, { ignoreInitial: false }, mailers);
 }
 
 livereload({ start: true });
