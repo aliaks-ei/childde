@@ -4,6 +4,6 @@ mixin themeTab({ name = '', isActive = false, href })
 
 section.profile-tabs-wrapper
     ul.profile-tabs
-        +themeTab({ name: 'Top beiträge', href: 'profileQuestionsTab', isActive: true })
-        +themeTab({ name: 'Ohne antwort', href: 'profileAnswersTab' })
-        +themeTab({ name: 'Alle beiträge', href: 'profileSubscriptionsTab' })
+        +themeTab({ name: 'Top beiträge', href: 'topThemeQuestionsTab', isActive: true })
+        +themeTab({ name: 'Ohne antwort', href: 'openThemeQuestionsTab' })
+        +themeTab({ name: 'Alle beiträge', href: 'allThemeQuestionsTab' })

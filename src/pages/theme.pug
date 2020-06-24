@@ -23,7 +23,7 @@ block body
 						include ../common.blocks/themes/theme-header/themeHeader
 						include ../common.blocks/themes/theme-tabs/themeTabs
 						section
-							.profile-questions-tab#profileQuestionsTab
+							#topThemeQuestionsTab
 								+questionCard({ 
 									overlay : 'var(--orange-color)',
 									bgImage : 'question-2-image.png',
@@ -36,7 +36,7 @@ block body
 									avatar  : 'question-3-avatar.png',
 									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 								})
-							.profile-answers-tab#profileAnswersTab(style="display: none")
+							#openThemeQuestionsTab(style="display: none")
 								+questionCard({ 
 									overlay : 'var(--green-color)',
 									bgImage : 'question-3-image.png',
@@ -49,7 +49,7 @@ block body
 									avatar  : 'question-4-avatar.png',
 									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 								})
-							.profile-answers-tab#profileSubscriptionsTab(style="display: none")
+							#allThemeQuestionsTab(style="display: none")
 								+questionCard({ 
 									overlay   : 'var(--red-color)',
 									bgImage   : 'question-1-image.png',
