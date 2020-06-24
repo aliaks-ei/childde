@@ -101,14 +101,13 @@
     bottom   : 0;
 }
 
-.question-header__link {
-    z-index: 1;
+.question-header__image-wrapper {
+    z-index: -1;
 }
 
 .question-header__info {
-    position : relative;
-    height   : 100%;
-    padding  : 32px var(--card-horizontal-padding) 22px;
+    height  : 100%;
+    padding : 32px var(--card-horizontal-padding) 22px;
 }
 
 .question-info__user {

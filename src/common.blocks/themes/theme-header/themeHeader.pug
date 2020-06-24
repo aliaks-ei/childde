@@ -1,0 +1,19 @@
+include ../../buttons/base-button/baseButton
+
+section.profile-header-wrapper
+    .profile-header
+        .profile-header__cover.profile-header__cover--fixed-height
+            .profile-header__cover__bg-color(style="background-color: #8cc761")
+            .profile-header__cover__bg-image(style="background-image: url('./assets/images/history-theme.png')")
+        .profile-header__info
+            span.profile-header__info__username History
+            
+            .profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
+                +baseButton({ text: 'Beitrag zum Thema schreiben' })(class="profile-action-btns__update-profile", data-target="qModal")
+
+                +baseButton({ 
+                    text    : 'Abonnieren',
+                    meta    : '43,5K',
+                    bgColor : 'var(--background-color-gray)',
+                    color   : 'var(--black-color-2)'
+                })(class="profile-action-btns__themes-subscribe")

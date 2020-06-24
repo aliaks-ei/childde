@@ -12,6 +12,11 @@
         padding-top   : 40%;
         border-radius : 0;
         margin-bottom : 0;
+
+        &--fixed-height {
+            padding-top : 0;
+            height      : 140px;
+        }
     }
 
     .profile-header__avatar {
@@ -54,13 +59,17 @@
         }
     }
 
+    .profile-header__info__registry-date {
+        margin-bottom: 12px;
+    }
+
     .profile-action-btns--scroll-x {
         overflow-x  : auto;
         white-space : nowrap;
         transform   : translateZ(0);
         font-size   : 0;
         line-height : 0;
-        margin      : 0 -20px;
+        margin      : 12px -20px 0;
 
         &::-webkit-scrollbar {
             display: none;

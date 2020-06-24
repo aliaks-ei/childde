@@ -1,0 +1,9 @@
+mixin themeTab({ name = '', isActive = false, href })
+    li.profile-tabs__tab
+        a.profile-tabs__link(href=`#${ href }`, class = isActive ? 'profile-tabs__link--active' : '')= name
+
+section.profile-tabs-wrapper
+    ul.profile-tabs
+        +themeTab({ name: 'Top beiträge', href: 'profileQuestionsTab', isActive: true })
+        +themeTab({ name: 'Ohne antwort', href: 'profileAnswersTab' })
+        +themeTab({ name: 'Alle beiträge', href: 'profileSubscriptionsTab' })

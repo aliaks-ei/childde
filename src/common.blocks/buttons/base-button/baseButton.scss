@@ -38,8 +38,14 @@
 		}
 	}
 
-	.base-btn__content {
+	.base-btn__content,
+	.base-btn__meta {
 		position: relative;
+	}
+
+	.base-btn__meta {
+		margin-left : 8px;
+		color       : var(--text-gray-3);
 	}
 }
 

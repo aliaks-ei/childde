@@ -2,10 +2,10 @@ extends ../layouts/pageLayout
 
 include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/progress-linear/progressLinear
-include ../common.blocks/profile/profile-header/profileHeader
+include ../common.blocks/question-card/questionCard
 
 block title
-	title Profile
+	title Theme
 
 block body
 	body
@@ -20,15 +20,51 @@ block body
 					.three-column-layout__left
 						include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
 					.three-column-layout__center
-						+profileHeader({ name: 'Devid Brown' })
-						include ../common.blocks/profile/profile-tabs/profileTabs
+						include ../common.blocks/themes/theme-header/themeHeader
+						include ../common.blocks/themes/theme-tabs/themeTabs
 						section
-							include ../common.blocks/profile/profile-tabs/profileQuestionsTab
-							include ../common.blocks/profile/profile-tabs/profileAnswersTab
-							include ../common.blocks/profile/profile-tabs/profileSubscriptionsTab
+							.profile-questions-tab#profileQuestionsTab
+								+questionCard({ 
+									overlay : 'var(--orange-color)',
+									bgImage : 'question-2-image.png',
+									avatar  : 'question-2-avatar.png',
+									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
+								+questionCard({ 
+									overlay : 'var(--green-color)',
+									bgImage : 'question-3-image.png',
+									avatar  : 'question-3-avatar.png',
+									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
+							.profile-answers-tab#profileAnswersTab(style="display: none")
+								+questionCard({ 
+									overlay : 'var(--green-color)',
+									bgImage : 'question-3-image.png',
+									avatar  : 'question-3-avatar.png',
+									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
+								+questionCard({ 
+									overlay : 'var(--purple-color)',
+									bgImage : 'question-4-image.png',
+									avatar  : 'question-4-avatar.png',
+									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
+							.profile-answers-tab#profileSubscriptionsTab(style="display: none")
+								+questionCard({ 
+									overlay   : 'var(--red-color)',
+									bgImage   : 'question-1-image.png',
+									avatar    : 'question-1-avatar.png',
+									withLabel : true,
+									title     : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
+								+questionCard({ 
+									overlay : 'var(--orange-color)',
+									bgImage : 'question-2-image.png',
+									avatar  : 'question-2-avatar.png',
+									title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
+								})
 					.three-column-layout__right
-						include ../common.blocks/themes/themes-rating/themesRating
-								
+						include ../common.blocks/comments/comments
 			.space-vertical--80
 		include ../common.blocks/footer/base/baseFooter
 		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
@@ -46,16 +82,12 @@ block body
 						include ../common.blocks/bottom-sheets/themes-select/themesSelect
 						include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
 						include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
-						include ../common.blocks/bottom-sheets/other-profile-menu/otherProfileMenu
 			.bs-overlay.bs-overlay--hidden
 			#qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
 				include ../common.blocks/question-card-dropdowns/qcTopDropdown
 			#qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
 				include ../common.blocks/question-card-dropdowns/qcBottomDropdown
 			include ../common.blocks/modals/ask-question-modal/askQuestionModal
-			include ../common.blocks/modals/profile-avatar-modal/profileAvatarModal
-			include ../common.blocks/modals/profile-information-modal/profileInformationModal
-			include ../common.blocks/modals/subscribe-to-themes-modal/subscribeToThemesModal
 
 		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
 		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
