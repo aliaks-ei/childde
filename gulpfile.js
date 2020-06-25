@@ -1,4 +1,4 @@
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 
 const babel            = require('gulp-babel');
 const pug              = require('gulp-pug');
@@ -39,10 +39,13 @@ function cleanBuild() {
 	return del('build/**/*');
 }
 
-function svgSprites() {
+function svgSprites(cb) {
 	src(paths.icons)
 		.pipe(svgSymbols())
 		.pipe(dest('build/assets/icons'))
+		.pipe(livereload());
+	
+	cb();
 }
 
 function html(cb) {
@@ -114,7 +117,7 @@ function mailers(cb) {
 }
 
 function watchChanges() {
-	livereload.listen();
+	livereload({ start: true });
 
 	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
 	watch([ 'src/assets/styles/*.scss', 'src/common.blocks/**/*.scss' ], { ignoreInitial: false }, css);
@@ -122,8 +125,9 @@ function watchChanges() {
 	watch(paths.images, { ignoreInitial: false }, images);
 	watch(paths.icons, { ignoreInitial: false }, svgSprites);
 	watch(paths.mailers, { ignoreInitial: false }, mailers);
+
+	livereload.listen();
 }
 
-livereload({ start: true });
-
-exports.default = series(cleanBuild, watchChanges);
+exports.serve = series(cleanBuild, watchChanges);
+exports.build = series(cleanBuild, parallel(html, css, js, images, svgSprites, mailers));

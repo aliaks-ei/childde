@@ -7,7 +7,8 @@ mixin baseButton({ text, meta, withArrow, bgColor = 'var(--red-color)', color = 
             span.base-btn__icon.base-btn__icon--left.material-icons-round(style=`color: ${ color }`) 
                 | keyboard_arrow_right
         span.base-btn__content #{ text }
-        span.base-btn__meta= meta
+        if meta
+            span.base-btn__meta= meta
         if withArrow
             span.base-btn__icon.base-btn__icon--right.material-icons-round(style=`color: ${ color }`) 
                 | keyboard_arrow_right
