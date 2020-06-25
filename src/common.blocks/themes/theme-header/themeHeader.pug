@@ -9,7 +9,8 @@ section.profile-header-wrapper
             span.profile-header__info__username History
             
             .profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
-                +baseButton({ text: 'Beitrag zum Thema schreiben' })(class="profile-action-btns__update-profile", data-target="qModal")
+                +baseButton({ text: 'Beitrag zum Thema schreiben' })(class="profile-action-btns__update-profile", data-target="qModal", data-mobile-hidden)
+                +baseButton({ text: 'Beitrag schreiben' })(class="profile-action-btns__update-profile", data-target="qModal", data-desktop-hidden)
 
                 +baseButton({ 
                     text    : 'Abonnieren',

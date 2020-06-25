@@ -16,6 +16,6 @@ yarn-error.log*
 *.sln
 *.sw?
 
-#Cypress
+# Cypress
 tests/e2e/screenshots
 tests/e2e/videos

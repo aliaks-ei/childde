@@ -6,7 +6,7 @@ function showModal(element) {
     document.body.style.paddingRight = `${ window.innerWidth - document.documentElement.clientWidth }px`;
     document.body.classList.add('app-no-scroll');
 
-    element.insertAdjacentHTML('afterend', '<div class="modal-overlay" style="display: block"></div>');
+    element.insertAdjacentHTML('afterend', '<div class="modal-overlay"></div>');
 }
 
 function hideModal(element) {
