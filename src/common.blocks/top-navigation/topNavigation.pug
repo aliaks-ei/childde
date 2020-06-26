@@ -29,7 +29,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 					.top-navigation-right-block__item
 						+svgIcon('notification')(class="top-navigation-right-block__notification-icon")
 					a.top-navigation-right-block__item#userImage
-						img.top-navigation-right-block__user-image(src="./assets/images/avatar.png")
+						img.top-navigation-right-block__user-image(src="./assets/images/avatar.png", alt="")
 					include ../account-widget/accountWidget
 				else
 					a.top-navigation__link(href="/") Startseite

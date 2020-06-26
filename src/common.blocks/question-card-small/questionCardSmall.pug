@@ -7,6 +7,7 @@ mixin questionCardSmall({ bgColor = transparent, image, interests = 0, title, th
 			.question-card-small__image-wrapper(style=`background-color: ${ bgColor }`)
 				img.question-card-small__image(
 					src   = `./assets/images/${ image }.png`,
+					alt   = ""
 					class = ['blue_personage', 'green_personage'].includes(image) ? 'question-card-small__image--large' : ''
 				)
 			.question-card-small__content

@@ -5,7 +5,7 @@ mixin answerCommentCard({ author, avatar, text, level })
                 .question-info__user.question-user
                     .question-user__link-wrapper
                         a.question-card__overlapping-link(href="/profile")
-                        img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`)
+                        img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`, alt=author)
                         span.question-user__name= author
                     span.question-user__date yesterday at 12:20
                 .question-reviews__likes

@@ -1,7 +1,7 @@
 mixin swiperCard({ title, content, imageUrl, buttonText })
 	a.swiper-card.swiper-slide(href="javascript:void(0)", class=imageUrl ? 'swiper-card--with-image' : '')
 		if imageUrl
-			img.swiper-card__image(src=imageUrl)
+			img.swiper-card__image(src=imageUrl, alt="")
 		.swiper-card__container
 			h5= title
 			.swiper-card__content= content

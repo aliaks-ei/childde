@@ -1,6 +1,6 @@
 mixin company(logo, title, number)
 	.best-companies__company
-		img.best-companies__company__logo(src=`./assets/images/${ logo }`)
+		img.best-companies__company__logo(src=`./assets/images/${ logo }`, alt=title)
 		.best-companies__company__title= title
 		.best-companies__company__number= number
 

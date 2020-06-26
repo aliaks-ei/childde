@@ -3,7 +3,7 @@ mixin subscriber({ name = '', avatar = '', isSubscribed = false })
         .subscriber
             a.subscriber__overlapping-link(href="/profile")
             .subcriber__avatar
-                img.subscriber__avatar__img(src=`./assets/images/${ avatar }.png`)
+                img.subscriber__avatar__img(src=`./assets/images/${ avatar }.png`, alt=name)
             .subscriber__info
                 .subscriber__info__name= name
                 .subscriber__info__subtitle Expert of child science

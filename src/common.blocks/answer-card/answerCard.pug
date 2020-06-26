@@ -9,7 +9,7 @@ mixin answerCard({ avatar, nickname, isBrief = true, isSubscribed = false })
             .question-info__user.question-user
                 div.question-user__link-wrapper
                     a.question-card__overlapping-link(href="/profile")
-                    img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`)
+                    img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`, alt=nickname)
                     span.question-user__name= nickname
                 span.question-user__date yesterday at 12:20
             button.answer-card__subscribe-btn(class = isSubscribed ? 'answer-card__subscribe-btn--active' : '')
