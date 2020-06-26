@@ -31,6 +31,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 					a.top-navigation-right-block__item#userImage
 						img.top-navigation-right-block__user-image(src="./assets/images/avatar.png", alt="")
 					include ../account-widget/accountWidget
+					include ../tooltip/baseTooltip
 				else
 					a.top-navigation__link(href="/") Startseite
 					a.top-navigation__link.top-navigation__link--highlighted#signInLink(href="/login") Anmelden
