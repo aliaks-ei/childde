@@ -93,7 +93,8 @@
 }
 
 .question-header__link,
-.question-header__image-wrapper {
+.question-header__image-wrapper,
+.question-image__blackout {
     position : absolute;
     top      : 0;
     left     : 0;
@@ -103,6 +104,11 @@
 
 .question-header__image-wrapper {
     z-index: -1;
+}
+
+.question-image__blackout {
+    background-image : linear-gradient(to bottom, transparent, #373737);
+    opacity          : .6;
 }
 
 .question-header__info {

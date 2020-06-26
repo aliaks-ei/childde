@@ -9,7 +9,9 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
             .question-card__header.question-header
                 .question-header__image-wrapper.question-image
                     .question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
-                    .question-image__overlay(style=`${ bgImage ? `background-image: url("./assets/images/${ bgImage }")` : '' }`)
+                    if bgImage
+                        .question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
+                        .question-image__blackout
                 a.question-header__link(href="/question")
                 .question-header__info.question-info 
                     .question-info__user.question-user
