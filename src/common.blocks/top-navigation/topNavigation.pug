@@ -7,7 +7,7 @@ mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = fa
 		class = isUserAuthorized ? '' : 'top-navigation--auth',
 	)&attributes(attributes)
 		.top-navigation__container.container-1024
-			a.top-navigation__logo(href="/")
+			a.top-navigation__logo(href="/", aria-label="Site logo")
 				+svgIcon('logo')
 
 			include ../search-bar/searchBar

@@ -8,7 +8,7 @@ mixin answerCard({ avatar, nickname, isBrief = true, isSubscribed = false })
         .answer-card__header
             .question-info__user.question-user
                 div.question-user__link-wrapper
-                    a.question-card__overlapping-link(href="/profile")
+                    a.question-card__overlapping-link(href="/profile", aria-label=nickname)
                     img.question-card__user-avatar(src=`./assets/images/${ avatar }.png`, alt=nickname)
                     span.question-user__name= nickname
                 span.question-user__date yesterday at 12:20

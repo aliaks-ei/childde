@@ -14,13 +14,13 @@ mixin questionCardWithVote({ overlay, bgImage, avatar, withLabel, title, subtitl
                 .question-header__info.question-info 
                     .question-info__user.question-user
                         div.question-user__link-wrapper
-                            a.question-card__overlapping-link(href="/profile")
-                            img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="")
+                            a.question-card__overlapping-link(href="/profile", aria-label="Philip Djones")
+                            img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="Philip Djones")
                             span.question-user__name Philip Djones
                         span.question-user__date yesterday at 12:20
                         if withLabel
                             .question-user__label 
-                                a.question-card__overlapping-link(href="/profile")
+                                a.question-card__overlapping-link(href="/profile", aria-label="Label Kinderfrage")
                                 img.question-user__label__icon(src="toy.svg", alt="")
                                 span Kinderfrage
                     h3.question-info__title !{ title }

@@ -27,32 +27,36 @@
 }
 
 .search-bar__icon {
-	position    : absolute;
-	top         : 50%;
-	transform   : translateY(-50%);
-	display     : flex;
-	align-items : center;
-	right       : 18px;
+	position         : absolute;
+	top              : 50%;
+	transform        : translateY(-50%);
+	display          : flex;
+	align-items      : center;
+	justify-content  : center;
+	right            : 18px;
+	background-color : transparent;
+	border           : 0;
+	padding          : 0;
+	cursor           : pointer;
+	user-select      : none;
+
+	
 
 	&--search {
-		background-color : transparent;
-		border           : 0;
-		padding          : 0;
-		top              : 0;
-		bottom           : 0;
-		right            : 12px;
-		display          : flex;
-		align-items      : center;
-		justify-content  : center;
-		transform        : none;
-		width            : 30px;
-		height           : 50px;
-		cursor           : pointer;
-		user-select      : none;
+		top       : 0;
+		bottom    : 0;
+		right     : 12px;
+		width     : 30px;
+		height    : 50px;
+		transform : none;
 	}
 
 	&:not(.search-bar__icon--search) {
 		display: none;
+
+		&:active {
+			transform: translateY(-50%) scale(.96);
+		}
 	}
 }
 
