@@ -1,3 +1,8 @@
 .bottom-sheet__other-profile-menu#bsOtherProfileMenu(style="display: none")
-    include ../../profile/other-profile-menu/otherProfileMenu
+    .base-dropdown.other-profile-menu
+        .question-dropdown-wrapper
+            a.question-dropdown__item
+                .question-dropdown__item__icon
+                    +svgIcon('warning')
+                span Melden pro user
     button.qc-menu__button(data-target="closeBottomSheet") Close
