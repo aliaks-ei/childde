@@ -1,4 +1,4 @@
-const signInLink             = document.getElementById('signInLink');
+const signInLink             = document.querySelector('.top-navigation__link--highlighted');
 const hamburgerMenu          = document.getElementById('hamburgerMenu');
 const hamburgerMenuActivator = document.querySelector('[data-target="hamburgerMenu"]');
 
