@@ -6,7 +6,7 @@ mixin themeCard({ name = '', bgImage = '', bgColor = '', large = false })
                 .theme-card__cover
                     .theme-card__bg-color(style=`background-color: ${ bgColor }`)
                     .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="/theme")
+                a.theme-card__link(href="/theme", aria-label=name)
                 button.theme-card__subscribe-button(type="button")
                     span.material-icons-round add_circle
                     | Abonnieren
@@ -19,6 +19,6 @@ mixin themeCard({ name = '', bgImage = '', bgColor = '', large = false })
                 .theme-card__cover
                     .theme-card__bg-color(style=`background-color: ${ bgColor }`)
                     .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="/theme")
+                a.theme-card__link(href="/theme", aria-label=name)
                 button.theme-card__subscribe-button(type="button")
                     span.material-icons-round add_circle
