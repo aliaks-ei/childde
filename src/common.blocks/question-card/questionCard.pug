@@ -12,7 +12,7 @@ mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
                     if bgImage
                         .question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
                         .question-image__blackout
-                a.question-header__link(href="/question", aria-label="title")
+                a.question-header__link(href="/question", aria-label=title)
                 .question-header__info.question-info 
                     .question-info__user.question-user
                         div.question-user__link-wrapper

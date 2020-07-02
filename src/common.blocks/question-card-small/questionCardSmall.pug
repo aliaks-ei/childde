@@ -3,7 +3,7 @@ include ../themes/theme-chips/themeChips
 mixin questionCardSmall({ bgColor = transparent, image, interests = 0, title, themes = [] })
 	.question-card-wrapper.question-card-wrapper--small
 		.question-card-small
-			a.question-card-small__link(href="javascript:void(0)")
+			a.question-card-small__link(href="javascript:void(0)", aria-label=title)
 			.question-card-small__image-wrapper(style=`background-color: ${ bgColor }`)
 				img.question-card-small__image(
 					src   = `./assets/images/${ image }.png`,
