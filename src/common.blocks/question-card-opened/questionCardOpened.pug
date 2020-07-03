@@ -3,14 +3,14 @@ include ../themes/theme-chips/themeChips
 
 mixin mobileActionButton({ title, icon, count, isMaterial = false, isActive = false })
     button.q-mob-action-button(class = isActive ? 'q-mob-action-button--active' : '')&attributes(attributes)
-        .q-mob-action-button__circle
+        span.q-mob-action-button__circle
             if isMaterial
                 span.material-icons-round= icon
             else
                 +svgIcon(icon)
             if count
-                .q-mob-action-button__count= count
-        .q-mob-action-button__title= title
+                span.q-mob-action-button__count= count
+        span.q-mob-action-button__title= title
 
 mixin questionCardOpened({ overlay, bgImage, avatar, withLabel, title })
     - let isDefaultQuestion = !(overlay && bgImage);
