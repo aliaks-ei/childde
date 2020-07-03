@@ -10,14 +10,14 @@ include ../svg-icon/svgIcon
 			+svgIcon("paintbrush")
 		span Bearbeiten
 	label.question-dropdown__item.question-dropdown__item--with-toggle(data-target="qNotificationsToggler")
-		.question-dropdown__item__toggle-wrapper
-			div
-				.question-dropdown__item__icon
+		span.question-dropdown__item__toggle-wrapper
+			span
+				span.question-dropdown__item__icon
 					+svgIcon("bell-crossed")
 					+svgIcon("bell")
 				span Mitteilungen
-			.question-dropdown__item__toggle.item-toggle
+			span.question-dropdown__item__toggle.item-toggle
 				input(type='checkbox')
 				span.item-toggle__slider
-		.question-dropdown__item__hint
+		span.question-dropdown__item__hint
 			| (Sie erhalten Mitteilungen &uuml;ber neue Antworten und Kommentare)
