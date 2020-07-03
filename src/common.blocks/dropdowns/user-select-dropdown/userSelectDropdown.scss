@@ -23,8 +23,13 @@
     z-index       : 1100;
 }
 
-.user-select__avatar img {
-    width: 40px;
+.user-select__avatar {
+    display     : flex;
+    align-items : center;
+
+    img {
+        width: 40px;
+    }
 }
 
 .select-dropdown {
