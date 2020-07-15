@@ -1,10 +1,10 @@
-name: Test
+name: EditorConfig
 
 on:
-	pull_request:
-	push:
-		branches:
-			- master
+  pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   lint:
