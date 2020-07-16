@@ -1,38 +1,38 @@
 include ../../in-column-links/inColumnLinks
 
 footer.footer-wrapper-auth
-    .footer-auth
-        .footer-auth__top-block.container-1024
-            .footer__downloads
-                a.footer-auth__logo-wrapper(href="/", aria-label="Site logo")
-                    +svgIcon('logo')
-                +baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
-                .footer-auth__social-icons
-                    a.footer-auth__social-icons__item(href="https://www.linkedin.com/", target="_blank", rel="noopener", aria-label="Child.de LinkedIn account")
-                        svg(xmlns='http://www.w3.org/2000/svg' width='14.63' height='14.63' viewbox='0 0 14.63 14.63')
-                            path(d='M4.251,2.626A1.535,1.535,0,0,1,2.626,4.251,1.563,1.563,0,0,1,1,2.707,1.648,1.648,0,0,1,2.626,1,1.58,1.58,0,0,1,4.251,2.626ZM1,15.63H4.251V5.064H1Zm11.054-10.4A3.56,3.56,0,0,0,8.965,6.852H8.884L8.721,5.47H5.8c0,.894.081,1.951.081,3.17v6.99H9.128V9.859a2.506,2.506,0,0,1,.081-.813,1.748,1.748,0,0,1,1.544-1.3c1.138,0,1.626.975,1.626,2.276V15.63H15.63V9.615C15.63,6.608,14.086,5.226,12.054,5.226Z' transform='translate(-1 -1)')
-                    a.footer-auth__social-icons__item(href="https://www.twitter.com/", target="_blank", rel="noopener", aria-label="Child.de Twitter account")
-                        svg(xmlns='http://www.w3.org/2000/svg' width='14.636' height='11.897' viewbox='0 0 14.636 11.897')
-                            path(d='M18.771,9.362c.006.13.008.26.008.388a8.538,8.538,0,0,1-13.146,7.2,5.906,5.906,0,0,0,.716.04A6.015,6.015,0,0,0,10.079,15.7a3.009,3.009,0,0,1-2.8-2.084,3.128,3.128,0,0,0,.564.052,3.017,3.017,0,0,0,.791-.1A3.006,3.006,0,0,1,6.219,10.62v-.037a3.012,3.012,0,0,0,1.361.376,3.01,3.01,0,0,1-.929-4.012,8.539,8.539,0,0,0,6.189,3.14,2.96,2.96,0,0,1-.078-.686,3,3,0,0,1,5.2-2.054,6.031,6.031,0,0,0,1.906-.729,3.017,3.017,0,0,1-1.32,1.663,6.033,6.033,0,0,0,1.725-.475A6.089,6.089,0,0,1,18.771,9.362Z' transform='translate(-5.633 -6.398)')
-                    a.footer-auth__social-icons__item(href="https://www.facebook.com/", target="_blank", rel="noopener", aria-label="Child.de Facebook account")
-                        svg(xmlns='http://www.w3.org/2000/svg' width='6.788' height='12.216' viewbox='0 0 6.788 12.216')
-                            path(d='M14.009,7.577H12.07c-.23,0-.485.3-.485.7v1.4H14.01l-.367,2H11.585v5.993H9.3V11.677H7.222v-2H9.3V8.506A2.878,2.878,0,0,1,12.07,5.453h1.938Z' transform='translate(-7.222 -5.453)')
-                    a.footer-auth__social-icons__item(href="https://www.gmail.com/", target="_blank", rel="noopener", aria-label="Child.de Gmail account")
-                        svg(xmlns='http://www.w3.org/2000/svg' width='16.407' height='13.125' viewbox='0 0 16.407 13.125')
-                            path(d='M14.766,51H1.641A1.645,1.645,0,0,0,0,52.641v9.844a1.645,1.645,0,0,0,1.641,1.641H14.766a1.645,1.645,0,0,0,1.641-1.641V52.641A1.645,1.645,0,0,0,14.766,51Zm0,11.485H13.125V55.266L8.2,58.383,3.281,55.266v7.219H1.641V52.641h.984L8.2,56.086l5.578-3.445h.984Z' transform='translate(0 -51)')
-                    a.footer-auth__social-icons__item(href="https://www.google.com/", target="_blank", rel="noopener", aria-label="Child.de Google account")
-                        svg(xmlns='http://www.w3.org/2000/svg' width='14.269' height='14.271' viewbox='0 0 14.269 14.271')
-                            path(d='M7.826,91.127h3.485a4.43,4.43,0,1,1-1.2-4.75.48.48,0,0,0,.653,0l1.28-1.2a.479.479,0,0,0,0-.7,7.109,7.109,0,0,0-4.764-1.954,7.136,7.136,0,1,0,6.982,7.536c.006-.047.009-1.638.009-1.638H7.826a.478.478,0,0,0-.478.478v1.752A.478.478,0,0,0,7.826,91.127Z' transform='translate(0 -82.52)')
-                include ../../buttons/store-links/storeLinks
-            .in-column-links-wrapper
-                +inColumnLinks('Menu', ['FAQ', 'Alle Themen', 'AGB', 'Datenshiltz', 'Richlinien', 'Kontakt', 'Impressum'])
-                .in-column-links-wrapper__separated-column
-                    +inColumnLinks('Ask', ['Latest questions', 'Good questions', 'Open questions', 'One more answer, please'])
-                    +inColumnLinks('Reply', ['New answers', 'Most helpful answers'])
-                +inColumnLinks('Themes', ['Automobile', 'Beauty', 'Job', 'Computer', 'Nutrition', 'Finances', 'Leisure', 'Health'])
-                +inColumnLinks('Services', ['Information', 'Rules', 'Help', 'Documentation', 'Agreement'])
-        .footer-auth__bottom-block-wrapper
-            .footer-auth__bottom-block.container-1024
-                .footer__copyright 
-                    span 2013-2020 — child.de. 
-                    span All rights reserved
+	.footer-auth
+		.footer-auth__top-block.container-1024
+			.footer__downloads
+				a.footer-auth__logo-wrapper(href="/", aria-label="Site logo")
+					+svgIcon('logo')
+				+baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
+				.footer-auth__social-icons
+					a.footer-auth__social-icons__item(href="https://www.linkedin.com/", target="_blank", rel="noopener", aria-label="Child.de LinkedIn account")
+						svg(xmlns='http://www.w3.org/2000/svg' width='14.63' height='14.63' viewbox='0 0 14.63 14.63')
+							path(d='M4.251,2.626A1.535,1.535,0,0,1,2.626,4.251,1.563,1.563,0,0,1,1,2.707,1.648,1.648,0,0,1,2.626,1,1.58,1.58,0,0,1,4.251,2.626ZM1,15.63H4.251V5.064H1Zm11.054-10.4A3.56,3.56,0,0,0,8.965,6.852H8.884L8.721,5.47H5.8c0,.894.081,1.951.081,3.17v6.99H9.128V9.859a2.506,2.506,0,0,1,.081-.813,1.748,1.748,0,0,1,1.544-1.3c1.138,0,1.626.975,1.626,2.276V15.63H15.63V9.615C15.63,6.608,14.086,5.226,12.054,5.226Z' transform='translate(-1 -1)')
+					a.footer-auth__social-icons__item(href="https://www.twitter.com/", target="_blank", rel="noopener", aria-label="Child.de Twitter account")
+						svg(xmlns='http://www.w3.org/2000/svg' width='14.636' height='11.897' viewbox='0 0 14.636 11.897')
+							path(d='M18.771,9.362c.006.13.008.26.008.388a8.538,8.538,0,0,1-13.146,7.2,5.906,5.906,0,0,0,.716.04A6.015,6.015,0,0,0,10.079,15.7a3.009,3.009,0,0,1-2.8-2.084,3.128,3.128,0,0,0,.564.052,3.017,3.017,0,0,0,.791-.1A3.006,3.006,0,0,1,6.219,10.62v-.037a3.012,3.012,0,0,0,1.361.376,3.01,3.01,0,0,1-.929-4.012,8.539,8.539,0,0,0,6.189,3.14,2.96,2.96,0,0,1-.078-.686,3,3,0,0,1,5.2-2.054,6.031,6.031,0,0,0,1.906-.729,3.017,3.017,0,0,1-1.32,1.663,6.033,6.033,0,0,0,1.725-.475A6.089,6.089,0,0,1,18.771,9.362Z' transform='translate(-5.633 -6.398)')
+					a.footer-auth__social-icons__item(href="https://www.facebook.com/", target="_blank", rel="noopener", aria-label="Child.de Facebook account")
+						svg(xmlns='http://www.w3.org/2000/svg' width='6.788' height='12.216' viewbox='0 0 6.788 12.216')
+							path(d='M14.009,7.577H12.07c-.23,0-.485.3-.485.7v1.4H14.01l-.367,2H11.585v5.993H9.3V11.677H7.222v-2H9.3V8.506A2.878,2.878,0,0,1,12.07,5.453h1.938Z' transform='translate(-7.222 -5.453)')
+					a.footer-auth__social-icons__item(href="https://www.gmail.com/", target="_blank", rel="noopener", aria-label="Child.de Gmail account")
+						svg(xmlns='http://www.w3.org/2000/svg' width='16.407' height='13.125' viewbox='0 0 16.407 13.125')
+							path(d='M14.766,51H1.641A1.645,1.645,0,0,0,0,52.641v9.844a1.645,1.645,0,0,0,1.641,1.641H14.766a1.645,1.645,0,0,0,1.641-1.641V52.641A1.645,1.645,0,0,0,14.766,51Zm0,11.485H13.125V55.266L8.2,58.383,3.281,55.266v7.219H1.641V52.641h.984L8.2,56.086l5.578-3.445h.984Z' transform='translate(0 -51)')
+					a.footer-auth__social-icons__item(href="https://www.google.com/", target="_blank", rel="noopener", aria-label="Child.de Google account")
+						svg(xmlns='http://www.w3.org/2000/svg' width='14.269' height='14.271' viewbox='0 0 14.269 14.271')
+							path(d='M7.826,91.127h3.485a4.43,4.43,0,1,1-1.2-4.75.48.48,0,0,0,.653,0l1.28-1.2a.479.479,0,0,0,0-.7,7.109,7.109,0,0,0-4.764-1.954,7.136,7.136,0,1,0,6.982,7.536c.006-.047.009-1.638.009-1.638H7.826a.478.478,0,0,0-.478.478v1.752A.478.478,0,0,0,7.826,91.127Z' transform='translate(0 -82.52)')
+				include ../../buttons/store-links/storeLinks
+			.in-column-links-wrapper
+				+inColumnLinks('Menu', ['FAQ', 'Alle Themen', 'AGB', 'Datenshiltz', 'Richlinien', 'Kontakt', 'Impressum'])
+				.in-column-links-wrapper__separated-column
+					+inColumnLinks('Ask', ['Latest questions', 'Good questions', 'Open questions', 'One more answer, please'])
+					+inColumnLinks('Reply', ['New answers', 'Most helpful answers'])
+				+inColumnLinks('Themes', ['Automobile', 'Beauty', 'Job', 'Computer', 'Nutrition', 'Finances', 'Leisure', 'Health'])
+				+inColumnLinks('Services', ['Information', 'Rules', 'Help', 'Documentation', 'Agreement'])
+		.footer-auth__bottom-block-wrapper
+			.footer-auth__bottom-block.container-1024
+				.footer__copyright
+					span 2013-2020 — child.de.
+					span All rights reserved

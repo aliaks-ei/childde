@@ -1,87 +1,87 @@
 @media (max-width: 600px) {
-    .themes-wrapper {
-        margin-top    : 24px;
-        margin-bottom : 16px;
-    }
+	.themes-wrapper {
+		margin-top    : 24px;
+		margin-bottom : 16px;
+	}
 
-    .themes-container {
-        flex-direction : column;
-        flex-wrap      : nowrap;
-        margin         : 0;
-        padding        : 0 12px;
-    }
+	.themes-container {
+		flex-direction : column;
+		flex-wrap      : nowrap;
+		margin         : 0;
+		padding        : 0 12px;
+	}
 
-    .theme-card-wrapper {
-        width : 100%;
-        flex  : 1 1 100%;
-    }
+	.theme-card-wrapper {
+		width : 100%;
+		flex  : 1 1 100%;
+	}
 
-    .theme-card-container {
-        padding: 0;
-    }
+	.theme-card-container {
+		padding: 0;
+	}
 
-    .theme-card {
-        height        : 116px;
-        margin-bottom : 12px;
-        padding       : 20px 16px;
+	.theme-card {
+		height        : 116px;
+		margin-bottom : 12px;
+		padding       : 20px 16px;
 
-        &:not(.theme-card--mobile) {
-            display: none;
-        }
+		&:not(.theme-card--mobile) {
+			display: none;
+		}
 
-        &--large {
-            height         : 116px;
-            padding-bottom : 16px;
-        }
+		&--large {
+			height         : 116px;
+			padding-bottom : 16px;
+		}
 
-        &--mobile {
-            display         : flex;
-            flex-direction  : row;
-            justify-content : space-between;
-            align-items     : center;
+		&--mobile {
+			display         : flex;
+			flex-direction  : row;
+			justify-content : space-between;
+			align-items     : center;
 
-            .theme-card__content {
-                display         : flex;
-                flex-direction  : column;
-                justify-content : space-between;
-                flex-grow       : 1;
-                height          : 100%;
-            }
+			.theme-card__content {
+				display         : flex;
+				flex-direction  : column;
+				justify-content : space-between;
+				flex-grow       : 1;
+				height          : 100%;
+			}
 
-            .theme-card__subscribe-button {
-                height        : 44px;
-                width         : 44px;
-                min-width     : 44px;
-                border-radius : 44px;
+			.theme-card__subscribe-button {
+				height        : 44px;
+				width         : 44px;
+				min-width     : 44px;
+				border-radius : 44px;
 
-                &:before {
-                    content: none;
-                }
+				&:before {
+					content: none;
+				}
 
-                .material-icons-round {
-                    font-size    : 44px;
-                    margin-right : 0;
-                }
-            }
+				.material-icons-round {
+					font-size    : 44px;
+					margin-right : 0;
+				}
+			}
 
-            &.theme-card--subscribed .theme-card__subscribe-button {
-                background-color : rgba(255, 255, 255, .2);
-                justify-content  : center;
+			&.theme-card--subscribed .theme-card__subscribe-button {
+				background-color : rgba(255, 255, 255, .2);
+				justify-content  : center;
 
-                .material-icons-round {
-                    font-size: 24px;
-                }
-            }
-        }
-    }
+				.material-icons-round {
+					font-size: 24px;
+				}
+			}
+		}
+	}
 
-    .theme-card__title {
-        margin-top    : 0;
-        margin-bottom : auto;
-    }
+	.theme-card__title {
+		margin-top    : 0;
+		margin-bottom : auto;
+	}
 
-    .theme-card__subscriptions {
-        font-size   : 12px;
-        font-weight : 600;
-    }
+	.theme-card__subscriptions {
+		font-size   : 12px;
+		font-weight : 600;
+	}
 }

@@ -1,74 +1,74 @@
 @media (max-width: 600px) {
-    .profile-avatar-modal__header {
-        padding-top: 24px;
-    }
+	.profile-avatar-modal__header {
+		padding-top: 24px;
+	}
 
-    .profile-avatar-modal__title {
-        font-size: 20px;
-    }
+	.profile-avatar-modal__title {
+		font-size: 20px;
+	}
 
-    .profile-avatar-modal__close-btn {
-        display: none;
-    }
+	.profile-avatar-modal__close-btn {
+		display: none;
+	}
 
-    .profile-avatar-modal__image-uploader {
-        padding-top    : 16px;
-        padding-bottom : 36px;
-    }
+	.profile-avatar-modal__image-uploader {
+		padding-top    : 16px;
+		padding-bottom : 36px;
+	}
 
-    .avatar-image-uploader__current-avatar {
-        width         : 140px;
-        min-width     : 140px;
-        height        : 140px;
-        border-radius : 48px;
+	.avatar-image-uploader__current-avatar {
+		width         : 140px;
+		min-width     : 140px;
+		height        : 140px;
+		border-radius : 48px;
 
-        & > svg {
-            width  : 64px;
-            height : auto;
-        }
-    }
+		& > svg {
+			width  : 64px;
+			height : auto;
+		}
+	}
 
-    .avatar-image-uploader__upload-btn {
-        width     : 36px;
-        height    : 36px;
-        min-width : 36px;
-        bottom    : -20px;
+	.avatar-image-uploader__upload-btn {
+		width     : 36px;
+		height    : 36px;
+		min-width : 36px;
+		bottom    : -20px;
 
-        svg {
-            width: 16px;
-        }
-    }
+		svg {
+			width: 16px;
+		}
+	}
 
-    .profile-avatar-modal__form {
-        padding: 16px 32px;
-    }
+	.profile-avatar-modal__form {
+		padding: 16px 32px;
+	}
 
-    .profile-avatar-modal__input {
-        height      : 48px;
-        line-height : 48px;
-        font-size   : 14px;
-        padding     : 4px 36px 4px 12px;
-    }
+	.profile-avatar-modal__input {
+		height      : 48px;
+		line-height : 48px;
+		font-size   : 14px;
+		padding     : 4px 36px 4px 12px;
+	}
 
-    .profile-avatar-modal__input__clear-icon {
-        font-size : 20px;
-        right     : 10px;
-    }
+	.profile-avatar-modal__input__clear-icon {
+		font-size : 20px;
+		right     : 10px;
+	}
 
-    .profile-avatar-modal__input-error-message {
-        font-size  : 12px;
-        margin-top : 4px;
-    }
+	.profile-avatar-modal__input-error-message {
+		font-size  : 12px;
+		margin-top : 4px;
+	}
 
-    .profile-avatar-modal__save-btn-wrapper {
-        margin-top: 36px;
-    }
+	.profile-avatar-modal__save-btn-wrapper {
+		margin-top: 36px;
+	}
 
-    .profile-avatar-modal__save-btn.base-btn {
-        background-color : var(--red-color);
-        color            : var(--white-color);
-        height           : 52px;
-        line-height      : 52px;
-        width            : 180px;
-    }
+	.profile-avatar-modal__save-btn.base-btn {
+		background-color : var(--red-color);
+		color            : var(--white-color);
+		height           : 52px;
+		line-height      : 52px;
+		width            : 180px;
+	}
 }

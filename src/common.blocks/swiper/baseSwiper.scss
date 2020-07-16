@@ -1,82 +1,82 @@
 .base-swiper {
-    position: relative;
+	position: relative;
 
-    .swiper-wrapper {
-        padding: 46px 0;
-    }
+	.swiper-wrapper {
+		padding: 46px 0;
+	}
 }
 
 .base-swiper-button {
 	width            : 36px;
 	height           : 36px;
-    border-radius    : 50%;
-    top              : 55%;
+	border-radius    : 50%;
+	top              : 55%;
 	background-color : var(--white-color);
-    box-shadow       : 0 3px 6px rgba(0, 0, 0, .16);
-    z-index          : 3;
-    transition       : .2s ease-in-out;
-    user-select      : none;
-    outline          : none;
+	box-shadow       : 0 3px 6px rgba(0, 0, 0, .16);
+	z-index          : 3;
+	transition       : .2s ease-in-out;
+	user-select      : none;
+	outline          : none;
 
-    .material-icons-round {
-        color       : var(--black-color);
-        font-size   : 20px;
-        font-weight : 700;
-    }
+	.material-icons-round {
+		color       : var(--black-color);
+		font-size   : 20px;
+		font-weight : 700;
+	}
 
-    &.swiper-button-disabled {
-        opacity        : 0;
-        pointer-events : none;
-    }
+	&.swiper-button-disabled {
+		opacity        : 0;
+		pointer-events : none;
+	}
 
-    &.swiper-button-prev {
-        left: -18px;
+	&.swiper-button-prev {
+		left: -18px;
 
-        &:not(.swiper-button-disabled) + .base-swiper__left-shadow {
-            opacity: 1;
-        }
+		&:not(.swiper-button-disabled) + .base-swiper__left-shadow {
+			opacity: 1;
+		}
 
-        &:hover {
-            transform: translateX(-4px);
-        }
-    }
-    
-    &.swiper-button-next {
-        right: -18px;
+		&:hover {
+			transform: translateX(-4px);
+		}
+	}
 
-        &:not(.swiper-button-disabled) + .base-swiper__right-shadow {
-            opacity: 1;
-        }
+	&.swiper-button-next {
+		right: -18px;
 
-        &:hover {
-            transform: translateX(4px);
-        }
-    }
+		&:not(.swiper-button-disabled) + .base-swiper__right-shadow {
+			opacity: 1;
+		}
 
-    &:after {
-        content: none;
-    }
+		&:hover {
+			transform: translateX(4px);
+		}
+	}
+
+	&:after {
+		content: none;
+	}
 }
 
 .base-swiper__right-shadow,
 .base-swiper__left-shadow {
-    background     : var(--white-color);
-    position       : absolute;
-    width          : 18px;
-    top            : 0;
-    bottom         : 0;
-    z-index        : 1;
-    opacity        : 0;
-    pointer-events : none;
-    transition     : opacity .3s ease-in-out;
+	background     : var(--white-color);
+	position       : absolute;
+	width          : 18px;
+	top            : 0;
+	bottom         : 0;
+	z-index        : 1;
+	opacity        : 0;
+	pointer-events : none;
+	transition     : opacity .3s ease-in-out;
 }
 
 .base-swiper__right-shadow {
-    right      : -18px;
-    box-shadow : -8px 0 12px -8px rgba(0, 0, 0, .4);
+	right      : -18px;
+	box-shadow : -8px 0 12px -8px rgba(0, 0, 0, .4);
 }
 
 .base-swiper__left-shadow {
-    left       : -18px;
-    box-shadow : 8px 0 12px -8px rgba(0, 0, 0, .4);
+	left       : -18px;
+	box-shadow : 8px 0 12px -8px rgba(0, 0, 0, .4);
 }

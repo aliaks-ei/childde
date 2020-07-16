@@ -1,15 +1,15 @@
 @media (max-width: 600px) {
-    .date-filter {
-        height  : 36px;
-        margin  : 0 14px 24px;
-        padding : 2px;
-    }
+	.date-filter {
+		height  : 36px;
+		margin  : 0 14px 24px;
+		padding : 2px;
+	}
 
-    .date-filter__item {
-        font-size: 12px;
+	.date-filter__item {
+		font-size: 12px;
 
-        & + & {
-            margin-left: 2px;
-        }
-    }
+		& + & {
+			margin-left: 2px;
+		}
+	}
 }

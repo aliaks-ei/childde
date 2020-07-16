@@ -1,57 +1,57 @@
 .page-not-found-container {
-    padding: 96px;
+	padding: 96px;
 }
 
 .page-not-found {
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
 }
 
 .page-not-found__title {
-    font-size     : 148px;
-    line-height   : 180px;
-    margin-bottom : 24px;
-    margin-left   : -10px;
+	font-size     : 148px;
+	line-height   : 180px;
+	margin-bottom : 24px;
+	margin-left   : -10px;
 }
 
 .page-not-found__subtitle {
-    font-size   : 30px;
-    line-height : 40px;
+	font-size   : 30px;
+	line-height : 40px;
 }
 
 .page-not-found__error-info {
-    margin-top: 85px;
+	margin-top: 85px;
 }
 
 .page-not-found__links-title {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .page-not-found__links {
-    padding         : 0;
-    margin-top      : 28px;
-    margin-bottom   : 0;
-    line-height     : 30px;
-    list-style-type : none;
+	padding         : 0;
+	margin-top      : 28px;
+	margin-bottom   : 0;
+	line-height     : 30px;
+	list-style-type : none;
 }
 
 .page-not-found__links__item {
-    color           : var(--blue-color-2);
-    text-decoration : none;
-    font-weight     : 600;
+	color           : var(--blue-color-2);
+	text-decoration : none;
+	font-weight     : 600;
 
-    &:hover {
-        text-decoration: underline;
-    }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 @media (max-width: 1279px) and (min-width: 600px) {
-    .page-not-found-container {
-        padding: 96px 24px;
-    }
+	.page-not-found-container {
+		padding: 96px 24px;
+	}
 
-    .page-not-found__image-wrapper img {
-        width: 524px;
-    }
+	.page-not-found__image-wrapper img {
+		width: 524px;
+	}
 }

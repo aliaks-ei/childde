@@ -4,64 +4,64 @@ include ../../symbols-counter/symbolsCounter
 include ../../themes/theme-chips/themeChips
 
 mixin optionBtn({ icon, text })
-    button.question-modal__option-btn&attributes(attributes)
-        +svgIcon(icon)
-        span &nbsp; #{ text }
+	button.question-modal__option-btn&attributes(attributes)
+		+svgIcon(icon)
+		span &nbsp; #{ text }
 
 .base-modal-wrapper#qModal(style="display: none")
-    .base-modal.question-modal
-        .base-modal__top-controls
-            button.base-icon-btn.base-modal__close-btn(data-target-close="qModal")
-                span.material-icons-round keyboard_backspace
-        .question-modal__cover
-            .question-modal__header 
-                .question-modal__header__title Frage stellen
-                button.base-icon-btn.question-modal__close-btn(data-target-close="qModal")
-                    span.material-icons-round close
-            .question-modal__cover__bg-color#qCoverBgColor
-            .question-modal__cover__bg-image#qCoverBgImage
-            textarea.question-modal__textarea#qModalTitle(placeholder="Welche frage möchtest du beantworten?", rows="2")
-            .question-modal__selected-themes-wrapper
-                +themeChips({ 
-                    themes: [
-                        { name: '&#43;', target: 'qThemesDropdown' },
-                        { name: 'Family', removable: true }, 
-                        { name: 'Sport', removable: true },
-                        { name: 'Chillout', removable: true }
-                    ],
-                    withoutLimit: true
-                })
-        .question-modal__cover-colors#qCoverColors
-            button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
-                span.material-icons-round done
-            each color in ['#fabb4f', '#75d0c4', '#ffcf62', '#9494c5', '#8ba4c6', '#ff7150', '#e57497']
-                button.question-modal__color-btn(style=`background-color: ${ color }`)
-                    span.material-icons-round notes
-        .question-modal__options-wrapper 
-            .question-modal__options(data-mobile-hidden)
-                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
-                .themes-select-wrapper#qThemesDropdown
-                    include ../../dropdowns/themes-dropdown/themesDropdown 
-                +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="qUploadCoverBtn")
-                .upload-cover-wrapper#qCoverUploadDropdown
-                    include ../../dropdowns/upload-question-cover/uploadQuestionCover
-                +optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
-            .question-modal__options(data-desktop-hidden)
-                +optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")
-                +optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="bsCoverUpload")
-                +optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
-        .question-modal__bottom-container.q-bottom-container
-            include ../../dropdowns/user-select-dropdown/userSelectDropdown
-            .q-bottom-container__actions.q-actions
-                +symbolsCounter({ limit: 150, isCountDown: true })
-                +baseButton({ 
-                    text      : 'Speichern',
-                    withArrow : true
-                })(class="q-bottom-container__btn", disabled)
-        .question-modal__bottom-container.q-bottom-container(data-target="bsAuthorSelect", data-desktop-hidden)
-            .user-select__selected
-                span.user-select__avatar
-                    img(src="./assets/images/question-vote-avatar.png", alt="")
-                span.user-select__name Philip Djones
-            .q-bottom-container__icon-wrapper
-                span.material-icons-round more_vert
+	.base-modal.question-modal
+		.base-modal__top-controls
+			button.base-icon-btn.base-modal__close-btn(data-target-close="qModal")
+				span.material-icons-round keyboard_backspace
+		.question-modal__cover
+			.question-modal__header
+				.question-modal__header__title Frage stellen
+				button.base-icon-btn.question-modal__close-btn(data-target-close="qModal")
+					span.material-icons-round close
+			.question-modal__cover__bg-color#qCoverBgColor
+			.question-modal__cover__bg-image#qCoverBgImage
+			textarea.question-modal__textarea#qModalTitle(placeholder="Welche frage möchtest du beantworten?", rows="2")
+			.question-modal__selected-themes-wrapper
+				+themeChips({
+					themes: [
+						{ name: '&#43;', target: 'qThemesDropdown' },
+						{ name: 'Family', removable: true },
+						{ name: 'Sport', removable: true },
+						{ name: 'Chillout', removable: true }
+					],
+					withoutLimit: true
+				})
+		.question-modal__cover-colors#qCoverColors
+			button.question-modal__color-btn.question-modal__color-btn--bordered#qColorBtnWhite
+				span.material-icons-round done
+			each color in ['#fabb4f', '#75d0c4', '#ffcf62', '#9494c5', '#8ba4c6', '#ff7150', '#e57497']
+				button.question-modal__color-btn(style=`background-color: ${ color }`)
+					span.material-icons-round notes
+		.question-modal__options-wrapper
+			.question-modal__options(data-mobile-hidden)
+				+optionBtn({ icon: 'book', text: 'Themes' })(data-target="qThemesDropdown")
+				.themes-select-wrapper#qThemesDropdown
+					include ../../dropdowns/themes-dropdown/themesDropdown
+				+optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="qUploadCoverBtn")
+				.upload-cover-wrapper#qCoverUploadDropdown
+					include ../../dropdowns/upload-question-cover/uploadQuestionCover
+				+optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
+			.question-modal__options(data-desktop-hidden)
+				+optionBtn({ icon: 'book', text: 'Themes' })(data-target="bsThemesSelect")
+				+optionBtn({ icon: 'picture', text: 'Titelbild' })(data-target="bsCoverUpload")
+				+optionBtn({ icon: 'pencil', text: 'Details' })(data-target="qDetails")
+		.question-modal__bottom-container.q-bottom-container
+			include ../../dropdowns/user-select-dropdown/userSelectDropdown
+			.q-bottom-container__actions.q-actions
+				+symbolsCounter({ limit: 150, isCountDown: true })
+				+baseButton({
+					text      : 'Speichern',
+					withArrow : true
+				})(class="q-bottom-container__btn", disabled)
+		.question-modal__bottom-container.q-bottom-container(data-target="bsAuthorSelect", data-desktop-hidden)
+			.user-select__selected
+				span.user-select__avatar
+					img(src="./assets/images/question-vote-avatar.png", alt="")
+				span.user-select__name Philip Djones
+			.q-bottom-container__icon-wrapper
+				span.material-icons-round more_vert

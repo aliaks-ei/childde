@@ -10,7 +10,7 @@
 		height: 142px;
 	}
 
-	&--auth { 
+	&--auth {
 		.top-navigation__logo {
 			margin-right: 80px;
 		}
@@ -29,7 +29,7 @@
 }
 
 .top-navigation-right-block {
-	position    : relative; 
+	position    : relative;
 	display     : flex;
 	align-items : center;
 }
@@ -57,7 +57,7 @@
 	&--last {
 		margin-right: 16px;
 	}
-	
+
 	&--highlighted {
 		font-weight: 700;
 		line-height: 24px;
@@ -74,7 +74,7 @@
 				top       : 0;
 				transform : translateX(-50%) translateY(-20px);
 			}
-			
+
 			&:last-of-type {
 				bottom    : 0;
 				transform : translateX(-50%) translateY(20px) rotate(180deg);
@@ -107,14 +107,14 @@
 	stroke-miterlimit : 10;
 }
 
-.sign-in-line--1, 
-.sign-in-line--3, 
-.sign-in-line--4, 
+.sign-in-line--1,
+.sign-in-line--3,
+.sign-in-line--4,
 .sign-in-line--6 {
 	stroke-dasharray: 11px;
 }
 
-.sign-in-line--2, 
+.sign-in-line--2,
 .sign-in-line--5 {
 	stroke-dasharray: 18px;
 }

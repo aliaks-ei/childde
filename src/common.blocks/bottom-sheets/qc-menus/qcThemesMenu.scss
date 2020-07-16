@@ -1,36 +1,36 @@
 .qc-themes-menu .upload-cover__content {
-    padding     : 8px 0 20px 8px;
-    font-weight : 600;
+	padding     : 8px 0 20px 8px;
+	font-weight : 600;
 }
 
 .qc-themes-menu__item {
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-    line-height     : 32px;
+	display         : flex;
+	align-items     : center;
+	justify-content : space-between;
+	line-height     : 32px;
 
-    & + & {
-        margin-top: 16px;
-    }
+	& + & {
+		margin-top: 16px;
+	}
 
-    &__content {
-        margin-right  : 8px;
-        overflow      : hidden;
-        white-space   : nowrap;
-        text-overflow : ellipsis;
-    }
-    
-    &__link {
-        flex-shrink      : 0;
-        line-height      : 32px;
-        height           : 32px;
-        min-width        : 32px;
-        border-radius    : 32px;
-        padding          : 0 12px;
-        text-decoration  : none;
-        font-family      : var(--font-montserrat);
-        color            : var(--black-color-2);
-        background-color : var(--background-color-gray);
-        font-size        : 12px;
-    }
+	&__content {
+		margin-right  : 8px;
+		overflow      : hidden;
+		white-space   : nowrap;
+		text-overflow : ellipsis;
+	}
+	
+	&__link {
+		flex-shrink      : 0;
+		line-height      : 32px;
+		height           : 32px;
+		min-width        : 32px;
+		border-radius    : 32px;
+		padding          : 0 12px;
+		text-decoration  : none;
+		font-family      : var(--font-montserrat);
+		color            : var(--black-color-2);
+		background-color : var(--background-color-gray);
+		font-size        : 12px;
+	}
 }

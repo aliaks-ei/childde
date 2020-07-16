@@ -1,15 +1,15 @@
 include ../svg-icon/svgIcon
 
 mixin accountWidgetItem({ iconName, title, href = 'javascript:void(0)' })
-    a.account-widget__item(href=href)
-        .account-widget__item__icon
-            +svgIcon(iconName)
-        span= title
+	a.account-widget__item(href=href)
+		.account-widget__item__icon
+			+svgIcon(iconName)
+		span= title
 
 .account-widget.base-dropdown#accountDropdown
-    +accountWidgetItem({ iconName: 'user', title: 'Profil', href: '/profile' })
-    +accountWidgetItem({ iconName: 'message', title: 'Nachrichten' })
-    +accountWidgetItem({ iconName: 'bookmark', title: 'Lesezeichen' })
-    +accountWidgetItem({ iconName: 'question', title: 'Hilfe' })
-    +accountWidgetItem({ iconName: 'settings', title: 'Einstellungen' })
-    +accountWidgetItem({ iconName: 'exit', title: 'Abmelden', href: '/login' })
+	+accountWidgetItem({ iconName: 'user', title: 'Profil', href: '/profile' })
+	+accountWidgetItem({ iconName: 'message', title: 'Nachrichten' })
+	+accountWidgetItem({ iconName: 'bookmark', title: 'Lesezeichen' })
+	+accountWidgetItem({ iconName: 'question', title: 'Hilfe' })
+	+accountWidgetItem({ iconName: 'settings', title: 'Einstellungen' })
+	+accountWidgetItem({ iconName: 'exit', title: 'Abmelden', href: '/login' })

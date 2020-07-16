@@ -1,27 +1,24 @@
 include ../../themes/theme-card/themeCard
 
 .base-modal-wrapper#subscribeToThemesModal(style="display: none")
-    .base-modal.themes-subscribe-modal
-        .base-modal__top-controls
-            button.base-icon-btn.base-modal__close-btn(data-target-close="subscribeToThemesModal")
-                span.material-icons-round keyboard_backspace
-            .themes-subscribe-modal__title-wrapper
-                h3.themes-subscribe-modal__title Themen abonnieren
-        .themes-subscribe-modal__header
-            h2.themes-subscribe-modal__title Wähle was du antworten möchtest
-            button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="subscribeToThemesModal")
-                span.material-icons-round close
-        .themes-subscribe-modal__search-wrapper
-            .profile-avatar-modal__input-wrapper
-                input.profile-avatar-modal__input(type="text", placeholder="Search for themes")
-        .themes-wrapper
-            .themes-container
-                +themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
-                +themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
-                +themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})
-                +themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b'})
-                +themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465'})
-                +themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7'})
-            
-
-        
+	.base-modal.themes-subscribe-modal
+		.base-modal__top-controls
+			button.base-icon-btn.base-modal__close-btn(data-target-close="subscribeToThemesModal")
+				span.material-icons-round keyboard_backspace
+			.themes-subscribe-modal__title-wrapper
+				h3.themes-subscribe-modal__title Themen abonnieren
+		.themes-subscribe-modal__header
+			h2.themes-subscribe-modal__title Wähle was du antworten möchtest
+			button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="subscribeToThemesModal")
+				span.material-icons-round close
+		.themes-subscribe-modal__search-wrapper
+			.profile-avatar-modal__input-wrapper
+				input.profile-avatar-modal__input(type="text", placeholder="Search for themes")
+		.themes-wrapper
+			.themes-container
+				+themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761'})
+				+themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b'})
+				+themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4'})
+				+themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b'})
+				+themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465'})
+				+themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7'})

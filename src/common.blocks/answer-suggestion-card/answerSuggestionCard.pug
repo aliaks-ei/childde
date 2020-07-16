@@ -1,14 +1,14 @@
 include ../buttons/base-button/baseButton
 
 .answer-suggestion-card-wrapper
-    .answer-suggestion-card
-        .answer-suggestion-card__image
-            img(src="./assets/images/question-0-avatar.png", alt="")
-        h2.answer-suggestion-card__title Andrej, wissen Sie die Antwort auf diese Frage?
-        .answer-suggestion-card__subtitle Teilen Sie Ihre Erfahrungen und Kenntnisse.
-        +baseButton({ 
-            text      : 'Auf die Frage antworten',
-            withArrow : true,
-            bgColor   : 'var(--white-color)',
-            color     : 'var(--black-color-2)'
-        })(class="answer-suggestion-card__button")
+	.answer-suggestion-card
+		.answer-suggestion-card__image
+			img(src="./assets/images/question-0-avatar.png", alt="")
+		h2.answer-suggestion-card__title Andrej, wissen Sie die Antwort auf diese Frage?
+		.answer-suggestion-card__subtitle Teilen Sie Ihre Erfahrungen und Kenntnisse.
+		+baseButton({
+			text      : 'Auf die Frage antworten',
+			withArrow : true,
+			bgColor   : 'var(--white-color)',
+			color     : 'var(--black-color-2)'
+		})(class="answer-suggestion-card__button")

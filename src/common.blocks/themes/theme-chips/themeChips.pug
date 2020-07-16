@@ -1,22 +1,22 @@
 mixin themeChip({ name, target, removable = false })
-    .theme-chip(data-target=target)            
-        span !{ name }
-        if removable
-            span.material-icons-round close
-        else
-            a.theme-chip__link(href='javascript:void(0)', aria-label=name)
+	.theme-chip(data-target=target)
+		span !{ name }
+		if removable
+			span.material-icons-round close
+		else
+			a.theme-chip__link(href='javascript:void(0)', aria-label=name)
 
 mixin themeChips({ themes = [], light = false, withoutLimit = false })
-    .theme-chips-wrapper(class = light ? 'theme-chips-wrapper--light' : '')
-        if !withoutLimit && themes.length > 2
-            - let visibleThemes = themes.slice(0, 2);
+	.theme-chips-wrapper(class = light ? 'theme-chips-wrapper--light' : '')
+		if !withoutLimit && themes.length > 2
+			- let visibleThemes = themes.slice(0, 2);
 
-            each theme in visibleThemes
-                +themeChip(theme)
-            .theme-chip(data-mobile-hidden)
-                span +!{ themes.length - visibleThemes.length }
-            .theme-chip(data-target="qcThemesBottomMenu", data-desktop-hidden)
-                span +!{ themes.length - visibleThemes.length }
-        else 
-            each theme in themes
-                +themeChip(theme)
+			each theme in visibleThemes
+				+themeChip(theme)
+			.theme-chip(data-mobile-hidden)
+				span +!{ themes.length - visibleThemes.length }
+			.theme-chip(data-target="qcThemesBottomMenu", data-desktop-hidden)
+				span +!{ themes.length - visibleThemes.length }
+		else
+			each theme in themes
+				+themeChip(theme)

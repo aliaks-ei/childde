@@ -1,20 +1,20 @@
 include ../../in-column-links/inColumnLinks
 
 footer.footer-wrapper
-    .footer.container-1024
-        .footer__top-block
-            .footer__downloads
-                +baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
-                include ../../buttons/store-links/storeLinks
-            .in-column-links-wrapper
-                +inColumnLinks('Dein Konto', ['Profil', 'Einstellungen', 'Abmelden'])
-                +inColumnLinks('Meinung.de', ['Startseite', 'Alle Themen', 'FAQ', 'Kontakt'])
-                +inColumnLinks('Rechtliches', ['AGB', 'Datenschutz', 'Richtlinien', 'Impressum'])
-        .footer__socials
-            include ./baseFooterSocialIcons
-            .footer__copyright 
-                span 2013-2020 — child.de. 
-                span All rights reserved
-            a(href="/", aria-label="Site logo")
-                +svgIcon("logo")
-        include ../../buttons/scroll-top-button/scrollTopButton
+	.footer.container-1024
+		.footer__top-block
+			.footer__downloads
+				+baseButton({ text: 'Für Unternehmen', withArrow: true })(class="footer__action-btn")
+				include ../../buttons/store-links/storeLinks
+			.in-column-links-wrapper
+				+inColumnLinks('Dein Konto', ['Profil', 'Einstellungen', 'Abmelden'])
+				+inColumnLinks('Meinung.de', ['Startseite', 'Alle Themen', 'FAQ', 'Kontakt'])
+				+inColumnLinks('Rechtliches', ['AGB', 'Datenschutz', 'Richtlinien', 'Impressum'])
+		.footer__socials
+			include ./baseFooterSocialIcons
+			.footer__copyright
+				span 2013-2020 — child.de.
+				span All rights reserved
+			a(href="/", aria-label="Site logo")
+				+svgIcon("logo")
+		include ../../buttons/scroll-top-button/scrollTopButton

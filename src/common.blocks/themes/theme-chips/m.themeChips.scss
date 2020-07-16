@@ -1,22 +1,22 @@
 @media (max-width: 600px) {
-    .theme-chip {
-        height        : 24px;
-        padding       : 0 10px;
-        font-size     : 12px;
-        line-height   : 24px;
-        margin-bottom : 6px;
-        margin-right  : 6px;
+	.theme-chip {
+		height        : 24px;
+		padding       : 0 10px;
+		font-size     : 12px;
+		line-height   : 24px;
+		margin-bottom : 6px;
+		margin-right  : 6px;
 
-        .material-icons-round {
-            font-size: 16px;
-        }
+		.material-icons-round {
+			font-size: 16px;
+		}
 
-        &[data-desktop-hidden] {
-            display: flex;
-        }
-    
-        &[data-mobile-hidden] {
-            display: none;
-        }
-    }
+		&[data-desktop-hidden] {
+			display: flex;
+		}
+
+		&[data-mobile-hidden] {
+			display: none;
+		}
+	}
 }

@@ -1,38 +1,38 @@
 @media (max-width: 600px) {
-    .profile-tabs-wrapper {
-        margin-bottom: 20px;
-    }
+	.profile-tabs-wrapper {
+		margin-bottom: 20px;
+	}
 
-    .profile-tabs {
-        white-space : nowrap;
-        overflow-x  : auto;
-        overflow-y  : hidden;
+	.profile-tabs {
+		white-space : nowrap;
+		overflow-x  : auto;
+		overflow-y  : hidden;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
 
-    .profile-tabs__tab {
-        margin-right: 8px;
+	.profile-tabs__tab {
+		margin-right: 8px;
 
-        &:first-child {
-            margin-left: 20px;
-        }
-    
-        &:last-child {
-            margin-right: 20px;
-        }
-    }
+		&:first-child {
+			margin-left: 20px;
+		}
 
-    .profile-tabs__link {
-        height      : 32px;
-        line-height : 32px;
-        padding     : 0 14px;
-        font-size   : 12px;
-    }
+		&:last-child {
+			margin-right: 20px;
+		}
+	}
 
-    .profile-subscriptions-tab {
-        padding: 0 12px 24px;
-    }
+	.profile-tabs__link {
+		height      : 32px;
+		line-height : 32px;
+		padding     : 0 14px;
+		font-size   : 12px;
+	}
+
+	.profile-subscriptions-tab {
+		padding: 0 12px 24px;
+	}
 }

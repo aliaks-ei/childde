@@ -3,7 +3,7 @@ include ../buttons/base-button/baseButton
 
 mixin topNavigation({ bgColor, isUserAuthorized = true, showAdditionalLinks = false })
 	header.top-navigation(
-		style = `background-color: ${ bgColor }`, 
+		style = `background-color: ${ bgColor }`,
 		class = isUserAuthorized ? '' : 'top-navigation--auth',
 	)&attributes(attributes)
 		.top-navigation__container.container-1024

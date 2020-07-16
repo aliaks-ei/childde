@@ -1,73 +1,73 @@
 @media (max-width: 600px) {
-    .themes-select-wrapper {
-        position      : static;
-        display       : block;
-        width         : 100%;
-        margin-bottom : 0;
-        z-index       : initial;
-    }
+	.themes-select-wrapper {
+		position      : static;
+		display       : block;
+		width         : 100%;
+		margin-bottom : 0;
+		z-index       : initial;
+	}
 
-    .themes-select.base-dropdown {
-        background-color : transparent;
-        box-shadow       : none;
-        border-radius    : 0;
-    }
+	.themes-select.base-dropdown {
+		background-color : transparent;
+		box-shadow       : none;
+		border-radius    : 0;
+	}
 
-    .themes-select__header,
-    .themes-search__field-wrapper {
-        padding: 0;
-    }
+	.themes-select__header,
+	.themes-search__field-wrapper {
+		padding: 0;
+	}
 
-    .themes-header__title {
-        font-size: 18px;
-    }
+	.themes-header__title {
+		font-size: 18px;
+	}
 
-    .themes-header__close-btn {
-        font-size     : 12px;
-        font-weight   : 600;
-        border-radius : 25px;
-        height        : 28px;
-        padding       : 4px 16px;
-        transition    : none;
+	.themes-header__close-btn {
+		font-size     : 12px;
+		font-weight   : 600;
+		border-radius : 25px;
+		height        : 28px;
+		padding       : 4px 16px;
+		transition    : none;
 
-        &[data-desktop-hidden] {
-            display: block;
-        }
-    
-        &[data-mobile-hidden] {
-            display: none;
-        }
-    }
+		&[data-desktop-hidden] {
+			display: block;
+		}
+	
+		&[data-mobile-hidden] {
+			display: none;
+		}
+	}
 
-    .themes-search__field {
-        height: 36px;
-    }
+	.themes-search__field {
+		height: 36px;
+	}
 
-    .themes-search__results-wrapper {
-        padding-top: 16px;
-    }
+	.themes-search__results-wrapper {
+		padding-top: 16px;
+	}
 
-    .themes-options {
-        padding    : 0 4px;
-        max-height : unset;
-    }
+	.themes-options {
+		padding    : 0 4px;
+		max-height : unset;
+	}
 
-    .themes-options__option {
-        font-size : 14px;
-        padding   : 6px 0;
-    }
+	.themes-options__option {
+		font-size : 14px;
+		padding   : 6px 0;
+	}
 
-    .themes-options__option__add-btn {
-        width     : 26px;
-        min-width : 26px;
-        height    : 26px;
+	.themes-options__option__add-btn {
+		width     : 26px;
+		min-width : 26px;
+		height    : 26px;
 
-        .material-icons-round {
-            font-size: 20px;
-        }
-    }
+		.material-icons-round {
+			font-size: 20px;
+		}
+	}
 
-    .themes-select__search-results {
-        padding: 15px 0 16px;
-    }
+	.themes-select__search-results {
+		padding: 15px 0 16px;
+	}
 }

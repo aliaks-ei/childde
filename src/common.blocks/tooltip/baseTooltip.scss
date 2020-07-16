@@ -1,68 +1,68 @@
 .tooltip-wrapper {
-    position : absolute;
-    top      : 74px;
-    right    : 6px;
-    z-index  : 40;
+	position : absolute;
+	top      : 74px;
+	right    : 6px;
+	z-index  : 40;
 }
 
 .tooltip {
-    position         : relative;
-    display          : flex;
-    flex-direction   : column;
-    padding          : 20px 20px 16px;
-    width            : 310px;
-    border-radius    : 10px;
-    color            : var(--white-color);
-    background-color : var(--blue-color);
-    box-shadow       : 0 3px 30px rgba(54, 54, 54, .1);
+	position         : relative;
+	display          : flex;
+	flex-direction   : column;
+	padding          : 20px 20px 16px;
+	width            : 310px;
+	border-radius    : 10px;
+	color            : var(--white-color);
+	background-color : var(--blue-color);
+	box-shadow       : 0 3px 30px rgba(54, 54, 54, .1);
 
-    &:before {
-      position      : absolute;
-      content       : "";
-      right         : 26px;
-      top           : -18px;
-      width         : 0;
-      height        : 0;
-      border-bottom : 20px solid var(--blue-color);
-      border-left   : 20px solid transparent;
-    }
+	&:before {
+	  position      : absolute;
+	  content       : "";
+	  right         : 26px;
+	  top           : -18px;
+	  width         : 0;
+	  height        : 0;
+	  border-bottom : 20px solid var(--blue-color);
+	  border-left   : 20px solid transparent;
+	}
 
-    &__close-icon {
-        position   : absolute;
-        right      : 14px;
-        top        : 12px;
-        opacity    : .4;
-        transition : opacity .1s ease-out, transform .1s ease-out;
-        cursor     : pointer;
-        color      : var(--white-color);
-    
-        &:hover {
-          opacity: 1;
-        }
+	&__close-icon {
+		position   : absolute;
+		right      : 14px;
+		top        : 12px;
+		opacity    : .4;
+		transition : opacity .1s ease-out, transform .1s ease-out;
+		cursor     : pointer;
+		color      : var(--white-color);
 
-        &:active {
-            transform: scale(.96);
-        }
-    }
+		&:hover {
+		  opacity: 1;
+		}
 
-    &__content {
-        line-height  : 24px;
-        margin-right : 36px;
-    }
+		&:active {
+			transform: scale(.96);
+		}
+	}
 
-    &__button {
-        display          : block;
-        text-decoration  : none;
-        margin-left      : auto;
-        height           : 36px;
-        min-height       : 36px;
-        line-height      : 36px;
-        font-size        : 14px;
-        padding          : 0 16px;
-        font-weight      : 600;
-        border-radius    : 25px;
-        margin-top       : 20px;
-        color            : var(--black-color-2);
-        background-color : var(--white-color);
-    }
+	&__content {
+		line-height  : 24px;
+		margin-right : 36px;
+	}
+
+	&__button {
+		display          : block;
+		text-decoration  : none;
+		margin-left      : auto;
+		height           : 36px;
+		min-height       : 36px;
+		line-height      : 36px;
+		font-size        : 14px;
+		padding          : 0 16px;
+		font-weight      : 600;
+		border-radius    : 25px;
+		margin-top       : 20px;
+		color            : var(--black-color-2);
+		background-color : var(--white-color);
+	}
 }

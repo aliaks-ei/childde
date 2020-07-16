@@ -28,7 +28,7 @@ describe('Question modal', () => {
 describe('Answer modal', () => {
     it('successfully opens answer modal by clicking on "Antworten" button in question card', () => {
         cy.visit('/');
-        
+
         cy.get('.question-card.question-card--default').within(() => {
             cy.get('[data-target="answerModal"]').click({ force: true });
         });

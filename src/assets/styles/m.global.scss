@@ -1,38 +1,38 @@
 @media (max-width: 600px) {
-    html, body {
-        font-size: 14px;
-    }
+	html, body {
+		font-size: 14px;
+	}
 
-    .page-title {
-        display: none;
-    }
+	.page-title {
+		display: none;
+	}
 
-    .page-title--mobile {
-        display    : block;
-        padding    : 0 12px;
-        margin-top : 24px;
-    }
+	.page-title--mobile {
+		display    : block;
+		padding    : 0 12px;
+		margin-top : 24px;
+	}
 
-    .page--registration {
-        --delimiter-point: 594px;
-    }
+	.page--registration {
+		--delimiter-point: 594px;
+	}
 
-    .page--login {
-        --delimiter-point: 516px;
-    }
+	.page--login {
+		--delimiter-point: 516px;
+	}
 
-    .space-vertical--100,
-    .space-vertical--80 {
-        display: none;
-    }
+	.space-vertical--100,
+	.space-vertical--80 {
+		display: none;
+	}
 
-    .similar-answers-title {
-        padding       : 0 12px;
-        margin-top    : 24px;
-        margin-bottom : 8px;
-    }
+	.similar-answers-title {
+		padding       : 0 12px;
+		margin-top    : 24px;
+		margin-bottom : 8px;
+	}
 
-    .main--with-bottom-border {
-        border-bottom: 0;
-    }
+	.main--with-bottom-border {
+		border-bottom: 0;
+	}
 }

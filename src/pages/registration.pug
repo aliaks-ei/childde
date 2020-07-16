@@ -4,7 +4,7 @@ include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/progress-linear/progressLinear
 
 block title
-	title Registration	
+	title Registration
 
 block body
 	body.page--registration
@@ -12,8 +12,8 @@ block body
 		+topNavigation({ bgColor: 'transparent', isUserAuthorized: false })(class="top-navigation--large")
 		main.authorization-form-container.container-1024
 			h1.authorization-form-title Willkommen!
-			.authorization-form-subtitle 
-				| Erstellen Sie Ihr Konto, um alle Funktionen von 
+			.authorization-form-subtitle
+				| Erstellen Sie Ihr Konto, um alle Funktionen von
 				br
 				| meinung.de wahrnehmen zu können
 			include ../common.blocks/authorization-forms/registration-form/registrationForm

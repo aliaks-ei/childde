@@ -2,97 +2,97 @@ include ../svg-icon/svgIcon
 include ../themes/theme-chips/themeChips
 
 mixin questionCard({ overlay, bgImage, avatar, withLabel, title, interested })
-    - let isDefaultQuestion = !(overlay && bgImage);
+	- let isDefaultQuestion = !(overlay && bgImage);
 
-    .question-card-wrapper
-        .question-card(class={ 'question-card--default': isDefaultQuestion })
-            .question-card__header.question-header
-                .question-header__image-wrapper.question-image
-                    .question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
-                    if bgImage
-                        .question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
-                        .question-image__blackout
-                a.question-header__link(href="/question", aria-label=title)
-                .question-header__info.question-info 
-                    .question-info__user.question-user
-                        div.question-user__link-wrapper
-                            a.question-card__overlapping-link(href="/profile", aria-label="Philip Djones")
-                            img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="Philip Djones")
-                            span.question-user__name Philip Djones
-                        span.question-user__date yesterday at 12:20
-                        if withLabel
-                            .question-user__label 
-                                a.question-card__overlapping-link(href="/profile", aria-label="Label Kinderfrage")
-                                .question-user__label__icon
-                                    +svgIcon("toy")
-                                span Kinderfrage
-                    h3.question-info__title !{ title }
-                    +themeChips({ 
-                        themes : [{ name: 'Real estate' }, { name: 'Career' }],
-                        light  : !isDefaultQuestion 
-                    })
-                button.base-icon-btn.question-header__dropdown-icon(
-                    class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
-                    data-target = "qcTopDropdown"
-                )
-                    span.material-icons-round more_vert
-                button.base-icon-btn.question-header__dropdown-icon(
-                    class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
-                    data-target = "qcTopMenu"
-                )
-                    span.material-icons-round(data-target="qcTopMenu") more_vert
-            .question-card__reactions-wrapper
-                .question-card__reactions
-                    button.question-card-button(class = interested ? 'question-card-button--active' : '')
-                        if interested
-                            span.question-card-button__icon
-                                +svgIcon("interest")
-                        else 
-                            span.question-card-button__icon.material-icons favorite
-                        span Interessant 53
-                    if interested
-                        button.question-card-button(data-target="answerModal")
-                            span.question-card-button__icon
-                                +svgIcon("answer")
-                            span Antworten
-                    else
-                        button.question-card-button
-                            span.question-card-button__icon
-                                +svgIcon("messages")
-                            span 345
-                button.question-card-button.question-card__visibility-btn
-                    span.question-card-button__icon.material-icons visibility_off
-            .question-card__content
-                div
-                    .question-card__content__short-desc
-                        span
-                            | Der Eimer sollte aus weichem Kunststoff bestehen. 
-                            | Wählen Sie die Größe des Eimers auf der Grundlage der Größe des Hundes. 
-                            | Einem durchschnittlichen Hund passt etwa ein 5 Liter Eimer. 
-                            | Nehmen Sie die Tiefe so auf, dass der Bug des Hundes ...
-                        span.question-card__content__read-more-btn Mehr lesen
-                    .question-card__content__full-desc
-                        div
-                            p Introvertierte Menschen sind eher verschlossen, scheu und zurückhaltend im Umgang mit anderen Menschen. Sie halten sich in Gegenwart anderer eher im Hintergrund. Extrovertierte Menschen blühen auf, wenn sie mit anderen Menschen zusammen sind. Sie sind gesellig, kontaktfreudig, sozial aktiv und sehr kommunikativ.
-                            p Introversion und Extraversion sind eine angeborene Veranlagung, auf die allerdings das soziale Umfeld, die Erziehung sowie prägende Erlebnisse weiter Einfluss nehmen können. Das heißt, Sie kommen bereits introvertiert, zentrovertiert oder extrovertiert auf die Welt.
-                            p Die Entwicklung in die eine oder andere Richtung kann beispielsweise durch die Erziehung weiter ausgeprägt werden.
-                            p Aber aus einem introvertierten wird niemals ein extrovertierter Mensch, und umgekehrt.
-                            p Beide können sich zwar in einer bestimmten Situation gegensätzlich verhalten, aber in ihrer Wesensart werden sie sich nicht ändern.
-                        .question-card__content__reviews.question-reviews
-                            .question-reviews__likes
-                                button.question-card-button
-                                    span.question-card-button__icon.material-icons(
-                                        class=interested ? 'question-card-button__icon--active' : 'material-icons-outlined'
-                                    ) thumb_up
-                                    span.question-card-button__text Gute antwort&nbsp;
-                                    span +75
-                                button.question-card-button
-                                    span.question-card-button__icon.material-icons(
-                                        class=interested ? 'material-icons-outlined' : 'question-card-button__icon--active'
-                                    ) thumb_down
-                                    span= interested ? 0 : 1
-                            button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
-                                span.material-icons-round more_horiz
-                            button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomMenu")
-                                span.material-icons-round(data-target="qcBottomMenu") more_horiz
-                        button.question-card__read-all-answers-btn Weitere Antworten lesen
+	.question-card-wrapper
+		.question-card(class={ 'question-card--default': isDefaultQuestion })
+			.question-card__header.question-header
+				.question-header__image-wrapper.question-image
+					.question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
+					if bgImage
+						.question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
+						.question-image__blackout
+				a.question-header__link(href="/question", aria-label=title)
+				.question-header__info.question-info
+					.question-info__user.question-user
+						div.question-user__link-wrapper
+							a.question-card__overlapping-link(href="/profile", aria-label="Philip Djones")
+							img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="Philip Djones")
+							span.question-user__name Philip Djones
+						span.question-user__date yesterday at 12:20
+						if withLabel
+							.question-user__label
+								a.question-card__overlapping-link(href="/profile", aria-label="Label Kinderfrage")
+								.question-user__label__icon
+									+svgIcon("toy")
+								span Kinderfrage
+					h3.question-info__title !{ title }
+					+themeChips({
+						themes : [{ name: 'Real estate' }, { name: 'Career' }],
+						light  : !isDefaultQuestion
+					})
+				button.base-icon-btn.question-header__dropdown-icon(
+					class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
+					data-target = "qcTopDropdown"
+				)
+					span.material-icons-round more_vert
+				button.base-icon-btn.question-header__dropdown-icon(
+					class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
+					data-target = "qcTopMenu"
+				)
+					span.material-icons-round(data-target="qcTopMenu") more_vert
+			.question-card__reactions-wrapper
+				.question-card__reactions
+					button.question-card-button(class = interested ? 'question-card-button--active' : '')
+						if interested
+							span.question-card-button__icon
+								+svgIcon("interest")
+						else
+							span.question-card-button__icon.material-icons favorite
+						span Interessant 53
+					if interested
+						button.question-card-button(data-target="answerModal")
+							span.question-card-button__icon
+								+svgIcon("answer")
+							span Antworten
+					else
+						button.question-card-button
+							span.question-card-button__icon
+								+svgIcon("messages")
+							span 345
+				button.question-card-button.question-card__visibility-btn
+					span.question-card-button__icon.material-icons visibility_off
+			.question-card__content
+				div
+					.question-card__content__short-desc
+						span
+							| Der Eimer sollte aus weichem Kunststoff bestehen.
+							| Wählen Sie die Größe des Eimers auf der Grundlage der Größe des Hundes.
+							| Einem durchschnittlichen Hund passt etwa ein 5 Liter Eimer.
+							| Nehmen Sie die Tiefe so auf, dass der Bug des Hundes ...
+						span.question-card__content__read-more-btn Mehr lesen
+					.question-card__content__full-desc
+						div
+							p Introvertierte Menschen sind eher verschlossen, scheu und zurückhaltend im Umgang mit anderen Menschen. Sie halten sich in Gegenwart anderer eher im Hintergrund. Extrovertierte Menschen blühen auf, wenn sie mit anderen Menschen zusammen sind. Sie sind gesellig, kontaktfreudig, sozial aktiv und sehr kommunikativ.
+							p Introversion und Extraversion sind eine angeborene Veranlagung, auf die allerdings das soziale Umfeld, die Erziehung sowie prägende Erlebnisse weiter Einfluss nehmen können. Das heißt, Sie kommen bereits introvertiert, zentrovertiert oder extrovertiert auf die Welt.
+							p Die Entwicklung in die eine oder andere Richtung kann beispielsweise durch die Erziehung weiter ausgeprägt werden.
+							p Aber aus einem introvertierten wird niemals ein extrovertierter Mensch, und umgekehrt.
+							p Beide können sich zwar in einer bestimmten Situation gegensätzlich verhalten, aber in ihrer Wesensart werden sie sich nicht ändern.
+						.question-card__content__reviews.question-reviews
+							.question-reviews__likes
+								button.question-card-button
+									span.question-card-button__icon.material-icons(
+										class=interested ? 'question-card-button__icon--active' : 'material-icons-outlined'
+									) thumb_up
+									span.question-card-button__text Gute antwort&nbsp;
+									span +75
+								button.question-card-button
+									span.question-card-button__icon.material-icons(
+										class=interested ? 'material-icons-outlined' : 'question-card-button__icon--active'
+									) thumb_down
+									span= interested ? 0 : 1
+							button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomDropdown")
+								span.material-icons-round more_horiz
+							button.base-icon-btn.question-reviews__horizontal-dropdown(data-target="qcBottomMenu")
+								span.material-icons-round(data-target="qcBottomMenu") more_horiz
+						button.question-card__read-all-answers-btn Weitere Antworten lesen

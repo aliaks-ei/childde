@@ -18,7 +18,7 @@
 			top: -12px;
 		}
 	}
-	
+
 	&:nth-of-type(2) {
 		background-color: #cfe8fa;
 
@@ -26,7 +26,7 @@
 			top: -24px;
 		}
 	}
-	
+
 	&:last-of-type {
 		background-color: #c5f0ed;
 
@@ -46,8 +46,8 @@
 }
 
 .swiper-card__container {
-    display        : flex;
-    flex-direction : column;
+	display        : flex;
+	flex-direction : column;
 	align-items    : flex-start;
 	height         : 100%;
 }

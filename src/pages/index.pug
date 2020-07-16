@@ -32,32 +32,32 @@ block body
 					include ../common.blocks/enter-question/enterQuestion
 					include ../common.blocks/filter-by-dates/filterByDates
 					include ../common.blocks/opinion-card/opinionCard
-					+questionCard({ 
+					+questionCard({
 						avatar     : 'question-0-avatar.png',
 						title      : 'Reverse engineering of a binary format on the example of Korg.',
 						interested : true
 					})
 					include ../common.blocks/questions-slider/questionsSlider
-					+questionCard({ 
+					+questionCard({
 						overlay   : 'var(--red-color)',
 						bgImage   : 'question-1-image.png',
 						avatar    : 'question-1-avatar.png',
 						withLabel : true,
 						title     : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
-					+questionCard({ 
+					+questionCard({
 						overlay : 'var(--orange-color)',
 						bgImage : 'question-2-image.png',
 						avatar  : 'question-2-avatar.png',
 						title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
-					+questionCard({ 
+					+questionCard({
 						overlay : 'var(--green-color)',
 						bgImage : 'question-3-image.png',
 						avatar  : 'question-3-avatar.png',
 						title   : 'Wie macht man aus einem Eimer ein Hundehalsband?'
 					})
-					+questionCard({ 
+					+questionCard({
 						overlay : 'var(--purple-color)',
 						bgImage : 'question-4-image.png',
 						avatar  : 'question-4-avatar.png',
@@ -79,7 +79,7 @@ block body
 					include ../common.blocks/sponsors/sponsor
 					include ../common.blocks/popular-themes/popularThemes
 					include ../common.blocks/best-companies/bestCompanies
-					include ../common.blocks/we-are-read/weAreRead	
+					include ../common.blocks/we-are-read/weAreRead
 		include ../common.blocks/pre-footer/preFooter
 		include ../common.blocks/footer/base/baseFooter
 		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
@@ -104,7 +104,7 @@ block body
 				include ../common.blocks/question-card-dropdowns/qcBottomDropdown
 			include ../common.blocks/modals/ask-question-modal/askQuestionModal
 			include ../common.blocks/modals/answer-modal/answerModal
-		
+
 		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
 		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")

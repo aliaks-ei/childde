@@ -1,9 +1,9 @@
 mixin advertCard(image)
-    a.advert-card(href="javascript:void(0)")
-        img.advert-card__image(src=`./assets/images/${ image }.png`, alt="Nur so sind alle Erfahrungen, Meinungen")
-        .advert-card__content Nur so sind alle Erfahrungen, Meinungen
+	a.advert-card(href="javascript:void(0)")
+		img.advert-card__image(src=`./assets/images/${ image }.png`, alt="Nur so sind alle Erfahrungen, Meinungen")
+		.advert-card__content Nur so sind alle Erfahrungen, Meinungen
 
 .adverts-wrapper
-    +advertCard('advert-1-image')
-    +advertCard('advert-2-image')
-    +advertCard('advert-3-image')
+	+advertCard('advert-1-image')
+	+advertCard('advert-2-image')
+	+advertCard('advert-3-image')

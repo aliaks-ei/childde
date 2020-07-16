@@ -20,10 +20,10 @@ const mjmlEngine       = require('mjml');
 
 const paths = {
 	css: [
-		'src/assets/styles/variables.scss', 
-		'src/assets/styles/global.scss', 
-		'src/common.blocks/**/*.scss', 
-		'!src/common.blocks/**/m.*.scss' 
+		'src/assets/styles/variables.scss',
+		'src/assets/styles/global.scss',
+		'src/common.blocks/**/*.scss',
+		'!src/common.blocks/**/m.*.scss'
 	],
 	mCss    : [ 'src/assets/styles/m.global.scss', 'src/common.blocks/**/m.*.scss' ],
 	js      : 'src/common.blocks/**/*.js',
@@ -44,7 +44,7 @@ function svgSprites(cb) {
 		.pipe(svgSymbols())
 		.pipe(dest('build/assets/icons'))
 		.pipe(livereload());
-	
+
 	cb();
 }
 

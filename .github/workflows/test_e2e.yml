@@ -1,4 +1,4 @@
-name: EditorConfig
+name: E2E tests
 
 on:
   push:
@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run test:editorconfig
+      - run: npm run test:e2e

@@ -1,35 +1,33 @@
 include ../../buttons/base-button/baseButton
 
 .answer-comment-form__activator-wrapper
-    .answer-comment-form__avatar
-        img(src="./assets/images/question-2-avatar.png", alt="")
-    .answer-comment-form__activator(data-target="new-comment") 
-        .answer-comment-form__avatar
-            img(src="./assets/images/question-2-avatar.png", alt="")
-        | Leave a comment
+	.answer-comment-form__avatar
+		img(src="./assets/images/question-2-avatar.png", alt="")
+	.answer-comment-form__activator(data-target="new-comment") 
+		.answer-comment-form__avatar
+			img(src="./assets/images/question-2-avatar.png", alt="")
+		| Leave a comment
 .new-comment-form-wrapper#new-comment
-    .new-comment-form-container
-        .answer-comment-form__avatar
-            img(src="./assets/images/question-2-avatar.png", alt="")
-        .new-comment-form
-            .answer-comment-form__avatar
-                img(src="./assets/images/question-2-avatar.png", alt="")
-            textarea.new-comment-form__textarea(placeholder="Leave a comment...", rows="1")
-            .answer-modal__option-buttons.answer-options
-                button.answer-options__btn.answer-options__btn--bold
-                    span.answer-options__btn__content Ж
-                button.answer-options__btn.answer-options__btn--italic
-                    span.answer-options__btn__content К
-                button.answer-options__btn
-                    span.answer-options__btn__content.material-icons list
-                button.answer-options__btn
-                    span.answer-options__btn__content.material-icons-round format_quote
-                button.answer-options__btn
-                    span.answer-options__btn__content.material-icons-round insert_photo
-                button.answer-options__btn.answer-options__btn--link
-                    span.answer-options__btn__content.material-icons-round insert_link
-    .new-comment-form__actions
-        +baseButton({ text: 'Cansel', bgColor: 'var(--border-color-lightblue)', color: 'var(--black-color-2)' })(class="new-comment-form__cancel-btn", data-target-close="new-comment")
-        +baseButton({ text: 'Senden', withArrow: true })(class="new-comment-form__send-btn", disabled)
-
-
+	.new-comment-form-container
+		.answer-comment-form__avatar
+			img(src="./assets/images/question-2-avatar.png", alt="")
+		.new-comment-form
+			.answer-comment-form__avatar
+				img(src="./assets/images/question-2-avatar.png", alt="")
+			textarea.new-comment-form__textarea(placeholder="Leave a comment...", rows="1")
+			.answer-modal__option-buttons.answer-options
+				button.answer-options__btn.answer-options__btn--bold
+					span.answer-options__btn__content Ж
+				button.answer-options__btn.answer-options__btn--italic
+					span.answer-options__btn__content К
+				button.answer-options__btn
+					span.answer-options__btn__content.material-icons list
+				button.answer-options__btn
+					span.answer-options__btn__content.material-icons-round format_quote
+				button.answer-options__btn
+					span.answer-options__btn__content.material-icons-round insert_photo
+				button.answer-options__btn.answer-options__btn--link
+					span.answer-options__btn__content.material-icons-round insert_link
+	.new-comment-form__actions
+		+baseButton({ text: 'Cansel', bgColor: 'var(--border-color-lightblue)', color: 'var(--black-color-2)' })(class="new-comment-form__cancel-btn", data-target-close="new-comment")
+		+baseButton({ text: 'Senden', withArrow: true })(class="new-comment-form__send-btn", disabled)

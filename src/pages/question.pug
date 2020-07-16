@@ -20,7 +20,7 @@ block body
 				.three-column-layout__left
 					include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
 				.three-column-layout__center
-					+questionCardOpened({ 
+					+questionCardOpened({
 						overlay   : '#65adeb',
 						bgImage   : 'question-opened-image.png',
 						avatar    : 'question-2-avatar.png',
@@ -35,33 +35,33 @@ block body
 					+answerCard({ avatar: 'question-4-avatar', nickname: 'Stacy Kim', isSubscribed: true })
 					+answerCard({ avatar: 'question-vote-avatar', nickname: 'Philip Djones', isSubscribed: true })
 					.answer-comments__comments-container
-						+answerCommentCard({ 
+						+answerCommentCard({
 							author : 'Philip Djones',
 							avatar : 'question-0-avatar',
 							text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time '
 						})
 					include ../common.blocks/answer-suggestion-card/answerSuggestionCard
-					+questionCardSmall({ 
+					+questionCardSmall({
 						bgColor   : '#faf4dc',
 						image     : 'blue_personage',
 						interests : 53,
 						title     : 'Wie viel verdienen Illustratoren?',
 						themes    : [{ name: 'Real estate' }, { name: 'Career' }]
 					})
-					+questionCardSmall({ 
+					+questionCardSmall({
 						bgColor   : '#cfe8fa',
 						image     : 'yellow_personage',
 						title     : 'Wie viel verdienen Automechaniker?',
 						themes    : [{ name: 'Career' }]
 					})
-					+questionCardSmall({ 
+					+questionCardSmall({
 						bgColor   : '#efdbeb',
 						interests : 53,
 						image     : 'green_personage',
 						title     : 'Ist es realistisch, mit Faberlic aus der Ferne Geld zu verdienen?',
 						themes    : [{ name: 'Real estate' }]
 					})
-					+questionCardSmall({ 
+					+questionCardSmall({
 						bgColor   : '#e2f5cc',
 						interests : 53,
 						image     : 'books_personage',

@@ -6,7 +6,7 @@
 			display: none;
 		}
 	}
-	
+
 	.top-navigation__container {
 		padding         : 0 14px;
 		justify-content : space-between;
@@ -21,19 +21,19 @@
 	}
 
 	.top-navigation-right-block__search-icon {
-        display    : block;
-        margin-top : -2px;
+		display    : block;
+		margin-top : -2px;
 	}
-	
+
 	.top-navigation-right-block__item + .top-navigation-right-block__item {
 		margin-left: 18px;
 	}
-	
+
 	.top-navigation-right-block__notification-icon {
 		width  : 20px;
 		height : 20px;
 	}
-	
+
 	.top-navigation-right-block__user-image {
 		width: 34px;
 	}

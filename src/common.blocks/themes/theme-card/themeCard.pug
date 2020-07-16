@@ -1,24 +1,24 @@
 mixin themeCard({ name = '', bgImage = '', bgColor = '', large = false })
-    .theme-card-wrapper
-        .theme-card-container
-            .theme-card(class = large ? 'theme-card--large' : null)
-                h2.theme-card__title= name
-                .theme-card__cover
-                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
-                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="/theme", aria-label=name)
-                button.theme-card__subscribe-button(type="button")
-                    span.material-icons-round add_circle
-                    | Abonnieren
-                    span.theme-card__subscribe-button__amount 43 543
-            .theme-card.theme-card--mobile
-                .theme-card__content
-                    h2.theme-card__title= name
-                    .theme-card__subscriptions Abonnieren
-                        span.theme-card__subscribe-button__amount 43 543
-                .theme-card__cover
-                    .theme-card__bg-color(style=`background-color: ${ bgColor }`)
-                    .theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
-                a.theme-card__link(href="/theme", aria-label=name)
-                button.theme-card__subscribe-button(type="button")
-                    span.material-icons-round add_circle
+	.theme-card-wrapper
+		.theme-card-container
+			.theme-card(class = large ? 'theme-card--large' : null)
+				h2.theme-card__title= name
+				.theme-card__cover
+					.theme-card__bg-color(style=`background-color: ${ bgColor }`)
+					.theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
+				a.theme-card__link(href="/theme", aria-label=name)
+				button.theme-card__subscribe-button(type="button")
+					span.material-icons-round add_circle
+					| Abonnieren
+					span.theme-card__subscribe-button__amount 43 543
+			.theme-card.theme-card--mobile
+				.theme-card__content
+					h2.theme-card__title= name
+					.theme-card__subscriptions Abonnieren
+						span.theme-card__subscribe-button__amount 43 543
+				.theme-card__cover
+					.theme-card__bg-color(style=`background-color: ${ bgColor }`)
+					.theme-card__bg-image(style=`background-image: url('./assets/images/${ bgImage }.png')`)
+				a.theme-card__link(href="/theme", aria-label=name)
+				button.theme-card__subscribe-button(type="button")
+					span.material-icons-round add_circle
