@@ -11,7 +11,6 @@ npm run serve
 ## Run tests
 ```
 npm run test:e2e
-npm run test:editorconfig
 ```
 
 ## Build application
