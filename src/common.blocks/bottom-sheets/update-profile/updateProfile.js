@@ -11,7 +11,7 @@
 			bottomSheet.addEventListener('transitionend', function () {
 				if (!currentMenuItem.dataset.target && bsCoverUpload) {
 					bsCoverUpload.style.display = 'block';
-	
+
 					showBottomSheet();
 				}
 			}, { once: true });

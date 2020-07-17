@@ -13,7 +13,7 @@ function animateSignInLink(el, dashoffset) {
 
 	if (dashoffset > 0) {
 		setTimeout(() => animateSignInLink(el, dashoffset), Math.abs(dashoffset) * 2);
-  	}
+	}
 }
 
 signInLink && signInLink.addEventListener('mouseenter', () => {

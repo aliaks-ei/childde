@@ -6,7 +6,7 @@
 
 	function handleCommentTextareaChange(event) {
 		const isSendBtnActive = Boolean(event.target.value && event.target.value.length);
-		
+
 		newCommentSendBtn.disabled = !isSendBtnActive;
 	}
 
@@ -28,7 +28,7 @@
 		commentFormActivator.parentElement.style.display = 'flex';
 
 		textareaEl.removeEventListener('input', handleCommentTextareaChange);
-		
+
 		textareaEl.value = '';
 		textareaEl.style.height = null;
 

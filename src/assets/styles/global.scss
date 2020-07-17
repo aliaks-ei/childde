@@ -88,7 +88,11 @@ button {
 .page--registration {
 	--delimiter-point: 894px;
 
-	background: linear-gradient(to bottom, #ffeddc var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat;
+	background: linear-gradient(
+		to bottom,
+		#ffeddc var(--delimiter-point),
+		var(--background-color-lightblue) 0
+	) no-repeat;
 
 	&:before {
 		content             : "";
@@ -107,7 +111,11 @@ button {
 .page--login {
 	--delimiter-point: 804px;
 
-	background: linear-gradient(to bottom, #afdd82 var(--delimiter-point), var(--background-color-lightblue) 0) no-repeat;
+	background: linear-gradient(
+		to bottom, #afdd82
+		var(--delimiter-point),
+		var(--background-color-lightblue) 0
+	) no-repeat;
 }
 
 .material-icons,

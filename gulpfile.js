@@ -51,7 +51,7 @@ function svgSprites(cb) {
 function html(cb) {
 	src(paths.html)
 		.pipe(plumber())
-		.pipe(pug({ pretty: true }))
+		.pipe(pug())
 		.pipe(dest('build'))
 		.pipe(livereload());
 
@@ -71,7 +71,7 @@ function css(cb) {
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 
-  	cb();
+	cb();
 }
 
 function js(cb) {
@@ -88,7 +88,7 @@ function js(cb) {
 		.pipe(dest('build/js'))
 		.pipe(livereload());
 
-  	cb();
+	cb();
 }
 
 function images(cb) {
@@ -97,7 +97,7 @@ function images(cb) {
 		.pipe(dest('build/assets/images'))
 		.pipe(livereload());
 
-    cb();
+	cb();
 }
 
 function mailers(cb) {
@@ -106,7 +106,7 @@ function mailers(cb) {
 		.pipe(pug())
 		.pipe(rename({ extname: '.mjml' }))
 		.pipe(dest('build/mailers'))
-		.pipe(mjml(mjmlEngine, { beautify: true }))
+		.pipe(mjml(mjmlEngine, { minify: true }))
 		.pipe(dest('build/mailers'))
 		.pipe(livereload())
 		.on('end', function () {
@@ -117,14 +117,16 @@ function mailers(cb) {
 }
 
 function watchChanges() {
+	const ignoreInitial = false;
+
 	livereload({ start: true });
 
-	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial: false }, html);
-	watch([ 'src/assets/styles/*.scss', 'src/common.blocks/**/*.scss' ], { ignoreInitial: false }, css);
-	watch(paths.js, { ignoreInitial: false }, js);
-	watch(paths.images, { ignoreInitial: false }, images);
-	watch(paths.icons, { ignoreInitial: false }, svgSprites);
-	watch(paths.mailers, { ignoreInitial: false }, mailers);
+	watch([ 'src/pages/*.pug', 'src/common.blocks/**/*.pug' ], { ignoreInitial }, html);
+	watch([ 'src/assets/styles/*.scss', 'src/common.blocks/**/*.scss' ], { ignoreInitial }, css);
+	watch(paths.js, { ignoreInitial }, js);
+	watch(paths.images, { ignoreInitial }, images);
+	watch(paths.icons, { ignoreInitial }, svgSprites);
+	watch(paths.mailers, { ignoreInitial }, mailers);
 
 	livereload.listen();
 }

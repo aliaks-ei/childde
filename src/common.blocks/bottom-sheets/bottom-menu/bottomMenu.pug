@@ -4,12 +4,12 @@ mixin bottomMenuLink({ icon, title, href = '' })
 			+svgIcon(icon)
 		| !{ title }
 
-.bottom-menu#bottomMenu(style="display: none") 
+.bottom-menu#bottomMenu(style="display: none")
 	.bottom-menu__search-bar-wrapper
 		.search-bar
 			input.search-bar__input(type="text", placeholder="Search")
 			button.search-bar__icon(aria-label="Search", type="button")
-				span.material-icons-round search 
+				span.material-icons-round search
 	.bottom-menu__nav-wrapper
 		+bottomMenuLink({ icon: 'compass', title: 'Neu' })
 		+bottomMenuLink({ icon: 'trophy', title: 'Top' })

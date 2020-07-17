@@ -25,18 +25,64 @@ block body
 							h2 Was interessiert Sie?
 						.enter-question-wrapper
 							form.enter-question-wrapper__container(autocomplete="off", novalidate)
-								input.enter-question-wrapper__input(type="text", placeholder="Suche nach Thema")
-								+baseButton({ text: 'Suche', withArrow : true })(class="enter-question-wrapper__button", type="submit")
+								input.enter-question-wrapper__input(
+									type        = "text",
+									placeholder = "Suche nach Thema"
+								)
+								+baseButton({ text: 'Suche', withArrow : true })(
+									class = "enter-question-wrapper__button",
+									type  = "submit"
+								)
 						.themes-wrapper
 							.themes-container
-								+themeCard({ name: 'History', bgImage: 'history-theme', bgColor: '#8cc761', large: true})
-								+themeCard({ name: 'Games', bgImage: 'games-theme', bgColor: '#e4955b', large: true})
-								+themeCard({ name: 'Travel', bgImage: 'travel-theme', bgColor: '#70acb4', large: true})
-								+themeCard({ name: 'Food', bgImage: 'food-theme', bgColor: '#f7ae3b', large: true})
-								+themeCard({ name: 'Health', bgImage: 'health-theme', bgColor: '#eb7465', large: true})
-								+themeCard({ name: 'Films', bgImage: 'films-theme', bgColor: '#a461c7', large: true})
-								+themeCard({ name: 'Family', bgImage: 'family-theme', bgColor: '#65adeb', large: true})
-								+themeCard({ name: 'Internet', bgImage: 'internet-theme', bgColor: '#f7ae3b', large: true})
+								+themeCard({
+									name    : 'History',
+									bgImage : 'history-theme',
+									bgColor : '#8cc761',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Games',
+									bgImage : 'games-theme',
+									bgColor : '#e4955b',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Travel',
+									bgImage : 'travel-theme',
+									bgColor : '#70acb4',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Food',
+									bgImage : 'food-theme',
+									bgColor : '#f7ae3b',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Health',
+									bgImage : 'health-theme',
+									bgColor : '#eb7465',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Films',
+									bgImage : 'films-theme',
+									bgColor : '#a461c7',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Family',
+									bgImage : 'family-theme',
+									bgColor : '#65adeb',
+									large   : true
+								})
+								+themeCard({
+									name    : 'Internet',
+									bgImage : 'internet-theme',
+									bgColor : '#f7ae3b',
+									large   : true
+								})
 					.three-column-layout__right
 						include ../common.blocks/we-are-read/weAreRead
 			.space-vertical--80

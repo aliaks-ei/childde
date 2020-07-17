@@ -54,13 +54,13 @@
 	align-items : center;
 	width       : 24px;
 	min-width   : 24px;
-	
+
 	& + & {
 		box-shadow    : 0 0 0 3px var(--white-color);
 		border-radius : 8px;
 		margin-left   : -4px;
 	}
-	
+
 	img {
 		width: 100%;
 	}

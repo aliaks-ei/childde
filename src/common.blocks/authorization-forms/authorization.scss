@@ -78,7 +78,7 @@
 	opacity     : 0;
 }
 
-.auth-form__field-wrapper--error { 
+.auth-form__field-wrapper--error {
 	.auth-form__field {
 		border-color: var(--red-color);
 	}
@@ -109,7 +109,7 @@
 	&:checked + .auth-form__checkbox .material-icons-round {
 		display: inline;
 	}
-	
+
 	&:checked + .auth-form__checkbox {
 		background-color : var(--red-color);
 		border           : 0;
@@ -174,7 +174,7 @@
 	&:last-of-type {
 		margin-bottom: 45px;
 	}
-	
+
 	&:last-of-type svg {
 		width  : 18px;
 		height : 18px;
@@ -195,7 +195,7 @@
 	margin-top    : 0;
 	margin-bottom : 0;
 	line-height   : 26px;
-	
+
 	& + & {
 		margin-top: 6px;
 	}

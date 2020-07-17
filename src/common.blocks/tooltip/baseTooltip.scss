@@ -17,14 +17,14 @@
 	box-shadow       : 0 3px 30px rgba(54, 54, 54, .1);
 
 	&:before {
-	  position      : absolute;
-	  content       : "";
-	  right         : 26px;
-	  top           : -18px;
-	  width         : 0;
-	  height        : 0;
-	  border-bottom : 20px solid var(--blue-color);
-	  border-left   : 20px solid transparent;
+		position      : absolute;
+		content       : "";
+		right         : 26px;
+		top           : -18px;
+		width         : 0;
+		height        : 0;
+		border-bottom : 20px solid var(--blue-color);
+		border-left   : 20px solid transparent;
 	}
 
 	&__close-icon {
@@ -37,7 +37,7 @@
 		color      : var(--white-color);
 
 		&:hover {
-		  opacity: 1;
+			opacity: 1;
 		}
 
 		&:active {

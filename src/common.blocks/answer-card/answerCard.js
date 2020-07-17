@@ -1,4 +1,4 @@
-(function () {    
+(function () {
 	const bestAnswerLabelActivators = document.querySelectorAll('[data-toggle="bestAnswerLabel"]');
 
 	if (bestAnswerLabelActivators) {
@@ -9,7 +9,7 @@
 
 	function setAnswerAsTheBest() {
 		if (this.classList.contains('best-answer-toggler--active')) return;
-		
+
 		const answerCardEl = this.closest('.answer-card');
 		const bestAnswerLabelEl = answerCardEl.querySelector('.answer-card__best-answer-label');
 		const contentEl = this.querySelector('.best-answer-toggler__content span');
