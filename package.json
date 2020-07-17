@@ -7,7 +7,7 @@
 		"build": "gulp build",
 		"cypress:run": "cypress run -b chrome",
 		"cypress:open": "concurrently \"http-server ./build\" \"gulp serve\" \"cypress open\"",
-		"editorconfig:check": "editorconfig-checker --exclude '.git|node_modules|.DS_Store|build|tests'",
+		"editorconfig:check": "editorconfig-checker --exclude '.git|node_modules|.DS_Store|build'",
 		"test:e2e": "start-server-and-test serve http://localhost:8080 cypress:run"
 	},
 	"author": "Alexey Mozheyko",
