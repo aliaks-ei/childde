@@ -1,16 +1,16 @@
 .page-not-found-container.container-1024
-	.page-not-found
-		.page-not-found__content
-			h1.page-not-found__title Ups!
-			h2.page-not-found__subtitle Wir können die Seite nicht finden, die du suchst
+  .page-not-found
+    .page-not-found__content
+      h1.page-not-found__title Ups!
+      h2.page-not-found__subtitle Wir können die Seite nicht finden, die du suchst
 
-			.page-not-found__error-info
-				h3 Fehlercode: 404
-				p.page-not-found__links-title Hier sind stattdessen einige hilfreiche Links:
+      .page-not-found__error-info
+        h3 Fehlercode: 404
+        p.page-not-found__links-title Hier sind stattdessen einige hilfreiche Links:
 
-				ul.page-not-found__links
-					each link in ['Reisen mit Airbnb', 'Gastgeben bei Airbnb', 'Vertrauen & Sicherheit']
-						li
-							a.page-not-found__links__item(href="javascript:void(0)")= link
-		.page-not-found__image-wrapper
-			img(src="./assets/images/404.png", alt="")
+        ul.page-not-found__links
+          each link in ['Reisen mit Airbnb', 'Gastgeben bei Airbnb', 'Vertrauen & Sicherheit']
+            li
+              a.page-not-found__links__item(href="javascript:void(0)")= link
+    .page-not-found__image-wrapper
+      img(src="./assets/images/404.png", alt="")

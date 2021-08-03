@@ -1,75 +1,75 @@
 .footer-wrapper-auth {
-	background-color: var(--white-color);
+  background-color: var(--white-color);
 }
 
 .footer-auth {
-	background-color: inherit;
+  background-color: inherit;
 
-	.footer__downloads {
-		margin-right: 80px;
-	}
+  .footer__downloads {
+    margin-right: 80px;
+  }
 
-	.footer__copyright {
-		margin-bottom: 0;
-	}
+  .footer__copyright {
+    margin-bottom: 0;
+  }
 }
 
 .footer-auth__top-block.container-1024 {
-	position        : relative;
-	justify-content : flex-start;
-	padding         : 57px 28px 99px;
+  position        : relative;
+  justify-content : flex-start;
+  padding         : 57px 28px 99px;
 }
 
 .footer-auth__logo-wrapper {
-	margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .footer-auth__social-icons {
-	display         : flex;
-	align-items     : center;
-	justify-content : space-between;
-	width           : 225px;
-	min-width       : 225px;
-	margin-top      : 40px;
-	margin-bottom   : 17px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  width           : 225px;
+  min-width       : 225px;
+  margin-top      : 40px;
+  margin-bottom   : 17px;
 }
 
 .footer-auth__social-icons__item {
-	display          : flex;
-	align-items      : center;
-	justify-content  : center;
-	width            : 35px;
-	min-width        : 35px;
-	height           : 35px;
-	line-height      : 35px;
-	border-radius    : 50%;
-	border           : 3px solid transparent;
-	background-color : var(--blue-color-2);
-	transition       : .1s ease-out;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+  width            : 35px;
+  min-width        : 35px;
+  height           : 35px;
+  line-height      : 35px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  background-color : var(--blue-color-2);
+  transition       : .1s ease-out;
 
-	svg {
-		fill: var(--white-color);
-	}
+  svg {
+    fill: var(--white-color);
+  }
 
-	&:hover {
-		background-color : var(--white-color);
-		border-color     : var(--blue-color-2);
-	}
+  &:hover {
+    background-color : var(--white-color);
+    border-color     : var(--blue-color-2);
+  }
 
-	&:hover svg {
-		fill: var(--blue-color-2);
-	}
+  &:hover svg {
+    fill: var(--blue-color-2);
+  }
 }
 
 .footer-auth__bottom-block-wrapper {
-	height           : 94px;
-	width            : 100%;
-	border-top       : 1px solid var(--border-color-lightgray);
-	background-color : inherit;
+  height           : 94px;
+  width            : 100%;
+  border-top       : 1px solid var(--border-color-lightgray);
+  background-color : inherit;
 }
 
 .footer-auth__bottom-block.container-1024 {
-	height           : 100%;
-	background-color : inherit;
-	align-items      : center;
+  height           : 100%;
+  background-color : inherit;
+  align-items      : center;
 }

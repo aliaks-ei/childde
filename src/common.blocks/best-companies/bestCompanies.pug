@@ -1,18 +1,18 @@
 mixin company(logo, title, number)
-	.best-companies__company
-		img.best-companies__company__logo(src=`./assets/images/${ logo }`, alt=title)
-		.best-companies__company__title= title
-		.best-companies__company__number= number
+  .best-companies__company
+    img.best-companies__company__logo(src=`./assets/images/${ logo }`, alt=title)
+    .best-companies__company__title= title
+    .best-companies__company__number= number
 
 .best-companies
-	h3 Best company
+  h3 Best company
 
-	.best-companies__content
-		+company('logo_nova.png', 'New Post', '1450,99')
-		+company('logo_cossa.png', 'Cossa', '2450,99')
-		+company('logo_nemiroff.png', 'Nemiroff', '2350,99')
-		+company('logo_unilever.png', 'Uniliver', '3450,99')
-		+company('logo_rusbase.png', 'Rusbase', '850,99')
-		+company('logo_lifecell.png', 'Lifecell', '1650,99')
+  .best-companies__content
+    +company('logo_nova.png', 'New Post', '1450,99')
+    +company('logo_cossa.png', 'Cossa', '2450,99')
+    +company('logo_nemiroff.png', 'Nemiroff', '2350,99')
+    +company('logo_unilever.png', 'Uniliver', '3450,99')
+    +company('logo_rusbase.png', 'Rusbase', '850,99')
+    +company('logo_lifecell.png', 'Lifecell', '1650,99')
 
-	a.best-companies__button(href="javascript:void(0)") Show all
+  a.best-companies__button(href="javascript:void(0)") Show all

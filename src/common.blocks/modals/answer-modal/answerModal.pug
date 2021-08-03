@@ -1,50 +1,50 @@
 include ../../symbols-counter/symbolsCounter
 
 .base-modal-wrapper#answerModal(style="display: none")
-	.base-modal.answer-modal-container
-		.answer-modal
-			.base-modal__top-controls
-				button.base-icon-btn.base-modal__close-btn(data-target-close="answerModal")
-					span.material-icons-round close
-			.answer-modal__header-wrapper
-				.answer-modal__header
-					.answer-modal__header__title Wie macht man aus einem Eimer ein Hundehalsband?
-					button.base-icon-btn.answer-modal__close-btn(data-target-close="answerModal")
-						span.material-icons-round close
-			.answer-modal__content-wrapper
-				.answer-modal__content
-					.answer-modal__header__title(data-desktop-hidden) Wie macht man aus einem Eimer ein Hundehalsband?
-					textarea.answer-modal__textarea#answerModalContent(placeholder="Response no more than 90 characters", rows="1")
-				.answer-modal__option-buttons.answer-options
-					button.answer-options__btn.answer-options__btn--bold
-						span.answer-options__btn__content Ж
-					button.answer-options__btn.answer-options__btn--italic
-						span.answer-options__btn__content К
-					button.answer-options__btn
-						span.answer-options__btn__content.material-icons list
-					button.answer-options__btn
-						span.answer-options__btn__content.material-icons-round format_quote
-					button.answer-options__btn(data-target="uploadImageDropdown")
-						span.answer-options__btn__content.material-icons-round insert_photo
-					include ../../dropdowns/upload-image/uploadImage
-					button.answer-options__btn.answer-options__btn--link(data-target="addLinkDropdown")
-						span.answer-options__btn__content.material-icons-round insert_link
-					include ../../dropdowns/add-link/addLink
-			.answer-modal__bottom-wrapper
-				.answer-modal__bottom-container
-					include ../../dropdowns/user-select-dropdown/userSelectDropdown
-					.asnwer-modal__answer-button-wrapper
-						+symbolsCounter({ limit: 90, success: true })
-						+baseButton({
-							text    : 'Antworten',
-							bgColor : 'var(--black-color)',
-							color   : 'var(--white-color)'
-						})(class="answer-modal__answer-button", disabled)
-			.answer-modal__bottom-wrapper(data-target="bsAuthorSelect", data-desktop-hidden)
-				.answer-modal__bottom-container
-					.user-select__selected
-						span.user-select__avatar
-							img(src="./assets/images/question-vote-avatar.png", alt="")
-						span.user-select__name Philip Djones
-					.answer-modal__icon-wrapper
-						span.material-icons-round more_vert
+  .base-modal.answer-modal-container
+    .answer-modal
+      .base-modal__top-controls
+        button.base-icon-btn.base-modal__close-btn(data-target-close="answerModal")
+          span.material-icons-round close
+      .answer-modal__header-wrapper
+        .answer-modal__header
+          .answer-modal__header__title Wie macht man aus einem Eimer ein Hundehalsband?
+          button.base-icon-btn.answer-modal__close-btn(data-target-close="answerModal")
+            span.material-icons-round close
+      .answer-modal__content-wrapper
+        .answer-modal__content
+          .answer-modal__header__title(data-desktop-hidden) Wie macht man aus einem Eimer ein Hundehalsband?
+          textarea.answer-modal__textarea#answerModalContent(placeholder="Response no more than 90 characters", rows="1")
+        .answer-modal__option-buttons.answer-options
+          button.answer-options__btn.answer-options__btn--bold
+            span.answer-options__btn__content Ж
+          button.answer-options__btn.answer-options__btn--italic
+            span.answer-options__btn__content К
+          button.answer-options__btn
+            span.answer-options__btn__content.material-icons list
+          button.answer-options__btn
+            span.answer-options__btn__content.material-icons-round format_quote
+          button.answer-options__btn(data-target="uploadImageDropdown")
+            span.answer-options__btn__content.material-icons-round insert_photo
+          include ../../dropdowns/upload-image/uploadImage
+          button.answer-options__btn.answer-options__btn--link(data-target="addLinkDropdown")
+            span.answer-options__btn__content.material-icons-round insert_link
+          include ../../dropdowns/add-link/addLink
+      .answer-modal__bottom-wrapper
+        .answer-modal__bottom-container
+          include ../../dropdowns/user-select-dropdown/userSelectDropdown
+          .asnwer-modal__answer-button-wrapper
+            +symbolsCounter({ limit: 90, success: true })
+            +baseButton({
+              text    : 'Antworten',
+              bgColor : 'var(--black-color)',
+              color   : 'var(--white-color)'
+            })(class="answer-modal__answer-button", disabled)
+      .answer-modal__bottom-wrapper(data-target="bsAuthorSelect", data-desktop-hidden)
+        .answer-modal__bottom-container
+          .user-select__selected
+            span.user-select__avatar
+              img(src="./assets/images/question-vote-avatar.png", alt="")
+            span.user-select__name Philip Djones
+          .answer-modal__icon-wrapper
+            span.material-icons-round more_vert

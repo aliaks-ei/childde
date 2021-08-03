@@ -1,14 +1,14 @@
 (function () {
-	const otherProfileMenuActivator = document.querySelector('[data-target="otherProfileMenu"]');
-	const otherProfileMenu          = document.getElementById('otherProfileMenu');
+  const otherProfileMenuActivator = document.querySelector('[data-target="otherProfileMenu"]');
+  const otherProfileMenu          = document.getElementById('otherProfileMenu');
 
-	window.addEventListener('click', function (event) {
-		if (!(otherProfileMenuActivator || otherProfileMenu)) return;
+  window.addEventListener('click', function (event) {
+    if (!(otherProfileMenuActivator || otherProfileMenu)) return;
 
-		otherProfileMenu.style.display = 'none';
+    otherProfileMenu.style.display = 'none';
 
-		if (otherProfileMenuActivator.contains(event.target) || otherProfileMenu.contains(event.target)) {
-			otherProfileMenu.style.display = 'block';
-		}
-	});
+    if (otherProfileMenuActivator.contains(event.target) || otherProfileMenu.contains(event.target)) {
+      otherProfileMenu.style.display = 'block';
+    }
+  });
 })();

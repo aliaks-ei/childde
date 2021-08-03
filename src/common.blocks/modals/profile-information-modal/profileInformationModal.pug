@@ -2,17 +2,17 @@ include ../../svg-icon/svgIcon
 include ../../buttons/base-button/baseButton
 
 .base-modal-wrapper#profileInformationModal(style="display: none")
-	.base-modal.profile-info-modal
-		.base-modal__top-controls
-			button.base-icon-btn.base-modal__close-btn(data-target-close="profileInformationModal")
-				span.material-icons-round keyboard_backspace
-		.profile-info-modal__header
-			h2.profile-info-modal__title Profil bearbeiten
-			button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="profileInformationModal")
-				span.material-icons-round close
-		form.profile-info-modal__form(autocomplete="off", novalidate)
-			.profile-info-modal__field-label Text:
-			.profile-info-modal__textarea-wrapper
-				textarea.profile-info-modal__textarea(placeholder="Description...", rows="3")
-			.profile-info-modal__submit-btn-wrapper
-				+baseButton({ text: 'Speichern', withArrow: true })(class="profile-info-modal__submit-btn")
+  .base-modal.profile-info-modal
+    .base-modal__top-controls
+      button.base-icon-btn.base-modal__close-btn(data-target-close="profileInformationModal")
+        span.material-icons-round keyboard_backspace
+    .profile-info-modal__header
+      h2.profile-info-modal__title Profil bearbeiten
+      button.base-icon-btn.profile-avatar-modal__close-btn(data-target-close="profileInformationModal")
+        span.material-icons-round close
+    form.profile-info-modal__form(autocomplete="off", novalidate)
+      .profile-info-modal__field-label Text:
+      .profile-info-modal__textarea-wrapper
+        textarea.profile-info-modal__textarea(placeholder="Description...", rows="3")
+      .profile-info-modal__submit-btn-wrapper
+        +baseButton({ text: 'Speichern', withArrow: true })(class="profile-info-modal__submit-btn")

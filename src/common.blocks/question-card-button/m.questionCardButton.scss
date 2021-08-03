@@ -1,33 +1,33 @@
 @media (max-width: 600px) {
-	.question-card-button {
-		font-size   : 12px;
-		line-height : 22px;
-		padding     : 0;
+  .question-card-button {
+    font-size   : 12px;
+    line-height : 22px;
+    padding     : 0;
 
-		&:before {
-			content: none;
-		}
+    &:before {
+      content: none;
+    }
 
-		& + & {
-			margin-left: 16px;
-		}
+    & + & {
+      margin-left: 16px;
+    }
 
-		.question-card-button__icon {
-			font-size   : 16px;
-			display     : flex;
-			align-items : center;
+    .question-card-button__icon {
+      font-size   : 16px;
+      display     : flex;
+      align-items : center;
 
-			svg {
-				width: 20px;
-			}
+      svg {
+        width: 20px;
+      }
 
-			svg.answer {
-				width: 14px;
-			}
+      svg.answer {
+        width: 14px;
+      }
 
-			&:not(:only-child) {
-				margin-right: 6px;
-			}
-		}
-	}
+      &:not(:only-child) {
+        margin-right: 6px;
+      }
+    }
+  }
 }

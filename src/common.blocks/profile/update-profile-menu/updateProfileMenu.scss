@@ -1,39 +1,39 @@
 .update-profile-menu {
-	display  : none;
-	position : absolute;
-	top      : 60px;
-	left     : 0;
-	width    : 385px;
-	z-index  : 2;
+  display  : none;
+  position : absolute;
+  top      : 60px;
+  left     : 0;
+  width    : 385px;
+  z-index  : 2;
 }
 
 .update-profile-menu__content {
-	padding: 16px 0;
+  padding: 16px 0;
 }
 
 .update-profile-menu__item-wrapper:hover {
-	background-color: var(--background-color-gray);
+  background-color: var(--background-color-gray);
 }
 
 .update-profile-menu__item {
-	display     : flex;
-	align-items : center;
-	line-height : 44px;
-	padding     : 0 22px;
-	font-weight : 600;
-	cursor      : pointer;
-	user-select : none;
+  display     : flex;
+  align-items : center;
+  line-height : 44px;
+  padding     : 0 22px;
+  font-weight : 600;
+  cursor      : pointer;
+  user-select : none;
 
-	&:active {
-		opacity   : .65;
-		transform : scale(.98);
-	}
+  &:active {
+    opacity   : .65;
+    transform : scale(.98);
+  }
 }
 
 .update-profile-menu__item__icon {
-	display         : flex;
-	align-items     : center;
-	justify-content : center;
-	width           : 22px;
-	margin-right    : 12px;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 22px;
+  margin-right    : 12px;
 }

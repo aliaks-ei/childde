@@ -1,59 +1,59 @@
 .answer-comment-card-wrapper {
-	margin-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .answer-comment-card {
-	max-width     : 600px;
-	padding       : 24px 22px 16px 30px;
-	border-radius : 10px;
+  max-width     : 600px;
+  padding       : 24px 22px 16px 30px;
+  border-radius : 10px;
 }
 
 .answer-comment-card__header {
-	display         : flex;
-	align-items     : center;
-	justify-content : space-between;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
 
-	.question-info__user.question-user {
-		margin: 0;
+  .question-info__user.question-user {
+    margin: 0;
 
-		.question-user__name {
-			color: var(--blue-color);
-		}
-	}
+    .question-user__name {
+      color: var(--blue-color);
+    }
+  }
 
-	.question-card-button .question-card-button__icon:not(:only-child) {
-		margin-right: 6px;
-	}
+  .question-card-button .question-card-button__icon:not(:only-child) {
+    margin-right: 6px;
+  }
 }
 
 .answer-comment-card__content {
-	padding-top : 6px;
-	line-height : 26px;
+  padding-top : 6px;
+  line-height : 26px;
 }
 
 .answer-comment-card__actions {
-	display     : flex;
-	align-items : center;
+  display     : flex;
+  align-items : center;
 
-	.question-reviews__likes {
-		display: none;
-	}
+  .question-reviews__likes {
+    display: none;
+  }
 }
 
 .answer-comment-card__answer-btn {
-	padding          : 0;
-	margin-top       : -2px;
-	margin-right     : 12px;
-	border           : 0;
-	background-color : transparent;
-	color            : var(--text-gray-3);
-	font-size        : 14px;
-	font-family      : var(--font-open-sans);
-	font-weight      : 600;
-	cursor           : pointer;
-	user-select      : none;
+  padding          : 0;
+  margin-top       : -2px;
+  margin-right     : 12px;
+  border           : 0;
+  background-color : transparent;
+  color            : var(--text-gray-3);
+  font-size        : 14px;
+  font-family      : var(--font-open-sans);
+  font-weight      : 600;
+  cursor           : pointer;
+  user-select      : none;
 
-	&:hover {
-		color: var(--black-color);
-	}
+  &:hover {
+    color: var(--black-color);
+  }
 }

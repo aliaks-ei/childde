@@ -3,53 +3,53 @@ include ../../svg-icon/svgIcon
 include ../update-profile-menu/updateProfileMenuItem
 
 mixin profileHeader({ name = '', isOwnProfile = false })
-	section.profile-header-wrapper
-		.profile-header
-			.profile-header__cover
-				.profile-header__cover__bg-color
-				.profile-header__cover__bg-image
-				.profile-header__avatar
-					img.profile-header__avatar__img(src="./assets/images/profile-avatar.png", alt="Philip Djones")
-			.profile-header__info
-				if !isOwnProfile
-					button.profile-header__menu-btn.base-icon-btn(data-target="otherProfileMenu", data-mobile-hidden)
-						span.material-icons-round more_vert
-					button.profile-header__menu-btn.base-icon-btn(data-target="bsOtherProfileMenu", data-desktop-hidden)
-						span.material-icons-round more_vert
-					include ../other-profile-menu/otherProfileMenu
+  section.profile-header-wrapper
+    .profile-header
+      .profile-header__cover
+        .profile-header__cover__bg-color
+        .profile-header__cover__bg-image
+        .profile-header__avatar
+          img.profile-header__avatar__img(src="./assets/images/profile-avatar.png", alt="Philip Djones")
+      .profile-header__info
+        if !isOwnProfile
+          button.profile-header__menu-btn.base-icon-btn(data-target="otherProfileMenu", data-mobile-hidden)
+            span.material-icons-round more_vert
+          button.profile-header__menu-btn.base-icon-btn(data-target="bsOtherProfileMenu", data-desktop-hidden)
+            span.material-icons-round more_vert
+          include ../other-profile-menu/otherProfileMenu
 
-				if isOwnProfile
-					a.profile-header__info__username(href="javascript:void(0)", data-target="profileAvatarModal")= name
-						span.material-icons-round create
-				else
-					span.profile-header__info__username= name
+        if isOwnProfile
+          a.profile-header__info__username(href="javascript:void(0)", data-target="profileAvatarModal")= name
+            span.material-icons-round create
+        else
+          span.profile-header__info__username= name
 
-				.profile-header__info__registry-date Mitglied seit März 2019
+        .profile-header__info__registry-date Mitglied seit März 2019
 
-				if isOwnProfile
-					.profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
-						+baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu", data-mobile-hidden)
-						+baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="bsUpdateProfile", data-desktop-hidden)
+        if isOwnProfile
+          .profile-header__info__action-btns.profile-action-btns.profile-action-btns--scroll-x
+            +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="updateProfileMenu", data-mobile-hidden)
+            +baseButton({ text: 'Profil bearbeiten' })(class="profile-action-btns__update-profile", data-target="bsUpdateProfile", data-desktop-hidden)
 
-						.update-profile-menu.base-dropdown#updateProfileMenu
-							.update-profile-menu__content
-								+updateProfileMenuItem({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
-								+updateProfileMenuItem({ icon: 'profile-cover', text: 'Titelbild ändern' })(data-target="profileUpdateCover")
-								+updateProfileMenuItem({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
+            .update-profile-menu.base-dropdown#updateProfileMenu
+              .update-profile-menu__content
+                +updateProfileMenuItem({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
+                +updateProfileMenuItem({ icon: 'profile-cover', text: 'Titelbild ändern' })(data-target="profileUpdateCover")
+                +updateProfileMenuItem({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
 
-						include ../update-profile-cover/updateProfileCover
+            include ../update-profile-cover/updateProfileCover
 
-						+baseButton({
-							text    : 'Themen abonnieren',
-							bgColor : 'var(--background-color-gray)',
-							color   : 'var(--black-color-2)'
-						})(class="profile-action-btns__themes-subscribe", data-target="subscribeToThemesModal")
-				else
-					.profile-header__info__action-btns.profile-action-btns.profile-header__info__action-btns--flex
-						button.profile-action-btns__ask-question-btn.base-btn(data-target="qModal")
-							+svgIcon('profile-ask-question')
-							| Frage stellen
+            +baseButton({
+              text    : 'Themen abonnieren',
+              bgColor : 'var(--background-color-gray)',
+              color   : 'var(--black-color-2)'
+            })(class="profile-action-btns__themes-subscribe", data-target="subscribeToThemesModal")
+        else
+          .profile-header__info__action-btns.profile-action-btns.profile-header__info__action-btns--flex
+            button.profile-action-btns__ask-question-btn.base-btn(data-target="qModal")
+              +svgIcon('profile-ask-question')
+              | Frage stellen
 
-						button.answer-card__subscribe-btn
-							+svgIcon('subscribe')
-							span Abonnieren
+            button.answer-card__subscribe-btn
+              +svgIcon('subscribe')
+              span Abonnieren

@@ -1,59 +1,59 @@
 @media (max-width: 600px) {
-	.answer-comments-wrapper {
-		margin-top: 20px;
-	}
+  .answer-comments-wrapper {
+    margin-top: 20px;
+  }
 
-	.answer-comments__caption-wrapper {
-		margin-bottom : 16px;
-		padding       : 0 12px;
-	}
+  .answer-comments__caption-wrapper {
+    margin-bottom : 16px;
+    padding       : 0 12px;
+  }
 
-	.answer-comments__total-comments {
-		font-size : 12px;
-		padding   : 0 8px;
-	}
+  .answer-comments__total-comments {
+    font-size : 12px;
+    padding   : 0 8px;
+  }
 
-	.answer-comments__comments-container {
-		padding: 0 12px;
-	}
+  .answer-comments__comments-container {
+    padding: 0 12px;
+  }
 
-	.answer-comments__collapsed-comments {
-		margin-bottom: 16px;
+  .answer-comments__collapsed-comments {
+    margin-bottom: 16px;
 
-		.comments-arrow {
-			width: 18px;
-		}
-	}
+    .comments-arrow {
+      width: 18px;
+    }
+  }
 
-	.collapsed-comments__link {
-		font-size: 12px;
-	}
+  .collapsed-comments__link {
+    font-size: 12px;
+  }
 
-	.answer-comments__comments {
-		--comments-border-left-offset: 2px;
-	}
+  .answer-comments__comments {
+    --comments-border-left-offset: 2px;
+  }
 
-	.answer-comments__comments--with-border:before {
-		border-width: 3px;
-	}
+  .answer-comments__comments--with-border:before {
+    border-width: 3px;
+  }
 
-	.answer-comments__comments--level-1 {
-		--comments-level-padding: 20px;
-	}
+  .answer-comments__comments--level-1 {
+    --comments-level-padding: 20px;
+  }
 
-	.answer-comments__comments--level-2 {
-		--comments-level-padding: 16px;
-	}
+  .answer-comments__comments--level-2 {
+    --comments-level-padding: 16px;
+  }
 
-	.answer-comments__comments--level-3 {
-		--comments-level-padding: 12px;
-	}
+  .answer-comments__comments--level-3 {
+    --comments-level-padding: 12px;
+  }
 
-	.answer-comments__comments--level-4 {
-		--comments-level-padding: 8px;
-	}
+  .answer-comments__comments--level-4 {
+    --comments-level-padding: 8px;
+  }
 
-	.answer-comments__comments--level-5 {
-		--comments-level-padding: 4px;
-	}
+  .answer-comments__comments--level-5 {
+    --comments-level-padding: 4px;
+  }
 }

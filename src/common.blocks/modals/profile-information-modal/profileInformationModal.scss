@@ -1,50 +1,50 @@
 .profile-info-modal {
-	position : relative;
-	width    : 775px;
-	padding  : 42px 56px;
+  position : relative;
+  width    : 775px;
+  padding  : 42px 56px;
 }
 
 .profile-info-modal__form {
-	margin-top: 28px;
+  margin-top: 28px;
 }
 
 .profile-info-modal__field-label {
-	font-weight   : 600;
-	line-height   : 26px;
-	margin-bottom : 12px;
+  font-weight   : 600;
+  line-height   : 26px;
+  margin-bottom : 12px;
 }
 
 .profile-info-modal__textarea {
-	width            : 100%;
-	border           : 2px solid transparent;
-	margin           : 0;
-	border-radius    : 5px;
-	min-height       : 116px;
-	font-family      : var(--font-open-sans);
-	font-size        : 16px;
-	font-weight      : 600;
-	color            : var(--black-color);
-	background-color : var(--background-color-gray);
-	line-height      : 26px;
-	padding          : 14px 16px;
-	resize           : none;
-	outline          : none;
-	transition       : border-color .1s ease-out;
+  width            : 100%;
+  border           : 2px solid transparent;
+  margin           : 0;
+  border-radius    : 5px;
+  min-height       : 116px;
+  font-family      : var(--font-open-sans);
+  font-size        : 16px;
+  font-weight      : 600;
+  color            : var(--black-color);
+  background-color : var(--background-color-gray);
+  line-height      : 26px;
+  padding          : 14px 16px;
+  resize           : none;
+  outline          : none;
+  transition       : border-color .1s ease-out;
 
-	&:focus {
-		border-color: var(--blue-color);
-	}
+  &:focus {
+    border-color: var(--blue-color);
+  }
 }
 
 .profile-info-modal__submit-btn-wrapper {
-	margin-top: 32px;
+  margin-top: 32px;
 }
 
 .profile-info-modal__submit-btn {
-	margin-left   : auto;
-	width         : 208px;
-	height        : 66px;
-	line-height   : 66px;
-	border-radius : 33px;
-	font-size     : 18px;
+  margin-left   : auto;
+  width         : 208px;
+  height        : 66px;
+  line-height   : 66px;
+  border-radius : 33px;
+  font-size     : 18px;
 }

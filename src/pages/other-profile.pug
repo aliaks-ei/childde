@@ -5,58 +5,58 @@ include ../common.blocks/progress-linear/progressLinear
 include ../common.blocks/profile/profile-header/profileHeader
 
 block title
-	title Profile
+  title Profile
 
 block body
-	body
-		+progressLinear({ color: '#3e8fad', percent: 30 })
-		+topNavigation({ bgColor: '#e3f0f5' })
-		.search-bar-container#searchBar
-			include ../common.blocks/search-bar/searchBar
-		.space-vertical--80
-		main.main--with-bottom-border
-			.three-column-layout
-				.container-1024
-					.three-column-layout__left
-						include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
-					.three-column-layout__center
-						+profileHeader({ name: 'Devid Brown' })
-						include ../common.blocks/profile/profile-tabs/profileTabs
-						section
-							include ../common.blocks/profile/profile-tabs/profileQuestionsTab
-							include ../common.blocks/profile/profile-tabs/profileAnswersTab
-							include ../common.blocks/profile/profile-tabs/profileSubscriptionsTab
-					.three-column-layout__right
-						include ../common.blocks/themes/themes-rating/themesRating
+  body
+    +progressLinear({ color: '#3e8fad', percent: 30 })
+    +topNavigation({ bgColor: '#e3f0f5' })
+    .search-bar-container#searchBar
+      include ../common.blocks/search-bar/searchBar
+    .space-vertical--80
+    main.main--with-bottom-border
+      .three-column-layout
+        .container-1024
+          .three-column-layout__left
+            include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
+          .three-column-layout__center
+            +profileHeader({ name: 'Devid Brown' })
+            include ../common.blocks/profile/profile-tabs/profileTabs
+            section
+              include ../common.blocks/profile/profile-tabs/profileQuestionsTab
+              include ../common.blocks/profile/profile-tabs/profileAnswersTab
+              include ../common.blocks/profile/profile-tabs/profileSubscriptionsTab
+          .three-column-layout__right
+            include ../common.blocks/themes/themes-rating/themesRating
 
-			.space-vertical--80
-		include ../common.blocks/footer/base/baseFooter
-		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
+      .space-vertical--80
+    include ../common.blocks/footer/base/baseFooter
+    include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
 
-		#modals
-			.bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
-				.bottom-sheet
-					.bottom-sheet__arrow-icon(data-target="closeBottomSheet")
-						span.material-icons-round expand_more
-					.bottom-sheet__content
-						include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
-						include ../common.blocks/bottom-sheets/qc-menus/qcTopMenu
-						include ../common.blocks/bottom-sheets/qc-menus/qcBottomMenu
-						include ../common.blocks/bottom-sheets/qc-menus/qcThemesMenu
-						include ../common.blocks/bottom-sheets/themes-select/themesSelect
-						include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
-						include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
-						include ../common.blocks/bottom-sheets/other-profile-menu/otherProfileMenu
-			.bs-overlay.bs-overlay--hidden
-			#qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
-				include ../common.blocks/question-card-dropdowns/qcTopDropdown
-			#qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
-				include ../common.blocks/question-card-dropdowns/qcBottomDropdown
-			include ../common.blocks/modals/ask-question-modal/askQuestionModal
-			include ../common.blocks/modals/profile-avatar-modal/profileAvatarModal
-			include ../common.blocks/modals/profile-information-modal/profileInformationModal
-			include ../common.blocks/modals/subscribe-to-themes-modal/subscribeToThemesModal
+    #modals
+      .bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
+        .bottom-sheet
+          .bottom-sheet__arrow-icon(data-target="closeBottomSheet")
+            span.material-icons-round expand_more
+          .bottom-sheet__content
+            include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
+            include ../common.blocks/bottom-sheets/qc-menus/qcTopMenu
+            include ../common.blocks/bottom-sheets/qc-menus/qcBottomMenu
+            include ../common.blocks/bottom-sheets/qc-menus/qcThemesMenu
+            include ../common.blocks/bottom-sheets/themes-select/themesSelect
+            include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
+            include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
+            include ../common.blocks/bottom-sheets/other-profile-menu/otherProfileMenu
+      .bs-overlay.bs-overlay--hidden
+      #qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
+        include ../common.blocks/question-card-dropdowns/qcTopDropdown
+      #qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
+        include ../common.blocks/question-card-dropdowns/qcBottomDropdown
+      include ../common.blocks/modals/ask-question-modal/askQuestionModal
+      include ../common.blocks/modals/profile-avatar-modal/profileAvatarModal
+      include ../common.blocks/modals/profile-information-modal/profileInformationModal
+      include ../common.blocks/modals/subscribe-to-themes-modal/subscribeToThemesModal
 
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
-		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
-		script(src="./js/index.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+    script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
+    script(src="./js/index.min.js")

@@ -2,72 +2,72 @@ include ../svg-icon/svgIcon
 include ../themes/theme-chips/themeChips
 
 mixin mobileActionButton({ title, icon, count, isMaterial = false, isActive = false })
-	button.q-mob-action-button(class = isActive ? 'q-mob-action-button--active' : '')&attributes(attributes)
-		span.q-mob-action-button__circle
-			if isMaterial
-				span.material-icons-round= icon
-			else
-				+svgIcon(icon)
-			if count
-				span.q-mob-action-button__count= count
-		span.q-mob-action-button__title= title
+  button.q-mob-action-button(class = isActive ? 'q-mob-action-button--active' : '')&attributes(attributes)
+    span.q-mob-action-button__circle
+      if isMaterial
+        span.material-icons-round= icon
+      else
+        +svgIcon(icon)
+      if count
+        span.q-mob-action-button__count= count
+    span.q-mob-action-button__title= title
 
 mixin questionCardOpened({ overlay, bgImage, avatar, withLabel, title })
-	- let isDefaultQuestion = !(overlay && bgImage);
+  - let isDefaultQuestion = !(overlay && bgImage);
 
-	.question-card-wrapper.question-card-wrapper--opened
-		.question-card(class={ 'question-card--default': isDefaultQuestion })
-			.question-card__header.question-header
-				.question-header__image-wrapper.question-image
-					.question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
-					if bgImage
-						.question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
-						.question-image__blackout
-				a.question-header__link(href="javascript:void(0)", aria-label=title)
-				.question-header__info.question-info
-					.question-info__user.question-user
-						div.question-user__link-wrapper
-							a.question-card__overlapping-link(href="/profile", aria-label="Philip Djones")
-							img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="Philip Djones")
-							span.question-user__name Philip Djones
-						span.question-user__date yesterday at 12:20
-						if withLabel
-							.question-user__label
-								a.question-card__overlapping-link(href="/profile", aria-label="Label Kinderfrage")
-								.question-user__label__icon
-									+svgIcon("bear")
-								span Kinderfrage
-					h3.question-info__title !{ title }
-					+themeChips({
-						themes : [{ name: 'Real estate' }, { name: 'Career' }],
-						light  : !isDefaultQuestion
-					})
-				button.base-icon-btn.question-header__dropdown-icon(
-					class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
-					data-target = "qcTopDropdown"
-				)
-					span.material-icons-round more_vert
-			.question-card__controls-wrapper
-				.question-card__reactions-wrapper
-					.question-card__reactions
-						button.question-card-button
-							span.question-card-button__icon.material-icons favorite
-							span Interessant 53
-						button.question-card-button(data-target="answerModal")
-							span.question-card-button__icon
-								+svgIcon("answer")
-							span Antworten
-					button.question-card-button
-						span.question-card-button__icon.material-icons visibility
-						span 536
-				.question-card__mobile-actions
-					+mobileActionButton({ title: 'Antworten', icon: 'edit', count: 12 })(data-target="answerModal")
-					+mobileActionButton({ title: 'Interessant', icon: 'interest', count: 53, isActive: true })
-					+mobileActionButton({ title: 'More', icon: 'more_vert', isMaterial: true })(data-target="qcTopMenu")
-				.question-card__notifications-wrapper(data-target="qNotificationsToggler")
-					.answer-card__best-answer-toggler.best-answer-toggler
-						.best-answer-toggler__content
-							span Erhalten Sie Benachrichtigungen über neue Antworten und Kommentare
-						.question-dropdown__item__toggle.item-toggle
-							input(type='checkbox')
-							span.item-toggle__slider
+  .question-card-wrapper.question-card-wrapper--opened
+    .question-card(class={ 'question-card--default': isDefaultQuestion })
+      .question-card__header.question-header
+        .question-header__image-wrapper.question-image
+          .question-image__bg-color(style=`background-color: ${ overlay || 'var(--white-color )' }`)
+          if bgImage
+            .question-image__overlay(style=`background-image: url("./assets/images/${ bgImage }")`)
+            .question-image__blackout
+        a.question-header__link(href="javascript:void(0)", aria-label=title)
+        .question-header__info.question-info
+          .question-info__user.question-user
+            div.question-user__link-wrapper
+              a.question-card__overlapping-link(href="/profile", aria-label="Philip Djones")
+              img.question-card__user-avatar(src=`./assets/images/${ avatar }`, alt="Philip Djones")
+              span.question-user__name Philip Djones
+            span.question-user__date yesterday at 12:20
+            if withLabel
+              .question-user__label
+                a.question-card__overlapping-link(href="/profile", aria-label="Label Kinderfrage")
+                .question-user__label__icon
+                  +svgIcon("bear")
+                span Kinderfrage
+          h3.question-info__title !{ title }
+          +themeChips({
+            themes : [{ name: 'Real estate' }, { name: 'Career' }],
+            light  : !isDefaultQuestion
+          })
+        button.base-icon-btn.question-header__dropdown-icon(
+          class       = isDefaultQuestion ? 'question-header__dropdown-icon--dark' : null,
+          data-target = "qcTopDropdown"
+        )
+          span.material-icons-round more_vert
+      .question-card__controls-wrapper
+        .question-card__reactions-wrapper
+          .question-card__reactions
+            button.question-card-button
+              span.question-card-button__icon.material-icons favorite
+              span Interessant 53
+            button.question-card-button(data-target="answerModal")
+              span.question-card-button__icon
+                +svgIcon("answer")
+              span Antworten
+          button.question-card-button
+            span.question-card-button__icon.material-icons visibility
+            span 536
+        .question-card__mobile-actions
+          +mobileActionButton({ title: 'Antworten', icon: 'edit', count: 12 })(data-target="answerModal")
+          +mobileActionButton({ title: 'Interessant', icon: 'interest', count: 53, isActive: true })
+          +mobileActionButton({ title: 'More', icon: 'more_vert', isMaterial: true })(data-target="qcTopMenu")
+        .question-card__notifications-wrapper(data-target="qNotificationsToggler")
+          .answer-card__best-answer-toggler.best-answer-toggler
+            .best-answer-toggler__content
+              span Erhalten Sie Benachrichtigungen über neue Antworten und Kommentare
+            .question-dropdown__item__toggle.item-toggle
+              input(type='checkbox')
+              span.item-toggle__slider

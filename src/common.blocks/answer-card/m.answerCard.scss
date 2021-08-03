@@ -1,41 +1,41 @@
 @media (max-width: 600px) {
-	.answer-card {
-		padding       : 0 14px;
-		margin-bottom : 16px;
-	}
+  .answer-card {
+    padding       : 0 14px;
+    margin-bottom : 16px;
+  }
 
-	.answer-card__header {
-		padding-bottom: 8px;
-	}
+  .answer-card__header {
+    padding-bottom: 8px;
+  }
 
-	.answer-card__content p {
-		margin-bottom: 1rem;
-	}
+  .answer-card__content p {
+    margin-bottom: 1rem;
+  }
 
-	.answer-card__subscribe-btn {
-		border-radius : 50%;
-		padding       : 8px;
+  .answer-card__subscribe-btn {
+    border-radius : 50%;
+    padding       : 8px;
 
-		svg {
-			margin-right: 0;
-		}
+    svg {
+      margin-right: 0;
+    }
 
-		span {
-			display: none;
-		}
-	}
+    span {
+      display: none;
+    }
+  }
 
-	.answer-card__date {
-		padding   : 0 6px;
-		font-size : 12px;
-	}
+  .answer-card__date {
+    padding   : 0 6px;
+    font-size : 12px;
+  }
 
-	.answer-card__best-answer-label {
-		line-height: 18px;
-	}
+  .answer-card__best-answer-label {
+    line-height: 18px;
+  }
 
-	.best-answer-toggler__content {
-		font-size   : 12px;
-		line-height : 18px;
-	}
+  .best-answer-toggler__content {
+    font-size   : 12px;
+    line-height : 18px;
+  }
 }

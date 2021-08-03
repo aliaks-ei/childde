@@ -1,22 +1,22 @@
 @media (max-width: 600px) {
-	.swiper-card {
-		padding : 24px;
-		height  : 220px;
+  .swiper-card {
+    padding : 24px;
+    height  : 220px;
 
-		&--with-image {
-			height: 330px;
-		}
-	}
+    &--with-image {
+      height: 330px;
+    }
+  }
 
-	.swiper-card__content {
-		font-size     : 12px;
-		line-height   : 22px;
-		margin-bottom : 16px;
-	}
+  .swiper-card__content {
+    font-size     : 12px;
+    line-height   : 22px;
+    margin-bottom : 16px;
+  }
 
-	.swiper-card__button {
-		height      : 36px;
-		line-height : 36px;
-		margin-top  : 0;
-	}
+  .swiper-card__button {
+    height      : 36px;
+    line-height : 36px;
+    margin-top  : 0;
+  }
 }

@@ -7,94 +7,94 @@ include ../common.blocks/answer-comments/answer-comment-card/answerCommentCard
 include ../common.blocks/question-card-small/questionCardSmall
 
 block title
-	title Question
+  title Question
 
 block body
-	body
-		+topNavigation({ bgColor: '#e3f0f5' })
-		.search-bar-container#searchBar
-			include ../common.blocks/search-bar/searchBar
-		.space-vertical--80
-		.three-column-layout
-			.container-1024
-				.three-column-layout__left
-					include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
-				.three-column-layout__center
-					+questionCardOpened({
-						overlay   : '#65adeb',
-						bgImage   : 'question-opened-image.png',
-						avatar    : 'question-2-avatar.png',
-						withLabel : true,
-						title     : 'Wie viel verdienen Ticktoker?'
-					})
-					+answerCard({ avatar: 'question-0-avatar', nickname: 'Philip Djones', isBrief: false })
-					include ../common.blocks/answer-comments/answerComments
-					include ../common.blocks/adverts/adverts
-					.similar-answers-title
-						h3 Noch zwei antworten
-					+answerCard({ avatar: 'question-4-avatar', nickname: 'Stacy Kim', isSubscribed: true })
-					+answerCard({ avatar: 'question-vote-avatar', nickname: 'Philip Djones', isSubscribed: true })
-					.answer-comments__comments-container
-						+answerCommentCard({
-							author : 'Philip Djones',
-							avatar : 'question-0-avatar',
-							text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time '
-						})
-					include ../common.blocks/answer-suggestion-card/answerSuggestionCard
-					+questionCardSmall({
-						bgColor   : '#faf4dc',
-						image     : 'blue_personage',
-						interests : 53,
-						title     : 'Wie viel verdienen Illustratoren?',
-						themes    : [{ name: 'Real estate' }, { name: 'Career' }]
-					})
-					+questionCardSmall({
-						bgColor   : '#cfe8fa',
-						image     : 'yellow_personage',
-						title     : 'Wie viel verdienen Automechaniker?',
-						themes    : [{ name: 'Career' }]
-					})
-					+questionCardSmall({
-						bgColor   : '#efdbeb',
-						interests : 53,
-						image     : 'green_personage',
-						title     : 'Ist es realistisch, mit Faberlic aus der Ferne Geld zu verdienen?',
-						themes    : [{ name: 'Real estate' }]
-					})
-					+questionCardSmall({
-						bgColor   : '#e2f5cc',
-						interests : 53,
-						image     : 'books_personage',
-						title     : 'Wie macht man aus einem Eimer ein Hundehalsband?',
-						themes    : [{ name: 'Real estate' }, { name: 'Career' }]
-					})
-				.three-column-layout__right
-					include ../common.blocks/comments/comments
-					include ../common.blocks/we-are-read/weAreRead
-		include ../common.blocks/pre-footer/preFooter
-		include ../common.blocks/footer/base/baseFooter
-		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
+  body
+    +topNavigation({ bgColor: '#e3f0f5' })
+    .search-bar-container#searchBar
+      include ../common.blocks/search-bar/searchBar
+    .space-vertical--80
+    .three-column-layout
+      .container-1024
+        .three-column-layout__left
+          include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
+        .three-column-layout__center
+          +questionCardOpened({
+            overlay   : '#65adeb',
+            bgImage   : 'question-opened-image.png',
+            avatar    : 'question-2-avatar.png',
+            withLabel : true,
+            title     : 'Wie viel verdienen Ticktoker?'
+          })
+          +answerCard({ avatar: 'question-0-avatar', nickname: 'Philip Djones', isBrief: false })
+          include ../common.blocks/answer-comments/answerComments
+          include ../common.blocks/adverts/adverts
+          .similar-answers-title
+            h3 Noch zwei antworten
+          +answerCard({ avatar: 'question-4-avatar', nickname: 'Stacy Kim', isSubscribed: true })
+          +answerCard({ avatar: 'question-vote-avatar', nickname: 'Philip Djones', isSubscribed: true })
+          .answer-comments__comments-container
+            +answerCommentCard({
+              author : 'Philip Djones',
+              avatar : 'question-0-avatar',
+              text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time '
+            })
+          include ../common.blocks/answer-suggestion-card/answerSuggestionCard
+          +questionCardSmall({
+            bgColor   : '#faf4dc',
+            image     : 'blue_personage',
+            interests : 53,
+            title     : 'Wie viel verdienen Illustratoren?',
+            themes    : [{ name: 'Real estate' }, { name: 'Career' }]
+          })
+          +questionCardSmall({
+            bgColor   : '#cfe8fa',
+            image     : 'yellow_personage',
+            title     : 'Wie viel verdienen Automechaniker?',
+            themes    : [{ name: 'Career' }]
+          })
+          +questionCardSmall({
+            bgColor   : '#efdbeb',
+            interests : 53,
+            image     : 'green_personage',
+            title     : 'Ist es realistisch, mit Faberlic aus der Ferne Geld zu verdienen?',
+            themes    : [{ name: 'Real estate' }]
+          })
+          +questionCardSmall({
+            bgColor   : '#e2f5cc',
+            interests : 53,
+            image     : 'books_personage',
+            title     : 'Wie macht man aus einem Eimer ein Hundehalsband?',
+            themes    : [{ name: 'Real estate' }, { name: 'Career' }]
+          })
+        .three-column-layout__right
+          include ../common.blocks/comments/comments
+          include ../common.blocks/we-are-read/weAreRead
+    include ../common.blocks/pre-footer/preFooter
+    include ../common.blocks/footer/base/baseFooter
+    include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
 
-		#modals
-			.bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
-				.bottom-sheet
-					.bottom-sheet__arrow-icon(data-target="closeBottomSheet")
-						span.material-icons-round expand_more
-					.bottom-sheet__content
-						include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
-						include ../common.blocks/bottom-sheets/qc-menus/qcTopMenu
-						include ../common.blocks/bottom-sheets/qc-menus/qcBottomMenu
-						include ../common.blocks/bottom-sheets/themes-select/themesSelect
-						include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
-						include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
-			.bs-overlay.bs-overlay--hidden
-			#qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
-				include ../common.blocks/question-card-dropdowns/qcTopDropdown
-			#qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
-				include ../common.blocks/question-card-dropdowns/qcBottomDropdown
-			include ../common.blocks/modals/ask-question-modal/askQuestionModal
-			include ../common.blocks/modals/answer-modal/answerModal
+    #modals
+      .bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
+        .bottom-sheet
+          .bottom-sheet__arrow-icon(data-target="closeBottomSheet")
+            span.material-icons-round expand_more
+          .bottom-sheet__content
+            include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
+            include ../common.blocks/bottom-sheets/qc-menus/qcTopMenu
+            include ../common.blocks/bottom-sheets/qc-menus/qcBottomMenu
+            include ../common.blocks/bottom-sheets/themes-select/themesSelect
+            include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
+            include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
+      .bs-overlay.bs-overlay--hidden
+      #qTopDropdown.question-card__dropdown.question-dropdown.base-dropdown
+        include ../common.blocks/question-card-dropdowns/qcTopDropdown
+      #qBottomDropdown.question-card__dropdown.question-dropdown.question-dropdown--bottom.base-dropdown
+        include ../common.blocks/question-card-dropdowns/qcBottomDropdown
+      include ../common.blocks/modals/ask-question-modal/askQuestionModal
+      include ../common.blocks/modals/answer-modal/answerModal
 
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
-		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
-		script(src="./js/index.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+    script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
+    script(src="./js/index.min.js")

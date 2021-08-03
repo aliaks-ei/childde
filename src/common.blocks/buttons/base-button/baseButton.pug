@@ -1,14 +1,14 @@
 mixin baseButton({ text, meta, withArrow, bgColor = 'var(--red-color)', color = 'var(--white-color)' })
-	button.base-btn(
-		style = `background-color: ${ bgColor }; color: ${ color }`,
-		class = withArrow ? 'base-btn--animated' : ''
-	)&attributes(attributes)
-		if withArrow
-			span.base-btn__icon.base-btn__icon--left.material-icons-round(style=`color: ${ color }`)
-				| keyboard_arrow_right
-		span.base-btn__content #{ text }
-		if meta
-			span.base-btn__meta= meta
-		if withArrow
-			span.base-btn__icon.base-btn__icon--right.material-icons-round(style=`color: ${ color }`)
-				| keyboard_arrow_right
+  button.base-btn(
+    style = `background-color: ${ bgColor }; color: ${ color }`,
+    class = withArrow ? 'base-btn--animated' : ''
+  )&attributes(attributes)
+    if withArrow
+      span.base-btn__icon.base-btn__icon--left.material-icons-round(style=`color: ${ color }`)
+        | keyboard_arrow_right
+    span.base-btn__content #{ text }
+    if meta
+      span.base-btn__meta= meta
+    if withArrow
+      span.base-btn__icon.base-btn__icon--right.material-icons-round(style=`color: ${ color }`)
+        | keyboard_arrow_right

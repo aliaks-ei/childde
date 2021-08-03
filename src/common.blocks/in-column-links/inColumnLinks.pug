@@ -1,7 +1,7 @@
 mixin inColumnLinks(title, links = [])
-	.in-column-links&attributes(attributes)
-		.in-column-links__title= title
-		ul.in-column-links__container
-			each link in links
-				li.in-column-links__item
-					a.in-column-links__item__link(href='javascript:void(0)')= link
+  .in-column-links&attributes(attributes)
+    .in-column-links__title= title
+    ul.in-column-links__container
+      each link in links
+        li.in-column-links__item
+          a.in-column-links__item__link(href='javascript:void(0)')= link

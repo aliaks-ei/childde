@@ -1,60 +1,60 @@
 .theme-chips-wrapper {
-	display     : flex;
-	align-items : center;
-	flex-wrap   : wrap;
+  display     : flex;
+  align-items : center;
+  flex-wrap   : wrap;
 
-	&--light .theme-chip {
-		background-color: rgba(241, 244, 246, .22);
+  &--light .theme-chip {
+    background-color: rgba(241, 244, 246, .22);
 
-		&:hover {
-			background-color: rgba(241, 244, 246, .15);
-		}
-	}
+    &:hover {
+      background-color: rgba(241, 244, 246, .15);
+    }
+  }
 }
 
 .theme-chip {
-	display          : flex;
-	align-items      : center;
-	position         : relative;
-	font-family      : var(--font-open-sans);
-	border-radius    : 40px;
-	background-color : var(--background-color-gray);
-	user-select      : none;
-	height           : 32px;
-	padding          : 0 13px;
-	font-size        : 14px;
-	line-height      : 32px;
-	cursor           : pointer;
-	transition       : .1s ease-out;
-	margin-bottom    : 9px;
-	margin-right     : 9px;
+  display          : flex;
+  align-items      : center;
+  position         : relative;
+  font-family      : var(--font-open-sans);
+  border-radius    : 40px;
+  background-color : var(--background-color-gray);
+  user-select      : none;
+  height           : 32px;
+  padding          : 0 13px;
+  font-size        : 14px;
+  line-height      : 32px;
+  cursor           : pointer;
+  transition       : .1s ease-out;
+  margin-bottom    : 9px;
+  margin-right     : 9px;
 
-	&[data-desktop-hidden] {
-		display: none;
-	}
+  &[data-desktop-hidden] {
+    display: none;
+  }
 
-	&:hover {
-		background-color: var(--background-color-gray-3);
-	}
+  &:hover {
+    background-color: var(--background-color-gray-3);
+  }
 }
 
 .theme-chip__link {
-	display  : block;
-	position : absolute;
-	top      : 0;
-	bottom   : 0;
-	left     : 0;
-	right    : 0;
+  display  : block;
+  position : absolute;
+  top      : 0;
+  bottom   : 0;
+  left     : 0;
+  right    : 0;
 }
 
 .theme-chip:active {
-	transform : scale(.96);
-	opacity   : .65;
+  transform : scale(.96);
+  opacity   : .65;
 }
 
 .theme-chip .material-icons-round {
-	font-size   : 20px;
-	margin-left : 6px;
-	margin-top  : 1px;
-	color       : inherit;
+  font-size   : 20px;
+  margin-left : 6px;
+  margin-top  : 1px;
+  color       : inherit;
 }

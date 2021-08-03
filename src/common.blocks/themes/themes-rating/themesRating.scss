@@ -1,54 +1,54 @@
 .theme-rating {
-	display         : block;
-	width           : 100%;
-	position        : relative;
-	cursor          : pointer;
-	text-decoration : none;
-	color           : var(--black-color);
+  display         : block;
+  width           : 100%;
+  position        : relative;
+  cursor          : pointer;
+  text-decoration : none;
+  color           : var(--black-color);
 
-	&:hover .theme-rating__bar {
-		background-color: var(--border-color-lightgray);
-	}
+  &:hover .theme-rating__bar {
+    background-color: var(--border-color-lightgray);
+  }
 
-	& + & {
-		margin-top: 12px;
-	}
+  & + & {
+    margin-top: 12px;
+  }
 }
 
 .theme-rating__bar {
-	height           : 44px;
-	min-height       : 44px;
-	background-color : #f5f4ed;
-	border-radius    : 10px;
-	transition       : background-color .1s ease-out;
+  height           : 44px;
+  min-height       : 44px;
+  background-color : #f5f4ed;
+  border-radius    : 10px;
+  transition       : background-color .1s ease-out;
 }
 
 .theme-rating__content {
-	position        : absolute;
-	top             : 0;
-	left            : 0;
-	right           : 0;
-	bottom          : 0;
-	display         : flex;
-	align-items     : center;
-	justify-content : space-between;
-	font-family     : var(--font-open-sans);
-	font-size       : 16px;
-	font-weight     : 600;
-	padding         : 4px 20px;
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  bottom          : 0;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  font-family     : var(--font-open-sans);
+  font-size       : 16px;
+  font-weight     : 600;
+  padding         : 4px 20px;
 }
 
 .themes-rating__more-themes-btn-wrapper {
-	margin-top    : 36px;
-	margin-bottom : 16px;
+  margin-top    : 36px;
+  margin-bottom : 16px;
 }
 
 .themes-rating__more-themes-btn.base-btn {
-	height      : 42px;
-	line-height : 42px;
-	padding     : 0 24px;
+  height      : 42px;
+  line-height : 42px;
+  padding     : 0 24px;
 
-	&:hover {
-		background-color: var(--background-color-gray-3) !important;
-	}
+  &:hover {
+    background-color: var(--background-color-gray-3) !important;
+  }
 }

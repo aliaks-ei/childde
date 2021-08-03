@@ -1,10 +1,10 @@
 mixin linkToStore(icon, subtitle, title)
-	a.store-link(href="javascript:void(0)")
-		+svgIcon(icon)
-		.store-link__content-wrapper
-			.store-link__subtitle= subtitle
-			.store-link__title= title
+  a.store-link(href="javascript:void(0)")
+    +svgIcon(icon)
+    .store-link__content-wrapper
+      .store-link__subtitle= subtitle
+      .store-link__title= title
 
 .store-links-wrapper
-	+linkToStore('app-store', 'Available on the', 'App Store')
-	+linkToStore('google-play', 'Android App on', 'Google Play')
+  +linkToStore('app-store', 'Available on the', 'App Store')
+  +linkToStore('google-play', 'Android App on', 'Google Play')

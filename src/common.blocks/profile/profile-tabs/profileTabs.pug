@@ -1,10 +1,10 @@
 mixin profileTab({ name = '', amount, isActive = false, href })
-	li.profile-tabs__tab
-		a.profile-tabs__link(href=`#${ href }`, class = isActive ? 'profile-tabs__link--active' : '')= name
-			span.profile-tabs__link__amount= amount
+  li.profile-tabs__tab
+    a.profile-tabs__link(href=`#${ href }`, class = isActive ? 'profile-tabs__link--active' : '')= name
+      span.profile-tabs__link__amount= amount
 
 section.profile-tabs-wrapper
-	ul.profile-tabs
-		+profileTab({ name: 'Die Fragen', amount: 5, href: 'profileQuestionsTab', isActive: true })
-		+profileTab({ name: 'Die Antworten', amount: 15, href: 'profileAnswersTab' })
-		+profileTab({ name: 'Abonnenten', amount: 24, href: 'profileSubscriptionsTab' })
+  ul.profile-tabs
+    +profileTab({ name: 'Die Fragen', amount: 5, href: 'profileQuestionsTab', isActive: true })
+    +profileTab({ name: 'Die Antworten', amount: 15, href: 'profileAnswersTab' })
+    +profileTab({ name: 'Abonnenten', amount: 24, href: 'profileSubscriptionsTab' })

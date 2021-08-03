@@ -1,35 +1,35 @@
 @media (max-width: 600px) {
-	.opinion-card-wrapper {
-		padding       : 0 12px;
-		margin-bottom : 24px;
-	}
+  .opinion-card-wrapper {
+    padding       : 0 12px;
+    margin-bottom : 24px;
+  }
 
-	.opinion-card__title {
-		margin-right: 0;
-	}
+  .opinion-card__title {
+    margin-right: 0;
+  }
 
-	.opinion-card {
-		height      : auto;
-		align-items : center;
-		text-align  : center;
-		padding     : 24px;
-	}
+  .opinion-card {
+    height      : auto;
+    align-items : center;
+    text-align  : center;
+    padding     : 24px;
+  }
 
-	.opinion-card__img {
-		position : static;
-		margin   : 12px 0 16px;
-		width    : 128px;
-	}
+  .opinion-card__img {
+    position : static;
+    margin   : 12px 0 16px;
+    width    : 128px;
+  }
 
-	.opinion-card__button {
-		height      : 36px;
-		line-height : 36px;
-	}
+  .opinion-card__button {
+    height      : 36px;
+    line-height : 36px;
+  }
 
-	.card-content__text {
-		width         : 100%;
-		font-size     : 12px;
-		line-height   : 22px;
-		margin-bottom : 16px;
-	}
+  .card-content__text {
+    width         : 100%;
+    font-size     : 12px;
+    line-height   : 22px;
+    margin-bottom : 16px;
+  }
 }

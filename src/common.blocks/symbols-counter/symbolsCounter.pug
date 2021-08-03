@@ -1,19 +1,19 @@
 mixin symbolsCounter({ success = false, limit, isCountDown = false })
-	-
-		let additionalClasses = '';
+  -
+    let additionalClasses = '';
 
-		if (error) additionalClasses += ' symbols-counter-container--error';
-		if (success) additionalClasses += ' symbols-counter-container--success';
+    if (error) additionalClasses += ' symbols-counter-container--error';
+    if (success) additionalClasses += ' symbols-counter-container--success';
 
-	.symbols-counter-container(
-		class                  = additionalClasses,
-		data-symbols-limit     = limit,
-		data-symbols-countdown = isCountDown
-	)&attributes(attributes)
-		svg.symbols-counter(width='36' height='36' fill='none')
-			circle.symbols-counter__bg-circle(cx='18' cy='18' r='16' stroke-width='2')
-			circle.symbols-counter__fill-circle(cx='18' cy='18' r='16' stroke-width='2', stroke-dashoffset="101.24778", stroke-dasharray="101.24778", style="stroke-dashoffset: 101.24778; stroke-dasharray: 101.24778")
+  .symbols-counter-container(
+    class                  = additionalClasses,
+    data-symbols-limit     = limit,
+    data-symbols-countdown = isCountDown
+  )&attributes(attributes)
+    svg.symbols-counter(width='36' height='36' fill='none')
+      circle.symbols-counter__bg-circle(cx='18' cy='18' r='16' stroke-width='2')
+      circle.symbols-counter__fill-circle(cx='18' cy='18' r='16' stroke-width='2', stroke-dashoffset="101.24778", stroke-dasharray="101.24778", style="stroke-dashoffset: 101.24778; stroke-dasharray: 101.24778")
 
-		.symbols-counter__label
-			span.symbols-counter__label__text
-			span.material-icons-round check
+    .symbols-counter__label
+      span.symbols-counter__label__text
+      span.material-icons-round check

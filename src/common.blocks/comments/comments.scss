@@ -1,37 +1,37 @@
 .comments-widget {
-	margin-bottom: 56px;
+  margin-bottom: 56px;
 }
 
 .comments-widget__title {
-	margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .comment {
-	display         : block;
-	font-weight     : 600;
-	line-height     : 26px;
-	color           : var(--black-color-2);
-	text-decoration : none;
+  display         : block;
+  font-weight     : 600;
+  line-height     : 26px;
+  color           : var(--black-color-2);
+  text-decoration : none;
 
-	&:hover .comment__text {
-		text-decoration: underline;
-	}
+  &:hover .comment__text {
+    text-decoration: underline;
+  }
 
-	& + & {
-		margin-top: 22px;
-	}
+  & + & {
+    margin-top: 22px;
+  }
 }
 
 .comment__text {
-	margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .comment__meta,
 .comment__icon {
-	display     : flex;
-	align-items : center;
+  display     : flex;
+  align-items : center;
 }
 
 .comment__icon {
-	margin-right: 8px;
+  margin-right: 8px;
 }

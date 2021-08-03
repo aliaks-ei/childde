@@ -5,104 +5,104 @@ include ../common.blocks/progress-linear/progressLinear
 include ../common.blocks/themes/theme-card/themeCard
 
 block title
-	title Themes
+  title Themes
 
 block body
-	body
-		+progressLinear({ color: '#58c9bb', percent: 30 })
-		+topNavigation({ bgColor: '#b2e3dd' })
-		.search-bar-container#searchBar
-			include ../common.blocks/search-bar/searchBar
-		.space-vertical--80
-		main
-			.three-column-layout
-				.container-1024
-					.three-column-layout__left
-						include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
-					.three-column-layout__center
-						h1.page-title Was interessiert Sie?
-						.page-title--mobile
-							h2 Was interessiert Sie?
-						.enter-question-wrapper
-							form.enter-question-wrapper__container(autocomplete="off", novalidate)
-								input.enter-question-wrapper__input(
-									type        = "text",
-									placeholder = "Suche nach Thema"
-								)
-								+baseButton({ text: 'Suche', withArrow : true })(
-									class = "enter-question-wrapper__button",
-									type  = "submit"
-								)
-						.themes-wrapper
-							.themes-container
-								+themeCard({
-									name    : 'History',
-									bgImage : 'history-theme',
-									bgColor : '#8cc761',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Games',
-									bgImage : 'games-theme',
-									bgColor : '#e4955b',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Travel',
-									bgImage : 'travel-theme',
-									bgColor : '#70acb4',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Food',
-									bgImage : 'food-theme',
-									bgColor : '#f7ae3b',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Health',
-									bgImage : 'health-theme',
-									bgColor : '#eb7465',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Films',
-									bgImage : 'films-theme',
-									bgColor : '#a461c7',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Family',
-									bgImage : 'family-theme',
-									bgColor : '#65adeb',
-									large   : true
-								})
-								+themeCard({
-									name    : 'Internet',
-									bgImage : 'internet-theme',
-									bgColor : '#f7ae3b',
-									large   : true
-								})
-					.three-column-layout__right
-						include ../common.blocks/we-are-read/weAreRead
-			.space-vertical--80
-		include ../common.blocks/pre-footer/preFooter
-		include ../common.blocks/footer/base/baseFooter
-		include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
+  body
+    +progressLinear({ color: '#58c9bb', percent: 30 })
+    +topNavigation({ bgColor: '#b2e3dd' })
+    .search-bar-container#searchBar
+      include ../common.blocks/search-bar/searchBar
+    .space-vertical--80
+    main
+      .three-column-layout
+        .container-1024
+          .three-column-layout__left
+            include ../common.blocks/nav-menu/left-nav-menu/leftNavMenu
+          .three-column-layout__center
+            h1.page-title Was interessiert Sie?
+            .page-title--mobile
+              h2 Was interessiert Sie?
+            .enter-question-wrapper
+              form.enter-question-wrapper__container(autocomplete="off", novalidate)
+                input.enter-question-wrapper__input(
+                  type        = "text",
+                  placeholder = "Suche nach Thema"
+                )
+                +baseButton({ text: 'Suche', withArrow : true })(
+                  class = "enter-question-wrapper__button",
+                  type  = "submit"
+                )
+            .themes-wrapper
+              .themes-container
+                +themeCard({
+                  name    : 'History',
+                  bgImage : 'history-theme',
+                  bgColor : '#8cc761',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Games',
+                  bgImage : 'games-theme',
+                  bgColor : '#e4955b',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Travel',
+                  bgImage : 'travel-theme',
+                  bgColor : '#70acb4',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Food',
+                  bgImage : 'food-theme',
+                  bgColor : '#f7ae3b',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Health',
+                  bgImage : 'health-theme',
+                  bgColor : '#eb7465',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Films',
+                  bgImage : 'films-theme',
+                  bgColor : '#a461c7',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Family',
+                  bgImage : 'family-theme',
+                  bgColor : '#65adeb',
+                  large   : true
+                })
+                +themeCard({
+                  name    : 'Internet',
+                  bgImage : 'internet-theme',
+                  bgColor : '#f7ae3b',
+                  large   : true
+                })
+          .three-column-layout__right
+            include ../common.blocks/we-are-read/weAreRead
+      .space-vertical--80
+    include ../common.blocks/pre-footer/preFooter
+    include ../common.blocks/footer/base/baseFooter
+    include ../common.blocks/nav-menu/bottom-nav-menu/bottomNavMenu
 
-		#modals
-			.bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
-				.bottom-sheet
-					.bottom-sheet__arrow-icon(data-target="closeBottomSheet")
-						span.material-icons-round expand_more
-					.bottom-sheet__content
-						include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
-						include ../common.blocks/bottom-sheets/themes-select/themesSelect
-						include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
-						include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
-			.bs-overlay.bs-overlay--hidden
-			include ../common.blocks/modals/ask-question-modal/askQuestionModal
+    #modals
+      .bottom-sheet-wrapper.bottom-sheet-wrapper--hidden#bottomSheet
+        .bottom-sheet
+          .bottom-sheet__arrow-icon(data-target="closeBottomSheet")
+            span.material-icons-round expand_more
+          .bottom-sheet__content
+            include ../common.blocks/bottom-sheets/bottom-menu/bottomMenu
+            include ../common.blocks/bottom-sheets/themes-select/themesSelect
+            include ../common.blocks/bottom-sheets/q-cover-upload/qCoverUpload
+            include ../common.blocks/bottom-sheets/q-author-select/qAuthorSelect
+      .bs-overlay.bs-overlay--hidden
+      include ../common.blocks/modals/ask-question-modal/askQuestionModal
 
-		script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
-		script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
-		script(src="./js/index.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js")
+    script(src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js")
+    script(src="./js/index.min.js")

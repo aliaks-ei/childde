@@ -2,49 +2,49 @@ include ./answer-comment-card/answerCommentCard
 include ../svg-icon/svgIcon
 
 .answer-comments-wrapper
-	.answer-comments
-		.answer-comments__caption-wrapper
-			h3.answer-comments__caption Verlasse Deine Antwort
-			.answer-comments__total-comments 12
-		.answer-comments__comments-container
-			+answerCommentCard({
-				author : 'Jhon Dow',
-				avatar : 'question-3-avatar',
-				text   : 'I still do not understand from the article: the law of conservation of energy - a myth or reality?'
-			})
-			+answerCommentCard({
-				author : 'Philip Djones',
-				avatar : 'question-2-avatar',
-				text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time'
-			})
-			.answer-comments__comments.answer-comments__comments--with-border.answer-comments__comments--level-1
-				+answerCommentCard({
-					author : 'Jhon Dow',
-					avatar : 'question-3-avatar',
-					text   : 'The theorem works, only symmetries there are such that the invariants of motion of the type'
-				})
-				.answer-comments__comments.answer-comments__comments--with-border.answer-comments__comments--level-2
-					.answer-comments__collapsed-comments.collapsed-comments
-						+svgIcon('comments-arrow')
-						.collapsed-comments__avatars
-							.collapsed-comments__avatars__item
-								img(src='./assets/images/question-0-avatar.png', alt="")
-							.collapsed-comments__avatars__item
-								img(src='./assets/images/question-3-avatar.png', alt="")
-						a.collapsed-comments__link(href="javascript:void(0)") 2 comments
-					+answerCommentCard({
-						author : 'Philip Djones',
-						avatar : 'question-2-avatar',
-						text   : 'And how much is the time spread in such events for all reference systems related to the objects that existed then? If it is in order of magnitude much less than these same millions of years - I suppose, for cosmology'
-					})
-				+answerCommentCard({
-					author : 'Jhon Dow',
-					avatar : 'question-3-avatar',
-					text   : 'Ok'
-				})
-			+answerCommentCard({
-				author : 'Philip Djones',
-				avatar : 'question-2-avatar',
-				text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws'
-			})
-		include ./answer-comment-form/answerCommentForm
+  .answer-comments
+    .answer-comments__caption-wrapper
+      h3.answer-comments__caption Verlasse Deine Antwort
+      .answer-comments__total-comments 12
+    .answer-comments__comments-container
+      +answerCommentCard({
+        author : 'Jhon Dow',
+        avatar : 'question-3-avatar',
+        text   : 'I still do not understand from the article: the law of conservation of energy - a myth or reality?'
+      })
+      +answerCommentCard({
+        author : 'Philip Djones',
+        avatar : 'question-2-avatar',
+        text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws (more precisely, invariants of the equations of motion) with the symmetries of space-time. For example, the conservation of energy follows from the homogeneity of time'
+      })
+      .answer-comments__comments.answer-comments__comments--with-border.answer-comments__comments--level-1
+        +answerCommentCard({
+          author : 'Jhon Dow',
+          avatar : 'question-3-avatar',
+          text   : 'The theorem works, only symmetries there are such that the invariants of motion of the type'
+        })
+        .answer-comments__comments.answer-comments__comments--with-border.answer-comments__comments--level-2
+          .answer-comments__collapsed-comments.collapsed-comments
+            +svgIcon('comments-arrow')
+            .collapsed-comments__avatars
+              .collapsed-comments__avatars__item
+                img(src='./assets/images/question-0-avatar.png', alt="")
+              .collapsed-comments__avatars__item
+                img(src='./assets/images/question-3-avatar.png', alt="")
+            a.collapsed-comments__link(href="javascript:void(0)") 2 comments
+          +answerCommentCard({
+            author : 'Philip Djones',
+            avatar : 'question-2-avatar',
+            text   : 'And how much is the time spread in such events for all reference systems related to the objects that existed then? If it is in order of magnitude much less than these same millions of years - I suppose, for cosmology'
+          })
+        +answerCommentCard({
+          author : 'Jhon Dow',
+          avatar : 'question-3-avatar',
+          text   : 'Ok'
+        })
+      +answerCommentCard({
+        author : 'Philip Djones',
+        avatar : 'question-2-avatar',
+        text   : 'It would be useful here to mention the Noether theorem about the connection of conservation laws'
+      })
+    include ./answer-comment-form/answerCommentForm

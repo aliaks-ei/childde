@@ -1,20 +1,20 @@
 include ../swiper-card/baseSwiperCard
 
 mixin baseSwiper(cards = [])
-	.base-swiper&attributes(attributes)
-		.swiper-container
-			.swiper-wrapper
-				each card in cards
-					+swiperCard({
-						title      : card.title,
-						content    : card.content,
-						imageUrl   : card.imageUrl,
-						buttonText : card.buttonText
-					})
-		.base-swiper-button.swiper-button-next
-			span.material-icons-round keyboard_arrow_right
-		.base-swiper__right-shadow
+  .base-swiper&attributes(attributes)
+    .swiper-container
+      .swiper-wrapper
+        each card in cards
+          +swiperCard({
+            title      : card.title,
+            content    : card.content,
+            imageUrl   : card.imageUrl,
+            buttonText : card.buttonText
+          })
+    .base-swiper-button.swiper-button-next
+      span.material-icons-round keyboard_arrow_right
+    .base-swiper__right-shadow
 
-		.base-swiper-button.swiper-button-prev
-			span.material-icons-round keyboard_arrow_left
-		.base-swiper__left-shadow
+    .base-swiper-button.swiper-button-prev
+      span.material-icons-round keyboard_arrow_left
+    .base-swiper__left-shadow

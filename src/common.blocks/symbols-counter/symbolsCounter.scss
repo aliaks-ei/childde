@@ -1,61 +1,61 @@
 .symbols-counter-container {
-	--symbols-counter-size: 36px;
+  --symbols-counter-size: 36px;
 
-	display         : inline-flex;
-	align-items     : center;
-	justify-content : center;
-	position        : relative;
-	width           : var(--symbols-counter-size);
-	height          : var(--symbols-counter-size);
-	min-width       : var(--symbols-counter-size);
-	min-height      : var(--symbols-counter-size);
-	color           : var(--text-gray-2);
-	margin          : auto 16px;
-	opacity         : 0;
-	transition      : .2s ease-out;
+  display         : inline-flex;
+  align-items     : center;
+  justify-content : center;
+  position        : relative;
+  width           : var(--symbols-counter-size);
+  height          : var(--symbols-counter-size);
+  min-width       : var(--symbols-counter-size);
+  min-height      : var(--symbols-counter-size);
+  color           : var(--text-gray-2);
+  margin          : auto 16px;
+  opacity         : 0;
+  transition      : .2s ease-out;
 
-	&--error {
-		color: var(--red-color);
+  &--error {
+    color: var(--red-color);
 
-		.symbols-counter__bg-circle {
-			stroke-opacity: 1;
-		}
-	}
+    .symbols-counter__bg-circle {
+      stroke-opacity: 1;
+    }
+  }
 
-	&--success {
-		color: var(--green-color);
-	}
+  &--success {
+    color: var(--green-color);
+  }
 }
 
 .symbols-counter {
-	fill     : none;
-	position : absolute;
-	top      : 0;
-	left     : 0;
+  fill     : none;
+  position : absolute;
+  top      : 0;
+  left     : 0;
 }
 
 .symbols-counter__bg-circle {
-	stroke         : currentColor;
-	stroke-opacity : .07;
-	transition     : stroke-opacity .2s ease-out;
+  stroke         : currentColor;
+  stroke-opacity : .07;
+  transition     : stroke-opacity .2s ease-out;
 }
 
 .symbols-counter__fill-circle {
-	stroke           : currentColor;
-	transform        : rotate(-90deg);
-	transform-origin : center;
-	transition       : stroke-dashoffset .1s linear, stroke .2s ease-out;
+  stroke           : currentColor;
+  transform        : rotate(-90deg);
+  transform-origin : center;
+  transition       : stroke-dashoffset .1s linear, stroke .2s ease-out;
 }
 
 .symbols-counter__label {
-	font-size   : 14px;
-	line-height : 1;
-	font-weight : 600;
+  font-size   : 14px;
+  line-height : 1;
+  font-weight : 600;
 
-	.material-icons-round {
-		display     : none;
-		font-size   : 20px;
-		line-height : inherit;
-		color       : currentColor;
-	}
+  .material-icons-round {
+    display     : none;
+    font-size   : 20px;
+    line-height : inherit;
+    color       : currentColor;
+  }
 }

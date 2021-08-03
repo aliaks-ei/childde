@@ -3,17 +3,17 @@ extends ../layouts/pageLayout
 include ../common.blocks/top-navigation/topNavigation
 
 block title
-	title Page not found
+  title Page not found
 
 block body
-	body
-		+topNavigation({ bgColor: '#e3f0f5', showAdditionalLinks: true })
-		.search-bar-container#searchBar
-			include ../common.blocks/search-bar/searchBar
+  body
+    +topNavigation({ bgColor: '#e3f0f5', showAdditionalLinks: true })
+    .search-bar-container#searchBar
+      include ../common.blocks/search-bar/searchBar
 
-		main.main--with-bottom-border
-			include ../common.blocks/page-not-found/pageNotFound
+    main.main--with-bottom-border
+      include ../common.blocks/page-not-found/pageNotFound
 
-		include ../common.blocks/footer/base/baseFooter
+    include ../common.blocks/footer/base/baseFooter
 
-		script(src="./js/index.min.js")
+    script(src="./js/index.min.js")

@@ -1,85 +1,85 @@
 .swiper-card {
-	display         : flex;
-	flex-direction  : column;
-	align-items     : center;
-	justify-content : space-between;
-	border-radius   : 10px;
-	position        : relative;
-	text-decoration : none;
-	color           : var(--black-color);
-	min-width       : 248px;
-	height          : 270px;
-	padding         : 28px 24px;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : space-between;
+  border-radius   : 10px;
+  position        : relative;
+  text-decoration : none;
+  color           : var(--black-color);
+  min-width       : 248px;
+  height          : 270px;
+  padding         : 28px 24px;
 
-	&:first-of-type {
-		background-color: #faf4dc;
+  &:first-of-type {
+    background-color: #faf4dc;
 
-		.swiper-card__image {
-			top: -12px;
-		}
-	}
+    .swiper-card__image {
+      top: -12px;
+    }
+  }
 
-	&:nth-of-type(2) {
-		background-color: #cfe8fa;
+  &:nth-of-type(2) {
+    background-color: #cfe8fa;
 
-		.swiper-card__image {
-			top: -24px;
-		}
-	}
+    .swiper-card__image {
+      top: -24px;
+    }
+  }
 
-	&:last-of-type {
-		background-color: #c5f0ed;
+  &:last-of-type {
+    background-color: #c5f0ed;
 
-		.swiper-card__image {
-			top: -18px;
-		}
-	}
+    .swiper-card__image {
+      top: -18px;
+    }
+  }
 
-	&--with-image {
-		height: 378px;
+  &--with-image {
+    height: 378px;
 
-		.swiper-card__container {
-			margin-top : auto;
-			height     : auto;
-		}
-	}
+    .swiper-card__container {
+      margin-top : auto;
+      height     : auto;
+    }
+  }
 }
 
 .swiper-card__container {
-	display        : flex;
-	flex-direction : column;
-	align-items    : flex-start;
-	height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  align-items    : flex-start;
+  height         : 100%;
 }
 
 .swiper-card__image {
-	position: absolute;
+  position: absolute;
 }
 
 .swiper-card__content {
-	font-size     : 14px;
-	line-height   : 26px;
-	margin-bottom : auto;
+  font-size     : 14px;
+  line-height   : 26px;
+  margin-bottom : auto;
 }
 
 .swiper-card__button {
-	background-color : var(--white-color);
-	border-radius    : 25px;
-	display          : flex;
-	justify-content  : center;
-	align-items      : center;
-	padding          : 0 30px;
-	color            : var(--black-color-2);
-	font-family      : var(--font-montserrat);
-	font-size        : 12px;
-	font-weight      : 700;
-	height           : 39px;
-	line-height      : 39px;
-	margin-top       : 22px;
-	text-decoration  : none;
+  background-color : var(--white-color);
+  border-radius    : 25px;
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
+  padding          : 0 30px;
+  color            : var(--black-color-2);
+  font-family      : var(--font-montserrat);
+  font-size        : 12px;
+  font-weight      : 700;
+  height           : 39px;
+  line-height      : 39px;
+  margin-top       : 22px;
+  text-decoration  : none;
 
-	&:active {
-		transform : scale(.96);
-		opacity   : 1;
-	}
+  &:active {
+    transform : scale(.96);
+    opacity   : 1;
+  }
 }

@@ -1,7 +1,7 @@
 .bottom-sheet__update-profile#bsUpdateProfile(style="display: none")
-	.update-profile-menu.base-dropdown
-		.update-profile-menu__content
-			+updateProfileMenuItem({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
-			+updateProfileMenuItem({ icon: 'profile-cover', text: 'Titelbild ändern' })
-			+updateProfileMenuItem({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
-	button.qc-menu__button(data-target="closeBottomSheet") Close
+  .update-profile-menu.base-dropdown
+    .update-profile-menu__content
+      +updateProfileMenuItem({ icon: 'user-with-bg', text: 'Profilbild und Profilname ändern' })(data-target="profileAvatarModal")
+      +updateProfileMenuItem({ icon: 'profile-cover', text: 'Titelbild ändern' })
+      +updateProfileMenuItem({ icon: 'brush', text: 'Informationen hinzufügen oder ändern' })(data-target="profileInformationModal")
+  button.qc-menu__button(data-target="closeBottomSheet") Close

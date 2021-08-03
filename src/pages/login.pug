@@ -4,19 +4,19 @@ include ../common.blocks/top-navigation/topNavigation
 include ../common.blocks/progress-linear/progressLinear
 
 block title
-	title Log in
+  title Log in
 
 block body
-	body.page--login
-		+progressLinear({ color: '#7ec439', percent: 30 })
-		+topNavigation({ bgColor: 'transparent', isUserAuthorized: false })(class="top-navigation--large")
-		main.authorization-form-container.container-1024
-			h1.authorization-form-title Enter
-			.authorization-form-subtitle
-				| Erstellen Sie Ihr Konto, um alle Funktionen von
-				br
-				| meinung.de wahrnehmen zu können
-			include ../common.blocks/authorization-forms/login-form/loginForm
-		include ../common.blocks/footer/authorization/authFooter
+  body.page--login
+    +progressLinear({ color: '#7ec439', percent: 30 })
+    +topNavigation({ bgColor: 'transparent', isUserAuthorized: false })(class="top-navigation--large")
+    main.authorization-form-container.container-1024
+      h1.authorization-form-title Enter
+      .authorization-form-subtitle
+        | Erstellen Sie Ihr Konto, um alle Funktionen von
+        br
+        | meinung.de wahrnehmen zu können
+      include ../common.blocks/authorization-forms/login-form/loginForm
+    include ../common.blocks/footer/authorization/authFooter
 
-		script(src="./js/index.min.js")
+    script(src="./js/index.min.js")

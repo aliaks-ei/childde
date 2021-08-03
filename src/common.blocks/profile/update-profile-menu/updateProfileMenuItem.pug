@@ -1,8 +1,8 @@
 include ../../svg-icon/svgIcon
 
 mixin updateProfileMenuItem({ icon = '', text = '' })
-	.update-profile-menu__item-wrapper&attributes(attributes)
-		.update-profile-menu__item
-			.update-profile-menu__item__icon
-				+svgIcon(icon)
-			span.update-profile-menu__item__text= text
+  .update-profile-menu__item-wrapper&attributes(attributes)
+    .update-profile-menu__item
+      .update-profile-menu__item__icon
+        +svgIcon(icon)
+      span.update-profile-menu__item__text= text

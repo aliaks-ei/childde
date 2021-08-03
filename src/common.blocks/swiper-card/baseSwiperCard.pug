@@ -1,8 +1,8 @@
 mixin swiperCard({ title, content, imageUrl, buttonText })
-	.swiper-card.swiper-slide(class=imageUrl ? 'swiper-card--with-image' : '')
-		if imageUrl
-			img.swiper-card__image(src=imageUrl, alt="")
-		.swiper-card__container
-			h5= title
-			.swiper-card__content= content
-			a.swiper-card__button(href="javascript:void(0)")= buttonText
+  .swiper-card.swiper-slide(class=imageUrl ? 'swiper-card--with-image' : '')
+    if imageUrl
+      img.swiper-card__image(src=imageUrl, alt="")
+    .swiper-card__container
+      h5= title
+      .swiper-card__content= content
+      a.swiper-card__button(href="javascript:void(0)")= buttonText

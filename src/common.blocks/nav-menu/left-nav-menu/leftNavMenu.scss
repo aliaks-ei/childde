@@ -1,118 +1,118 @@
 .left-nav-menu__item {
-	height      : 44px;
-	user-select : none;
+  height      : 44px;
+  user-select : none;
 
-	& + & {
-		margin-top: 2px;
-	}
+  & + & {
+    margin-top: 2px;
+  }
 }
 
 .left-nav-item {
-	position: relative;
+  position: relative;
 
-	&:before {
-		position         : absolute;
-		content          : "";
-		top              : 0;
-		bottom           : 0;
-		left             : -6px;
-		right            : -6px;
-		border-radius    : 25px;
-		opacity          : 0;
-		background-color : var(--background-color-gray);
-		transition       : opacity .1s ease-out;
-	}
+  &:before {
+    position         : absolute;
+    content          : "";
+    top              : 0;
+    bottom           : 0;
+    left             : -6px;
+    right            : -6px;
+    border-radius    : 25px;
+    opacity          : 0;
+    background-color : var(--background-color-gray);
+    transition       : opacity .1s ease-out;
+  }
 
-	&:hover:before,
-	&--selected:before {
-		opacity: 1;
-	}
+  &:hover:before,
+  &--selected:before {
+    opacity: 1;
+  }
 }
 
 .left-nav-item__icon {
-	position        : relative;
-	display         : flex;
-	justify-content : center;
-	align-items     : center;
-	width           : 32px;
+  position        : relative;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 32px;
 }
 
 .left-nav-item__link {
-	position        : relative;
-	display         : flex;
-	align-items     : center;
-	height          : 100%;
-	font-weight     : 600;
-	padding         : 0 8px;
-	text-decoration : none;
-	color           : var(--black-color);
-	transition      : transform .1s ease-out;
+  position        : relative;
+  display         : flex;
+  align-items     : center;
+  height          : 100%;
+  font-weight     : 600;
+  padding         : 0 8px;
+  text-decoration : none;
+  color           : var(--black-color);
+  transition      : transform .1s ease-out;
 
-	span {
-		margin-left: 8px;
-	}
+  span {
+    margin-left: 8px;
+  }
 
-	&:active {
-		transform: scale(.96);
-	}
+  &:active {
+    transform: scale(.96);
+  }
 }
 
 .left-nav-menu__button {
-	width       : 171px;
-	height      : 50px;
-	line-height : 50px;
-	margin-top  : 30px;
+  width       : 171px;
+  height      : 50px;
+  line-height : 50px;
+  margin-top  : 30px;
 
-	&--tablet {
-		position         : relative;
-		display          : none;
-		border           : 0;
-		padding          : 0;
-		border-radius    : 44px;
-		width            : 44px;
-		height           : 44px;
-		min-width        : 44px;
-		line-height      : 44px;
-		cursor           : pointer;
-		background-color : var(--black-color);
+  &--tablet {
+    position         : relative;
+    display          : none;
+    border           : 0;
+    padding          : 0;
+    border-radius    : 44px;
+    width            : 44px;
+    height           : 44px;
+    min-width        : 44px;
+    line-height      : 44px;
+    cursor           : pointer;
+    background-color : var(--black-color);
 
-		.material-icons {
-			line-height : inherit;
-			color       : var(--white-color);
-		}
-	}
+    .material-icons {
+      line-height : inherit;
+      color       : var(--white-color);
+    }
+  }
 
-	&--tablet:before {
-		position         : absolute;
-		top              : 0;
-		right            : 0;
-		bottom           : 0;
-		left             : 0;
-		content          : "";
-		background-color : rgba(255,255,255,.1);
-		opacity          : 0;
-	}
+  &--tablet:before {
+    position         : absolute;
+    top              : 0;
+    right            : 0;
+    bottom           : 0;
+    left             : 0;
+    content          : "";
+    background-color : rgba(255,255,255,.1);
+    opacity          : 0;
+  }
 
-	&--tablet:hover:before {
-		opacity: 1;
-	}
+  &--tablet:hover:before {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1279px) {
-	.left-nav-item__link span {
-		display: none;
-	}
+  .left-nav-item__link span {
+    display: none;
+  }
 
-	.left-nav-item:before {
-		left  : 0;
-		right : 0;
-	}
+  .left-nav-item:before {
+    left  : 0;
+    right : 0;
+  }
 
-	.left-nav-menu__button.base-btn {
-		display: none;
-	}
+  .left-nav-menu__button.base-btn {
+    display: none;
+  }
 
-	.left-nav-menu__button--tablet {
-		display: block;
-	}
+  .left-nav-menu__button--tablet {
+    display: block;
+  }
 }

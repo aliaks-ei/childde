@@ -1,28 +1,28 @@
 @media (max-width: 600px) {
-	.bottom-sheet__update-profile .update-profile-menu {
-		display          : block;
-		position         : relative;
-		width            : 100%;
-		top              : unset;
-		left             : unset;
-		box-shadow       : none;
-		border-radius    : 0;
-		background-color : transparent;
-	}
+  .bottom-sheet__update-profile .update-profile-menu {
+    display          : block;
+    position         : relative;
+    width            : 100%;
+    top              : unset;
+    left             : unset;
+    box-shadow       : none;
+    border-radius    : 0;
+    background-color : transparent;
+  }
 
-	.update-profile-menu__content {
-		padding-top: 0;
-	}
+  .update-profile-menu__content {
+    padding-top: 0;
+  }
 
-	.update-profile-menu__item {
-		padding: 0;
-	}
+  .update-profile-menu__item {
+    padding: 0;
+  }
 
-	.update-profile-menu__item-wrapper:hover {
-		background-color: transparent;
-	}
+  .update-profile-menu__item-wrapper:hover {
+    background-color: transparent;
+  }
 
-	.update-profile-menu__item__icon {
-		width: 20px;
-	}
+  .update-profile-menu__item__icon {
+    width: 20px;
+  }
 }

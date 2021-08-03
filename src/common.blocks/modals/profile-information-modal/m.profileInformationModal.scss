@@ -1,49 +1,49 @@
 @media (max-width: 600px) {
-	.profile-info-modal {
-		padding: 0;
-	}
+  .profile-info-modal {
+    padding: 0;
+  }
 
-	.profile-info-modal__header {
-		padding: 20px 16px 0;
-	}
+  .profile-info-modal__header {
+    padding: 20px 16px 0;
+  }
 
-	.profile-info-modal__title {
-		font-size: 18px;
-	}
+  .profile-info-modal__title {
+    font-size: 18px;
+  }
 
-	.profile-info-modal__form {
-		padding       : 0 16px;
-		margin-top    : 16px;
-		margin-bottom : 16px;
-	}
+  .profile-info-modal__form {
+    padding       : 0 16px;
+    margin-top    : 16px;
+    margin-bottom : 16px;
+  }
 
-	.profile-info-modal__textarea {
-		font-size   : 14px;
-		line-height : 22px;
-		padding     : 8px 12px;
-	}
+  .profile-info-modal__textarea {
+    font-size   : 14px;
+    line-height : 22px;
+    padding     : 8px 12px;
+  }
 
-	.profile-info-modal__submit-btn-wrapper {
-		position   : fixed;
-		top        : 6px;
-		right      : 8px;
-		margin-top : 0;
-		z-index    : 5;
-	}
+  .profile-info-modal__submit-btn-wrapper {
+    position   : fixed;
+    top        : 6px;
+    right      : 8px;
+    margin-top : 0;
+    z-index    : 5;
+  }
 
-	.profile-info-modal__submit-btn.base-btn {
-		width       : 112px;
-		height      : 36px;
-		line-height : 36px;
+  .profile-info-modal__submit-btn.base-btn {
+    width       : 112px;
+    height      : 36px;
+    line-height : 36px;
 
-		.base-btn__icon {
-			display: none;
-		}
+    .base-btn__icon {
+      display: none;
+    }
 
-		.base-btn__content {
-			transform   : none;
-			transition  : none;
-			margin-left : 0;
-		}
-	}
+    .base-btn__content {
+      transform   : none;
+      transition  : none;
+      margin-left : 0;
+    }
+  }
 }

@@ -1,23 +1,23 @@
 include ../svg-icon/svgIcon
 
 .question-dropdown-wrapper
-	a.question-dropdown__item
-		.question-dropdown__item__icon
-			+svgIcon("share")
-		span Teilen
-	a.question-dropdown__item
-		.question-dropdown__item__icon
-			+svgIcon("paintbrush")
-		span Bearbeiten
-	label.question-dropdown__item.question-dropdown__item--with-toggle(data-target="qNotificationsToggler")
-		span.question-dropdown__item__toggle-wrapper
-			span
-				span.question-dropdown__item__icon
-					+svgIcon("bell-crossed")
-					+svgIcon("bell")
-				span Mitteilungen
-			span.question-dropdown__item__toggle.item-toggle
-				input(type='checkbox')
-				span.item-toggle__slider
-		span.question-dropdown__item__hint
-			| (Sie erhalten Mitteilungen &uuml;ber neue Antworten und Kommentare)
+  a.question-dropdown__item
+    .question-dropdown__item__icon
+      +svgIcon("share")
+    span Teilen
+  a.question-dropdown__item
+    .question-dropdown__item__icon
+      +svgIcon("paintbrush")
+    span Bearbeiten
+  label.question-dropdown__item.question-dropdown__item--with-toggle(data-target="qNotificationsToggler")
+    span.question-dropdown__item__toggle-wrapper
+      span
+        span.question-dropdown__item__icon
+          +svgIcon("bell-crossed")
+          +svgIcon("bell")
+        span Mitteilungen
+      span.question-dropdown__item__toggle.item-toggle
+        input(type='checkbox')
+        span.item-toggle__slider
+    span.question-dropdown__item__hint
+      | (Sie erhalten Mitteilungen &uuml;ber neue Antworten und Kommentare)

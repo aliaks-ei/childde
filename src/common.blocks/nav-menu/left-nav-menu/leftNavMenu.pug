@@ -2,26 +2,26 @@ include ../../buttons/base-button/baseButton
 include ../../svg-icon/svgIcon
 
 mixin navItem({ icon, title, href = 'javascript:void(0)' })
-	.left-nav-menu__item.left-nav-item&attributes(attributes)
-		a.left-nav-item__link(href=href)
-			.left-nav-item__icon
-				+svgIcon(icon)
-			span= title
+  .left-nav-menu__item.left-nav-item&attributes(attributes)
+    a.left-nav-item__link(href=href)
+      .left-nav-item__icon
+        +svgIcon(icon)
+      span= title
 
 nav.left-nav-menu
-	div
-		+navItem({ icon: 'newspaper', title: 'Feed', href: '/' })(class="left-nav-item--selected")
-		+navItem({ icon: 'user', title: 'Profil', href: '/profile' })
-		+navItem({ icon: 'compass', title: 'Neu' })
-		+navItem({ icon: 'edit', title: 'Antworten' })
-		+navItem({ icon: 'trophy', title: 'Top' })
-		+navItem({ icon: 'themen', title: 'Themen', href: '/themes' })
-		+navItem({ icon: 'surface', title: 'Bewertung' })
-		+navItem({ icon: 'teamwork', title: 'Community' })
-		+baseButton({
-			text      : 'Frage stellen',
-			bgColor   : 'var(--black-color)',
-			color     : 'var(--white-color)'
-		})(class="left-nav-menu__button", data-target="qModal")
-		button.left-nav-menu__button.left-nav-menu__button--tablet(data-target="qModal")
-			span.material-icons help_outline
+  div
+    +navItem({ icon: 'newspaper', title: 'Feed', href: '/' })(class="left-nav-item--selected")
+    +navItem({ icon: 'user', title: 'Profil', href: '/profile' })
+    +navItem({ icon: 'compass', title: 'Neu' })
+    +navItem({ icon: 'edit', title: 'Antworten' })
+    +navItem({ icon: 'trophy', title: 'Top' })
+    +navItem({ icon: 'themen', title: 'Themen', href: '/themes' })
+    +navItem({ icon: 'surface', title: 'Bewertung' })
+    +navItem({ icon: 'teamwork', title: 'Community' })
+    +baseButton({
+      text      : 'Frage stellen',
+      bgColor   : 'var(--black-color)',
+      color     : 'var(--white-color)'
+    })(class="left-nav-menu__button", data-target="qModal")
+    button.left-nav-menu__button.left-nav-menu__button--tablet(data-target="qModal")
+      span.material-icons help_outline

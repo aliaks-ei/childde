@@ -1,12 +1,12 @@
 mixin subscriber({ name = '', avatar = '', isSubscribed = false })
-	.subscriber-wrapper
-		.subscriber
-			a.subscriber__overlapping-link(href="/profile")
-			.subcriber__avatar
-				img.subscriber__avatar__img(src=`./assets/images/${ avatar }.png`, alt=name)
-			.subscriber__info
-				.subscriber__info__name= name
-				.subscriber__info__subtitle Expert of child science
-			button.answer-card__subscribe-btn.subscriber__subscribe-btn(class = isSubscribed ? 'answer-card__subscribe-btn--active' : '')
-				+svgIcon(`${ isSubscribed ? 'subscribe-done' : 'subscribe' }`)
-				span Abonnieren
+  .subscriber-wrapper
+    .subscriber
+      a.subscriber__overlapping-link(href="/profile")
+      .subcriber__avatar
+        img.subscriber__avatar__img(src=`./assets/images/${ avatar }.png`, alt=name)
+      .subscriber__info
+        .subscriber__info__name= name
+        .subscriber__info__subtitle Expert of child science
+      button.answer-card__subscribe-btn.subscriber__subscribe-btn(class = isSubscribed ? 'answer-card__subscribe-btn--active' : '')
+        +svgIcon(`${ isSubscribed ? 'subscribe-done' : 'subscribe' }`)
+        span Abonnieren
