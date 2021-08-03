@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  lint:
+  test-e2e:
     runs-on: ubuntu-latest
     strategy:
       matrix:

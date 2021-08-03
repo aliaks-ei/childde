@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  lint:
+  editorconfig-check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
