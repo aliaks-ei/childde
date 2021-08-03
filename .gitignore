@@ -1,6 +1,7 @@
+# Misc
 .DS_Store
 node_modules
-build
+/build
 
 # Log files
 npm-debug.log*
@@ -17,5 +18,5 @@ yarn-error.log*
 *.sw?
 
 # Cypress
-tests/e2e/screenshots
-tests/e2e/videos
+/tests/e2e/screenshots
+/tests/e2e/videos

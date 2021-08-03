@@ -1,5 +1,4 @@
 {
-    "baseUrl": "http://localhost:8080",
     "fileServerFolder": "./build",
     "fixturesFolder": "./tests/e2e/fixtures",
     "integrationFolder": "./tests/e2e/integration",

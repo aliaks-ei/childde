@@ -11,7 +11,7 @@ const csso             = require('gulp-csso');
 const minify           = require('gulp-minify');
 const rename           = require('gulp-rename');
 const addsrc           = require('gulp-add-src');
-const sass             = require('gulp-sass');
+const sass             = require('gulp-sass')(require('sass'));
 const mjml             = require('gulp-mjml');
 const autoprefixer     = require('autoprefixer');
 const del              = require('del');
@@ -32,8 +32,6 @@ const paths = {
 	icons   : 'src/assets/icons/*.svg',
 	mailers : 'src/pages/mailers/*.pug'
 };
-
-sass.compiler = require('node-sass');
 
 function cleanBuild() {
 	return del('build/**/*');
