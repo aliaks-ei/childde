@@ -32,10 +32,10 @@
 		"gulp-sass": "^5.0.0",
 		"gulp-svg-symbols": "^3.2.3",
 		"http-server": "^0.12.3",
-		"mjml": "^4.6.3",
+		"mjml": "^4.14.1",
 		"postcss-preset-env": "^6.7.0",
 		"sass": "^1.37.2",
-		"start-server-and-test": "^1.11.0"
+		"start-server-and-test": "^1.15.4"
 	},
 	"browserslist": [
 		"> 2%",
