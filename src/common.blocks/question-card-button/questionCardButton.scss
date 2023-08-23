@@ -1,27 +1,27 @@
 .question-card-button {
-  position         : relative;
-  display          : flex;
-  align-items      : center;
-  font-family      : var(--font-open-sans);
-  font-weight      : 600;
-  border           : 0;
-  color            : var(--black-color);
-  background-color : transparent;
-  font-size        : 14px;
-  line-height      : 27px;
-  cursor           : pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-open-sans);
+  font-weight: 600;
+  border: 0;
+  color: var(--black-color);
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 27px;
+  cursor: pointer;
 
   &:before {
-    content       : "";
-    position      : absolute;
-    top           : -6px;
-    left          : -6px;
-    right         : -6px;
-    bottom        : -6px;
-    background    : rgba(32, 35, 51, .07);
-    transition    : opacity .1s ease-out;
-    opacity       : 0;
-    border-radius : 26px;
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background: rgba(32, 35, 51, 0.07);
+    transition: opacity 0.1s ease-out;
+    opacity: 0;
+    border-radius: 26px;
   }
 
   &:hover:before {
@@ -33,8 +33,8 @@
   }
 
   .question-card-button__icon {
-    font-size : 20px;
-    color     : var(--text-gray);
+    font-size: 20px;
+    color: var(--text-gray);
 
     &:not(:only-child) {
       margin-right: 10px;
@@ -50,6 +50,6 @@
   }
 
   &--active:before {
-    background: rgba(84, 161, 201, .07);
+    background: rgba(84, 161, 201, 0.07);
   }
 }

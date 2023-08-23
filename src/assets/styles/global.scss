@@ -2,40 +2,46 @@
   box-sizing: border-box;
 }
 
-html, body {
-  position                    : relative;
-  font-size                   : 16px;
-  font-family                 : var(--font-open-sans);
-  color                       : var(--black-color);
-  margin                      : 0;
-  padding                     : 0;
-  width                       : 100%;
-  scroll-behavior             : smooth;
-  -webkit-overflow-scrolling  : touch;
-  -webkit-font-smoothing      : antialiased;
-  -webkit-tap-highlight-color : transparent;
-  -moz-osx-font-smoothing     : grayscale;
+html,
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: var(--font-open-sans);
+  color: var(--black-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family : var(--font-montserrat);
-  color       : var(--black-color-2);
-  margin-top  : 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat);
+  color: var(--black-color-2);
+  margin-top: 0;
 }
 
 h1 {
-  font-size   : 1.875em;
-  line-height : 40px;
+  font-size: 1.875em;
+  line-height: 40px;
 }
 
 h3 {
-  font-size   : 1.125em;
-  line-height : 1.45em;
+  font-size: 1.125em;
+  line-height: 1.45em;
 }
 
 h5 {
-  font-size   : .875em;
-  line-height : 18px;
+  font-size: 0.875em;
+  line-height: 18px;
 }
 
 button,
@@ -54,14 +60,14 @@ input:focus {
 }
 
 a:active {
-  opacity: .65;
+  opacity: 0.65;
 }
 
 button {
-  transition: transform .1s ease-out;
+  transition: transform 0.1s ease-out;
 
   &:active {
-    transform: scale(.96);
+    transform: scale(0.96);
   }
 }
 
@@ -74,11 +80,11 @@ button {
 }
 
 .container-1024 {
-  display         : flex;
-  justify-content : center;
-  max-width       : 1264px;
-  width           : 100%;
-  margin          : 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1264px;
+  width: 100%;
+  margin: 0 auto;
 
   @media (max-width: 1279px) and (min-width: 600px) {
     width: 1024px;
@@ -89,22 +95,23 @@ button {
   --delimiter-point: 894px;
 
   background: linear-gradient(
-    to bottom,
-    #ffeddc var(--delimiter-point),
-    var(--background-color-lightblue) 0
-  ) no-repeat;
+      to bottom,
+      #ffeddc var(--delimiter-point),
+      var(--background-color-lightblue) 0
+    )
+    no-repeat;
 
   &:before {
-    content             : "";
-    position            : absolute;
-    top                 : 0;
-    left                : 0;
-    right               : 0;
-    height              : var(--delimiter-point);
-    background-image    : url('../assets/images/registration-bg.png');
-    background-position : top left;
-    background-size     : cover;
-    z-index             : -2;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--delimiter-point);
+    background-image: url("../assets/images/registration-bg.png");
+    background-position: top left;
+    background-size: cover;
+    z-index: -2;
   }
 }
 
@@ -112,10 +119,11 @@ button {
   --delimiter-point: 804px;
 
   background: linear-gradient(
-    to bottom, #afdd82
-    var(--delimiter-point),
-    var(--background-color-lightblue) 0
-  ) no-repeat;
+      to bottom,
+      #afdd82 var(--delimiter-point),
+      var(--background-color-lightblue) 0
+    )
+    no-repeat;
 }
 
 .material-icons,
@@ -132,8 +140,8 @@ button {
 }
 
 .similar-answers-title {
-  margin-top    : 60px;
-  margin-bottom : 32px;
+  margin-top: 60px;
+  margin-bottom: 32px;
 }
 
 .main--with-bottom-border {

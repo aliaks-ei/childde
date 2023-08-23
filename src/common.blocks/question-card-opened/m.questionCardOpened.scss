@@ -1,11 +1,11 @@
 @media (max-width: 600px) {
   .question-card-wrapper.question-card-wrapper--opened {
-    margin-top    : 12px;
-    margin-bottom : 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 
     .question-info__title {
-      font-size   : 1.5em;
-      line-height : 26px;
+      font-size: 1.5em;
+      line-height: 26px;
     }
 
     .question-card__header {
@@ -17,14 +17,14 @@
     }
 
     .question-card__mobile-actions {
-      display     : flex;
-      align-items : center;
-      padding     : 20px 0 16px;
+      display: flex;
+      align-items: center;
+      padding: 20px 0 16px;
     }
   }
 
   .question-card__notifications-wrapper {
-    padding       : 0 4px;
-    margin-bottom : 16px;
+    padding: 0 4px;
+    margin-bottom: 16px;
   }
 }

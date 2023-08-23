@@ -1,66 +1,64 @@
 .search-bar {
-  flex      : 1;
-  position  : relative;
-  max-width : 436px;
-  height    : 50px;
+  flex: 1;
+  position: relative;
+  max-width: 436px;
+  height: 50px;
 }
 
 .search-bar__input {
-  border-radius    : inherit;
-  border           : 2px solid transparent;
-  height           : 100%;
-  width            : 100%;
-  font-weight      : 500;
-  font-family      : var(--font-montserrat);
-  color            : var(--black-color);
-  font-size        : 16px;
-  padding          : 0 48px 0 22px;
-  border-radius    : 25px;
-  background-color : var(--white-color);
-  transition       : .1s ease-out;
-  outline          : none;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--black-color);
+  font-size: 16px;
+  padding: 0 48px 0 22px;
+  border-radius: 25px;
+  background-color: var(--white-color);
+  transition: 0.1s ease-out;
+  outline: none;
 
   &:focus {
-    background-color : var(--background-color-gray-2);
-    border-color     : var(--blue-color);
+    background-color: var(--background-color-gray-2);
+    border-color: var(--blue-color);
   }
 }
 
 .search-bar__icon {
-  position         : absolute;
-  top              : 50%;
-  transform        : translateY(-50%);
-  display          : flex;
-  align-items      : center;
-  justify-content  : center;
-  right            : 18px;
-  background-color : transparent;
-  border           : 0;
-  padding          : 0;
-  cursor           : pointer;
-  user-select      : none;
-
-
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 18px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
 
   &--search {
-    top       : 0;
-    bottom    : 0;
-    right     : 12px;
-    width     : 30px;
-    height    : 50px;
-    transform : none;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    width: 30px;
+    height: 50px;
+    transform: none;
   }
 
   &:not(.search-bar__icon--search) {
     display: none;
 
     &:active {
-      transform: translateY(-50%) scale(.96);
+      transform: translateY(-50%) scale(0.96);
     }
   }
 }
 
 .search-bar-container {
-  display : none;
-  padding : 12px 14px;
+  display: none;
+  padding: 12px 14px;
 }

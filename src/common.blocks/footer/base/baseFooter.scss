@@ -1,18 +1,18 @@
 .footer {
-  position : relative;
-  padding  : 96px 20px 114px;
+  position: relative;
+  padding: 96px 20px 114px;
 }
 
 .footer__top-block {
-  display         : flex;
-  justify-content : space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__downloads {
-  display        : flex;
-  flex-direction : column;
-  flex           : 0 0 auto;
-  margin-right   : 200px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin-right: 200px;
 
   @media (max-width: 1279px) {
     margin-right: 130px;
@@ -20,20 +20,20 @@
 }
 
 .footer__socials {
-  align-items : center;
-  margin-top  : 130px;
+  align-items: center;
+  margin-top: 130px;
 }
 
 .footer__socials__icons {
-  justify-content : space-between;
-  width           : 300px;
-  margin-bottom   : 32px;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 32px;
 }
 
 .footer__social-link {
   svg {
-    fill       : var(--black-color-2);
-    transition : fill .3s ease-out;
+    fill: var(--black-color-2);
+    transition: fill 0.3s ease-out;
   }
 
   &:hover svg {
@@ -42,6 +42,6 @@
 }
 
 .footer__copyright {
-  font-size     : 14px;
-  margin-bottom : 32px;
+  font-size: 14px;
+  margin-bottom: 32px;
 }

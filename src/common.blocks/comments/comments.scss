@@ -7,11 +7,11 @@
 }
 
 .comment {
-  display         : block;
-  font-weight     : 600;
-  line-height     : 26px;
-  color           : var(--black-color-2);
-  text-decoration : none;
+  display: block;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--black-color-2);
+  text-decoration: none;
 
   &:hover .comment__text {
     text-decoration: underline;
@@ -28,8 +28,8 @@
 
 .comment__meta,
 .comment__icon {
-  display     : flex;
-  align-items : center;
+  display: flex;
+  align-items: center;
 }
 
 .comment__icon {

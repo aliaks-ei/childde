@@ -4,9 +4,9 @@
   }
 
   .question-header__info {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   .question-info__user {
@@ -14,14 +14,14 @@
   }
 
   .question-info__title {
-    font-size    : 1.875em;
-    margin-right : 0;
+    font-size: 1.875em;
+    margin-right: 0;
   }
 
   .question-card__reactions-wrapper {
-    border       : 0;
-    padding      : 28px 10px 16px;
-    margin-left  : -4px;
+    border: 0;
+    padding: 28px 10px 16px;
+    margin-left: -4px;
   }
 
   .question-card__mobile-actions {
@@ -30,12 +30,12 @@
 }
 
 .question-card__controls-wrapper {
-  border-bottom : 1px solid var(--border-color-lightgray);
+  border-bottom: 1px solid var(--border-color-lightgray);
 }
 
 .question-card__notifications-wrapper {
-  padding       : 0 10px;
-  margin-bottom : 20px;
+  padding: 0 10px;
+  margin-bottom: 20px;
 
   .answer-card__best-answer-toggler.best-answer-toggler {
     margin-top: 0;
@@ -43,27 +43,27 @@
 }
 
 .q-mob-action-button {
-  display          : flex;
-  flex-direction   : column;
-  align-items      : center;
-  background-color : transparent;
-  border           : 0;
-  outline          : none;
-  user-select      : none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  user-select: none;
 
   .q-mob-action-button__circle {
     --circle-size: 40px;
 
-    display          : flex;
-    align-items      : center;
-    justify-content  : center;
-    position         : relative;
-    width            : var(--circle-size);
-    height           : var(--circle-size);
-    min-width        : var(--circle-size);
-    line-height      : var(--circle-size);
-    border-radius    : var(--circle-size);
-    background-color : var(--background-color-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    min-width: var(--circle-size);
+    line-height: var(--circle-size);
+    border-radius: var(--circle-size);
+    background-color: var(--background-color-gray);
   }
 
   svg {
@@ -94,8 +94,8 @@
     margin-left: auto;
 
     .material-icons-round {
-      font-size : 20px;
-      transform : rotate(90deg);
+      font-size: 20px;
+      transform: rotate(90deg);
     }
   }
 
@@ -105,29 +105,29 @@
 }
 
 .q-mob-action-button__title {
-  font-size   : 12px;
-  margin-top  : 6px;
-  font-weight : 600;
-  font-family : var(--font-montserrat);
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
 }
 
 .q-mob-action-button__count {
   --count-size: 20px;
 
-  position         : absolute;
-  background-color : var(--black-color);
-  color            : var(--white-color);
-  width            : var(--count-size);
-  height           : var(--count-size);
-  border-radius    : var(--count-size);
-  line-height      : var(--count-size);
-  font-size        : 8px;
-  top              : -5px;
-  right            : -8px;
-  border           : 1px solid var(--white-color);
-  font-weight      : 600;
-  font-family      : var(--font-open-sans);
-  display          : flex;
-  align-items      : center;
-  justify-content  : center;
+  position: absolute;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  width: var(--count-size);
+  height: var(--count-size);
+  border-radius: var(--count-size);
+  line-height: var(--count-size);
+  font-size: 8px;
+  top: -5px;
+  right: -8px;
+  border: 1px solid var(--white-color);
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

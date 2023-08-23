@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
   .answer-suggestion-card-wrapper {
-    padding       : 0 12px;
-    margin-bottom : 24px;
+    padding: 0 12px;
+    margin-bottom: 24px;
   }
 
   .answer-suggestion-card {
@@ -13,22 +13,22 @@
   }
 
   .answer-suggestion-card__subtitle {
-    font-size   : 14px;
-    line-height : 22px;
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .answer-suggestion-card__button {
-    max-width : 264px;
-    width     : 100%;
+    max-width: 264px;
+    width: 100%;
 
     &.base-btn .base-btn__icon {
       display: none;
     }
 
     &.base-btn .base-btn__content {
-      transition  : none;
-      transform   : none;
-      margin-left : 0;
+      transition: none;
+      transform: none;
+      margin-left: 0;
     }
   }
 }

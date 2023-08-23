@@ -3,27 +3,27 @@
 }
 
 .subscriber {
-  position    : relative;
-  display     : flex;
-  align-items : center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .subscriber__overlapping-link {
-  display  : block;
-  position : absolute;
-  top      : 0;
-  left     : 0;
-  right    : 0;
-  bottom   : 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .subcriber__avatar {
-  display      : flex;
-  align-items  : center;
-  height       : 40px;
-  width        : 40px;
-  min-width    : 40px;
-  margin-right : 14px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  margin-right: 14px;
 }
 
 .subscriber__avatar__img {
@@ -31,9 +31,9 @@
 }
 
 .subscriber__info {
-  font-size   : 12px;
-  font-family : var(--font-montserrat);
-  font-weight : 500;
+  font-size: 12px;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
 }
 
 .subscriber__info__name {
@@ -45,7 +45,7 @@
 }
 
 .subscriber__subscribe-btn {
-  position    : relative;
-  margin-left : auto;
-  z-index     : 1;
+  position: relative;
+  margin-left: auto;
+  z-index: 1;
 }

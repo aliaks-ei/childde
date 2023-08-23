@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
   .answer-card {
-    padding       : 0 14px;
-    margin-bottom : 16px;
+    padding: 0 14px;
+    margin-bottom: 16px;
   }
 
   .answer-card__header {
@@ -13,8 +13,8 @@
   }
 
   .answer-card__subscribe-btn {
-    border-radius : 50%;
-    padding       : 8px;
+    border-radius: 50%;
+    padding: 8px;
 
     svg {
       margin-right: 0;
@@ -26,8 +26,8 @@
   }
 
   .answer-card__date {
-    padding   : 0 6px;
-    font-size : 12px;
+    padding: 0 6px;
+    font-size: 12px;
   }
 
   .answer-card__best-answer-label {
@@ -35,7 +35,7 @@
   }
 
   .best-answer-toggler__content {
-    font-size   : 12px;
-    line-height : 18px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }

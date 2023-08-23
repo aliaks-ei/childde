@@ -1,5 +1,6 @@
 @media (max-width: 600px) {
-  html, body {
+  html,
+  body {
     font-size: 14px;
   }
 
@@ -8,9 +9,9 @@
   }
 
   .page-title--mobile {
-    display    : block;
-    padding    : 0 12px;
-    margin-top : 24px;
+    display: block;
+    padding: 0 12px;
+    margin-top: 24px;
   }
 
   .page--registration {
@@ -27,9 +28,9 @@
   }
 
   .similar-answers-title {
-    padding       : 0 12px;
-    margin-top    : 24px;
-    margin-bottom : 8px;
+    padding: 0 12px;
+    margin-top: 24px;
+    margin-bottom: 8px;
   }
 
   .main--with-bottom-border {

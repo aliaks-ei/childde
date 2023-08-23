@@ -3,15 +3,15 @@
 }
 
 .we-are-read__item {
-  height           : 168px;
-  border-radius    : 10px;
-  background-color : var(--background-color-gray-2);
-  padding          : 16px;
-  display          : flex;
-  flex-direction   : column;
-  justify-content  : space-between;
-  color            : var(--black-color);
-  text-decoration  : none;
+  height: 168px;
+  border-radius: 10px;
+  background-color: var(--background-color-gray-2);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--black-color);
+  text-decoration: none;
 
   &:hover .we-are-read__item__text {
     text-decoration: underline;
@@ -23,13 +23,13 @@
 }
 
 .we-are-read__item__text {
-  font-weight : 600;
-  line-height : 26px;
+  font-weight: 600;
+  line-height: 26px;
 }
 
 .we-are-read__comments {
-  display     : flex;
-  align-items : center;
-  font-size   : 14px;
-  font-weight : 600;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
 }

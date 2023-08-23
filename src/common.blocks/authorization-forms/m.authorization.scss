@@ -4,13 +4,13 @@
   }
 
   .authorization-form-title {
-    font-size     : 24px;
-    margin-bottom : 14px;
+    font-size: 24px;
+    margin-bottom: 14px;
   }
 
   .authorization-form-subtitle {
-    line-height   : 22px;
-    margin-bottom : 32px;
+    line-height: 22px;
+    margin-bottom: 32px;
   }
 
   .authorization-form {
@@ -30,13 +30,13 @@
   }
 
   .auth-form__field {
-    height    : 42px;
-    padding   : 4px 14px;
-    font-size : 14px;
+    height: 42px;
+    padding: 4px 14px;
+    font-size: 14px;
 
     &[type="password"] {
-      font-size      : 16px;
-      letter-spacing : 4px;
+      font-size: 16px;
+      letter-spacing: 4px;
     }
   }
 
@@ -46,9 +46,9 @@
 
   .base-btn.auth-form__action-btn,
   .auth-form__sign-in-with-social {
-    width         : 100%;
-    height        : 42px;
-    line-height   : 42px;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
   }
 
   .base-btn.auth-form__action-btn {
@@ -63,8 +63,8 @@
     }
 
     svg {
-      width  : 16px;
-      height : 16px;
+      width: 16px;
+      height: 16px;
     }
   }
 

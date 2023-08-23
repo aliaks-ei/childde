@@ -1,20 +1,20 @@
 .bottom-sheet-wrapper {
-  position         : fixed;
-  top              : auto !important;
-  bottom           : -100px;
-  left             : 0;
-  right            : 0;
-  border-radius    : 8px 8px 0 0;
-  padding          : 8px 16px 110px;
-  background-color : var(--white-color);
-  z-index          : 1007;
-  width            : 100%;
-  transform        : translate3d(0, 100%, 0);
-  transition       : transform .4s cubic-bezier(.22, 1, .36, 1);
-  will-change      : transform;
-  box-shadow       :  0 11px 15px -7px rgba(62, 62, 62, .3),
-            0 24px 38px 3px rgba(62, 62, 62, .24),
-            0 9px 46px 8px rgba(62, 62, 62, .22);
+  position: fixed;
+  top: auto !important;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 16px 110px;
+  background-color: var(--white-color);
+  z-index: 1007;
+  width: 100%;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  box-shadow: 0 11px 15px -7px rgba(62, 62, 62, 0.3),
+    0 24px 38px 3px rgba(62, 62, 62, 0.24),
+    0 9px 46px 8px rgba(62, 62, 62, 0.22);
 
   &--hidden {
     display: none;
@@ -22,22 +22,22 @@
 }
 
 .bottom-sheet {
-  display        : flex;
-  flex-direction : column;
+  display: flex;
+  flex-direction: column;
 }
 
 .bottom-sheet__arrow-icon {
-  padding-bottom : 8px;
-  margin         : 0 -16px;
-  text-align     : center;
+  padding-bottom: 8px;
+  margin: 0 -16px;
+  text-align: center;
 
   .material-icons-round {
-    font-size : 28px;
-    color     : var(--text-gray);
+    font-size: 28px;
+    color: var(--text-gray);
   }
 }
 
 .bs--keyboard-active {
-  position : absolute;
-  height   : 100%;
+  position: absolute;
+  height: 100%;
 }
