@@ -1,11 +1,11 @@
 .question-dropdown {
-  display     : none;
-  position    : absolute;
-  top         : 0;
-  left        : 0;
-  width       : 240px;
-  z-index     : 1001;
-  will-change : transform;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  z-index: 1001;
+  will-change: transform;
 
   &--bottom {
     width: 133px;
@@ -21,19 +21,19 @@
 }
 
 .question-dropdown__item {
-  display         : flex;
-  align-items     : center;
-  font-weight     : 600;
-  text-decoration : none;
-  color           : var(--black-color-2);
-  padding         : 0 24px 0 18px;
-  line-height     : 44px;
-  cursor          : pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black-color-2);
+  padding: 0 24px 0 18px;
+  line-height: 44px;
+  cursor: pointer;
 
   &--with-toggle {
-    flex-direction : column;
-    align-items    : flex-start;
-    user-select    : none;
+    flex-direction: column;
+    align-items: flex-start;
+    user-select: none;
   }
 
   &:hover {
@@ -42,9 +42,9 @@
 }
 
 .question-dropdown__item__icon {
-  display         : flex;
-  justify-content : center;
-  margin-right    : 13px;
+  display: flex;
+  justify-content: center;
+  margin-right: 13px;
 
   .bell {
     display: none;
@@ -52,34 +52,34 @@
 }
 
 .question-dropdown__item__toggle-wrapper {
-  display         : flex;
-  align-items     : center;
-  justify-content : space-between;
-  width           : 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 
   span {
-    display     : flex;
-    align-items : center;
+    display: flex;
+    align-items: center;
   }
 }
 
 .question-dropdown__item__hint {
-  font-size   : 12px;
-  font-weight : 400;
-  line-height : 22px;
-  margin      : -6px 16px 8px 36px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: -6px 16px 8px 36px;
 }
 
 .item-toggle {
-  position  : relative;
-  width     : 40px;
-  min-width : 40px;
-  height    : 24px;
+  position: relative;
+  width: 40px;
+  min-width: 40px;
+  height: 24px;
 
   input {
-    opacity : 0;
-    width   : 0;
-    height  : 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 
     &:checked + .item-toggle__slider {
       background-color: var(--black-color);
@@ -92,25 +92,25 @@
 }
 
 .item-toggle__slider {
-  position         : absolute;
-  top              : 0;
-  left             : 0;
-  right            : 0;
-  bottom           : 0;
-  background-color : var(--text-gray);
-  border-radius    : 12px;
-  transition       : .3s;
-  cursor           : pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-gray);
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
 
   &:before {
-    position         : absolute;
-    bottom           : 3px;
-    content          : "";
-    height           : 18px;
-    width            : 18px;
-    left             : 3px;
-    background-color : var(--white-color );
-    transition       : .3s;
-    border-radius    : 50%;
+    position: absolute;
+    bottom: 3px;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    background-color: var(--white-color);
+    transition: 0.3s;
+    border-radius: 50%;
   }
 }

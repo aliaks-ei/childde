@@ -1,21 +1,23 @@
-const bottomNav = document.getElementById('bottomNav');
+const bottomNav = document.getElementById("bottomNav");
 
 if (bottomNav) {
-  const bottomMenuActivator = bottomNav.querySelector('[data-target="bottomMenu"]');
+  const bottomMenuActivator = bottomNav.querySelector(
+    '[data-target="bottomMenu"]'
+  );
 
   let prevScrollPos = window.scrollY;
 
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     const currentScrollPos = window.scrollY;
 
-    bottomNav.style.bottom = `${ prevScrollPos > currentScrollPos ? 12 : -96 }px`;
+    bottomNav.style.bottom = `${prevScrollPos > currentScrollPos ? 12 : -96}px`;
     prevScrollPos = currentScrollPos;
   });
 
-  bottomMenuActivator.addEventListener('click', function () {
+  bottomMenuActivator.addEventListener("click", function () {
     const bottomMenu = document.getElementById(this.dataset.target);
 
-    bottomMenu.style.display = 'block';
+    bottomMenu.style.display = "block";
 
     showBottomSheet();
   });

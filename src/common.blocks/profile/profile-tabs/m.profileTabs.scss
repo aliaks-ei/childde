@@ -4,9 +4,9 @@
   }
 
   .profile-tabs {
-    white-space : nowrap;
-    overflow-x  : auto;
-    overflow-y  : hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 
     &::-webkit-scrollbar {
       display: none;
@@ -26,10 +26,10 @@
   }
 
   .profile-tabs__link {
-    height      : 32px;
-    line-height : 32px;
-    padding     : 0 14px;
-    font-size   : 12px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 14px;
+    font-size: 12px;
   }
 
   .profile-subscriptions-tab {

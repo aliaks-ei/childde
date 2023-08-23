@@ -4,8 +4,8 @@
   }
 
   .footer {
-    display : flex;
-    padding : 0;
+    display: flex;
+    padding: 0;
 
     .store-links-wrapper {
       margin-top: 16px;
@@ -17,27 +17,27 @@
   }
 
   .footer__pages-links {
-    line-height : 24px;
-    margin-top  : 16px;
+    line-height: 24px;
+    margin-top: 16px;
   }
 
   .footer__pages-links__item {
-    position        : relative;
-    font-size       : 12px;
-    color           : var(--black-color);
-    text-decoration : none;
-    padding         : 0 8px;
+    position: relative;
+    font-size: 12px;
+    color: var(--black-color);
+    text-decoration: none;
+    padding: 0 8px;
   }
 
   .footer__socials {
-    align-items : flex-start;
-    margin-top  : 20px;
-    padding     : 0 6px 8px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 0 6px 8px;
   }
 
   .footer__socials__icons {
-    width         : auto;
-    margin-bottom : 0;
+    width: auto;
+    margin-bottom: 0;
   }
 
   .footer__social-link {
@@ -46,15 +46,15 @@
     }
 
     svg {
-      width  : 16px;
-      height : 16px;
+      width: 16px;
+      height: 16px;
     }
   }
 
   .footer__copyright {
-    font-size     : 12px;
-    margin-top    : 16px;
-    margin-bottom : 0;
+    font-size: 12px;
+    margin-top: 16px;
+    margin-bottom: 0;
   }
 
   .footer__logo {

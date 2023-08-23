@@ -3,39 +3,39 @@
 }
 
 .profile-tabs {
-  list-style-type : none;
-  padding         : 0;
-  margin          : 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .profile-tabs__tab {
-  display        : inline-block;
-  vertical-align : baseline;
-  margin-right   : 12px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 12px;
 }
 
 .profile-tabs__link {
-  display         : inline-flex;
-  align-items     : center;
-  height          : 42px;
-  line-height     : 42px;
-  padding         : 0 20px;
-  font-size       : 14px;
-  font-weight     : 700;
-  font-family     : var(--font-montserrat);
-  color           : var(--text-gray);
-  border-radius   : 25px;
-  transition      : .1s ease-out;
-  text-decoration : none;
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-montserrat);
+  color: var(--text-gray);
+  border-radius: 25px;
+  transition: 0.1s ease-out;
+  text-decoration: none;
 
   &:hover,
   &--active {
-    background-color : var(--background-color-gray);
-    color            : var(--black-color-2);
+    background-color: var(--background-color-gray);
+    color: var(--black-color-2);
   }
 
   &:active {
-    transform: scale(.96);
+    transform: scale(0.96);
   }
 }
 

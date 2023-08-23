@@ -4,21 +4,21 @@
   }
 
   .bottom-menu__nav-wrapper {
-    padding       : 0 2px;
-    margin-bottom : 16px;
+    padding: 0 2px;
+    margin-bottom: 16px;
   }
 
   .bottom-menu__link {
-    display         : flex;
-    align-items     : center;
-    text-decoration : none;
-    color           : var(--black-color);
-    font-weight     : 600;
-    line-height     : 32px;
-    transition      : .1s ease-out;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: 32px;
+    transition: 0.1s ease-out;
 
     &:active {
-      transform: scale(.96);
+      transform: scale(0.96);
     }
 
     & + & {
@@ -27,15 +27,15 @@
   }
 
   .bottom-menu__link__icon {
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
-    width           : 32px;
-    margin-right    : 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    margin-right: 4px;
 
     svg {
-      width  : 15px;
-      height : 15px;
+      width: 15px;
+      height: 15px;
     }
   }
 }

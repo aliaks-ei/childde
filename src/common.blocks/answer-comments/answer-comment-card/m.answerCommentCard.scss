@@ -11,15 +11,15 @@
     line-height: 24px;
 
     p {
-      margin-top    : .75rem;
-      margin-bottom : .75rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
     }
   }
 
   .answer-comment-card__answer-btn {
-    font-size    : 12px;
-    margin-top   : 0;
-    margin-right : 0;
+    font-size: 12px;
+    margin-top: 0;
+    margin-right: 0;
   }
 
   .answer-comment-card__header .question-reviews__likes {
@@ -27,7 +27,7 @@
   }
 
   .answer-comment-card__actions .question-reviews__likes {
-    display     : flex;
-    margin-left : auto;
+    display: flex;
+    margin-left: auto;
   }
 }

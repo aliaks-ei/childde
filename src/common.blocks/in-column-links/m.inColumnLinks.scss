@@ -1,13 +1,13 @@
 @media (max-width: 600px) {
   .in-column-links-wrapper {
-    flex-wrap       : wrap;
-    justify-content : flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .in-column-links {
-    flex          : 1 1 50%;
-    margin-bottom : 24px;
-    padding       : 0;
+    flex: 1 1 50%;
+    margin-bottom: 24px;
+    padding: 0;
   }
 
   .in-column-links-wrapper__separated-column {
@@ -22,7 +22,7 @@
     }
   }
 
-  .in-column-links__title{
+  .in-column-links__title {
     margin-bottom: 8px;
   }
 

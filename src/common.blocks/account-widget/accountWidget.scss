@@ -1,29 +1,29 @@
 .account-widget {
-  display  : none;
-  position : absolute;
-  top      : 64px;
-  padding  : 14px 0;
-  width    : 235px;
-  right    : 0;
-  z-index  : 50;
+  display: none;
+  position: absolute;
+  top: 64px;
+  padding: 14px 0;
+  width: 235px;
+  right: 0;
+  z-index: 50;
 }
 
 .account-widget__item {
-  display         : flex;
-  align-items     : center;
-  padding         : 0 22px;
-  line-height     : 45px;
-  font-weight     : 600;
-  text-decoration : none;
-  color           : var(--black-color-2);
-  cursor          : pointer;
-  outline         : none;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  line-height: 45px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black-color-2);
+  cursor: pointer;
+  outline: none;
 
   &__icon {
-    display         : flex;
-    justify-content : center;
-    width           : 16px;
-    margin-right    : 12px;
+    display: flex;
+    justify-content: center;
+    width: 16px;
+    margin-right: 12px;
   }
 
   & + & {

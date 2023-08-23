@@ -3,9 +3,9 @@
 }
 
 .sponsors-widget__head {
-  display       : flex;
-  margin-bottom : 13px;
-  user-select   : none;
+  display: flex;
+  margin-bottom: 13px;
+  user-select: none;
 }
 
 .sponsors-widget__title {
@@ -13,16 +13,16 @@
 }
 
 .sponsors-widget__text {
-  font-weight   : 600;
-  line-height   : 26px;
-  margin-bottom : 15px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 15px;
 }
 
 .sponsors-widget__link {
-  color           : var(--blue-color);
-  font-weight     : 600;
-  line-height     : 26px;
-  text-decoration : none;
+  color: var(--blue-color);
+  font-weight: 600;
+  line-height: 26px;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;

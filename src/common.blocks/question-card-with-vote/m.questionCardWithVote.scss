@@ -1,14 +1,14 @@
 @media (max-width: 600px) {
   .question-info__subtitle {
-    font-size     : 14px;
-    margin-top    : -12px;
-    margin-bottom : 12px;
-    line-height   : 22px;
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+    line-height: 22px;
   }
 
   .question-card__vote-bar {
-    height    : 32px;
-    font-size : 12px;
+    height: 32px;
+    font-size: 12px;
 
     & + & {
       margin-top: 8px;
@@ -16,9 +16,9 @@
   }
 
   .question-card__vote-bar__progress {
-    padding     : 4px 12px;
-    height      : 28px;
-    line-height : 28px;
+    padding: 4px 12px;
+    height: 28px;
+    line-height: 28px;
   }
 
   .question-card__vote-bar__percentage {

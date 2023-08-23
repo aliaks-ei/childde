@@ -1,26 +1,26 @@
 .date-filter {
-  display          : flex;
-  max-width        : 348px;
-  height           : 50px;
-  margin-bottom    : 32px;
-  padding          : 4px;
-  border-radius    : 25px;
-  border           : 1px solid var(--border-color-lightblue);
-  background-color : var(--background-color-gray);
+  display: flex;
+  max-width: 348px;
+  height: 50px;
+  margin-bottom: 32px;
+  padding: 4px;
+  border-radius: 25px;
+  border: 1px solid var(--border-color-lightblue);
+  background-color: var(--background-color-gray);
 }
 
 .date-filter__item {
-  flex             : 1 1 25%;
-  background-color : transparent;
-  height           : 100%;
-  border           : 0;
-  border-radius    : 21px;
-  font-weight      : 700;
-  font-size        : 14px;
-  cursor           : pointer;
-  font-family      : var(--font-montserrat);
-  color            : var(--black-color-2);
-  transition       : transform .1s ease-out;
+  flex: 1 1 25%;
+  background-color: transparent;
+  height: 100%;
+  border: 0;
+  border-radius: 21px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: var(--font-montserrat);
+  color: var(--black-color-2);
+  transition: transform 0.1s ease-out;
 
   & + & {
     margin-left: 4px;
@@ -28,11 +28,11 @@
 
   &--active,
   &:hover {
-    background-color : var(--white-color );
-    color            : var(--red-color);
+    background-color: var(--white-color);
+    color: var(--red-color);
   }
 
   &:active {
-    opacity: .65;
+    opacity: 0.65;
   }
 }

@@ -1,16 +1,13 @@
 name: E2E tests
 
-on:
-  push:
-    branches:
-      - master
+on: ['push']
 
 jobs:
   test-e2e:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ['12', '14']
+        node-version: ['16']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2

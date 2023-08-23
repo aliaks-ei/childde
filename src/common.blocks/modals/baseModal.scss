@@ -1,22 +1,22 @@
 .base-modal-wrapper {
-  position   : fixed;
-  top        : 0;
-  left       : 0;
-  width      : 100%;
-  height     : 100%;
-  z-index    : 1003;
-  text-align : center;
-  overflow-y : auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+  text-align: center;
+  overflow-y: auto;
 }
 
 .base-modal {
-  display          : inline-block;
-  text-align       : left;
-  margin-top       : 60px;
-  margin-bottom    : 24px;
-  border-radius    : 8px;
-  box-shadow       : 0 3px 20px rgba(62, 62, 62, .2);
-  background-color : var(--white-color);
+  display: inline-block;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  box-shadow: 0 3px 20px rgba(62, 62, 62, 0.2);
+  background-color: var(--white-color);
 }
 
 .base-modal__top-controls {
@@ -25,14 +25,14 @@
 
 .modal-overlay,
 .bs-overlay {
-  position   : fixed;
-  top        : 0;
-  left       : 0;
-  bottom     : 0;
-  right      : 0;
-  width      : 100%;
-  background : var(--black-color);
-  opacity    : 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: var(--black-color);
+  opacity: 0.5;
 }
 
 .modal-overlay {
@@ -40,8 +40,8 @@
 }
 
 .bs-overlay {
-  z-index  : 1006;
-  overflow : hidden;
+  z-index: 1006;
+  overflow: hidden;
 
   &--hidden {
     display: none;

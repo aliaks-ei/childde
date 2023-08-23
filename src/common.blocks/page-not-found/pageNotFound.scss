@@ -3,21 +3,21 @@
 }
 
 .page-not-found {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-not-found__title {
-  font-size     : 148px;
-  line-height   : 180px;
-  margin-bottom : 24px;
-  margin-left   : -10px;
+  font-size: 148px;
+  line-height: 180px;
+  margin-bottom: 24px;
+  margin-left: -10px;
 }
 
 .page-not-found__subtitle {
-  font-size   : 30px;
-  line-height : 40px;
+  font-size: 30px;
+  line-height: 40px;
 }
 
 .page-not-found__error-info {
@@ -29,17 +29,17 @@
 }
 
 .page-not-found__links {
-  padding         : 0;
-  margin-top      : 28px;
-  margin-bottom   : 0;
-  line-height     : 30px;
-  list-style-type : none;
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 0;
+  line-height: 30px;
+  list-style-type: none;
 }
 
 .page-not-found__links__item {
-  color           : var(--blue-color-2);
-  text-decoration : none;
-  font-weight     : 600;
+  color: var(--blue-color-2);
+  text-decoration: none;
+  font-weight: 600;
 
   &:hover {
     text-decoration: underline;

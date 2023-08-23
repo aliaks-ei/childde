@@ -1,11 +1,11 @@
 {
-    "fileServerFolder": "./build",
-    "fixturesFolder": "./tests/e2e/fixtures",
-    "integrationFolder": "./tests/e2e/integration",
-    "pluginsFile": "./tests/e2e/plugins/index.js",
-    "supportFile": "./tests/e2e/support/index.js",
-    "videosFolder": "./tests/e2e/videos",
-    "screenshotsFolder": "./tests/e2e/screenshots",
-    "viewportWidth": 1366,
-    "viewportHeight": 768
+  "fileServerFolder": "./build",
+  "fixturesFolder": "./tests/e2e/fixtures",
+  "integrationFolder": "./tests/e2e/integration",
+  "pluginsFile": "./tests/e2e/plugins/index.js",
+  "supportFile": "./tests/e2e/support/index.js",
+  "videosFolder": "./tests/e2e/videos",
+  "screenshotsFolder": "./tests/e2e/screenshots",
+  "viewportWidth": 1366,
+  "viewportHeight": 768
 }

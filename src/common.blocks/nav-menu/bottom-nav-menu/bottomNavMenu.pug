@@ -2,9 +2,9 @@ include ../../svg-icon/svgIcon
 
 mixin navItem({ icon, title, materialIcon = false, highlighted = false, target, href = 'javascript:void(0)' })
   a.nav-menu__item.nav-item(
-    class       = highlighted ? 'nav-item--highlighted' : '',
+    class = highlighted ? 'nav-item--highlighted' : '',
     data-target = target,
-    href        = href
+    href = href
   )
     .nav-item__icon
       if materialIcon

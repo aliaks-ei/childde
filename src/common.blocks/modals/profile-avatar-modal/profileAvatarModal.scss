@@ -1,16 +1,16 @@
 .profile-avatar-modal {
-  position  : relative;
-  width     : 665px;
+  position: relative;
+  width: 665px;
 }
 
 .profile-avatar-modal__header {
-  padding    : 42px 24px 0;
-  text-align : center;
+  padding: 42px 24px 0;
+  text-align: center;
 }
 
 .profile-avatar-modal__close-btn {
-  top   : 20px;
-  right : 12px;
+  top: 20px;
+  right: 12px;
 
   .material-icons-round {
     color: var(--text-gray-3);
@@ -22,39 +22,39 @@
 }
 
 .profile-avatar-modal__image-uploader {
-  padding-top    : 24px;
-  padding-bottom : 48px;
+  padding-top: 24px;
+  padding-bottom: 48px;
 }
 
 .avatar-image-uploader__current-avatar {
-  position         : relative;
-  display          : flex;
-  align-items      : center;
-  justify-content  : center;
-  width            : 180px;
-  min-width        : 180px;
-  height           : 180px;
-  border-radius    : 65px;
-  margin           : 0 auto;
-  background-color : var(--background-color-gray);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  min-width: 180px;
+  height: 180px;
+  border-radius: 65px;
+  margin: 0 auto;
+  background-color: var(--background-color-gray);
 }
 
 .avatar-image-uploader__upload-btn {
-  position         : absolute;
-  bottom           : -26px;
-  display          : flex;
-  align-items      : center;
-  justify-content  : center;
-  width            : 44px;
-  min-width        : 44px;
-  height           : 44px;
-  border-radius    : 50%;
-  padding          : 0;
-  margin           : 0;
-  border           : 0;
-  cursor           : pointer;
-  user-select      : none;
-  background-color : var(--blue-color-2);
+  position: absolute;
+  bottom: -26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--blue-color-2);
 }
 
 .profile-avatar-modal__form {
@@ -62,9 +62,9 @@
 }
 
 .profile-avatar-modal__input-wrapper {
-  position    : relative;
-  display     : flex;
-  align-items : center;
+  position: relative;
+  display: flex;
+  align-items: center;
 
   &--error .profile-avatar-modal__input {
     border-color: var(--red-color);
@@ -76,11 +76,11 @@
 }
 
 .profile-avatar-modal__input__clear-icon {
-  position  : absolute;
-  right     : 16px;
-  font-size : 26px;
-  color     : var(--blue-color-2);
-  cursor    : pointer;
+  position: absolute;
+  right: 16px;
+  font-size: 26px;
+  color: var(--blue-color-2);
+  cursor: pointer;
 
   &:hover {
     color: var(--blue-color);
@@ -88,18 +88,18 @@
 }
 
 .profile-avatar-modal__input {
-  height           : 66px;
-  line-height      : 66px;
-  width            : 100%;
-  border           : 2px solid transparent;
-  border-radius    : 5px;
-  background-color : var(--background-color-gray);
-  font-family      : var(--font-open-sans);
-  font-size        : 16px;
-  font-weight      : 600;
-  outline          : none;
-  padding          : 4px 48px 4px 16px;
-  transition       : border-color .1s ease-out;
+  height: 66px;
+  line-height: 66px;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: var(--background-color-gray);
+  font-family: var(--font-open-sans);
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  padding: 4px 48px 4px 16px;
+  transition: border-color 0.1s ease-out;
 
   &:focus {
     border-color: var(--blue-color);
@@ -107,12 +107,12 @@
 }
 
 .profile-avatar-modal__input-error-message {
-  display     : none;
-  color       : var(--red-color);
-  font-size   : 14px;
-  font-weight : 700;
-  margin-top  : 6px;
-  margin-left : 2px;
+  display: none;
+  color: var(--red-color);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-left: 2px;
 }
 
 .profile-avatar-modal__save-btn-wrapper {
@@ -120,10 +120,10 @@
 }
 
 .profile-avatar-modal__save-btn.base-btn {
-  width         : 208px;
-  margin        : 0 auto;
-  height        : 66px;
-  line-height   : 66px;
-  border-radius : 33px;
-  font-size     : 18px;
+  width: 208px;
+  margin: 0 auto;
+  height: 66px;
+  line-height: 66px;
+  border-radius: 33px;
+  font-size: 18px;
 }

@@ -1,22 +1,22 @@
 @media (max-width: 600px) {
   .tooltip-wrapper {
-    top   : 60px;
-    right : 0;
+    top: 60px;
+    right: 0;
   }
 
   .tooltip {
-    padding : 16px;
-    width   : 290px;
+    padding: 16px;
+    width: 290px;
 
     &:before {
       right: 22px;
     }
 
     &__close-icon {
-      font-size : 22px;
-      right     : 8px;
-      top       : 8px;
-      opacity   : .6;
+      font-size: 22px;
+      right: 8px;
+      top: 8px;
+      opacity: 0.6;
     }
 
     &__content {
@@ -24,11 +24,11 @@
     }
 
     &__button {
-      height      : 32px;
-      min-height  : 32px;
-      line-height : 32px;
-      font-size   : 12px;
-      margin-top  : 12px;
+      height: 32px;
+      min-height: 32px;
+      line-height: 32px;
+      font-size: 12px;
+      margin-top: 12px;
     }
   }
 }

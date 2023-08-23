@@ -1,35 +1,35 @@
 .answer-comment-form__activator-wrapper {
-  display     : flex;
-  align-items : center;
-  margin      : 24px 0;
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
 }
 
 .answer-comment-form__avatar {
-  display      : flex;
-  align-items  : center;
-  width        : 50px;
-  min-width    : 50px;
-  margin-right : 8px;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  min-width: 50px;
+  margin-right: 8px;
 
   img {
-    width: 100%
+    width: 100%;
   }
 }
 
 .answer-comment-form__activator {
-  height           : 50px;
-  line-height      : 50px;
-  background-color : var(--border-color-lightblue);
-  border-radius    : 10px;
-  font-family      : var(--font-montserrat);
-  font-weight      : 500;
-  color            : var(--black-color-2);
-  flex             : 1 1 100%;
-  cursor           : text;
-  user-select      : none;
-  padding          : 0 24px;
-  border           : 2px solid transparent;
-  transition       : border-color .1s ease-out;
+  height: 50px;
+  line-height: 50px;
+  background-color: var(--border-color-lightblue);
+  border-radius: 10px;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  color: var(--black-color-2);
+  flex: 1 1 100%;
+  cursor: text;
+  user-select: none;
+  padding: 0 24px;
+  border: 2px solid transparent;
+  transition: border-color 0.1s ease-out;
 
   &:hover {
     border-color: var(--text-gray);
@@ -41,23 +41,23 @@
 }
 
 .new-comment-form-wrapper {
-  display        : none;
-  flex-direction : column;
-  margin         : 24px 0;
+  display: none;
+  flex-direction: column;
+  margin: 24px 0;
 }
 
 .new-comment-form-container {
-  display     : flex;
-  align-items : flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .new-comment-form {
-  background-color : var(--border-color-lightblue);
-  border-radius    : 10px;
-  padding          : 18px 24px 8px;
-  flex             : 1 1 100%;
-  border           : 2px solid transparent;
-  transition       : border-color .1s ease-out;
+  background-color: var(--border-color-lightblue);
+  border-radius: 10px;
+  padding: 18px 24px 8px;
+  flex: 1 1 100%;
+  border: 2px solid transparent;
+  transition: border-color 0.1s ease-out;
 
   &:focus-within {
     border-color: var(--text-gray-2);
@@ -73,38 +73,38 @@
 }
 
 .new-comment-form__textarea {
-  position         : relative;
-  font-size        : 16px;
-  font-weight      : 500;
-  font-family      : var(--font-montserrat);
-  color            : var(--black-color-2);
-  background-color : transparent;
-  line-height      : 22px;
-  min-height       : 66px;
-  border           : 0;
-  padding          : 0;
-  width            : 100%;
-  resize           : none;
-  outline          : none;
-  overflow         : hidden !important;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--black-color-2);
+  background-color: transparent;
+  line-height: 22px;
+  min-height: 66px;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  resize: none;
+  outline: none;
+  overflow: hidden !important;
 }
 
 .new-comment-form__actions {
-  display         : flex;
-  align-items     : center;
-  justify-content : flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .new-comment-form__cancel-btn,
 .new-comment-form__send-btn {
-  height      : 50px;
-  line-height : 50px;
-  margin-top  : 16px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 16px;
 }
 
 .new-comment-form__cancel-btn {
-  width        : 143px;
-  margin-right : 16px;
+  width: 143px;
+  margin-right: 16px;
 
   &.base-btn:not(.base-btn--animated):before {
     background-color: var(--background-color-gray-3);
