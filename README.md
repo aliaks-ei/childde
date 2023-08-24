@@ -3,7 +3,8 @@
 [![](https://github.com/alexmozheyko/childde/workflows/E2E%20tests/badge.svg)](https://github.com/alexmozheyko/childde/actions?query=workflow%3A%22E2E+tests%22)
 [![](https://github.com/alexmozheyko/childde/workflows/EditorConfig/badge.svg)](https://github.com/alexmozheyko/childde/actions?query=workflow%3AEditorConfig)
 
-Fully mobile compatible UI part of knowledge exchange platform [child.de](https://child.de/)
+Fully mobile compatible UI part of [child.de](https://child.de/) - knowledge exchange platform. <br>
+Built with Pug, CSS (SASS), Javascript and Gulp.
 
 ### Run development server
 
